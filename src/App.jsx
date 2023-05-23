@@ -2,7 +2,8 @@ import './App.css'
 
 function App() {
   return (
-    <div>Hello Asaf Ha Rofe Web App </div>
+    <H1>Hello Asaf Ha Rofe Web App </H1>
+    <h2>How are u?</h2>>
   )
 }
 
