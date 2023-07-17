@@ -72,21 +72,11 @@
     border-radius: 25px;
 }
 
-.AnimalsBackground {
-    /*!* Group 1 *!*/
-
-    /*position: absolute;*/
-    /*width: 482.45px;*/
-    /*height: 229.32px;*/
-    /*left: -38px;*/
-    /*top: 190px;*/
-}
-
 #LionBackground {
     /* אריה */
     position: absolute;
-    width: 166.53px;
-    height: 198.05px;
+    width: 166px;
+    height: 198px;
     left: 90px;
     top: 210px;
     transform: rotate(6deg);
@@ -98,7 +88,7 @@
     width: 172px;
     height: 205px;
     left: 170px;
-    top: 213.52px;
+    top: 213px;
 }
 
 #MonkeyBackground {
@@ -113,10 +103,10 @@
 #DogBackground{
     /* כלבטרינר */
     position: absolute;
-    width: 184.29px;
-    height: 211.08px;
+    width: 184px;
+    height: 211px;
     left: 220px;
-    top: 208.75px;
+    top: 208px;
 
     transform: rotate(-3.97deg);
 }
@@ -127,4 +117,28 @@
     height: 130px;
     left: 41px;
     top: 58px;
+}
+
+#YoutubeIcon{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top:580px;
+    left: 90px;
+}
+
+#FacebookIcon{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top:580px;
+    left: 160px;
+}
+
+#InstagramIcon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top:580px;
+    left: 230px;
 }
