@@ -7,7 +7,7 @@ import vetDogImagePath from '../Public/HomePage/VetDog.png';
 
 function App() {
   return (
-    <div id="Body">
+    <div id="HomePage">
         <img src={shamirLogoPath} id="ShamirLogo" alt="Shamir"/>
         <div className="AnimalsBackground">
             <img src={vetLionImagePath} id="LionBackground" alt="Lion"/>
