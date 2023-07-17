@@ -1,14 +1,19 @@
 import './App.css';
-import HomePage from "./Pages/HomePage";
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './Pages/HomePage/HomePage';
+import MedicalDocumentsPage from './Pages/MedicalDocumentsPage/MedicalDocumentsPage';
+import GamePage from './Pages/Game/GamePage';
 
 function App() {
-  return (
-      <HomePage/>
-  )
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/medical-documents" element={<MedicalDocumentsPage />} />
+                <Route path="/game" element={<GamePage />} />
+            </Routes>
+        </Router>
+    );
 }
 
-export default App
-
-
-
+export default App;

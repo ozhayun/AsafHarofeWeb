@@ -1,12 +1,14 @@
 import './HomePage.css'
-import shamirLogoPath from "../../Public/HomePage/ShamirLogo.png";
-import vetLionImagePath from "../../Public/HomePage/VetLion.png";
-import vetPandaImagePath from "../../Public/HomePage/VetPanda.png";
-import vetMonkeyImagePath from "../../Public/HomePage/VetMonkey.png";
-import vetDogImagePath from "../../Public/HomePage/VetDog.png";
-import youtubeImagePath from "../../Public/HomePage/YouTube.png";
-import facebookImagePath from "../../Public/HomePage/Facebook.png";
-import instagramImagePath from "../../Public/HomePage/Instagram.png";
+import shamirLogoPath from "../../../Public/HomePage/ShamirLogo.png";
+import vetLionImagePath from "../../../Public/HomePage/VetLion.png";
+import vetPandaImagePath from "../../../Public/HomePage/VetPanda.png";
+import vetMonkeyImagePath from "../../../Public/HomePage/VetMonkey.png";
+import vetDogImagePath from "../../../Public/HomePage/VetDog.png";
+import youtubeImagePath from "../../../Public/HomePage/YouTube.png";
+import facebookImagePath from "../../../Public/HomePage/Facebook.png";
+import instagramImagePath from "../../../Public/HomePage/Instagram.png";
+import {Button} from "@mui/material";
+
 
 const HomePage = () => {
     return (
@@ -18,8 +20,8 @@ const HomePage = () => {
                 <img src={vetMonkeyImagePath} id="MonkeyBackground" alt="Monkey"/>
                 <img src={vetDogImagePath} id="DogBackground" alt="Dog"/>
             </div>
-            <button id="MedicalDocumentsButton">מסמכים רפואים</button>
-            <button id="StartGameButton">התחל משחק</button>
+            <Button id="MedicalDocumentsButton">מסמכים רפואים</Button>
+            <Button id="StartGameButton">התחל משחק</Button>
             <div id='linksDiv'>
                 <a href="https://www.youtube.com/@Aharofeh" target="_blank">
                     <img src={youtubeImagePath} id="YoutubeIcon" alt='Youtube'/>
@@ -27,7 +29,7 @@ const HomePage = () => {
                 <a href="https://www.facebook.com/Shamir.medical/about" target="_blank">
                     <img src={facebookImagePath} id="FacebookIcon" alt='Facebook'/>
                 </a>
-                <a href="https://instagram.com/shamir.medical.center?igshid=MTIzZWMxMTBkOA==" target="_blank">
+                <a href="https://www.instagram.com/shamir.medical.center/" target="_blank">
                     <img src={instagramImagePath} id="InstagramIcon" alt='Instagram'/>
                 </a>
             </div>
