@@ -1,5 +1,7 @@
 const GamePage = () => {
-
+return (
+    <div>Game!!!</div>
+)
 }
 
 

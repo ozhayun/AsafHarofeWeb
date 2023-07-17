@@ -7,8 +7,8 @@ import vetDogImagePath from "../../../Public/HomePage/VetDog.png";
 import youtubeImagePath from "../../../Public/HomePage/YouTube.png";
 import facebookImagePath from "../../../Public/HomePage/Facebook.png";
 import instagramImagePath from "../../../Public/HomePage/Instagram.png";
-import {Button} from "@mui/material";
-
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
     return (
@@ -20,8 +20,13 @@ const HomePage = () => {
                 <img src={vetMonkeyImagePath} id="MonkeyBackground" alt="Monkey"/>
                 <img src={vetDogImagePath} id="DogBackground" alt="Dog"/>
             </div>
-            <Button id="MedicalDocumentsButton">מסמכים רפואים</Button>
-            <Button id="StartGameButton">התחל משחק</Button>
+            <Button id="MedicalDocumentsButton" component={Link} to="/medical-documents">
+                מסמכים רפואים
+            </Button>
+            <Button id="StartGameButton" component={Link} to="/game">
+                התחל משחק
+            </Button>
+
             <div id='linksDiv'>
                 <a href="https://www.youtube.com/@Aharofeh" target="_blank">
                     <img src={youtubeImagePath} id="YoutubeIcon" alt='Youtube'/>
