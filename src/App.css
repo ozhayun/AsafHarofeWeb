@@ -1,3 +1,133 @@
-#Title {
-    color: forestgreen;
+#Body {
+    background: linear-gradient(to bottom, #67E5D6, #FFFFFF);
+    height: 100vh;
+}
+
+#StartGameButton {
+    position: absolute;
+    width: 299px;
+    height: 44px;
+    left: 39px;
+    top: 477px;
+
+    font-family: 'Assistant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+
+    /* ירוק */
+    color: #25B90D;
+
+    /* Rectangle 2 */
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 330px;
+    height: 70px;
+    left: 23px;
+    top: 472px;
+
+    background: #FFFFFF;
+    /* ירוק */
+    border: 2px solid #25B90D;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+#MedicalDocumentsButton {
+    /* מסמכים רפואיים */
+    position: absolute;
+    width: 299px;
+    height: 44px;
+    left: 39px;
+    top: 378px;
+
+    /* ראשי */
+    font-family: 'Assistant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+
+    /* כחול ראשי */
+    color: #00456E;
+
+    /* Rectangle 1 */
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 330px;
+    height: 70px;
+    left: 23px;
+    top: 373px;
+
+    background: #FFFFFF;
+    /* כחול ראשי */
+    border: 2px solid #00456E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+.AnimalsBackground {
+    /*!* Group 1 *!*/
+
+    /*position: absolute;*/
+    /*width: 482.45px;*/
+    /*height: 229.32px;*/
+    /*left: -38px;*/
+    /*top: 190px;*/
+}
+
+#LionBackground {
+    /* אריה */
+    position: absolute;
+    width: 166.53px;
+    height: 198.05px;
+    left: 30px;
+    top: 190px;
+    transform: rotate(6deg);
+}
+
+#PandaBackground {
+    /* פנדוקטור */
+    position: absolute;
+    width: 172px;
+    height: 205px;
+    left: 170px;
+    top: 213.52px;
+    transform: matrix(-0.99, -0.1, -0.1, 0.99, 0, 0);
+}
+
+#MonkeyBackground {
+    /* קופרסור */
+    position: absolute;
+    width: 172px;
+    height: 208px;
+    left: 0px;
+    top: 196px;
+
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+#DogBackground{
+    /* כלבטרינר */
+    position: absolute;
+    width: 184.29px;
+    height: 211.08px;
+    left: 220px;
+    top: 208.75px;
+
+    transform: rotate(-3.97deg);
+}
+
+#ShamirLogo {
+    position: absolute;
+    width: 293px;
+    height: 130px;
+    left: 41px;
+    top: 58px;
 }
