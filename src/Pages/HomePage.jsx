@@ -1,12 +1,12 @@
 import './HomePage.css'
-import shamirLogoPath from "../Public/HomePage/ShamirLogo.png";
-import vetLionImagePath from "../Public/HomePage/VetLion.png";
-import vetPandaImagePath from "../Public/HomePage/VetPanda.png";
-import vetMonkeyImagePath from "../Public/HomePage/VetMonkey.png";
-import vetDogImagePath from "../Public/HomePage/VetDog.png";
-import youtubeImagePath from "../Public/HomePage/YouTube.png";
-import facebookImagePath from "../Public/HomePage/Facebook.png";
-import instagramImagePath from "../Public/HomePage/Instagram.png";
+import shamirLogoPath from "../../Public/HomePage/ShamirLogo.png";
+import vetLionImagePath from "../../Public/HomePage/VetLion.png";
+import vetPandaImagePath from "../../Public/HomePage/VetPanda.png";
+import vetMonkeyImagePath from "../../Public/HomePage/VetMonkey.png";
+import vetDogImagePath from "../../Public/HomePage/VetDog.png";
+import youtubeImagePath from "../../Public/HomePage/YouTube.png";
+import facebookImagePath from "../../Public/HomePage/Facebook.png";
+import instagramImagePath from "../../Public/HomePage/Instagram.png";
 
 const HomePage = () => {
     return (
