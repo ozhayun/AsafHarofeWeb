@@ -19,7 +19,7 @@ const CustomToolbar = ({toolbarTitle}) => {
                     to="/"
                     aria-label="homePage"
                 >
-                    <HomeIcon />
+                    <HomeIcon fontSize="large" />
                 </IconButton>
             </div>
             <Typography id="ToolbarTitle" variant="h6" noWrap={false} component="div">
