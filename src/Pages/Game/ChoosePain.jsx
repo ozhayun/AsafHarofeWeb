@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './ChoosePain.css'
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
@@ -12,25 +13,31 @@ import Typography from "@mui/material/Typography";
 import ThermometerImagePath from "../../../Public/HomePage/Thermometer.png";
 import PlasterImagePath from "../../../Public/HomePage/Plaster.png";
 import {useState} from "react";
+import {Button} from "@mui/material";
+import {useNavigate} from "react-router";
 
 const ChoosePain = () => {
+    const [selectedPain, setSelectedPain] = useState("");
+    const navigate = useNavigate();
+
     function appBarLabel() {
         return (
-            <Toolbar sx={{ maxWidth: 390, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <Toolbar sx={{maxWidth: 390, display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                 <div>
                     <IconButton
                         id="HomeButton"
                         component={Link}
                         to="/"
                         aria-label="homePage"
-                        sx={{ marginRight: 'auto' }}
+                        sx={{marginRight: 'auto'}}
                     >
-                        <HomeIcon />
+                        <HomeIcon/>
                     </IconButton>
                 </div>
                 <div>
                     {/* Adjust the 'width' and 'height' properties to change the image size */}
-                    <img src={shamirLogoPath} id="ShamirLogo" alt="Shamir" style={{ width: '20%', height: '20%', marginRight: 'auto' }} />
+                    <img src={shamirLogoPath} id="ShamirLogo" alt="Shamir"
+                         style={{width: '20%', height: '20%', marginRight: 'auto'}}/>
                 </div>
             </Toolbar>
         );
@@ -45,30 +52,42 @@ const ChoosePain = () => {
         },
     });
 
-    const [selectedAnimal, setSelectedPain] = useState("");
 
     const handlePainClick = (pain) => {
         setSelectedPain(pain);
     }
 
+    const handleContinueClick = () => {
+        if(selectedPain) {
+            navigate('/start-board');
+        }
+    }
+
     return (
         <div>
-            <Stack spacing={2} sx={{ flexGrow: 1 }}>
-                    <AppBar position="static" color="primary" enableColorOnDark>
-                        {appBarLabel()}
-                    </AppBar>
-                <Typography id = "Title" variant="h2" gutterBottom>
+            <div className="container">
+                <AppBar position="static" color="primary" enableColorOnDark>
+                    {appBarLabel()}
+                </AppBar>
+                <Typography id="Title" variant="h2" gutterBottom>
                     מה כואב לחיה?
                 </Typography>
                 <div className='rectanglePain'>
-                    <button className="piece cut" onClick={() => handlePainClick('cut')} data-selected={selectedAnimal === 'dog' ? 'true' : 'false'}>
-                        <img src={ThermometerImagePath} style={{width: "100%", height: "100%"}} alt="Dog" />
-                    </button>
-                    <button className="piece fiver" onClick={() => handlePainClick('fiver')} data-selected={selectedAnimal === 'lion' ? 'true' : 'false'}>
-                        <img src={PlasterImagePath} style={{width: "100%", height: "100%"}} alt="Lion" />
-                    </button>
+                    <Button className="piece" onClick={() => handlePainClick('cut')}
+                            data-selected={selectedPain === 'Thermometer' ? 'true' : 'false'}>
+                        <img src={ThermometerImagePath} style={{width: "100%", height: "100%"}} alt="Thermometer"/>
+                        ?יש לה חום
+                    </Button>
+                    <Button className="piece" onClick={() => handlePainClick('fiver')}
+                            data-selected={selectedPain === 'Plaster' ? 'true' : 'false'}>
+                        <img src={PlasterImagePath} style={{width: "100%", height: "100%"}} alt="Plaster"/>
+                        ?יש לה חתך
+                    </Button>
                 </div>
-            </Stack>
+                <Button id="ContinueButton" disabled={selectedPain === null} onClick={handleContinueClick}>
+                    המשך
+                </Button>
+            </div>
         </div>
     );
 }
