@@ -2,15 +2,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;  /* Make sure the toolbar container takes up the full width */
+    width: 100%;
 }
 
 .toolbar {
     height: 12vh;
     padding: 1em;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.left-container, .right-container {
+    flex-basis: 20%;
 }
 
 #ToolbarTitle {
@@ -19,6 +24,10 @@
     font-size: 2rem;
     font-weight: 400;
     line-height: 1;
+}
+
+#HomeButton, #ShamirLogo {
+    flex-shrink: 0;
 }
 
 #ShamirLogo {

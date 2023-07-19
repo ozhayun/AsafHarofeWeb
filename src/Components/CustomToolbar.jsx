@@ -12,18 +12,22 @@ import Typography from "@mui/material/Typography";
 const CustomToolbar = ({toolbarTitle}) => {
     const appBarLabel = (
         <Toolbar className="toolbar">
-            <IconButton
-                id="HomeButton"
-                component={Link}
-                to="/"
-                aria-label="homePage"
-            >
-                <HomeIcon />
-            </IconButton>
+            <div className="left-container">
+                <IconButton
+                    id="HomeButton"
+                    component={Link}
+                    to="/"
+                    aria-label="homePage"
+                >
+                    <HomeIcon />
+                </IconButton>
+            </div>
             <Typography id="ToolbarTitle" variant="h6" noWrap={false} component="div">
-                {toolbarTitle || '\u00A0'}
+                {toolbarTitle}
             </Typography>
-            <img src={shamirLogoPath} id="ShamirLogo" alt="Shamir" />
+            <div className="right-container">
+                <img src={shamirLogoPath} id="ShamirLogo" alt="Shamir" />
+            </div>
         </Toolbar>
     );
 
@@ -44,5 +48,6 @@ const CustomToolbar = ({toolbarTitle}) => {
         </ThemeProvider>
     )
 }
+
 
 export default CustomToolbar;
