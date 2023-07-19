@@ -1,18 +1,24 @@
-#HomePage {
-    background: linear-gradient(to bottom, #67E5D6, #FFFFFF);
-    height: 100vh;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* Buttons container */
+#HomePage {
+    height: 100vh;
+    background-size: contain;
+    background: linear-gradient(to bottom, #67E5D6, #FFFFFF) no-repeat;
+}
+
 #ButtonsDiv {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 25vh;  /* This makes the container take up the full viewport height */
+    height: 25vh;
+    margin-top: -1em;
 }
 
-/* Individual buttons */
 #StartGameButton, #MedicalDocumentsButton {
     width: 85%;
     height: 5rem;
@@ -41,26 +47,31 @@
     border-color: #00456E;
 }
 
-
 .AnimalsBackground {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 15em;
     margin-top: 2.5em;
 }
 
 #MonkeyBackground, #LionBackground, #PandaBackground, #DogBackground {
     width: 37vw;
     height: 13em;
-    margin: -2em;
+    margin: -0.9em;
 }
 
 #DogBackground {
     transform: rotate(-3.97deg);
+    z-index: 1;
 }
 
 #LionBackground {
     transform: rotate(6deg);
+}
+
+#PandaBackground {
+    z-index: 1;
 }
 
 #ShamirLogo {
@@ -69,7 +80,8 @@
     align-items: center;
     width: 80%; /* Adjust based on your need */
     height: auto; /* Let the height auto-adjust */
-    margin: 1em auto; /* Center the logo */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -84,3 +96,63 @@
     height: auto; /* Let the height auto-adjust */
     margin: 1em; /* Space around icons */
 }
+
+
+@media only screen and (max-width: 500px) {
+
+    /* Buttons container */
+    #ButtonsDiv {
+        height: 25vh;
+    }
+
+    /* Individual buttons */
+    #StartGameButton, #MedicalDocumentsButton {
+        width: 85%;
+        height: 5rem;
+        font-size: 7vw;
+    }
+
+    #MonkeyBackground, #LionBackground, #PandaBackground, #DogBackground {
+        width: 29vw;
+        height: 13em;
+        margin: -0.9em;
+    }
+
+    #ShamirLogo {
+        width: 70%;
+    }
+
+    #YoutubeIcon, #FacebookIcon, #InstagramIcon {
+        width: 20vw;
+    }
+}
+
+@media only screen and (min-width: 501px) {
+
+    /* Buttons container */
+    #ButtonsDiv {
+        height: 25vh;
+    }
+
+    /* Individual buttons */
+    #StartGameButton, #MedicalDocumentsButton {
+        width: 85%;
+        height: 4rem;
+        font-size: 2vw;
+    }
+
+    #MonkeyBackground, #LionBackground, #PandaBackground, #DogBackground {
+        width: 20vw;
+        height: 25vh;
+        margin: 0.5em;
+    }
+
+    #ShamirLogo {
+        width: 60%;
+    }
+
+    #YoutubeIcon, #FacebookIcon, #InstagramIcon {
+        width: 10vw;
+    }
+}
+
