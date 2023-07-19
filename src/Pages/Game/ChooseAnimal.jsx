@@ -6,6 +6,7 @@ import vetPandaImagePath from "../../../Public/HomePage/VetPanda.png";
 import vetMonkeyImagePath from "../../../Public/HomePage/VetMonkey.png";
 import vetDogImagePath from "../../../Public/HomePage/VetDog.png";
 import {useNavigate} from "react-router";
+import {Button} from "@mui/material";
 
 const ChooseAnimal = () => {
     const [selectedAnimal, setSelectedAnimal] = useState("");
@@ -23,27 +24,26 @@ const ChooseAnimal = () => {
 
     return(
         <div className="container">
-            <Typography id = "Title" variant="h2" gutterBottom>
+            <Typography id = "Title" variant="h2" gutterBottom style={{ direction: 'rtl' }}>
                 איזה חיה תרצה להיות?
             </Typography>
             <div className='rectangle'>
-                <button className="piece dog" onClick={() => handleAnimalClick('dog')} data-selected={selectedAnimal === 'dog' ? 'true' : 'false'}>
+                <Button className="piece dog" onClick={() => handleAnimalClick('dog')} data-selected={selectedAnimal === 'dog' ? 'true' : selectedAnimal === "" ? 'default' : 'false'}>
                     <img src={vetDogImagePath} style={{width: "100%", height: "100%"}} alt="Dog" />
-                </button>
-                <button className="piece lion" onClick={() => handleAnimalClick('lion')} data-selected={selectedAnimal === 'lion' ? 'true' : 'false'}>
+                </Button>
+                <Button className="piece lion" onClick={() => handleAnimalClick('lion')} data-selected={selectedAnimal === 'lion' ? 'true' : selectedAnimal === "" ? 'default' : 'false'}>
                     <img src={vetLionImagePath} style={{width: "100%", height: "100%"}} alt="Lion" />
-                </button>
-                <button className="piece monkey" onClick={() => handleAnimalClick('monkey')} data-selected={selectedAnimal === 'monkey' ? 'true' : 'false'}>
+                </Button>
+                <Button className="piece monkey" onClick={() => handleAnimalClick('monkey')} data-selected={selectedAnimal === 'monkey' ? 'true' : selectedAnimal === "" ? 'default' : 'false'}>
                     <img src={vetMonkeyImagePath} style={{width: "100%", height: "100%"}} alt="Monkey" />
-                </button>
-                <button className="piece panda" onClick={() => handleAnimalClick('panda')} data-selected={selectedAnimal === 'panda' ? 'true' : 'false'}>
+                </Button>
+                <Button className="piece panda" onClick={() => handleAnimalClick('panda')} data-selected={selectedAnimal === 'panda' ? 'true' : selectedAnimal === "" ? 'default' : 'false'}>
                     <img src={vetPandaImagePath} style={{width: "100%", height: "100%"}} alt="Panda" />
-                </button>
-
+                </Button>
             </div>
-            <button id="ContinueButton" disabled={selectedAnimal === null} onClick={handleContinueClick}>
+            <Button id="ContinueButton" disabled={selectedAnimal === null} onClick={handleContinueClick}>
                 המשך
-            </button>
+            </Button>
         </div>
     )
 }

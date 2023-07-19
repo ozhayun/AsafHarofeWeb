@@ -40,14 +40,20 @@
     align-items: center;
     overflow: hidden;
     transition: transform 0.3s ease;
-    opacity: 1;
+}
 
+.rectangle .piece[data-selected='true'] {
+    opacity: 1;
 }
 
 .rectangle .piece[data-selected='false'] {
-    opacity: 0.8;
-
+    opacity: 0.6;
 }
+
+.rectangle .piece[data-selected='default'] {
+    opacity: 1;
+}
+
 
 .rectangle .piece img {
     max-width: 100%;
@@ -91,5 +97,36 @@
     border-radius: 4vw;
 }
 
+#ContinueButton:hover, #ContinueButton:focus {
+    background-color: #a0f575; /* Change the background color on hover */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Add a box shadow on hover */
+}
 
 
+@media (min-width: 501px) {
+    #Title {
+        font-size: 6rem;
+        line-height: 7rem;
+    }
+
+    .rectangle {
+        width: 60%;
+        max-width: 40rem;
+        height: 25rem;
+        border-radius: 6rem;
+    }
+
+    .rectangle .piece[data-selected='true'] {
+        opacity: 1;
+    }
+
+    .rectangle .piece[data-selected='false'] {
+        opacity: 0.8;
+    }
+
+    #ContinueButton {
+        width: 30%;
+        font-size: 4vw;
+        line-height: 8vw;
+    }
+}
