@@ -21,7 +21,7 @@ const CustomToolbar = ({toolbarTitle}) => {
                 <HomeIcon />
             </IconButton>
             <Typography id="ToolbarTitle" variant="h6" noWrap={false} component="div">
-                {toolbarTitle}
+                {toolbarTitle || '\u00A0'}
             </Typography>
             <img src={shamirLogoPath} id="ShamirLogo" alt="Shamir" />
         </Toolbar>

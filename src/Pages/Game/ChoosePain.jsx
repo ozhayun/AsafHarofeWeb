@@ -20,7 +20,7 @@ const ChoosePain = () => {
                 <CustomToolbar toolbarTitle=""/>
             </div>
             <Stack spacing={2} sx={{ flexGrow: 1 }}>
-                <Typography id = "Title" variant="h2" gutterBottom>
+                <Typography id = "Title" variant="h2" gutterBottom style={{ direction: 'rtl' }}>
                     מה כואב לחיה?
                 </Typography>
                 <div className='rectanglePain'>
