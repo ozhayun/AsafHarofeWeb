@@ -28,17 +28,18 @@
 
 #HomeButton, #ShamirLogo {
     flex-shrink: 0;
-    
+
 }
 
 #ShamirLogo {
-    width: 150px;
+    width: 50px;
     height: auto;
     object-fit: contain;
 }
 
-@media only screen and (max-width: 600px) {
+@media (min-width: 601px) {
     #ShamirLogo {
-        width: 100px;
+        width: 15vw;
+        max-width: 100px;
     }
 }
