@@ -1,0 +1,95 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: contain;
+    background: linear-gradient(to bottom, #67E5D6, #FFFFFF) no-repeat;
+}
+
+#Title {
+    font-family: 'Assistant';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 5rem;
+    text-align: center;
+    color: #00456E;
+    margin-top: 1em;
+}
+.rectangle {
+    width: 80%;
+    max-width: 20rem;
+    height: 16rem;
+    border-radius: 4rem;
+    border: 0.25rem solid black;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.rectangle .piece {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    opacity: 1;
+
+}
+
+.rectangle .piece[data-selected='false'] {
+    opacity: 0.8;
+
+}
+
+.rectangle .piece img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.rectangle .piece.dog {
+    background-color: #ff0000;
+}
+
+.rectangle .piece.lion {
+    background-color: #25c9e7;
+}
+
+.rectangle .piece.monkey {
+    background-color: #00ff4c;
+}
+
+.rectangle .piece.panda {
+    background-color: #9900cc;
+}
+
+#ContinueButton {
+    margin-top: 1em;
+    width: 50%;
+    height: 5%;
+
+    font-style: normal;
+    font-weight: 450;
+    font-size: 8vw;
+    line-height: 15vw;
+    text-align: center;
+    color: #25B90D;
+
+    box-sizing: border-box;
+
+    background: #FFFFFF;
+    border: 0.7vw solid #25B90D;
+    box-shadow: 0px 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
+    border-radius: 4vw;
+}
+
+
+
