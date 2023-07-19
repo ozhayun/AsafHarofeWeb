@@ -93,13 +93,13 @@
 
     background: #FFFFFF;
     border: 0.7vw solid #25B90D;
-    box-shadow: 0px 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
     border-radius: 4vw;
 }
 
 #ContinueButton:hover, #ContinueButton:focus {
     background-color: #a0f575; /* Change the background color on hover */
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Add a box shadow on hover */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a box shadow on hover */
 }
 
 

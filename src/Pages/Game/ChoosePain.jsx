@@ -16,25 +16,22 @@ import {useState} from "react";
 const ChoosePain = () => {
     function appBarLabel() {
         return (
-            <Toolbar sx={{ maxWidth: 390, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <IconButton
+                    id="HomeButton"
+                    component={Link}
+                    to="/"
+                    aria-label="homePage"
+                >
+                    <HomeIcon />
+                </IconButton>
                 <div>
-                    <IconButton
-                        id="HomeButton"
-                        component={Link}
-                        to="/"
-                        aria-label="homePage"
-                        sx={{ marginRight: 'auto' }}
-                    >
-                        <HomeIcon />
-                    </IconButton>
-                </div>
-                <div>
-                    {/* Adjust the 'width' and 'height' properties to change the image size */}
-                    <img src={shamirLogoPath} id="ShamirLogo" alt="Shamir" style={{ width: '20%', height: '20%', marginRight: 'auto' }} />
+                    <img src={shamirLogoPath} id="ShamirLogo" alt="Shamir" style={{ width: '100%', maxWidth: '100px' }} />
                 </div>
             </Toolbar>
         );
     }
+
 
     const darkTheme = createTheme({
         palette: {
