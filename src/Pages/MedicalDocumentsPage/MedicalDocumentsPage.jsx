@@ -15,7 +15,7 @@ import {Link} from "react-router-dom";
 const MedicalDocumentsPage = () => {
     function appBarLabel(label) {
         return (
-            <Toolbar>
+            <Toolbar sx={{maxWidth: 390}}>
                 <IconButton id = "HomeButton" component={Link} to="/" aria-label="homePage" sx={{ marginRight: 'auto' }}>
                     <HomeIcon/>
                 </IconButton>
@@ -45,7 +45,7 @@ const MedicalDocumentsPage = () => {
                 </ThemeProvider>
             </Stack>
 
-            <List sx={{ width: '100%', maxWidth: 360 }}>
+            <List sx={{ width: '100%', maxWidth: 390 }}>
                 {[1, 2, 3].map((value, index) => (
                     <ListItem
                         key={value}
