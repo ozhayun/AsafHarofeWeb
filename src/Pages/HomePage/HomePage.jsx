@@ -24,7 +24,7 @@ const HomePage = () => {
                 <Button id="MedicalDocumentsButton" component={Link} to="/medical-documents">
                     מסמכים רפואים
                 </Button>
-                <Button id="StartGameButton" component={Link} to="/game">
+                <Button id="StartGameButton" component={Link} to="/choose-animal">
                     התחל משחק
                 </Button>
             </div>
