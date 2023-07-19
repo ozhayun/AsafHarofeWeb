@@ -3,142 +3,84 @@
     height: 100vh;
 }
 
-#StartGameButton {
-    position: absolute;
-    width: 299px;
-    height: 44px;
-    left: 39px;
-    top: 477px;
+/* Buttons container */
+#ButtonsDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;  /* This makes the container take up the full viewport height */
+}
+
+/* Individual buttons */
+#StartGameButton, #MedicalDocumentsButton {
+    width: 85%;
+    height: 5rem;
+    margin-top: 0.7em;
 
     font-family: 'Assistant';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
-    line-height: 52px;
+    font-size: 7vw;
+    line-height: 1;
     text-align: center;
 
-    /* ירוק */
-    color: #25B90D;
-
-    /* Rectangle 2 */
     box-sizing: border-box;
-
-    position: absolute;
-    width: 330px;
-    height: 70px;
-    left: 23px;
-    top: 472px;
-
     background: #FFFFFF;
-    /* ירוק */
     border: 2px solid #25B90D;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
 }
 
+#StartGameButton {
+    color: #25B90D;
+}
+
 #MedicalDocumentsButton {
-    /* מסמכים רפואיים */
-    position: absolute;
-    width: 299px;
-    height: 44px;
-    left: 39px;
-    top: 378px;
-
-    /* ראשי */
-    font-family: 'Assistant';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 52px;
-    text-align: center;
-
-    /* כחול ראשי */
     color: #00456E;
-
-    /* Rectangle 1 */
-
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 330px;
-    height: 70px;
-    left: 23px;
-    top: 373px;
-
-    background: #FFFFFF;
-    /* כחול ראשי */
-    border: 2px solid #00456E;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
+    border-color: #00456E;
 }
 
-#LionBackground {
-    /* אריה */
-    position: absolute;
-    width: 166px;
-    height: 198px;
-    left: 90px;
-    top: 210px;
-    transform: rotate(6deg);
+
+.AnimalsBackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5em;
 }
 
-#PandaBackground {
-    /* פנדוקטור */
-    position: absolute;
-    width: 172px;
-    height: 205px;
-    left: 170px;
-    top: 213px;
+#MonkeyBackground, #LionBackground, #PandaBackground, #DogBackground {
+    width: 37vw;
+    height: 13em;
+    margin: -2em;
 }
 
-#MonkeyBackground {
-    /* קופרסור */
-    position: absolute;
-    width: 172px;
-    height: 208px;
-    left: 0px;
-    top: 196px;
-}
-
-#DogBackground{
-    /* כלבטרינר */
-    position: absolute;
-    width: 184px;
-    height: 211px;
-    left: 220px;
-    top: 208px;
-
+#DogBackground {
     transform: rotate(-3.97deg);
 }
 
+#LionBackground {
+    transform: rotate(6deg);
+}
+
 #ShamirLogo {
-    position: absolute;
-    width: 293px;
-    height: 130px;
-    left: 41px;
-    top: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* Adjust based on your need */
+    height: auto; /* Let the height auto-adjust */
+    margin: 1em auto; /* Center the logo */
 }
 
-#YoutubeIcon{
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    top:580px;
-    left: 90px;
+
+#LinksDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#FacebookIcon{
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    top:580px;
-    left: 160px;
-}
-
-#InstagramIcon {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    top:580px;
-    left: 230px;
+#YoutubeIcon, #FacebookIcon, #InstagramIcon {
+    width: 15vw; /* Adjust based on viewport width */
+    height: auto; /* Let the height auto-adjust */
+    margin: 1em; /* Space around icons */
 }

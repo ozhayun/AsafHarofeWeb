@@ -15,19 +15,20 @@ const HomePage = () => {
         <div id="HomePage">
             <img src={shamirLogoPath} id="ShamirLogo" alt="Shamir"/>
             <div className="AnimalsBackground">
+                <img src={vetMonkeyImagePath} id="MonkeyBackground" alt="Monkey"/>
                 <img src={vetLionImagePath} id="LionBackground" alt="Lion"/>
                 <img src={vetPandaImagePath} id="PandaBackground" alt="Panda"/>
-                <img src={vetMonkeyImagePath} id="MonkeyBackground" alt="Monkey"/>
                 <img src={vetDogImagePath} id="DogBackground" alt="Dog"/>
             </div>
-            <Button id="MedicalDocumentsButton" component={Link} to="/medical-documents">
-                מסמכים רפואים
-            </Button>
-            <Button id="StartGameButton" component={Link} to="/game">
-                התחל משחק
-            </Button>
-
-            <div id='linksDiv'>
+            <div id="ButtonsDiv">
+                <Button id="MedicalDocumentsButton" component={Link} to="/medical-documents">
+                    מסמכים רפואים
+                </Button>
+                <Button id="StartGameButton" component={Link} to="/game">
+                    התחל משחק
+                </Button>
+            </div>
+            <div id='LinksDiv'>
                 <a href="https://www.youtube.com/@Aharofeh" target="_blank">
                     <img src={youtubeImagePath} id="YoutubeIcon" alt='Youtube'/>
                 </a>
