@@ -1,3 +1,12 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: contain;
+    background: linear-gradient(to bottom, #67E5D6, #FFFFFF) no-repeat;
+}
+
 .rectanglePain {
     width: 80%;
     max-width: 20rem;

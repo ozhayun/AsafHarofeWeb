@@ -1,5 +1,5 @@
-import {useState} from 'react'
 import './ChooseAnimal.css'
+import {useState} from 'react'
 import Typography from "@mui/material/Typography";
 import vetLionImagePath from "../../../Public/HomePage/VetLion.png";
 import vetPandaImagePath from "../../../Public/HomePage/VetPanda.png";
@@ -7,6 +7,8 @@ import vetMonkeyImagePath from "../../../Public/HomePage/VetMonkey.png";
 import vetDogImagePath from "../../../Public/HomePage/VetDog.png";
 import {useNavigate} from "react-router";
 import {Button} from "@mui/material";
+import CustomToolbar from '../../Components/CustomToolbar.jsx';
+import * as React from "react";
 
 const ChooseAnimal = () => {
     const [selectedAnimal, setSelectedAnimal] = useState("");
@@ -24,6 +26,9 @@ const ChooseAnimal = () => {
 
     return(
         <div className="container">
+            <div className="toolbar-container">
+                <CustomToolbar toolbarTitle=""/>
+            </div>
             <Typography id = "Title" variant="h2" gutterBottom style={{ direction: 'rtl' }}>
                 איזה חיה תרצה להיות?
             </Typography>
