@@ -20,7 +20,7 @@ const ChooseAnimal = () => {
 
     const handleContinueClick = () => {
         if(selectedAnimal) {
-            navigate('/choose-pain');
+            navigate('/choose-pain', { state: { animal: selectedAnimal } });
         }
     }
 

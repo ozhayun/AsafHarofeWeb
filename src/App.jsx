@@ -15,7 +15,6 @@ function App() {
                 <Route path="/game" element={<GamePage />} />
                 <Route path="/choose-animal" element={<ChooseAnimal />} />
                 <Route path="/choose-pain" element={<ChoosePain />} />
-
             </Routes>
         </Router>
     );

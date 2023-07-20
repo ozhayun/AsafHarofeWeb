@@ -1,6 +1,5 @@
 import './ChoosePain.css'
 import * as React from 'react';
-import Stack from '@mui/material/Stack';
 import Typography from "@mui/material/Typography";
 import ThermometerImagePath from "../../../Public/HomePage/Thermometer.png";
 import PlasterImagePath from "../../../Public/HomePage/Plaster.png";
@@ -8,10 +7,13 @@ import {useState} from "react";
 import CustomToolbar from '../../Components/CustomToolbar.jsx';
 import {Button} from "@mui/material";
 import {useNavigate} from "react-router";
+import {useLocation} from "react-router-dom";
 
-const ChoosePain = ({animal}) => {
+const ChoosePain = () => {
     const [selectedPain, setSelectedPain] = useState("");
     const navigate = useNavigate();
+    const location = useLocation();
+    const { animal } = location.state || {};
 
     const handlePainClick = (pain) => {
         setSelectedPain(pain);
@@ -19,7 +21,7 @@ const ChoosePain = ({animal}) => {
 
     const handleContinueClick = () => {
         if(selectedPain) {
-            navigate('/game', { state: { pain: selectedPain } });
+            navigate('/game', { state: { pain: selectedPain, animal: animal } });
         }
     }
 
