@@ -7,6 +7,17 @@
     background: linear-gradient(to bottom, #67E5D6, #FFFFFF) no-repeat;
 }
 
+#Title {
+    font-family: 'Assistant';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 5rem;
+    text-align: center;
+    color: #00456E;
+    margin-top: 1em;
+}
+
 .rectanglePain {
     width: 80%;
     max-width: 20rem;
@@ -18,6 +29,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
 }
+
 
 .rectanglePain .piece {
     width: 100%;
@@ -35,11 +47,17 @@
 
 .rectanglePain .piece[data-selected='false'] {
     opacity: 0.8;
+    background-color: lightgray;
 }
 
 .rectanglePain .piece[data-selected='true'] {
      opacity: 1;
+    background-color: #25B90D;
  }
+
+.rectangle .piece[data-selected='default'] {
+    opacity: 1;
+}
 
 .rectanglePain .piece img {
     max-width: 100%;
@@ -65,4 +83,3 @@
         width: 50%;
     }
 }
-
