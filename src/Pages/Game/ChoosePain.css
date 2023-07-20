@@ -58,3 +58,10 @@
     font-size: 4vw;
     line-height: 8vw;
 }
+
+
+@media screen and (max-width: 600px) {
+    #ShamirLogo {
+        width: 50%;
+    }
+}

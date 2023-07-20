@@ -1,0 +1,45 @@
+.toolbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.toolbar {
+    height: 12vh;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.left-container, .right-container {
+    flex-basis: 20%;
+}
+
+#ToolbarTitle {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+#HomeButton, #ShamirLogo {
+    flex-shrink: 0;
+
+}
+
+#ShamirLogo {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (min-width: 601px) {
+    #ShamirLogo {
+        width: 15vw;
+        max-width: 100px;
+    }
+}
