@@ -1,52 +1,17 @@
-import './ChoosePain.css'
 import * as React from 'react';
 import './ChoosePain.css';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import { Link } from 'react-router-dom';
-import HomeIcon from '@mui/icons-material/Home.js';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Typography from "@mui/material/Typography";
 import ThermometerImagePath from "../../../Public/HomePage/Thermometer.png";
 import PlasterImagePath from "../../../Public/HomePage/Plaster.png";
 import {useState} from "react";
+import CustomToolbar from "../../Components/CustomToolbar.jsx";
+import {Button} from "@mui/material";
+import {useNavigate} from "react-router";
 
 
 const ChoosePain = () => {
     const [selectedPain, setSelectedPain] = useState("");
-    const navigate = useNavigate('/choose-pain');
-
-    function appBarLabel() {
-        return (
-            <Toolbar sx={{maxWidth: 390, display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-                <div>
-                    <IconButton
-                        id="HomeButton"
-                        component={Link}
-                        to="/"
-                        aria-label="homePage"
-                        sx={{marginRight: 'auto'}}
-                    >
-                        <HomeIcon/>
-                    </IconButton>
-                </div>
-                <div>
-                    {/* Adjust the 'width' and 'height' properties to change the image size */}
-                    <img src={shamirLogoPath} id="ShamirLogo" alt="Shamir"
-                         style={{width: '20%', height: '20%', marginRight: 'auto'}}/>
-                </div>
-            </Toolbar>
-        );
-    }
-
-    const darkTheme = createTheme({
-        palette: {
-            mode: 'dark',
-            primary: {
-                main: '#1976d2',
-            },
-        },
-    });
+    const navigate = useNavigate();
 
     const handlePainClick = (pain) => {
         setSelectedPain(pain);
