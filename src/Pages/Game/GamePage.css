@@ -10,9 +10,15 @@
 
 .cell {
     border: 1px solid #677365;
+}
+
+.animal.background {
 
 }
 
+#RollButton {
+    border: #04857F;
+}
 
 @media (min-width: 500px) {
     .game-board {

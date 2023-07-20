@@ -1,0 +1,12 @@
+#Dice {
+    width: 20vw;
+    height: 10vh;
+    object-fit: contain;
+}
+
+.dice-container {
+    background-color: #04857F;
+    display: inline-block;
+
+
+}
