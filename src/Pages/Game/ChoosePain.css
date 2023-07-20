@@ -22,9 +22,7 @@
 .rectanglePain .piece {
     width: 100%;
     height: 100%;
-    border: black;
-    border-color: blue;
-    border-width: 3px;
+    border: 0.2rem solid black;
     background: none;
     display: flex;
     flex-direction: column;
@@ -37,11 +35,17 @@
 
 .rectanglePain .piece[data-selected='false'] {
     opacity: 0.8;
+    background-color: lightgray;
 }
 
 .rectanglePain .piece[data-selected='true'] {
      opacity: 1;
+    background-color: #25B90D;
  }
+
+.rectangle .piece[data-selected='default'] {
+    opacity: 1;
+}
 
 .rectanglePain .piece img {
     max-width: 100%;

@@ -73,13 +73,13 @@ const ChoosePain = () => {
                     מה כואב לחיה?
                 </Typography>
                 <div className='rectanglePain'>
-                    <Button className="piece" onClick={() => handlePainClick('cut')}
-                            data-selected={selectedPain === 'Thermometer' ? 'true' : 'false'}>
+                    <Button className="piece" onClick={() => handlePainClick('fiver')}
+                            data-selected={selectedPain === 'fiver' ? 'true' : selectedPain === "" ? 'default' : 'false'}>
                         <img src={ThermometerImagePath} style={{width: "100%", height: "100%"}} alt="Thermometer"/>
                         ?יש לה חום
                     </Button>
-                    <Button className="piece" onClick={() => handlePainClick('fiver')}
-                            data-selected={selectedPain === 'Plaster' ? 'true' : 'false'}>
+                    <Button className="piece" onClick={() => handlePainClick('cut')}
+                            data-selected={selectedPain === 'cut' ? 'true' : selectedPain === "" ? 'default' : 'false'}>
                         <img src={PlasterImagePath} style={{width: "100%", height: "100%"}} alt="Plaster"/>
                         ?יש לה חתך
                     </Button>
