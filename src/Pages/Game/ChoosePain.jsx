@@ -19,7 +19,7 @@ const ChoosePain = () => {
 
     const handleContinueClick = () => {
         if(selectedPain) {
-            navigate('/start-board');
+            navigate('/game');
         }
     }
 
@@ -28,26 +28,24 @@ const ChoosePain = () => {
             <div className="toolbar-container">
                 <CustomToolbar toolbarTitle=""/>
             </div>
-            <Stack spacing={2} sx={{ flexGrow: 1 }}>
-                <Typography id = "Title" variant="h2" gutterBottom style={{ direction: 'rtl' }}>
-                    מה כואב לחיה?
-                </Typography>
-                <div className='rectanglePain'>
-                    <Button className="piece" onClick={() => handlePainClick('cut')}
-                            data-selected={selectedPain === 'Thermometer' ? 'true' : 'false'}>
-                        <img src={ThermometerImagePath} style={{width: "100%", height: "100%"}} alt="Thermometer"/>
-                        ?יש לה חום
-                    </Button>
-                    <Button className="piece" onClick={() => handlePainClick('fiver')}
-                            data-selected={selectedPain === 'Plaster' ? 'true' : 'false'}>
-                        <img src={PlasterImagePath} style={{width: "100%", height: "100%"}} alt="Plaster"/>
-                        ?יש לה חתך
-                    </Button>
-                </div>
-                <Button id="ContinueButton" disabled={selectedPain === null} onClick={handleContinueClick}>
-                    המשך
+            <Typography id = "Title" variant="h2" gutterBottom style={{ direction: 'rtl' }}>
+                מה כואב לחיה?
+            </Typography>
+            <div className='rectanglePain'>
+                <Button className="piece" onClick={() => handlePainClick('cut')}
+                        data-selected={selectedPain === 'Thermometer' ? 'true' : 'false'}>
+                    <img src={ThermometerImagePath} style={{width: "100%", height: "100%"}} alt="Thermometer"/>
+                    ?יש לה חום
                 </Button>
-            </Stack>
+                <Button className="piece" onClick={() => handlePainClick('fiver')}
+                        data-selected={selectedPain === 'Plaster' ? 'true' : 'false'}>
+                    <img src={PlasterImagePath} style={{width: "100%", height: "100%"}} alt="Plaster"/>
+                    ?יש לה חתך
+                </Button>
+            </div>
+            <Button id="ContinueButton" disabled={selectedPain === ""} onClick={handleContinueClick}>
+                המשך
+            </Button>
         </div>
     );
 }

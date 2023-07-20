@@ -1,3 +1,4 @@
+import './MedicalDocumentsPage.css'
 import React from 'react';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -10,12 +11,12 @@ const MedicalDocumentsPage = () => {
 
 
     return (
-        <div>
+        <div className="medical documents container">
             <div className="toolbar-container">
                 <CustomToolbar toolbarTitle="מסמכים רפואים"/>
             </div>
             <List sx={{ width: '100%'}}>
-                {[1, 2, 3].map((value, index) => (
+                {[1, 2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20].map((value, index) => (
                     <ListItem
                         key={value}
                         disableGutters

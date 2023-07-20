@@ -46,7 +46,7 @@ const ChooseAnimal = () => {
                     <img src={vetPandaImagePath} style={{width: "100%", height: "100%"}} alt="Panda" />
                 </Button>
             </div>
-            <Button id="ContinueButton" disabled={selectedAnimal === null} onClick={handleContinueClick}>
+            <Button id="ContinueButton" disabled={selectedAnimal === ""} onClick={handleContinueClick}>
                 המשך
             </Button>
         </div>
