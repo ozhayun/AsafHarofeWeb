@@ -9,7 +9,7 @@ import CustomToolbar from '../../Components/CustomToolbar.jsx';
 import {Button} from "@mui/material";
 import {useNavigate} from "react-router";
 
-const ChoosePain = () => {
+const ChoosePain = ({animal}) => {
     const [selectedPain, setSelectedPain] = useState("");
     const navigate = useNavigate();
 
@@ -19,7 +19,7 @@ const ChoosePain = () => {
 
     const handleContinueClick = () => {
         if(selectedPain) {
-            navigate('/game');
+            navigate('/game', { state: { pain: selectedPain } });
         }
     }
 

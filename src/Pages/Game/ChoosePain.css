@@ -22,9 +22,7 @@
 .rectanglePain .piece {
     width: 100%;
     height: 100%;
-    border: black;
-    border-color: blue;
-    border-width: 3px;
+    border: 0.2rem solid black;
     background: none;
     display: flex;
     flex-direction: column;
