@@ -1,0 +1,26 @@
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    border: 0.25rem solid #000000;
+    overflow: hidden;
+    height: 60vh;
+    width: 100vw;
+}
+
+.cell {
+    border: 1px solid #677365;
+
+}
+
+
+@media (min-width: 500px) {
+    .game-board {
+        width: 80%;
+        max-width: 550px;
+        height: 70vh;
+        max-height: 550px;
+        margin: 0 auto;
+    }
+}
