@@ -1,11 +1,14 @@
 #Dice {
     width: 20vw;
-    height: 10vh;
+    height: 8vh;
     object-fit: contain;
 }
 
 .dice-container {
+    width: 20vw;
+    height: 8vh;
     display: inline-block;
-
-
+    background-color: #04857F;
+    border-radius: 10px;
 }
+

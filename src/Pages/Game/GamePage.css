@@ -63,7 +63,17 @@
 }
 
 #RollButton {
+    margin-top: 0.5em;
+    width: 3em;
+    height: 1em;
+    justify-content: center;
+    text-align: center;
     border: #04857F;
+    font-size: 1.7em;
+    color: white;
+    display: inline-block;
+    background-color: #04857F;
+    border-radius: 10px;
 }
 
 @media (min-width: 500px) {
