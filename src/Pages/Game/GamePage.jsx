@@ -2,9 +2,7 @@ import './GamePage.css'
 import CustomToolbar from "../../Components/CustomToolbar.jsx";
 import * as React from "react";
 import { useLocation } from 'react-router-dom';
-import { Button } from "@mui/material";
 import Dice from '../../Components/Dice';
-import { useState } from "react";
 import vetLionImagePath from "../../../Public/HomePage/VetLion.png";
 import vetPandaImagePath from "../../../Public/HomePage/VetPanda.png";
 import vetMonkeyImagePath from "../../../Public/HomePage/VetMonkey.png";
@@ -13,14 +11,8 @@ import vetDogImagePath from "../../../Public/HomePage/VetDog.png";
 const GamePage = () => {
     const location = useLocation();
     const {pain, animal} = location.state || {};
-    const [diceNumber, setDiceNumber] = useState(1);
 
     console.log("Pain: ", pain, "Animal: ", animal)
-
-    const rollDice = () => {
-        const newDiceNumber = Math.floor(Math.random() * 6) + 1;
-        setDiceNumber(newDiceNumber);
-    };
 
     const animalClass = `animal ${animal || ''}`; // Use an empty string as a fallback if 'animal' is not provided
 
@@ -48,15 +40,27 @@ const GamePage = () => {
                 <CustomToolbar toolbarTitle="סולמות ומגלשות"/>
             </div>
             <div className="game-board">
-                {Array.from({length: 100}, (_, index) => (
-                    <div className="cell" key={index}/>
-                ))}
+                {Array.from({length: 100}, (_, index) => {
+                    const x = Math.floor(index / 10);
+                    const y = index % 10;
+                    const isOddRow = x % 2 !== 0;
+                    const cellNumber = isOddRow ? (9 - x) * 10 + (10 - y) : (9 - x) * 10 + y + 1;
+                    return (
+                        <div className="cell" key={index}>
+                            <span className="cell-number">{cellNumber}</span>
+                        </div>
+                    );
+                })}
             </div>
+
+
+
+
+
             <div className={animalClass}>
                 {animalImage && <img src={animalImage} alt={animal} className="animal-image"/>}
                 <div className='rectangleDice'>
-                    <Dice diceNumber={diceNumber}/>
-                    <Button id="RollButton" onClick={rollDice}>הטל</Button>
+                    <Dice/>
                 </div>
             </div>
         </div>

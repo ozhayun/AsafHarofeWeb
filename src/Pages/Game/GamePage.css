@@ -6,11 +6,37 @@
     overflow: hidden;
     height: 60vh;
     width: 100vw;
+    flex-direction: column-reverse;
 }
 
 .cell {
     border: 1px solid #677365;
+    position: relative;
 }
+
+.cell-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.2em;
+}
+
+
+
+
+.cell {
+    border: 1px solid #677365;
+    position: relative;  /* This makes .cell a relative container */
+}
+
+.cell-number {
+    position: absolute;  /* This positions .cell-number absolutely within .cell */
+    top: 0;  /* This aligns .cell-number with the top of .cell */
+    left: 0;  /* This aligns .cell-number with the left of .cell */
+    padding: 0.2rem;  /* Add some spacing around .cell-number */
+    font-size: 0.8rem;  /* Adjust the font size of .cell-number */
+}
+
 
 .animal {
     display: flex;
@@ -62,19 +88,7 @@
     align-items: center;
 }
 
-#RollButton {
-    margin-top: 0.5em;
-    width: 3em;
-    height: 1em;
-    justify-content: center;
-    text-align: center;
-    border: #04857F;
-    font-size: 1.7em;
-    color: white;
-    display: inline-block;
-    background-color: #04857F;
-    border-radius: 10px;
-}
+
 
 @media (min-width: 500px) {
     .game-board {
