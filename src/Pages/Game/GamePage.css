@@ -22,8 +22,6 @@
 }
 
 
-
-
 .cell {
     border: 1px solid #677365;
     position: relative;  /* This makes .cell a relative container */
@@ -36,6 +34,16 @@
     padding: 0.2rem;  /* Add some spacing around .cell-number */
     font-size: 0.8rem;  /* Adjust the font size of .cell-number */
 }
+
+.slide-image {
+    z-index: 1;
+    position: absolute;
+    height: 30%; /* Adjust the height of the slide image */
+    width: 40%; /* Adjust the width of the slide image */
+    top: 40%; /* Adjust the top position to start at slot 95 */
+    left: 40%; /* Adjust the left position to start at slot 95 */
+}
+
 
 
 .animal {

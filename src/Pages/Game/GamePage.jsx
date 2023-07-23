@@ -7,6 +7,7 @@ import vetLionImagePath from "../../../Public/HomePage/VetLion.png";
 import vetPandaImagePath from "../../../Public/HomePage/VetPanda.png";
 import vetMonkeyImagePath from "../../../Public/HomePage/VetMonkey.png";
 import vetDogImagePath from "../../../Public/HomePage/VetDog.png";
+import slideImagePath from "../../../Public/GamePage/water-slide-04 1.png";
 
 const GamePage = () => {
     const location = useLocation();
@@ -39,6 +40,7 @@ const GamePage = () => {
             <div className="toolbar-container">
                 <CustomToolbar toolbarTitle="סולמות ומגלשות"/>
             </div>
+
             <div className="game-board">
                 {Array.from({length: 100}, (_, index) => {
                     const x = Math.floor(index / 10);
@@ -51,6 +53,9 @@ const GamePage = () => {
                         </div>
                     );
                 })}
+                <div className="slide-image">
+                    <img src={slideImagePath} alt="Slide" className="slide-image" />
+                </div>
             </div>
 
 
