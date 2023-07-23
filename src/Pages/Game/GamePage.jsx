@@ -53,8 +53,11 @@ const GamePage = () => {
                         </div>
                     );
                 })}
-                <div className="slide-image">
-                    <img src={slideImagePath} alt="Slide" className="slide-image" />
+                <div className="slide-image1">
+                    <img src={slideImagePath} alt="Slide" className="slide-image1" />
+                </div>
+                <div className="slide-image2">
+                    <img src={slideImagePath} alt="Slide" className="slide-image2" />
                 </div>
             </div>
 

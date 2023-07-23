@@ -1,4 +1,12 @@
+game-board-container{
+    height: 60vh;
+    width: 100vw;
+    flex-direction: column-reverse;
+    position: absolute;
+}
+
 .game-board {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
@@ -35,13 +43,24 @@
     font-size: 0.8rem;  /* Adjust the font size of .cell-number */
 }
 
-.slide-image {
+.slide-image1 {
     z-index: 1;
     position: absolute;
-    height: 30%; /* Adjust the height of the slide image */
+    height: 40%; /* Adjust the height of the slide image */
     width: 40%; /* Adjust the width of the slide image */
-    top: 40%; /* Adjust the top position to start at slot 95 */
-    left: 40%; /* Adjust the left position to start at slot 95 */
+    top: 41%; /* Adjust the top position to start at slot 95 */
+    left: 38%; /* Adjust the left position to start at slot 95 */
+    opacity: 90%;
+}
+
+.slide-image2 {
+    z-index: 1;
+    position: absolute;
+    height: 50%; /* Adjust the height of the slide image */
+    width: 50%; /* Adjust the width of the slide image */
+    top: 22%; /* Adjust the top position to start at slot 95 */
+    left: 17%; /* Adjust the left position to start at slot 95 */
+    opacity: 90%;
 }
 
 
