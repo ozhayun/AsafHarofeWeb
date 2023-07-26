@@ -1,4 +1,4 @@
-import './GamePage.css'
+import './GamePage.css';
 import CustomToolbar from "../../Components/CustomToolbar.jsx";
 import * as React from "react";
 import { useLocation } from 'react-router-dom';
@@ -45,6 +45,13 @@ const GamePage = () => {
             playerImage = null;
     }
 
+    const [playerPosition, setPlayerPosition] = React.useState(1);
+
+    const updatePlayerPosition = (rollResult) => {
+        const newPosition = Math.min(playerPosition + rollResult, 100);
+        setPlayerPosition(newPosition);
+    };
+
     return (
         <div className="container">
             <div className="toolbar-container">
@@ -52,13 +59,13 @@ const GamePage = () => {
             </div>
 
             <div className="game-board">
-                {Array.from({length: 100}, (_, index) => {
+                {Array.from({ length: 100 }, (_, index) => {
                     const x = Math.floor(index / 10);
                     const y = index % 10;
                     const isOddRow = x % 2 !== 0;
                     const cellNumber = isOddRow ? (9 - x) * 10 + (10 - y) : (9 - x) * 10 + y + 1;
 
-                    if (cellNumber === 1) {
+                    if (cellNumber === playerPosition) {
                         return (
                             <div className="cell" key={index}>
                                 <span className="cell-number">{cellNumber}</span>
@@ -98,11 +105,10 @@ const GamePage = () => {
                 </div>
             </div>
 
-
             <div className={animalClass}>
                 {animalImage && <img src={animalImage} alt={animal} className="animal-image"/>}
                 <div className='rectangleDice'>
-                    <Dice/>
+                    <Dice updatePlayerPosition={updatePlayerPosition} />
                 </div>
             </div>
         </div>
