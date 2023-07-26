@@ -52,11 +52,6 @@ const GamePage = () => {
                     );
                 })}
             </div>
-
-
-
-
-
             <div className={animalClass}>
                 {animalImage && <img src={animalImage} alt={animal} className="animal-image"/>}
                 <div className='rectangleDice'>

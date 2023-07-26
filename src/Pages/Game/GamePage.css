@@ -1,3 +1,10 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .game-board {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -8,6 +15,7 @@
     width: 100vw;
     flex-direction: column-reverse;
 }
+
 
 .cell {
     border: 1px solid #677365;
@@ -20,9 +28,6 @@
     left: 0;
     padding: 0.2em;
 }
-
-
-
 
 .cell {
     border: 1px solid #677365;
@@ -90,7 +95,7 @@
 
 
 
-@media (min-width: 500px) {
+@media (min-width: 601px) {
     .game-board {
         width: 80%;
         max-width: 550px;
@@ -98,4 +103,26 @@
         max-height: 550px;
         margin: 0 auto;
     }
+
+    .animal-image {
+        width: 20vw;
+        height: 20vh;
+    }
+
+    .rectangleDice {
+        height: 35vh;
+    }
+
+    .animal {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+        width: 100%;
+        height: 40vh;
+        padding: 20px;
+        background-size: contain;
+        justify-content: center;
+        position: relative;
+    }
+
 }

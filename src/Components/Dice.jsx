@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './Dice.css'
 import dice1 from '../../Public/GamePage/1.png';
 import dice2 from '../../Public/GamePage/2.png';
@@ -20,18 +20,21 @@ const Dice = () => {
 
     return (
         <div className="dice-container">
-            {diceImages.map((diceImage, index) => (
-                <img
-                    key={index}
-                    id={`DiceImage-${index + 1}`}
-                    className={`dice-image ${diceNumber === index + 1 ? 'visible' : ''}`}
-                    src={diceImage}
-                    alt={`Dice ${index + 1}`}
-                />
-            ))}
+            <div className="dice-images">
+                {diceImages.map((diceImage, index) => (
+                    <img
+                        key={index}
+                        id={`DiceImage-${index + 1}`}
+                        className={`dice-image ${diceNumber === index + 1 ? 'visible' : ''}`}
+                        src={diceImage}
+                        alt={`Dice ${index + 1}`}
+                    />
+                ))}
+            </div>
             <Button id="RollButton" onClick={rollDice}>הטל</Button>
         </div>
     );
 };
+
 
 export default Dice;

@@ -46,7 +46,7 @@
 }
 
 .rectangle .piece[data-selected='false'] {
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 .rectangle .piece[data-selected='default'] {
@@ -113,14 +113,6 @@
         max-width: 40rem;
         height: 25rem;
         border-radius: 6rem;
-    }
-
-    .rectangle .piece[data-selected='true'] {
-        opacity: 1;
-    }
-
-    .rectangle .piece[data-selected='false'] {
-        opacity: 0.8;
     }
 
     #ContinueButton {
