@@ -1,11 +1,12 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+game-board-container{
+    height: 60vh;
+    width: 100vw;
+    flex-direction: column-reverse;
+    position: absolute;
 }
 
 .game-board {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
@@ -15,7 +16,6 @@
     width: 100vw;
     flex-direction: column-reverse;
 }
-
 
 .cell {
     border: 1px solid #677365;
@@ -28,6 +28,7 @@
     left: 0;
     padding: 0.2em;
 }
+
 
 .cell {
     border: 1px solid #677365;
@@ -42,6 +43,86 @@
     font-size: 0.8rem;  /* Adjust the font size of .cell-number */
 }
 
+.player-image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%; /* Adjust the width of the player's image as needed */
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 80%; /* Adjust the max-height of the player's image as needed */
+}
+
+.slide-image1 {
+    z-index: 1;
+    position: absolute;
+    height: 37%; /* Adjust the height of the slide image */
+    width: 40%; /* Adjust the width of the slide image */
+    top: 54%; /* Adjust the top position to start at slot 95 */
+    left: 38%; /* Adjust the left position to start at slot 95 */
+    opacity: 80%;
+
+}
+
+.slide-image2 {
+    z-index: 1;
+    position: absolute;
+    height: 50%; /* Adjust the height of the slide image */
+    width: 55%; /* Adjust the width of the slide image */
+    top: 3%; /* Adjust the top position to start at slot 95 */
+    left: 8%; /* Adjust the left position to start at slot 95 */
+    opacity: 80%;
+}
+
+.slide-image3 {
+    z-index: 1;
+    position: absolute;
+    height: 50%; /* Adjust the height of the slide image */
+    width: 52%; /* Adjust the width of the slide image */
+    top: 23%; /* Adjust the top position to start at slot 95 */
+    left: 42%; /* Adjust the left position to start at slot 95 */
+    opacity: 80%;
+}
+
+.ladder-image1 {
+    z-index: 1;
+    position: absolute;
+    height: 42%; /* Adjust the height of the slide image */
+    width: 40%; /* Adjust the width of the slide image */
+    top: 5%; /* Adjust the top position to start at slot 95 */
+    left: 52%; /* Adjust the left position to start at slot 95 */
+    opacity: 80%;
+}
+
+.ladder-image2 {
+    z-index: 1;
+    position: absolute;
+    height: 63%; /* Adjust the height of the slide image */
+    width: 40%; /* Adjust the width of the slide image */
+    top: 35%; /* Adjust the top position to start at slot 95 */
+    left: 9%; /* Adjust the left position to start at slot 95 */
+    opacity: 80%;
+}
+
+.ladder-image3 {
+    z-index: 1;
+    position: absolute;
+    height: 42%; /* Adjust the height of the slide image */
+    width: 40%; /* Adjust the width of the slide image */
+    top: 55%; /* Adjust the top position to start at slot 95 */
+    left: 52%; /* Adjust the left position to start at slot 95 */
+    opacity: 80%;
+}
+
+.ladder-image4 {
+    z-index: 1;
+    position: absolute;
+    height: 73%; /* Adjust the height of the slide image */
+    width: 40%; /* Adjust the width of the slide image */
+    top: 14%; /* Adjust the top position to start at slot 95 */
+    left: 30%; /* Adjust the left position to start at slot 95 */
+    opacity: 80%;
+}
 
 .animal {
     display: flex;
@@ -95,7 +176,7 @@
 
 
 
-@media (min-width: 601px) {
+@media (min-width: 500px) {
     .game-board {
         width: 80%;
         max-width: 550px;
@@ -103,26 +184,4 @@
         max-height: 550px;
         margin: 0 auto;
     }
-
-    .animal-image {
-        width: 20vw;
-        height: 20vh;
-    }
-
-    .rectangleDice {
-        height: 35vh;
-    }
-
-    .animal {
-        display: flex;
-        align-items: center;
-        margin-top: auto;
-        width: 100%;
-        height: 40vh;
-        padding: 20px;
-        background-size: contain;
-        justify-content: center;
-        position: relative;
-    }
-
 }
