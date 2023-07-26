@@ -12,6 +12,7 @@ import vetDogImagePath from "../../../Public/HomePage/VetDog.png";
 // import vetDogPlayerImagePath from "../../../Public/GamePage/dogPlayer.png";
 import slideImagePath from "../../../Public/GamePage/water-slide.png";
 import ladderImagePath from "../../../Public/GamePage/ladder.png";
+import Dice from "../../Components/Dice.jsx";
 
 const GamePage = () => {
     const location = useLocation();
@@ -73,30 +74,37 @@ const GamePage = () => {
                     );
                 })}
 
-                <div className="slide-image1">
-                    <img src={slideImagePath} alt="Slide" className="slide-image1"/>
-                </div>
-                <div className="slide-image2">
-                    <img src={slideImagePath} alt="Slide" className="slide-image2"/>
-                </div>
-                <div className="slide-image3">
-                    <img src={slideImagePath} alt="Slide" className="slide-image3"/>
-                </div>
+            <div className="slide-image1">
+                <img src={slideImagePath} alt="Slide" className="slide-image1"/>
+            </div>
+            <div className="slide-image2">
+                <img src={slideImagePath} alt="Slide" className="slide-image2"/>
+            </div>
+            <div className="slide-image3">
+                <img src={slideImagePath} alt="Slide" className="slide-image3"/>
+            </div>
 
-                <div className="ladder-image1">
-                    <img src={ladderImagePath} alt="Slide" className="ladder-image1"/>
-                </div>
-                <div className="ladder-image2">
-                    <img src={ladderImagePath} alt="Slide" className="ladder-image2"/>
-                </div>
-                <div className="ladder-image3">
-                    <img src={ladderImagePath} alt="Slide" className="ladder-image3"/>
-                </div>
-                <div className="ladder-image4">
-                    <img src={ladderImagePath} alt="Slide" className="ladder-image4"/>
+            <div className="ladder-image1">
+                <img src={ladderImagePath} alt="Slide" className="ladder-image1"/>
+            </div>
+            <div className="ladder-image2">
+                <img src={ladderImagePath} alt="Slide" className="ladder-image2"/>
+            </div>
+            <div className="ladder-image3">
+                <img src={ladderImagePath} alt="Slide" className="ladder-image3"/>
+            </div>
+            <div className="ladder-image4">
+                <img src={ladderImagePath} alt="Slide" className="ladder-image4"/>
+            </div>
+
+            <div className={animalClass}>
+                {animalImage && <img src={animalImage} alt={animal} className="animal-image"/>}
+                <div className='rectangleDice'>
+                    <Dice/>
                 </div>
             </div>
         </div>
-    )
-}
+    </div>
+    );
+};
 export default GamePage;
