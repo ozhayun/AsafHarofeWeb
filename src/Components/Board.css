@@ -10,19 +10,6 @@
     flex-direction: column-reverse;
 }
 
-.cell {
-    border: 1px solid #677365;
-    position: relative;  /* This makes .cell a relative container */
-}
-
-.cell-number {
-    position: absolute;  /* This positions .cell-number absolutely within .cell */
-    top: 0;  /* This aligns .cell-number with the top of .cell */
-    left: 0;  /* This aligns .cell-number with the left of .cell */
-    padding: 0.2rem;  /* Add some spacing around .cell-number */
-    font-size: 0.8rem;  /* Adjust the font size of .cell-number */
-}
-
 .player-image{
     position: absolute;
     top: 50%;

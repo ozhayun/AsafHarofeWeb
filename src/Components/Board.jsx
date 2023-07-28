@@ -1,7 +1,8 @@
 import "./Board.css"
+import Cell from "./Cell.jsx"
 import * as React from "react";
 
-const Board = ({playerPosition, playerImage}) => {
+const Board = ({ playerPosition, playerImage }) => {
     return (
         <div className="game-board">
             {Array.from({ length: 100 }, (_, index) => {
@@ -10,19 +11,13 @@ const Board = ({playerPosition, playerImage}) => {
                 const isOddRow = x % 2 !== 0;
                 const cellNumber = isOddRow ? (9 - x) * 10 + (10 - y) : (9 - x) * 10 + y + 1;
 
-                if (cellNumber === playerPosition) {
-                    return (
-                        <div className="cell" key={index}>
-                            <span className="cell-number">{cellNumber}</span>
-                            <img src={playerImage} alt="Player" className="player-image" />
-                        </div>
-                    );
-                }
-
                 return (
-                    <div className="cell" key={index}>
-                        <span className="cell-number">{cellNumber}</span>
-                    </div>
+                    <Cell
+                        key={index}
+                        cellNumber={cellNumber}
+                        playerPosition={playerPosition}
+                        playerImage={playerImage}
+                    />
                 );
             })}
         </div>

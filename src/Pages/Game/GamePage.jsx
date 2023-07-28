@@ -54,7 +54,7 @@ const GamePage = () => {
             if (currentPos === endPosition) {
                 clearInterval(timerId);
             }
-        }, 500);
+        }, 650);
     };
 
     return (
