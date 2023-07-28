@@ -3,7 +3,7 @@ import CustomToolbar from "../../Components/CustomToolbar.jsx";
 import * as React from "react";
 import { useLocation } from 'react-router-dom';
 import Dice from '../../Components/Dice';
-import Board from '../../Components/Board';
+import CutBoard from '../../Components/MedicalBoards/CutBoard';
 import vetLionImagePath from "../../../Public/HomePage/VetLion.png";
 import vetPandaImagePath from "../../../Public/HomePage/VetPanda.png";
 import vetMonkeyImagePath from "../../../Public/HomePage/VetMonkey.png";
@@ -54,7 +54,7 @@ const GamePage = () => {
             if (currentPos === endPosition) {
                 clearInterval(timerId);
             }
-        }, 200);
+        }, 500);
     };
 
     return (
@@ -63,7 +63,7 @@ const GamePage = () => {
                 <CustomToolbar toolbarTitle="סולמות ומגלשות"/>
             </div>
 
-           <Board playerPosition={playerPosition} playerImage={playerImage}/>
+           <CutBoard playerPosition={playerPosition} playerImage={playerImage}/>
 
             <div className={animalClass}>
                 {animalImage && <img src={animalImage} alt={animal} className="animal-image"/>}
