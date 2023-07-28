@@ -2,6 +2,7 @@ import './GamePage.css';
 import CustomToolbar from "../../Components/CustomToolbar.jsx";
 import * as React from "react";
 import { useLocation } from 'react-router-dom';
+import Dice from '../../Components/Dice';
 import vetLionImagePath from "../../../Public/HomePage/VetLion.png";
 import vetPandaImagePath from "../../../Public/HomePage/VetPanda.png";
 import vetMonkeyImagePath from "../../../Public/HomePage/VetMonkey.png";
@@ -12,14 +13,11 @@ import vetMonkeyPlayerImagePath from "../../../Public/GamePage/monkeyPlayer.png"
 import vetDogPlayerImagePath from "../../../Public/GamePage/dogPlayer.png";
 import slideImagePath from "../../../Public/GamePage/water-slide.png";
 import ladderImagePath from "../../../Public/GamePage/ladder.png";
-import Dice from "../../Components/Dice.jsx";
 
 const GamePage = () => {
+    const [playerPosition, setPlayerPosition] = React.useState(1);
     const location = useLocation();
     const {pain, animal} = location.state || {};
-
-    console.log("Pain: ", pain, "Animal: ", animal)
-
     const animalClass = `animal ${animal || ''}`; // Use an empty string as a fallback if 'animal' is not provided
 
     let animalImage, playerImage;
@@ -45,8 +43,6 @@ const GamePage = () => {
             playerImage = null;
     }
 
-    const [playerPosition, setPlayerPosition] = React.useState(1);
-
     const updatePlayerPosition = (rollResult) => {
         const newPosition = Math.min(playerPosition + rollResult, 100);
         setPlayerPosition(newPosition);
@@ -69,7 +65,7 @@ const GamePage = () => {
                         return (
                             <div className="cell" key={index}>
                                 <span className="cell-number">{cellNumber}</span>
-                                <img src={playerImage} alt="Player" className="player-image"/>
+                                <img src={playerImage} alt="Player" className="player-image" />
                             </div>
                         );
                     }
@@ -81,27 +77,28 @@ const GamePage = () => {
                     );
                 })}
 
-            <div className="slide-image1">
-                <img src={slideImagePath} alt="Slide" className="slide-image1"/>
-            </div>
-            <div className="slide-image2">
-                <img src={slideImagePath} alt="Slide" className="slide-image2"/>
-            </div>
-            <div className="slide-image3">
-                <img src={slideImagePath} alt="Slide" className="slide-image3"/>
-            </div>
+                <div className="slide-image1">
+                    <img src={slideImagePath} alt="Slide" className="slide-image1" />
+                </div>
+                <div className="slide-image2">
+                    <img src={slideImagePath} alt="Slide" className="slide-image2" />
+                </div>
+                <div className="slide-image3">
+                    <img src={slideImagePath} alt="Slide" className="slide-image3" />
+                </div>
 
-            <div className="ladder-image1">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image1"/>
-            </div>
-            <div className="ladder-image2">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image2"/>
-            </div>
-            <div className="ladder-image3">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image3"/>
-            </div>
-            <div className="ladder-image4">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image4"/>
+                <div className="ladder-image1">
+                    <img src={ladderImagePath} alt="Slide" className="ladder-image1" />
+                </div>
+                <div className="ladder-image2">
+                    <img src={ladderImagePath} alt="Slide" className="ladder-image2" />
+                </div>
+                <div className="ladder-image3">
+                    <img src={ladderImagePath} alt="Slide" className="ladder-image3" />
+                </div>
+                <div className="ladder-image4">
+                    <img src={ladderImagePath} alt="Slide" className="ladder-image4" />
+                </div>
             </div>
 
             <div className={animalClass}>
@@ -111,7 +108,7 @@ const GamePage = () => {
                 </div>
             </div>
         </div>
-    </div>
     );
 };
+
 export default GamePage;

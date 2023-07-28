@@ -49,39 +49,12 @@
     background-color: white;
 }
 
-@media (min-width: 601px) {
-    .dice-container {
-        margin-top: 1em;
-        margin-bottom: 1em;
-        display: grid;
-        width: 15vw;
-        height: 35vh;
-        grid-template-rows: auto auto;
-        place-items: center;
-        background-color: #04857F;
-        border-radius: 10px;
-        border: 0.2em solid black;
-        padding: 0.3em;
-        gap: 1em;
+
+
+@media (min-width: 500px) {
+    .dice-images {
         position: relative;
-    }
-
-    .dice-image {
-        width: 7vw;
-        height: 10vh;
-        object-fit: contain;
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-    }
-
-    .dice-image.visible {
-        opacity: 1;
-    }
-
-    #RollButton {
-        margin-top: 1em;
-        width: 3em;
-        height: 2em;
-        font-size: 1.5em;
+        width: 20vw;
+        height: 11vh;
     }
 }
