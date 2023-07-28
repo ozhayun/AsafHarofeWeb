@@ -120,7 +120,7 @@
         font-size: 4vw;
         line-height: 8vw;
     }
-    
+
     .rectangle .piece[data-selected='true'] {
         opacity: 1;
     }
