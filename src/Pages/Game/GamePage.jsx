@@ -1,4 +1,4 @@
-import './GamePage.css'
+import './GamePage.css';
 import CustomToolbar from "../../Components/CustomToolbar.jsx";
 import * as React from "react";
 import { useLocation } from 'react-router-dom';
@@ -6,10 +6,10 @@ import vetLionImagePath from "../../../Public/HomePage/VetLion.png";
 import vetPandaImagePath from "../../../Public/HomePage/VetPanda.png";
 import vetMonkeyImagePath from "../../../Public/HomePage/VetMonkey.png";
 import vetDogImagePath from "../../../Public/HomePage/VetDog.png";
-// import vetLionPlayerImagePath from "../../../Public/GamePage/lionPlayer.png";
-// import vetPandaPlayerImagePath from "../../../Public/GamePage/pandaPlayer.png";
-// import vetMonkeyPlayerImagePath from "../../../Public/GamePage/monkeyPlayer.png";
-// import vetDogPlayerImagePath from "../../../Public/GamePage/dogPlayer.png";
+import vetLionPlayerImagePath from "../../../Public/GamePage/lionPlayer.png";
+import vetPandaPlayerImagePath from "../../../Public/GamePage/pandaPlayer.png";
+import vetMonkeyPlayerImagePath from "../../../Public/GamePage/monkeyPlayer.png";
+import vetDogPlayerImagePath from "../../../Public/GamePage/dogPlayer.png";
 import slideImagePath from "../../../Public/GamePage/water-slide.png";
 import ladderImagePath from "../../../Public/GamePage/ladder.png";
 import Dice from "../../Components/Dice.jsx";
@@ -26,24 +26,31 @@ const GamePage = () => {
     switch (animal) {
         case 'dog':
             animalImage = vetDogImagePath;
-            // playerImage = vetDogPlayerImagePath;
+            playerImage = vetDogPlayerImagePath;
             break;
         case 'lion':
             animalImage = vetLionImagePath;
-            // playerImage = vetLionPlayerImagePath;
+            playerImage = vetLionPlayerImagePath;
             break;
         case 'monkey':
             animalImage = vetMonkeyImagePath;
-            // playerImage = vetMonkeyPlayerImagePath;
+            playerImage = vetMonkeyPlayerImagePath;
             break;
         case 'panda':
             animalImage = vetPandaImagePath;
-            // playerImage = vetPandaPlayerImagePath;
+            playerImage = vetPandaPlayerImagePath;
             break;
         default:
             animalImage = null;
             playerImage = null;
     }
+
+    const [playerPosition, setPlayerPosition] = React.useState(1);
+
+    const updatePlayerPosition = (rollResult) => {
+        const newPosition = Math.min(playerPosition + rollResult, 100);
+        setPlayerPosition(newPosition);
+    };
 
     return (
         <div className="container">
@@ -52,13 +59,13 @@ const GamePage = () => {
             </div>
 
             <div className="game-board">
-                {Array.from({length: 100}, (_, index) => {
+                {Array.from({ length: 100 }, (_, index) => {
                     const x = Math.floor(index / 10);
                     const y = index % 10;
                     const isOddRow = x % 2 !== 0;
                     const cellNumber = isOddRow ? (9 - x) * 10 + (10 - y) : (9 - x) * 10 + y + 1;
 
-                    if (cellNumber === 1) {
+                    if (cellNumber === playerPosition) {
                         return (
                             <div className="cell" key={index}>
                                 <span className="cell-number">{cellNumber}</span>
@@ -100,7 +107,7 @@ const GamePage = () => {
             <div className={animalClass}>
                 {animalImage && <img src={animalImage} alt={animal} className="animal-image"/>}
                 <div className='rectangleDice'>
-                    <Dice/>
+                    <Dice updatePlayerPosition={updatePlayerPosition} />
                 </div>
             </div>
         </div>
