@@ -5,7 +5,7 @@ import * as React from "react";
 import Board from "../Board.jsx";
 
 const CutBoard = ({playerPosition, playerImage}) => {
-
+    const ladders = {}
     return (
         <div className="game-board-container">
             <Board playerPosition={playerPosition} playerImage={playerImage}/>
