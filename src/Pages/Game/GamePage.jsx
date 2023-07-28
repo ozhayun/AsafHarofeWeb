@@ -48,9 +48,19 @@ const GamePage = () => {
     const [playerPosition, setPlayerPosition] = React.useState(1);
 
     const updatePlayerPosition = (rollResult) => {
-        const newPosition = Math.min(playerPosition + rollResult, 100);
-        setPlayerPosition(newPosition);
+        let currentPos = playerPosition;
+        const endPosition = Math.min(playerPosition + rollResult, 100);
+
+        const timerId = setInterval(() => {
+            currentPos += 1;
+            setPlayerPosition(currentPos);
+
+            if (currentPos === endPosition) {
+                clearInterval(timerId);
+            }
+        }, 200);
     };
+
 
     return (
         <div className="container">
