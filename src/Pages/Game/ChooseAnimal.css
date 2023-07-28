@@ -120,4 +120,17 @@
         font-size: 4vw;
         line-height: 8vw;
     }
+    
+    .rectangle .piece[data-selected='true'] {
+        opacity: 1;
+    }
+
+    .rectangle .piece[data-selected='false'] {
+        opacity: 0.5;
+    }
+
+    .rectangle .piece[data-selected='default'] {
+        opacity: 1;
+    }
+
 }
