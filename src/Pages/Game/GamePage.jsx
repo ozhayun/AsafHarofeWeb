@@ -53,7 +53,7 @@ const GamePage = () => {
             if (currentPos === endPosition) {
                 clearInterval(timerId);
             }
-        }, 650);
+        }, 200);
     };
 
     return (
