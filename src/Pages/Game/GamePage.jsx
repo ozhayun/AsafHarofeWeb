@@ -48,6 +48,12 @@ const GamePage = () => {
         setLadders(newLadders);
     };
 
+    const [slides, setSlides] = React.useState({});
+
+    const handleSlidesChange = (newSlides) => {
+        setSlides(newSlides);
+    };
+
     const updatePlayerPosition = async (rollResult) => {
         const startPosition = playerPosition;
         const endPosition = Math.min(playerPosition + rollResult, 100);
@@ -58,11 +64,14 @@ const GamePage = () => {
         }
 
         if (ladders.hasOwnProperty(endPosition)) {
-            const ladderDestination = ladders[endPosition];
             await new Promise((resolve) => setTimeout(resolve, 200));
-            setPlayerPosition(ladderDestination);
+            setPlayerPosition(ladders[endPosition]);
         }
 
+        if (slides.hasOwnProperty(endPosition)) {
+            await new Promise((resolve) => setTimeout(resolve, 200));
+            setPlayerPosition(slides[endPosition]);
+        }
     };
 
 
@@ -74,7 +83,8 @@ const GamePage = () => {
 
            <CutBoard playerPosition={playerPosition}
                      playerImage={playerImage}
-                     onLaddersChange={handleLaddersChange}/>
+                     onLaddersChange={handleLaddersChange}
+                     onSlidesChange={handleSlidesChange}/>
 
             <div className={animalClass}>
                 {animalImage && <img src={animalImage} alt={animal} className="animal-image"/>}
