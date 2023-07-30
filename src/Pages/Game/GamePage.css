@@ -162,7 +162,13 @@ game-board-container{
     align-items: center;
 }
 
-@media (min-width: 500px) {
+@media screen and (max-width: 500px) {
+    #ShamirLogo {
+        width: 50%;
+    }
+}
+
+@media (min-width: 501px) {
     .game-board {
         width: 80%;
         max-width: 550px;

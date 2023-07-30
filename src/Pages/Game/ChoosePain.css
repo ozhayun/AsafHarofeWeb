@@ -78,8 +78,13 @@
     line-height: 8vw;
 }
 
-@media screen and (max-width: 600px) {
-    #ShamirLogo {
-        width: 50%;
+
+
+@media (min-width: 501px) {
+    .rectanglePain {
+        width: 60%;
+        max-width: 40rem;
+        height: 25rem;
+        border-radius: 6rem;
     }
 }
