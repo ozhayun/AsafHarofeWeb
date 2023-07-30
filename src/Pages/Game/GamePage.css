@@ -37,7 +37,7 @@
     height: 10vh;
     max-height: 100px;
     max-width: 100px;
-    margin-right: 40px;
+    margin-right: 3rem;
 }
 
 .rectangleDice {
@@ -60,8 +60,7 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 42vh; /* Adjust the height as needed (subtract the height of the game board) */
-        padding: 20px;
+        height: 42vh;
         background-size: contain;
         justify-content: center;
         position: relative;
@@ -72,7 +71,31 @@
         height: 20vh;
         max-height: 100px;
         max-width: 100px;
-        margin-right: 40px;
+        margin-right: 3rem;
+    }
+}
+
+
+
+@media (min-width: 901px) {
+    .rectangleDice {
+        width: 30%;
+        max-width: 15rem;
+        height: 10rem;
+        border: none;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .animal-image{
+        width: 14vw;
+        height: 20vh;
+        max-height: 100px;
+        max-width: 100px;
+        margin-right: 7rem;
     }
 
 }

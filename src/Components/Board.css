@@ -15,12 +15,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%; /* Adjust the width of the player's image as needed */
-    height: auto; /* Maintain the aspect ratio */
-    max-height: 80%; /* Adjust the max-height of the player's image as needed */
+    width: 50%;
+    height: auto;
+    max-height: 80%;
 }
-
-
 
 
 @media (min-width: 501px) {
