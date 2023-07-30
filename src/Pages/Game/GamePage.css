@@ -1,119 +1,5 @@
-game-board-container{
-    height: 60vh;
-    width: 100vw;
-    flex-direction: column-reverse;
-    position: absolute;
-}
-
 #ShamirLogo {
     width: 50%;
-}
-
-.game-board {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    border: 0.25rem solid #000000;
-    overflow: hidden;
-    height: 65vh;
-    width: 100vw;
-    flex-direction: column-reverse;
-}
-
-.cell {
-    border: 1px solid #677365;
-    position: relative;
-}
-
-
-.cell-number {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0.2rem;
-    font-size: 0.8rem;
-}
-
-.player-image{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: auto;
-    max-height: 80%;
-}
-
-.slide-image1 {
-    z-index: 1;
-    position: absolute;
-    height: 37%;
-    width: 40%;
-    top: 54%;
-    left: 38%;
-    opacity: 80%;
-
-}
-
-.slide-image2 {
-    z-index: 1;
-    position: absolute;
-    height: 50%;
-    width: 55%;
-    top: 3%;
-    left: 8%;
-    opacity: 80%;
-}
-
-.slide-image3 {
-    z-index: 1;
-    position: absolute;
-    height: 50%;
-    width: 52%;
-    top: 23%;
-    left: 42%;
-    opacity: 80%;
-}
-
-.ladder-image1 {
-    z-index: 1;
-    position: absolute;
-    height: 42%;
-    width: 40%;
-    top: 5%;
-    left: 52%;
-    opacity: 80%;
-}
-
-.ladder-image2 {
-    z-index: 1;
-    position: absolute;
-    height: 63%;
-    width: 40%;
-    top: 35%;
-    left: 9%;
-    opacity: 80%;
-}
-
-.ladder-image3 {
-    z-index: 1;
-    position: absolute;
-    height: 42%;
-    width: 40%;
-    top: 55%;
-    left: 52%;
-    opacity: 80%;
-}
-
-.ladder-image4 {
-    z-index: 1;
-    position: absolute;
-    height: 73%;
-    width: 40%;
-    top: 14%;
-    left: 30%;
-    opacity: 80%;
 }
 
 .animal {
@@ -122,7 +8,7 @@ game-board-container{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 23vh; /* Adjust the height as needed (subtract the height of the game board) */
+    height: 30vh; /* Adjust the height as needed (subtract the height of the game board) */
     padding: 20px;
     background-size: contain;
     justify-content: center;
@@ -164,38 +50,4 @@ game-board-container{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-
-
-@media (min-width: 501px) {
-    .game-board {
-        width: 80%;
-        max-width: 550px;
-        height: 55vh;
-        max-height: 550px;
-        margin: 0 auto;
-    }
-
-    .animal {
-        display: flex;
-        align-items: center;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 30vh;
-        padding: 20px;
-        background-size: contain;
-        justify-content: center;
-        position: relative;
-    }
-
-    .animal-image{
-        width: 10vw;
-        height: 22vh;
-        max-height: 100px;
-        max-width: 100px;
-        margin-right: 4rem;
-    }
-
 }
