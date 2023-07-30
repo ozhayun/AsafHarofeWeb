@@ -48,25 +48,23 @@ const GamePage = () => {
         setLadders(newLadders);
     };
 
-    const updatePlayerPosition = (rollResult) => {
-        let currentPos = playerPosition;
+    const updatePlayerPosition = async (rollResult) => {
+        const startPosition = playerPosition;
         const endPosition = Math.min(playerPosition + rollResult, 100);
 
-        const timerId = setInterval(() => {
-            currentPos += 1;
-            setPlayerPosition(currentPos);
+        for (let newPos = startPosition + 1; newPos <= endPosition; newPos++) {
+            await new Promise((resolve) => setTimeout(resolve, 200));
+            setPlayerPosition(newPos);
+        }
 
-            if (currentPos === endPosition) {
-                clearInterval(timerId);
-
-                if (ladders.hasOwnProperty(endPosition)) {
-                    setPlayerPosition(ladders[endPosition]);
-                }
-            }
-        }, 200);
-
+        if (ladders.hasOwnProperty(endPosition)) {
+            const ladderDestination = ladders[endPosition];
+            await new Promise((resolve) => setTimeout(resolve, 200));
+            setPlayerPosition(ladderDestination);
+        }
 
     };
+
 
     return (
         <div className="container">
