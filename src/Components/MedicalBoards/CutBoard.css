@@ -72,7 +72,35 @@
     opacity: 80%;
 }
 
+.ladder-image5 {
+    z-index: 1;
+    position: absolute;
+    height: 73%; /* Adjust the height of the slide image */
+    width: 40%; /* Adjust the width of the slide image */
+    top: 14%; /* Adjust the top position to start at slot 95 */
+    left: 30%; /* Adjust the left position to start at slot 95 */
+    opacity: 80%;
+}
 
+.ladder-image6 {
+    z-index: 1;
+    position: absolute;
+    height: 73%; /* Adjust the height of the slide image */
+    width: 40%; /* Adjust the width of the slide image */
+    top: 14%; /* Adjust the top position to start at slot 95 */
+    left: 30%; /* Adjust the left position to start at slot 95 */
+    opacity: 80%;
+}
+
+.ladder-image7 {
+    z-index: 1;
+    position: absolute;
+    height: 73%; /* Adjust the height of the slide image */
+    width: 40%; /* Adjust the width of the slide image */
+    top: 14%; /* Adjust the top position to start at slot 95 */
+    left: 30%; /* Adjust the left position to start at slot 95 */
+    opacity: 80%;
+}
 @media (min-width: 500px) {
     .game-board-container {
         width: 100%;

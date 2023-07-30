@@ -17,12 +17,10 @@ const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange 
         94: 72 };
 
     React.useEffect(() => {
-        // Notify the parent component (GamePage) about the ladders dictionary when it changes
         onLaddersChange(ladders);
     }, [ladders, onLaddersChange]);
 
     React.useEffect(() => {
-        // Notify the parent component (GamePage) about the ladders dictionary when it changes
         onSlidesChange(slides);
     }, [slides, onSlidesChange]);
 
@@ -51,6 +49,15 @@ const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange 
             </div>
             <div className="ladder-image4">
                 <img src={ladderImagePath} alt="Slide" className="ladder-image4" />
+            </div>
+            <div className="ladder-image5">
+                <img src={ladderImagePath} alt="Slide" className="ladder-image5" />
+            </div>
+            <div className="ladder-image6">
+                <img src={ladderImagePath} alt="Slide" className="ladder-image6" />
+            </div>
+            <div className="ladder-image7">
+                <img src={ladderImagePath} alt="Slide" className="ladder-image7" />
             </div>
         </div>
     )
