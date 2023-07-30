@@ -5,6 +5,10 @@ game-board-container{
     position: absolute;
 }
 
+#ShamirLogo {
+    width: 50%;
+}
+
 .game-board {
     position: relative;
     display: grid;
@@ -162,11 +166,7 @@ game-board-container{
     align-items: center;
 }
 
-@media screen and (max-width: 500px) {
-    #ShamirLogo {
-        width: 50%;
-    }
-}
+
 
 @media (min-width: 501px) {
     .game-board {
