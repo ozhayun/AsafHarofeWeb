@@ -4,8 +4,14 @@ import ladderImagePath from "../../../Public/GamePage/ladder.png";
 import * as React from "react";
 import Board from "../Board.jsx";
 
-const CutBoard = ({playerPosition, playerImage}) => {
-    const ladders = {}
+const CutBoard = ({playerPosition, playerImage, onLaddersChange }) => {
+    const ladders = { 2:22, 3: 23, 4:24, 5:25, 6:26, 7:27 };
+
+    React.useEffect(() => {
+        // Notify the parent component (GamePage) about the ladders dictionary when it changes
+        onLaddersChange(ladders);
+    }, [ladders, onLaddersChange]);
+
     return (
         <div className="game-board-container">
             <Board playerPosition={playerPosition} playerImage={playerImage}/>

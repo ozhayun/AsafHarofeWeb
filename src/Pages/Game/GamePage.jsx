@@ -42,6 +42,12 @@ const GamePage = () => {
             playerImage = null;
     }
 
+    const [ladders, setLadders] = React.useState({});
+
+    const handleLaddersChange = (newLadders) => {
+        setLadders(newLadders);
+    };
+
     const updatePlayerPosition = (rollResult) => {
         let currentPos = playerPosition;
         const endPosition = Math.min(playerPosition + rollResult, 100);
@@ -52,8 +58,14 @@ const GamePage = () => {
 
             if (currentPos === endPosition) {
                 clearInterval(timerId);
+
+                if (ladders.hasOwnProperty(endPosition)) {
+                    setPlayerPosition(ladders[endPosition]);
+                }
             }
         }, 200);
+
+
     };
 
     return (
@@ -62,7 +74,9 @@ const GamePage = () => {
                 <CustomToolbar toolbarTitle="סולמות ומגלשות"/>
             </div>
 
-           <CutBoard playerPosition={playerPosition} playerImage={playerImage}/>
+           <CutBoard playerPosition={playerPosition}
+                     playerImage={playerImage}
+                     onLaddersChange={handleLaddersChange}/>
 
             <div className={animalClass}>
                 {animalImage && <img src={animalImage} alt={animal} className="animal-image"/>}
