@@ -52,7 +52,6 @@
     align-items: center;
 }
 
-
 @media (min-width: 501px) {
     .animal {
         display: flex;

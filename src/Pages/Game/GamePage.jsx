@@ -1,7 +1,7 @@
 import './GamePage.css';
 import CustomToolbar from "../../Components/CustomToolbar.jsx";
 import * as React from "react";
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Dice from '../../Components/Dice';
 import CutBoard from '../../Components/MedicalBoards/CutBoard';
 import PopUp from '../../Components/PopUp'
@@ -21,7 +21,9 @@ const GamePage = () => {
     const [isPopUpOpen, setIsPopUpOpen] = React.useState(false);
     const [popupContent, setPopUpContent] = React.useState("");
     const [isGamePaused, setIsGamePaused] = React.useState(false);
+    const [isPlayerWin, setIsPlayerWin] = React.useState(false);
     const location = useLocation();
+    const navigate = useNavigate();
     const {pain, animal} = location.state || {};
     const animalClass = `animal ${animal || ''}`;
 
@@ -60,9 +62,16 @@ const GamePage = () => {
         const startPosition = playerPosition;
         const endPosition = Math.min(playerPosition + rollResult, 100);
 
-        for (let newPos = startPosition + 1; newPos <= endPosition; newPos++) {
-            await new Promise((resolve) => setTimeout(resolve, 200));
+        let newPos = startPosition;
+        for (newPos; newPos <= endPosition; newPos++) {
             setPlayerPosition(newPos);
+            await new Promise((resolve) => setTimeout(resolve, 200));
+
+            // If the player reaches cell 100, show victory popup and return
+            if (newPos === 100) {
+                handlePlayerWin();
+                return;
+            }
         }
 
         if (ladders.hasOwnProperty(endPosition)) {
@@ -87,6 +96,25 @@ const GamePage = () => {
         setIsGamePaused(false)
     };
 
+    const handlePlayerWin = () => {
+        setIsPopUpOpen(true);
+        setIsPlayerWin(true);
+        setIsGamePaused(true);
+    }
+
+    const navigateHome = () => {
+        setIsPopUpOpen(false);
+        setIsPlayerWin(false)
+        navigate('/');
+    };
+
+    const restartGame = () => {
+        setIsPopUpOpen(false);
+        setIsPlayerWin(false)
+        setPlayerPosition(1);
+    };
+
+
     return (
         <div className="container">
             <div className="toolbar-container">
@@ -100,8 +128,11 @@ const GamePage = () => {
                      openPopUp={openPopUp} />
 
             <PopUp isOpen={isPopUpOpen}
+                   isPlayerWin={isPlayerWin}
                    content={popupContent}
-                   closePopup={closePopUp} />
+                   closePopup={closePopUp}
+                   restartGame={restartGame}
+                   navigateHome={navigateHome}/>
 
             <div className={animalClass}>
                 {animalImage && <img src={animalImage} alt={animal} className="animal-image"/>}
