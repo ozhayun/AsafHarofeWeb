@@ -1,5 +1,5 @@
 import './Dice.css';
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import dice1 from '../../Public/GamePage/1.png';
 import dice2 from '../../Public/GamePage/2.png';
 import dice3 from '../../Public/GamePage/3.png';
@@ -12,16 +12,28 @@ const diceImages = [dice1, dice2, dice3, dice4, dice5, dice6];
 
 const Dice = ({ updatePlayerPosition }) => {
     const [diceNumber, setDiceNumber] = useState(1);
+    const [animate, setAnimate] = useState(false);
 
     const rollDice = () => {
         const newDiceNumber = Math.floor(Math.random() * 6) + 1;
         setDiceNumber(newDiceNumber);
         updatePlayerPosition(newDiceNumber);
+        setAnimate(true);
     };
+
+    useEffect(() => {
+        if (animate) {
+            const animationTimeout = setTimeout(() => {
+                setAnimate(false);
+            }, 500); // The same duration as the CSS animation (0.5s)
+
+            return () => clearTimeout(animationTimeout);
+        }
+    }, [animate]);
 
     return (
         <div className="dice-container">
-            <div className="dice-images">
+            <div className={`dice-images ${animate ? 'animate' : ''}`}>
                 {diceImages.map((diceImage, index) => (
                     <img
                         key={index}

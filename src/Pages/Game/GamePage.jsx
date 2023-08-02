@@ -42,19 +42,38 @@ const GamePage = () => {
             playerImage = null;
     }
 
-    const updatePlayerPosition = (rollResult) => {
-        let currentPos = playerPosition;
+    const [ladders, setLadders] = React.useState({});
+
+    const handleLaddersChange = (newLadders) => {
+        setLadders(newLadders);
+    };
+
+    const [slides, setSlides] = React.useState({});
+
+    const handleSlidesChange = (newSlides) => {
+        setSlides(newSlides);
+    };
+
+    const updatePlayerPosition = async (rollResult) => {
+        const startPosition = playerPosition;
         const endPosition = Math.min(playerPosition + rollResult, 100);
 
-        const timerId = setInterval(() => {
-            currentPos += 1;
-            setPlayerPosition(currentPos);
+        for (let newPos = startPosition + 1; newPos <= endPosition; newPos++) {
+            await new Promise((resolve) => setTimeout(resolve, 200));
+            setPlayerPosition(newPos);
+        }
 
-            if (currentPos === endPosition) {
-                clearInterval(timerId);
-            }
-        }, 650);
+        if (ladders.hasOwnProperty(endPosition)) {
+            await new Promise((resolve) => setTimeout(resolve, 200));
+            setPlayerPosition(ladders[endPosition]);
+        }
+
+        if (slides.hasOwnProperty(endPosition)) {
+            await new Promise((resolve) => setTimeout(resolve, 200));
+            setPlayerPosition(slides[endPosition]);
+        }
     };
+
 
     return (
         <div className="container">
@@ -62,7 +81,10 @@ const GamePage = () => {
                 <CustomToolbar toolbarTitle="סולמות ומגלשות"/>
             </div>
 
-           <CutBoard playerPosition={playerPosition} playerImage={playerImage}/>
+           <CutBoard playerPosition={playerPosition}
+                     playerImage={playerImage}
+                     onLaddersChange={handleLaddersChange}
+                     onSlidesChange={handleSlidesChange}/>
 
             <div className={animalClass}>
                 {animalImage && <img src={animalImage} alt={animal} className="animal-image"/>}

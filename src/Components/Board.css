@@ -8,6 +8,8 @@
     height: 60vh;
     width: 100vw;
     flex-direction: column-reverse;
+    z-index: 2;
+
 }
 
 .player-image{
@@ -18,6 +20,7 @@
     width: 50%;
     height: auto;
     max-height: 80%;
+    z-index: 3;
 }
 
 

@@ -1,6 +1,8 @@
 .cell {
     border: 1px solid #677365;
     position: relative;  /* This makes .cell a relative container */
+    z-index: 2;
+
 }
 
 .cell-number {
@@ -9,4 +11,6 @@
     left: 0;  /* This aligns .cell-number with the left of .cell */
     padding: 0.2rem;  /* Add some spacing around .cell-number */
     font-size: 0.8rem;  /* Adjust the font size of .cell-number */
+    z-index: 2;
+
 }

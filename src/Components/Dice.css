@@ -12,9 +12,6 @@
 }
 
 .dice-images {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
     width: 20vw;
     height: 8vh;
@@ -31,6 +28,22 @@
 
 .dice-image.visible {
     opacity: 1;
+}
+
+.dice-images.animate {
+    animation: diceAnimation 0.5s ease-in-out;
+}
+
+@keyframes diceAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25%, 75% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 #RollButton {
