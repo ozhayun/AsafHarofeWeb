@@ -1,0 +1,31 @@
+.popup-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);  /* semi-transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+
+.popup-content {
+    position: relative;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.close-button {
+    position: absolute;
+    right: 0.4rem;
+    top: 0.4rem;
+    font-size: 1.5rem;
+    border-radius: 0.3rem;
+}
+
+.content {
+    margin-top: 1rem;
+}
