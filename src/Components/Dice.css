@@ -45,40 +45,6 @@
         transform: translateY(-10px);
     }
 }
-/*
-.dice-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #04857F;
-    border-radius: 10px;
-    border: 0.2em solid black;
-    padding: 0.3em;
-    gap: 1em;
-    position: relative;
-}
-
-.dice-images {
-    position: relative;
-    width: 20vw;
-    height: 8vh;
-}
-
-.dice-image {
-    object-fit: contain;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-*/
-.dice-image.visible {
-    opacity: 1;
-}
 
 #RollButton {
     width: 3.5em;
@@ -97,24 +63,38 @@
     background-color: white;
 }
 
+@media (min-width: 501px) {
+    .dice-container {
+        display: grid;
+        grid-template-rows: auto auto;
+        max-width: 100%;
+        justify-items: center;
+        align-items: center;
+        background-color: #04857F;
+        border-radius: 10px;
+        border: 0.2em solid black;
+        padding: 0.3em;
+        gap: 1em;
+        position: relative;
+    }
 
+    .dice-images {
+        position: relative;
+        justify-items: center;
+        align-items: center;
+        width: 20vw;
+        height: 8vh;
+    }
+}
 
-/*@media (min-width: 501px) {*/
-/*    .dice-container {*/
-/*        display: grid;*/
-/*        grid-template-rows: auto auto;*/
-/*        justify-items: center;*/
-/*        align-items: center;*/
-/*        background-color: #04857F;*/
-/*        border-radius: 10px;*/
-/*        border: 0.2em solid black;*/
-/*        padding: 0.3em;*/
-/*        gap: 1em;*/
-/*        position: relative;*/
-/*    }*/
-/*    .dice-images {*/
-/*        position: relative;*/
-/*        width: 20vw;*/
-/*        height: 8vh;*/
-/*    }*/
-/*}*/
+@media (min-width: 1001px) {
+    .dice-images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 180px;
+        max-width: 90%; /* prevent the element from becoming too large */
+        height: 8vh;
+    }
+}

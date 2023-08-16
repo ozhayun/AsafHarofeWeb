@@ -1,9 +1,10 @@
 import './GamePage.css';
 import CustomToolbar from "../../Components/CustomToolbar.jsx";
 import * as React from "react";
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Dice from '../../Components/Dice';
 import CutBoard from '../../Components/MedicalBoards/CutBoard';
+import PopUp from '../../Components/PopUp'
 import vetLionImagePath from "../../../Public/HomePage/VetLion.png";
 import vetPandaImagePath from "../../../Public/HomePage/VetPanda.png";
 import vetMonkeyImagePath from "../../../Public/HomePage/VetMonkey.png";
@@ -15,9 +16,16 @@ import vetDogPlayerImagePath from "../../../Public/GamePage/dogPlayer.png";
 
 const GamePage = () => {
     const [playerPosition, setPlayerPosition] = React.useState(1);
+    const [ladders, setLadders] = React.useState({});
+    const [slides, setSlides] = React.useState({});
+    const [isPopUpOpen, setIsPopUpOpen] = React.useState(false);
+    const [popupContent, setPopUpContent] = React.useState("");
+    const [isGamePaused, setIsGamePaused] = React.useState(false);
+    const [isPlayerWin, setIsPlayerWin] = React.useState(false);
     const location = useLocation();
+    const navigate = useNavigate();
     const {pain, animal} = location.state || {};
-    const animalClass = `animal ${animal || ''}`; // Use an empty string as a fallback if 'animal' is not provided
+    const animalClass = `animal ${animal || ''}`;
 
     let animalImage, playerImage;
     switch (animal) {
@@ -42,13 +50,9 @@ const GamePage = () => {
             playerImage = null;
     }
 
-    const [ladders, setLadders] = React.useState({});
-
     const handleLaddersChange = (newLadders) => {
         setLadders(newLadders);
     };
-
-    const [slides, setSlides] = React.useState({});
 
     const handleSlidesChange = (newSlides) => {
         setSlides(newSlides);
@@ -58,9 +62,16 @@ const GamePage = () => {
         const startPosition = playerPosition;
         const endPosition = Math.min(playerPosition + rollResult, 100);
 
-        for (let newPos = startPosition + 1; newPos <= endPosition; newPos++) {
-            await new Promise((resolve) => setTimeout(resolve, 200));
+        let newPos = startPosition;
+        for (newPos; newPos <= endPosition; newPos++) {
             setPlayerPosition(newPos);
+            await new Promise((resolve) => setTimeout(resolve, 200));
+
+            // If the player reaches cell 100, show victory popup and return
+            if (newPos === 100) {
+                handlePlayerWin();
+                return;
+            }
         }
 
         if (ladders.hasOwnProperty(endPosition)) {
@@ -74,6 +85,35 @@ const GamePage = () => {
         }
     };
 
+    const openPopUp = (content) => {
+        setPopUpContent(content);
+        setIsPopUpOpen(true);
+        setIsGamePaused(true)
+    };
+
+    const closePopUp = () => {
+        setIsPopUpOpen(false);
+        setIsGamePaused(false)
+    };
+
+    const handlePlayerWin = () => {
+        setIsPopUpOpen(true);
+        setIsPlayerWin(true);
+        setIsGamePaused(true);
+    }
+
+    const navigateHome = () => {
+        setIsPopUpOpen(false);
+        setIsPlayerWin(false)
+        navigate('/');
+    };
+
+    const restartGame = () => {
+        setIsPopUpOpen(false);
+        setIsPlayerWin(false)
+        setPlayerPosition(1);
+    };
+
 
     return (
         <div className="container">
@@ -84,7 +124,15 @@ const GamePage = () => {
            <CutBoard playerPosition={playerPosition}
                      playerImage={playerImage}
                      onLaddersChange={handleLaddersChange}
-                     onSlidesChange={handleSlidesChange}/>
+                     onSlidesChange={handleSlidesChange}
+                     openPopUp={openPopUp} />
+
+            <PopUp isOpen={isPopUpOpen}
+                   isPlayerWin={isPlayerWin}
+                   content={popupContent}
+                   closePopup={closePopUp}
+                   restartGame={restartGame}
+                   navigateHome={navigateHome}/>
 
             <div className={animalClass}>
                 {animalImage && <img src={animalImage} alt={animal} className="animal-image"/>}
