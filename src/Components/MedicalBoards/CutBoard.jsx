@@ -15,6 +15,16 @@ const slides = {
     62: 44,
     94: 72 };
 
+const popupCells = {
+    3: 'שלום!\n מיד האחות תקבל אותך, תעצור את הדימום, תבדוק לך דופק, לחץ דם וחום',
+    9: 'You passed cell 9!',
+    24: 'You passed cell 24!',
+    26: 'You passed cell 26!',
+    62: 'You passed cell 62!',
+    78: 'You passed cell 78!',
+    94: 'You passed cell 94!',
+};
+
 const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange, openPopUp }) => {
     React.useEffect(() => {
         onLaddersChange(ladders);
@@ -25,16 +35,6 @@ const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange,
     }, [slides, onSlidesChange]);
 
     const checkCellPopups = (playerPosition) => {
-        const popupCells = {
-            3: 'You passed cell 3!You passed cell 3!You passed cell 3!You passed cell 3!You passed cell 3!You passed cell 3!You passed cell 3!You passed cell 3!You passed cell 3!',
-            9: 'You passed cell 9!',
-            24: 'You passed cell 24!',
-            26: 'You passed cell 26!',
-            62: 'You passed cell 62!',
-            78: 'You passed cell 78!',
-            94: 'You passed cell 94!',
-        };
-
         if (Object.keys(popupCells).includes(String(playerPosition))) {
             openPopUp(popupCells[playerPosition]);
         }
