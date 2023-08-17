@@ -19,7 +19,9 @@ const GamePage = () => {
     const [ladders, setLadders] = React.useState({});
     const [slides, setSlides] = React.useState({});
     const [isPopUpOpen, setIsPopUpOpen] = React.useState(false);
-    const [popupContent, setPopUpContent] = React.useState("");
+    const [popUpContent, setPopUpContent] = React.useState("");
+    const [popUpCells, setPopUpCells] = React.useState([]);
+    const [popUpMessages, setPopUpMessages] = React.useState([]);
     const [isGamePaused, setIsGamePaused] = React.useState(false);
     const [isPlayerWin, setIsPlayerWin] = React.useState(false);
     const location = useLocation();
@@ -27,6 +29,7 @@ const GamePage = () => {
     const {pain, animal} = location.state || {};
     const animalClass = `animal ${animal || ''}`;
 
+    let messageCount = 0;
     let animalImage, playerImage;
     switch (animal) {
         case 'dog':
@@ -85,6 +88,21 @@ const GamePage = () => {
         }
     };
 
+    const checkCellPopups = (playerPosition) => {
+        if(messageCount < popUpCells.length) {
+            const cellIndex = popUpCells.indexOf(playerPosition);
+            if (cellIndex !== -1) {
+                openPopUp(popUpMessages[cellIndex]);
+                messageCount++;
+            }
+        }
+    };
+
+    React.useEffect(() => {
+        checkCellPopups(playerPosition);
+    }, [playerPosition]);
+
+
     const openPopUp = (content) => {
         setPopUpContent(content);
         setIsPopUpOpen(true);
@@ -125,11 +143,14 @@ const GamePage = () => {
                      playerImage={playerImage}
                      onLaddersChange={handleLaddersChange}
                      onSlidesChange={handleSlidesChange}
-                     openPopUp={openPopUp} />
+                     openPopUp={openPopUp}
+                     setPopUpCells={setPopUpCells}
+                     setPopUpMessages={setPopUpMessages}
+                     />
 
             <PopUp isOpen={isPopUpOpen}
                    isPlayerWin={isPlayerWin}
-                   content={popupContent}
+                   content={popUpContent}
                    closePopup={closePopUp}
                    restartGame={restartGame}
                    navigateHome={navigateHome}/>

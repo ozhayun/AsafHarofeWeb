@@ -15,17 +15,27 @@ const slides = {
     62: 44,
     94: 72 };
 
-const popupCells = {
-    3: 'שלום!\n מיד האחות תקבל אותך, תעצור את הדימום, תבדוק לך דופק, לחץ דם וחום',
-    9: 'You passed cell 9!',
-    24: 'You passed cell 24!',
-    26: 'You passed cell 26!',
-    62: 'You passed cell 62!',
-    78: 'You passed cell 78!',
-    94: 'You passed cell 94!',
-};
+const popUpCells = [3,9,24,26,62,78,94];
 
-const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange, openPopUp }) => {
+const popUpMessages = [
+    "3",
+    "9",
+    "24",
+    "26",
+    "62",
+    "78",
+    "94"
+];
+
+const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages }) => {
+    React.useEffect(() => {
+        setPopUpCells(popUpCells)
+    },[setPopUpCells]);
+
+    React.useEffect(() => {
+        setPopUpMessages(popUpMessages)
+    }, [setPopUpMessages]);
+
     React.useEffect(() => {
         onLaddersChange(ladders);
     }, [ladders, onLaddersChange]);
@@ -34,15 +44,6 @@ const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange,
         onSlidesChange(slides);
     }, [slides, onSlidesChange]);
 
-    const checkCellPopups = (playerPosition) => {
-        if (Object.keys(popupCells).includes(String(playerPosition))) {
-            openPopUp(popupCells[playerPosition]);
-        }
-    };
-
-    React.useEffect(() => {
-        checkCellPopups(playerPosition);
-    }, [playerPosition]);
 
     return (
         <div className="game-board-container">
