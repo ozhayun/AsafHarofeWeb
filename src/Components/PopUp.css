@@ -4,7 +4,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);  /* semi-transparent black */
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,6 +16,7 @@
     background-color: white;
     padding: 2rem;
     border-radius: 1rem;
+    width: 95%
 }
 
 .close-button {
