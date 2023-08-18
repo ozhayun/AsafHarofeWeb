@@ -2,13 +2,15 @@
     position: relative;
 }
 
+/* 23 -> 16*/
 .slide-image1 {
     z-index: 1;
     position: absolute;
     height: 37%;
     width: 40%;
     top: 54%;
-    left: 38%;
+    left: 42%;
+    transform: rotate(9deg);
 }
 
 .slide-image2 {
@@ -75,7 +77,6 @@
     left: 29%;
     opacity: 90%;
     transform: rotate(18deg);
-
 }
 
 /* 29 -> 54*/
@@ -90,11 +91,20 @@
     transform: rotate(13deg);
 }
 
-
-
+/* 39 -> 60*/
+.ladder-image4 {
+    z-index: 1;
+    position: absolute;
+    height: 50%;
+    width: 40%;
+    top: 28%;
+    left: 58%;
+    opacity: 90%;
+    transform: rotate(7deg);
+}
 
 /* ladder 45 -> 74 */
-.ladder-image4 {
+.ladder-image5 {
     z-index: 1;
     position: absolute;
     height: 60%;
@@ -106,29 +116,17 @@
 
 }
 /* 78 -> 99 */
-.ladder-image5 {
+.ladder-image6 {
     z-index: 1;
     position: absolute;
     height: 46%;
     width: 40%;
-    top: 4%;
-    left: 50%;
+    top: 5%;
+    left: 60%;
     opacity: 90%;
-    transform: rotate(7deg)
+    transform: rotate(-12deg)
 }
 
-
-/* 29 -> 54*/
-.ladder-image6 {
-    z-index: 1;
-    position: absolute;
-    height: 50%;
-    width: 40%;
-    top: 28%;
-    left: 58%;
-    opacity: 90%;
-    transform: rotate(7deg);
-}
 
 @media (min-width: 500px) {
     .game-board-container {
