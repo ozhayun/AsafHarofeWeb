@@ -8,10 +8,12 @@ import CustomToolbar from '../../Components/CustomToolbar.jsx';
 import {Button} from "@mui/material";
 import {useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
+import ButtonClickSound from '../../../Public/Sounds/click.mp3';
 
 
 const ChoosePain = () => {
     const [selectedPain, setSelectedPain] = useState("");
+    const clickAudio = new Audio(ButtonClickSound);
     const navigate = useNavigate();
     const location = useLocation();
     const { animal } = location.state || {};
@@ -22,6 +24,7 @@ const ChoosePain = () => {
 
     const handleContinueClick = () => {
         if(selectedPain) {
+            clickAudio.play();
             navigate('/game', { state: { pain: selectedPain, animal: animal } });
         }
     }

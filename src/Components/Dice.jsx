@@ -1,5 +1,6 @@
 import './Dice.css';
 import React, {useEffect, useState} from 'react';
+import diceRollSound from '../../Public/Sounds/dice-rolling.mp3'
 import dice1 from '../../Public/GamePage/1.png';
 import dice2 from '../../Public/GamePage/2.png';
 import dice3 from '../../Public/GamePage/3.png';
@@ -13,12 +14,15 @@ const diceImages = [dice1, dice2, dice3, dice4, dice5, dice6];
 const Dice = ({ updatePlayerPosition }) => {
     const [diceNumber, setDiceNumber] = useState(1);
     const [animate, setAnimate] = useState(false);
+    const diceRollAudio = new Audio(diceRollSound);
+
 
     const rollDice = () => {
         const newDiceNumber = Math.floor(Math.random() * 6) + 1;
         setDiceNumber(newDiceNumber);
         updatePlayerPosition(newDiceNumber);
         setAnimate(true);
+        diceRollAudio.play();
     };
 
     useEffect(() => {

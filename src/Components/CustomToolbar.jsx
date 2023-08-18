@@ -8,8 +8,14 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import HomeIcon from '@mui/icons-material/Home';
 import Typography from "@mui/material/Typography";
+import ButtonClickSound from '../../Public/Sounds/click.mp3';
 
 const CustomToolbar = ({toolbarTitle}) => {
+    const clickAudio = new Audio(ButtonClickSound);
+
+    const handleHomeButtonClick = () => {
+        clickAudio.play()
+    }
     const appBarLabel = (
         <Toolbar className="toolbar">
             <div className="left-container">
@@ -18,6 +24,7 @@ const CustomToolbar = ({toolbarTitle}) => {
                     component={Link}
                     to="/"
                     aria-label="homePage"
+                    onClick={handleHomeButtonClick}
                 >
                     <HomeIcon fontSize="large" />
                 </IconButton>
