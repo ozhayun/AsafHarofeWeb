@@ -7,6 +7,15 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import IconButton from '@mui/material/IconButton';
 import CustomToolbar from '../../Components/CustomToolbar.jsx';
 
+const pdfFiles = [
+    { title: "הדבקת חתך", filename: "adhesive_cut.pdf" },
+    { title: "הטיפול במיון", filename: "emergency_room_treatment.pdf" },
+    { title: "טיפול בחבלת ראש", filename: "head_injury_treatment.pdf" },
+    { title: "טיפול בחום", filename: "fever_treatment.pdf" }
+];
+
+const MedicalFilesPagePath = "/Public/MedicalFilesPage";
+
 const MedicalDocumentsPage = () => {
 
 
@@ -15,21 +24,23 @@ const MedicalDocumentsPage = () => {
             <div className="toolbar-container">
                 <CustomToolbar toolbarTitle="מסמכים רפואים"/>
             </div>
-            <List sx={{ width: '100%'}}>
-                {[1, 2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20].map((value, index) => (
+            <List sx={{ width: '100%' }}>
+                {pdfFiles.map((file, index) => (
                     <ListItem
-                        key={value}
+                        key={file.filename}
                         disableGutters
                         secondaryAction={
-                            <IconButton aria-label="comment">
-                                <ArrowDownwardIcon />
-                            </IconButton>
+                            <a href={`${MedicalFilesPagePath}/${file.filename}`} download={file.title + ".pdf"}>
+                                <IconButton aria-label="download">
+                                    <ArrowDownwardIcon />
+                                </IconButton>
+                            </a>
                         }
                         sx={{
                             backgroundColor: index % 2 === 1 ? 'inherit' : '#f5f5f5',
                         }}
                     >
-                        <ListItemText primary={`Line item ${value}`} />
+                        <ListItemText primary={file.title} />
                     </ListItem>
                 ))}
             </List>
