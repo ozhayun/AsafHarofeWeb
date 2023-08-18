@@ -1,8 +1,23 @@
 .medical.documents.container {
+    direction: rtl;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-size: contain;
-    background: #cef0fa
+    background: #cef0fa;
+}
+
+.ListItemText {
+    text-align: right;
+    flex-grow: 1; /* This makes sure the text takes up as much space as possible */
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    /* If you need any specific styling for the buttons, it can be placed here */
 }
