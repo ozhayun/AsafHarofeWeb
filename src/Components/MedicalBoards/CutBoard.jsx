@@ -19,13 +19,18 @@ const popUpCells = [3,9,24,26,62,78,94];
 
 const popUpMessages = [
     "מיד האחות תקבל אותך, תעצור את הדימום, תבדוק לך דופק, לחץ דם וחום",
+
     "המתן לרופא אשר יחליט על הטיפול המתאים- הדבקה, חבישה או תפירה." +
     "לאחר הדבקה או חבישה, תקבל מכתב שחרור ותוכל לחזור הביתה." +
     "תפירה יכולה להיות עם טשטוש או בלי טשטוש.",
+
     "בתפירה עם טשטוש יכנס רופא בכיר, תיהיה חתימה על הסכמה, מתן תרופה ומעבר לחדר תפירה." +
     "בתפירה בלי טשטוש תעבור לחדר תפירה.",
+
     "תעבור ניקוי וחיטוי של החתך, הרדמה מקומית, תפירה וחבישה.",
-    "במידה ואינך מחוסן או זריקת הטטנוס שלך אינה בתוקף, תקבל זריקת טטנוס.",
+
+    "במידה ואינך מחוסן או שזריקת הטטנוס שלך אינה בתוקף, תקבל זריקת טטנוס.",
+
     "לאחר התאוששות תקבל מכתב עם החלטה על אשפוז או שחרור הביתה."
 ];
 
@@ -60,6 +65,9 @@ const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange,
             <div className="slide-image3">
                 <img src={slideImagePath} alt="Slide" className="slide-image3" />
             </div>
+            <div className="slide-image4">
+                <img src={slideImagePath} alt="Slide" className="slide-image4" />
+            </div>
 
             <div className="ladder-image1">
                 <img src={ladderImagePath} alt="Slide" className="ladder-image1" />
@@ -76,12 +84,12 @@ const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange,
             <div className="ladder-image5">
                 <img src={ladderImagePath} alt="Slide" className="ladder-image5" />
             </div>
-            <div className="ladder-image6">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image6" />
-            </div>
-            <div className="ladder-image7">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image7" />
-            </div>
+            {/*<div className="ladder-image6">*/}
+            {/*    <img src={ladderImagePath} alt="Slide" className="ladder-image6" />*/}
+            {/*</div>*/}
+            {/*<div className="ladder-image7">*/}
+            {/*    <img src={ladderImagePath} alt="Slide" className="ladder-image7" />*/}
+            {/*</div>*/}
         </div>
     )
 }
