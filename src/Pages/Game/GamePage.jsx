@@ -22,6 +22,7 @@ const GamePage = () => {
     const [popUpContent, setPopUpContent] = React.useState("");
     const [popUpCells, setPopUpCells] = React.useState([]);
     const [popUpMessages, setPopUpMessages] = React.useState([]);
+    const [messageCount, setMessageCount] = React.useState(0)
     const [isGamePaused, setIsGamePaused] = React.useState(false);
     const [isPlayerWin, setIsPlayerWin] = React.useState(false);
     const location = useLocation();
@@ -29,7 +30,6 @@ const GamePage = () => {
     const {pain, animal} = location.state || {};
     const animalClass = `animal ${animal || ''}`;
 
-    let messageCount = 0;
     let animalImage, playerImage;
     switch (animal) {
         case 'dog':
@@ -93,7 +93,8 @@ const GamePage = () => {
             const cellIndex = popUpCells.indexOf(playerPosition);
             if (cellIndex !== -1) {
                 openPopUp(popUpMessages[cellIndex]);
-                messageCount++;
+                const newMessageCount = messageCount + 1;
+                setMessageCount(newMessageCount);
             }
         }
     };
@@ -130,6 +131,7 @@ const GamePage = () => {
         setIsPopUpOpen(false);
         setIsPlayerWin(false)
         setPlayerPosition(1);
+        setMessageCount(0)
     };
 
 
