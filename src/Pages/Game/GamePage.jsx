@@ -89,9 +89,10 @@ const GamePage = () => {
     };
 
     const checkCellPopups = (playerPosition) => {
-        if(messageCount < popUpCells.length) {
+        if(messageCount < popUpCells.length || playerPosition === 100) {
             const cellIndex = popUpCells.indexOf(playerPosition);
-            if (cellIndex !== -1) {
+            if (cellIndex !== -1 && popUpMessages[cellIndex]) {
+                console.log("Opening popup with content: ", popUpMessages[cellIndex]);
                 openPopUp(popUpMessages[cellIndex]);
                 const newMessageCount = messageCount + 1;
                 setMessageCount(newMessageCount);
