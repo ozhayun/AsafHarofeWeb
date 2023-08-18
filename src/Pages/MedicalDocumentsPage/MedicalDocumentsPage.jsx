@@ -25,7 +25,7 @@ const MedicalDocumentsPage = () => {
             <div className="toolbar-container">
                 <CustomToolbar toolbarTitle="מסמכים רפואים"/>
             </div>
-            <List sx={{ width: '100%' }}>
+            <List className="files-list" >
                 {pdfFiles.map((file, index) => (
                     <ListItem
                         className="ListItem"

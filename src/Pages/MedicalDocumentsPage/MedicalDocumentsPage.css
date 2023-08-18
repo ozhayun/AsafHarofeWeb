@@ -1,9 +1,10 @@
-.medical.documents.container {
+.files-list {
     direction: rtl;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
     background-size: contain;
     background: #cef0fa;
 }
@@ -16,8 +17,4 @@
 .icon-container {
     display: flex;
     align-items: center;
-}
-
-.button {
-    /* If you need any specific styling for the buttons, it can be placed here */
 }
