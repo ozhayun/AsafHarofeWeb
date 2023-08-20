@@ -13,6 +13,7 @@ import vetLionPlayerImagePath from "../../../Public/GamePage/lionPlayer.png";
 import vetPandaPlayerImagePath from "../../../Public/GamePage/pandaPlayer.png";
 import vetMonkeyPlayerImagePath from "../../../Public/GamePage/monkeyPlayer.png";
 import vetDogPlayerImagePath from "../../../Public/GamePage/dogPlayer.png";
+import FeverBoard from "../../Components/MedicalBoards/FeverBoard.jsx";
 
 const GamePage = () => {
     const [playerPosition, setPlayerPosition] = React.useState(1);
@@ -141,14 +142,25 @@ const GamePage = () => {
                 <CustomToolbar toolbarTitle="סולמות ומגלשות"/>
             </div>
 
-           <CutBoard playerPosition={playerPosition}
-                     playerImage={playerImage}
-                     onLaddersChange={handleLaddersChange}
-                     onSlidesChange={handleSlidesChange}
-                     openPopUp={openPopUp}
-                     setPopUpCells={setPopUpCells}
-                     setPopUpMessages={setPopUpMessages}
-                     />
+            {pain === 'cut' ? (
+                <CutBoard playerPosition={playerPosition}
+                          playerImage={playerImage}
+                          onLaddersChange={handleLaddersChange}
+                          onSlidesChange={handleSlidesChange}
+                          openPopUp={openPopUp}
+                          setPopUpCells={setPopUpCells}
+                          setPopUpMessages={setPopUpMessages}
+                />
+            ) : (
+                <FeverBoard playerPosition={playerPosition}
+                            playerImage={playerImage}
+                            onLaddersChange={handleLaddersChange}
+                            onSlidesChange={handleSlidesChange}
+                            openPopUp={openPopUp}
+                            setPopUpCells={setPopUpCells}
+                            setPopUpMessages={setPopUpMessages}
+                />
+            )}
 
             <PopUp isOpen={isPopUpOpen}
                    isPlayerWin={isPlayerWin}
