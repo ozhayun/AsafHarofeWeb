@@ -3,6 +3,8 @@ import './ChoosePain.css';
 import Typography from "@mui/material/Typography";
 import ThermometerImagePath from "../../../Public/HomePage/Thermometer.png";
 import PlasterImagePath from "../../../Public/HomePage/Plaster.png";
+import AbdominalPainImagePath from "../../../Public/HomePage/AbdominalPain.png";
+import InjuryImagePath from "../../../Public/HomePage/Injury.png";
 import {useState} from "react";
 import CustomToolbar from '../../Components/CustomToolbar.jsx';
 import {Button} from "@mui/material";
@@ -47,6 +49,16 @@ const ChoosePain = () => {
                             data-selected={selectedPain === 'cut' ? 'true' : selectedPain === "" ? 'default' : 'false'}>
                         <img src={PlasterImagePath} style={{width: "100%", height: "100%"}} alt="Plaster"/>
                         ?יש לה חתך
+                    </Button>
+                    <Button className="piece" onClick={() => handlePainClick('abdominalPain')}
+                            data-selected={selectedPain === 'abdominalPain' ? 'true' : selectedPain === "" ? 'default' : 'false'}>
+                        <img src={AbdominalPainImagePath} style={{width: "100%", height: "100%"}} alt="AbdominalPain"/>
+                        ?יש לה כאב בטן
+                    </Button>
+                    <Button className="piece" onClick={() => handlePainClick('injury')}
+                            data-selected={selectedPain === 'injury' ? 'true' : selectedPain === "" ? 'default' : 'false'}>
+                        <img src={InjuryImagePath} style={{width: "100%", height: "100%"}} alt="Injury"/>
+                        ?יש לה חבלה ביד או רגל
                     </Button>
                 </div>
                 <Button id="ContinueButton" disabled={selectedPain === null} onClick={handleContinueClick}>

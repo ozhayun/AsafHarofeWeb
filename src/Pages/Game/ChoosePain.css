@@ -27,7 +27,7 @@
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
 
@@ -43,6 +43,8 @@
     overflow: hidden;
     transition: transform 0.3s ease;
     opacity: 1;
+    font-size: 1.5rem;
+    padding: 30px;
 }
 
 .rectanglePain .piece[data-selected='false'] {
