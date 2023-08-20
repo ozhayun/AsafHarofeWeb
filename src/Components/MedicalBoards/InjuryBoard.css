@@ -1,0 +1,140 @@
+.game-board-container {
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* 23 -> 16*/
+.slide-image1 {
+    z-index: 1;
+    position: absolute;
+    height: 37%;
+    width: 40%;
+    top: 54%;
+    left: 42%;
+    transform: rotate(9deg);
+}
+
+.slide-image2 {
+    z-index: 1;
+    position: absolute;
+    height: 53%;
+    width: 40%;
+    top: 28%;
+    left: 7%;
+    transform: rotate(5deg);
+}
+
+.slide-image3 {
+    z-index: 1;
+    position: absolute;
+    height: 50%;
+    width: 52%;
+    top: 23%;
+    left: 42%;
+}
+
+.slide-image4 {
+    z-index: 1;
+    position: absolute;
+    height: 50%;
+    width: 52%;
+    top: 3%;
+    left: 8%;
+}
+
+/* 86 -> 64 */
+.slide-image5 {
+    z-index: 1;
+    position: absolute;
+    height: 50%;
+    width: 52%;
+    top: 12%;
+    left: 36%;
+}
+
+.slide-image5 img {
+    transform: scaleX(-1)
+}
+
+/* ladder 3-> 22 */
+.ladder-image1 {
+    z-index: 1;
+    position: absolute;
+    height: 45%;
+    width: 40%;
+    top: 51%;
+    left: 52%;
+    opacity: 90%;
+    transform: rotate(7deg);
+}
+
+/* 14 -> 36 */
+.ladder-image2 {
+    z-index: 1;
+    position: absolute;
+    height: 53%;
+    width: 40%;
+    top: 41%;
+    left: 29%;
+    opacity: 90%;
+    transform: rotate(18deg);
+}
+
+/* 29 -> 54*/
+.ladder-image3 {
+    z-index: 1;
+    position: absolute;
+    height: 60%;
+    width: 40%;
+    top: 28%;
+    left: 14%;
+    opacity: 90%;
+    transform: rotate(13deg);
+}
+
+/* 39 -> 60*/
+.ladder-image4 {
+    z-index: 1;
+    position: absolute;
+    height: 50%;
+    width: 40%;
+    top: 28%;
+    left: 58%;
+    opacity: 90%;
+    transform: rotate(7deg);
+}
+
+/* ladder 45 -> 74 */
+.ladder-image5 {
+    z-index: 1;
+    position: absolute;
+    height: 60%;
+    width: 40%;
+    top: 14%;
+    left: 28%;
+    opacity: 90%;
+    transform: rotate(-14deg);
+
+}
+/* 78 -> 99 */
+.ladder-image6 {
+    z-index: 1;
+    position: absolute;
+    height: 46%;
+    width: 40%;
+    top: 5%;
+    left: 60%;
+    opacity: 90%;
+    transform: rotate(-12deg)
+}
+
+
+@media (min-width: 500px) {
+    .game-board-container {
+        width: 100%;
+        max-width: 550px;
+        height: 70vh;
+        max-height: 550px;
+        margin: 0 auto;
+    }
+}

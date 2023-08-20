@@ -14,6 +14,8 @@ import vetPandaPlayerImagePath from "../../../Public/GamePage/pandaPlayer.png";
 import vetMonkeyPlayerImagePath from "../../../Public/GamePage/monkeyPlayer.png";
 import vetDogPlayerImagePath from "../../../Public/GamePage/dogPlayer.png";
 import FeverBoard from "../../Components/MedicalBoards/FeverBoard.jsx";
+import AbdominalPainBoard from "../../Components/MedicalBoards/AbdominalPainBoard.jsx";
+import InjuryBoard from "../../Components/MedicalBoards/InjuryBoard.jsx";
 
 const GamePage = () => {
     const [playerPosition, setPlayerPosition] = React.useState(1);
@@ -142,25 +144,45 @@ const GamePage = () => {
                 <CustomToolbar toolbarTitle="סולמות ומגלשות"/>
             </div>
 
-            {pain === 'cut' ? (
-                <CutBoard playerPosition={playerPosition}
-                          playerImage={playerImage}
-                          onLaddersChange={handleLaddersChange}
-                          onSlidesChange={handleSlidesChange}
-                          openPopUp={openPopUp}
-                          setPopUpCells={setPopUpCells}
-                          setPopUpMessages={setPopUpMessages}
-                />
-            ) : (
-                <FeverBoard playerPosition={playerPosition}
-                            playerImage={playerImage}
-                            onLaddersChange={handleLaddersChange}
-                            onSlidesChange={handleSlidesChange}
-                            openPopUp={openPopUp}
-                            setPopUpCells={setPopUpCells}
-                            setPopUpMessages={setPopUpMessages}
-                />
-            )}
+                {pain === 'cut' ? (
+                    <CutBoard playerPosition={playerPosition}
+                              playerImage={playerImage}
+                              onLaddersChange={handleLaddersChange}
+                              onSlidesChange={handleSlidesChange}
+                              openPopUp={openPopUp}
+                              setPopUpCells={setPopUpCells}
+                              setPopUpMessages={setPopUpMessages}
+                    />
+                ) : pain === 'fever' ? (
+                    <FeverBoard playerPosition={playerPosition}
+                                playerImage={playerImage}
+                                onLaddersChange={handleLaddersChange}
+                                onSlidesChange={handleSlidesChange}
+                                openPopUp={openPopUp}
+                                setPopUpCells={setPopUpCells}
+                                setPopUpMessages={setPopUpMessages}
+                    />
+                ) : pain === 'injury' ? (
+                    <InjuryBoard playerPosition={playerPosition}
+                                playerImage={playerImage}
+                                onLaddersChange={handleLaddersChange}
+                                onSlidesChange={handleSlidesChange}
+                                openPopUp={openPopUp}
+                                setPopUpCells={setPopUpCells}
+                                setPopUpMessages={setPopUpMessages}
+                    />
+                ) : pain === 'abdominalPain' ? (
+                    <AbdominalPainBoard playerPosition={playerPosition}
+                              playerImage={playerImage}
+                              onLaddersChange={handleLaddersChange}
+                              onSlidesChange={handleSlidesChange}
+                              openPopUp={openPopUp}
+                              setPopUpCells={setPopUpCells}
+                              setPopUpMessages={setPopUpMessages}
+                    />
+                ) : null
+                }
+
 
             <PopUp isOpen={isPopUpOpen}
                    isPlayerWin={isPlayerWin}
