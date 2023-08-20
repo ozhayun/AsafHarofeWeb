@@ -17,11 +17,12 @@
     color: #00456E;
     margin-top: 1em;
 }
+
 .rectangle {
     width: 80%;
     max-width: 20rem;
     height: 16rem;
-    border-radius: 4rem;
+    border-radius: 3rem;
     border: 0.25rem solid black;
     overflow: hidden;
     display: grid;

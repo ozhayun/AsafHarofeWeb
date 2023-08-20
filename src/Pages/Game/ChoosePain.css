@@ -22,7 +22,7 @@
     width: 80%;
     max-width: 20rem;
     height: 16rem;
-    border-radius: 4rem;
+    border-radius: 3rem;
     border: 0.25rem solid black;
     overflow: hidden;
     display: grid;
@@ -43,8 +43,8 @@
     overflow: hidden;
     transition: transform 0.3s ease;
     opacity: 1;
-    font-size: 1.5rem;
-    padding: 30px;
+    font-size: 0.8rem;
+    padding: 5px;
 }
 
 .rectanglePain .piece[data-selected='false'] {
@@ -62,8 +62,8 @@
 }
 
 .rectanglePain .piece img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 70%;
+    max-height: 70%;
     object-fit: contain;
 }
 
