@@ -17,6 +17,8 @@ import FeverBoard from "../../Components/MedicalBoards/FeverBoard.jsx";
 import AbdominalPainBoard from "../../Components/MedicalBoards/AbdominalPainBoard.jsx";
 import InjuryBoard from "../../Components/MedicalBoards/InjuryBoard.jsx";
 import WinSoundMP3 from "../../../Public/Sounds/WinSound.mp3"
+import SlideSoundMP3 from "../../../Public/Sounds/SlideSound.mp3"
+import LadderSoundMP3 from "../../../Public/Sounds/LadderSound.mp3"
 
 const GamePage = () => {
     const [playerPosition, setPlayerPosition] = React.useState(1);
@@ -61,11 +63,21 @@ const GamePage = () => {
 
     const handleLaddersChange = (newLadders) => {
         setLadders(newLadders);
-    };
+    }
+
+    const playLadderSound = () => {
+        const LadderSound = new Audio(LadderSoundMP3)
+        LadderSound.play();
+    }
 
     const handleSlidesChange = (newSlides) => {
         setSlides(newSlides);
     };
+
+    const playSlideSound = () => {
+        const SlideSound = new Audio(SlideSoundMP3)
+        SlideSound.play();
+    }
 
     const updatePlayerPosition = async (rollResult) => {
         const startPosition = playerPosition;
@@ -84,11 +96,13 @@ const GamePage = () => {
         }
 
         if (ladders.hasOwnProperty(endPosition)) {
+            playLadderSound();
             await new Promise((resolve) => setTimeout(resolve, 200));
             setPlayerPosition(ladders[endPosition]);
         }
 
         if (slides.hasOwnProperty(endPosition)) {
+            playSlideSound();
             await new Promise((resolve) => setTimeout(resolve, 200));
             setPlayerPosition(slides[endPosition]);
         }
