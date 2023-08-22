@@ -8,7 +8,7 @@
     ],
     "rewrites": [
       {
-        "source": "**",
+        "source": "!/Public/MedicalFilesPage/**",
         "destination": "/index.html"
       }
     ]
