@@ -15,7 +15,7 @@ const pdfFiles = [
     { title: "טיפול בחום", filename: "fever_treatment.pdf" }
 ];
 
-const MedicalFilesPagePath = `${process.env.PUBLIC_URL}/Public/MedicalFilesPage`;
+const MedicalFilesPagePath = `/Public/MedicalFilesPage`;
 
 const MedicalDocumentsPage = () => {
 

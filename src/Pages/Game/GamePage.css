@@ -8,7 +8,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 30vh; /* Adjust the height as needed (subtract the height of the game board) */
+    height: 25vh;
     padding: 20px;
     background-size: contain;
     justify-content: center;
@@ -25,7 +25,6 @@
 
 .animal.monkey {
     background-color: #00ff4c;
-
 }
 
 .animal.panda {
@@ -74,8 +73,6 @@
     }
 }
 
-
-
 @media (min-width: 901px) {
     .rectangleDice {
         width: 30%;
@@ -96,5 +93,4 @@
         max-width: 100px;
         margin-right: 7rem;
     }
-
 }
