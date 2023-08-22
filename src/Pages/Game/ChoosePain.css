@@ -34,7 +34,6 @@
 .rectanglePain .piece {
     width: 100%;
     height: 100%;
-    border: 0.2rem solid black;
     background: none;
     display: flex;
     flex-direction: column;
@@ -45,6 +44,22 @@
     opacity: 1;
     font-size: 0.8rem;
     padding: 5px;
+}
+
+.rectanglePain .piece.fever{
+    border-bottom: 0.2rem solid black;
+    border-right: 0.2rem solid black;
+}
+
+.rectanglePain .piece.cut{
+    border-bottom: 0.2rem solid black;
+}
+
+.rectanglePain .piece.abdominalPain{
+    border-right: 0.2rem solid black;
+}
+
+.rectanglePain .piece.injury{
 }
 
 .rectanglePain .piece[data-selected='false'] {
