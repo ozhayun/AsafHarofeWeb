@@ -12,7 +12,7 @@ import {useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
 
 
-const ChoosePain = ({clickAudio}) => {
+const ChoosePain = ({playClickSound}) => {
     const [selectedPain, setSelectedPain] = useState("");
     const navigate = useNavigate();
     const location = useLocation();
@@ -24,7 +24,7 @@ const ChoosePain = ({clickAudio}) => {
 
     const handleContinueClick = () => {
         if(selectedPain) {
-            clickAudio.play();
+            playClickSound();
             navigate('/game', { state: { pain: selectedPain, animal: animal } });
         }
     }

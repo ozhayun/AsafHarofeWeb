@@ -14,15 +14,17 @@ const diceImages = [dice1, dice2, dice3, dice4, dice5, dice6];
 const Dice = ({ updatePlayerPosition }) => {
     const [diceNumber, setDiceNumber] = useState(1);
     const [animate, setAnimate] = useState(false);
-    const diceRollAudio = new Audio(diceRollSound);
 
-
+    const playDiceRollSound = () => {
+        const diceRollAudio = new Audio(diceRollSound);
+        diceRollAudio.play();
+    }
     const rollDice = () => {
         const newDiceNumber = Math.floor(Math.random() * 6) + 1;
         setDiceNumber(newDiceNumber);
+        playDiceRollSound();
         updatePlayerPosition(newDiceNumber);
         setAnimate(true);
-        diceRollAudio.play();
     };
 
     useEffect(() => {

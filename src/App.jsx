@@ -11,6 +11,11 @@ import ButtonClickSound from '/Public/Sounds/ClickSound.mp3';
 function App() {
     const clickAudio = new Audio(ButtonClickSound);
 
+    function playClickSound() {
+        const audio = new Audio(ButtonClickSound);
+        audio.play();
+    }
+
     return (
         <Router>
             <Routes>
@@ -21,7 +26,7 @@ function App() {
                     path="/choose-animal"
                     element={
                     <ChooseAnimal
-                        clickAudio={clickAudio}
+                        playClickSound={playClickSound}
                     />
                     }
                 />
@@ -29,7 +34,7 @@ function App() {
                     path="/choose-pain"
                     element={
                     <ChoosePain
-                        clickAudio={clickAudio}
+                        playClickSound={playClickSound}
                      />
                     }
                 />

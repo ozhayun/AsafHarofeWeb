@@ -11,7 +11,7 @@ import {Button} from "@mui/material";
 import CustomToolbar from '../../Components/CustomToolbar.jsx';
 import * as React from "react";
 
-const ChooseAnimal = ({clickAudio}) => {
+const ChooseAnimal = ({playClickSound}) => {
     const [selectedAnimal, setSelectedAnimal] = useState("");
     const navigate = useNavigate();
 
@@ -21,7 +21,7 @@ const ChooseAnimal = ({clickAudio}) => {
 
     const handleContinueClick = () => {
         if(selectedAnimal) {
-            clickAudio.play();
+            playClickSound();
             navigate('/choose-pain', { state: { animal: selectedAnimal } });
         }
     }
