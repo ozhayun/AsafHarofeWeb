@@ -5,7 +5,7 @@
     grid-template-rows: repeat(10, 1fr);
     border: 0.25rem solid #000000;
     overflow: hidden;
-    height: 55vh;
+    height: 60vh;
     width: 100vw;
     flex-direction: column-reverse;
     z-index: 2;
@@ -28,7 +28,7 @@
     .game-board {
         width: 100%;
         max-width: 550px;
-        height: 70vh;
+        height: 50vh;
         max-height: 550px;
         margin: 0 auto;
     }

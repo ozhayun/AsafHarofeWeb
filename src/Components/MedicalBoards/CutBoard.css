@@ -1,6 +1,6 @@
 .game-board-container {
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 /* 23 -> 16*/
@@ -129,11 +129,11 @@
 }
 
 
-@media (min-width: 500px) {
+@media (min-width: 501px) {
     .game-board-container {
         width: 100%;
         max-width: 550px;
-        height: 70vh;
+        height: 50vh;
         max-height: 550px;
         margin: 0 auto;
     }

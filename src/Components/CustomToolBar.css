@@ -6,7 +6,7 @@
 }
 
 .toolbar {
-    height: 12vh;
+    height: 9vh;
     padding: 1em;
     display: flex;
     justify-content: space-between;
@@ -37,7 +37,7 @@
     object-fit: contain;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 501px) {
     #ShamirLogo {
         width: 15vw;
         max-width: 100px;
