@@ -16,6 +16,7 @@ import vetDogPlayerImagePath from "../../../Public/GamePage/dogPlayer.png";
 import FeverBoard from "../../Components/MedicalBoards/FeverBoard.jsx";
 import AbdominalPainBoard from "../../Components/MedicalBoards/AbdominalPainBoard.jsx";
 import InjuryBoard from "../../Components/MedicalBoards/InjuryBoard.jsx";
+import WinSoundMP3 from "../../../Public/Sounds/WinSound.mp3"
 
 const GamePage = () => {
     const [playerPosition, setPlayerPosition] = React.useState(1);
@@ -32,6 +33,8 @@ const GamePage = () => {
     const navigate = useNavigate();
     const {pain, animal} = location.state || {};
     const animalClass = `animal ${animal || ''}`;
+    const WinSound = new Audio(WinSoundMP3)
+
 
     let animalImage, playerImage;
     switch (animal) {
@@ -119,6 +122,7 @@ const GamePage = () => {
     };
 
     const handlePlayerWin = () => {
+        WinSound.play();
         setIsPopUpOpen(true);
         setIsPlayerWin(true);
         setIsGamePaused(true);
