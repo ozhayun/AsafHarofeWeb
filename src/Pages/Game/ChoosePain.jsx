@@ -40,22 +40,22 @@ const ChoosePain = () => {
                     מה כואב לחיה?
                 </Typography>
                 <div className='rectanglePain'>
-                    <Button className="piece" onClick={() => handlePainClick('fever')}
+                    <Button className="piece fever" onClick={() => handlePainClick('fever')}
                             data-selected={selectedPain === 'fever' ? 'true' : selectedPain === "" ? 'default' : 'false'}>
                         <img src={ThermometerImagePath} style={{width: "100%", height: "100%"}} alt="Thermometer"/>
                         ?יש לה חום
                     </Button>
-                    <Button className="piece" onClick={() => handlePainClick('cut')}
+                    <Button className="piece cut" onClick={() => handlePainClick('cut')}
                             data-selected={selectedPain === 'cut' ? 'true' : selectedPain === "" ? 'default' : 'false'}>
                         <img src={PlasterImagePath} style={{width: "100%", height: "100%"}} alt="Plaster"/>
                         ?יש לה חתך
                     </Button>
-                    <Button className="piece" onClick={() => handlePainClick('abdominalPain')}
+                    <Button className="piece abdominalPain" onClick={() => handlePainClick('abdominalPain')}
                             data-selected={selectedPain === 'abdominalPain' ? 'true' : selectedPain === "" ? 'default' : 'false'}>
                         <img src={AbdominalPainImagePath} style={{width: "100%", height: "100%"}} alt="AbdominalPain"/>
                         ?יש לה כאב בטן
                     </Button>
-                    <Button className="piece" onClick={() => handlePainClick('injury')}
+                    <Button className="piece injury" onClick={() => handlePainClick('injury')}
                             data-selected={selectedPain === 'injury' ? 'true' : selectedPain === "" ? 'default' : 'false'}>
                         <img src={InjuryImagePath} style={{width: "100%", height: "100%"}} alt="Injury"/>
                         ?יש לה חבלה ביד או רגל
