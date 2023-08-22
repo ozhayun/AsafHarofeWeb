@@ -1,6 +1,6 @@
 import './ChooseAnimal.css'
 import {useState} from 'react'
-import ButtonClickSound from '../../../Public/Sounds/click.mp3';
+// import ButtonClickSound from '../../../Public/Sounds/click.mp3';
 import Typography from "@mui/material/Typography";
 import vetLionImagePath from "../../../Public/HomePage/VetLion.png";
 import vetPandaImagePath from "../../../Public/HomePage/VetPanda.png";
@@ -11,9 +11,8 @@ import {Button} from "@mui/material";
 import CustomToolbar from '../../Components/CustomToolbar.jsx';
 import * as React from "react";
 
-const ChooseAnimal = () => {
+const ChooseAnimal = ({clickAudio}) => {
     const [selectedAnimal, setSelectedAnimal] = useState("");
-    const clickAudio = new Audio(ButtonClickSound);
     const navigate = useNavigate();
 
     const handleAnimalClick = (animal) => {

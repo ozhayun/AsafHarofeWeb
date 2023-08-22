@@ -1,6 +1,6 @@
 import './Dice.css';
 import React, {useEffect, useState} from 'react';
-import diceRollSound from '../../Public/Sounds/dice-rolling.mp3'
+import diceRollSound from '../../Public/Sounds/DiceRollingSound.mp3'
 import dice1 from '../../Public/GamePage/1.png';
 import dice2 from '../../Public/GamePage/2.png';
 import dice3 from '../../Public/GamePage/3.png';
