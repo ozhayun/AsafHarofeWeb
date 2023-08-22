@@ -73,7 +73,16 @@ const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange,
                 <img src={slideImagePath} alt="Slide" className="slide-image4" />
             </div>
             <div className="slide-image5">
-                <img src={slideImagePath} alt="Slide" className="slide-image4" />
+                <img src={slideImagePath} alt="Slide" className="slide-image5" />
+            </div>
+            <div className="slide-image6">
+                <img src={slideImagePath} alt="Slide" className="slide-image6" />
+            </div>
+            <div className="slide-image7">
+                <img src={slideImagePath} alt="Slide" className="slide-image7" />
+            </div>
+            <div className="slide-image8">
+                <img src={slideImagePath} alt="Slide" className="slide-image8" />
             </div>
 
             <div className="ladder-image1">
@@ -94,6 +103,13 @@ const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange,
             <div className="ladder-image6">
                 <img src={ladderImagePath} alt="Slide" className="ladder-image6" />
             </div>
+            <div className="ladder-image7">
+                <img src={ladderImagePath} alt="Slide" className="ladder-image7" />
+            </div>
+            <div className="ladder-image8">
+                <img src={ladderImagePath} alt="Slide" className="ladder-image8" />
+            </div>
+
         </div>
     )
 }
