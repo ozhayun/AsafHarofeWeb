@@ -139,7 +139,7 @@ const GamePage = () => {
 
 
     return (
-        <div className="container">
+        <div className="game-page">
             <div className="toolbar-container">
                 <CustomToolbar toolbarTitle="סולמות ומגלשות"/>
             </div>
