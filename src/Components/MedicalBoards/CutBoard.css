@@ -87,7 +87,7 @@
     left: 60%;
 }
 
-/* ladder 95-> 87 */
+/* 95-> 87 */
 .slide-image8 {
     z-index: 1;
     position: absolute;
@@ -97,7 +97,7 @@
     left: 25%;
 }
 
-/* ladder 4-> 23 */
+/* 4-> 23 */
 .ladder-image1 {
     z-index: 1;
     position: absolute;
@@ -145,7 +145,7 @@
     transform: rotate(9deg);
 }
 
-/* ladder 24 -> 38 */
+/* 24 -> 38 */
 .ladder-image5 {
     z-index: 1;
     position: absolute;
