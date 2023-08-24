@@ -5,21 +5,26 @@ import * as React from "react";
 import Board from "../Board.jsx";
 
 const ladders = {
-    3: 22,
-    14: 36,
-    29: 54,
-    39: 60,
-    45 : 74,
-    80 : 99};
+    4 : 23,
+    28 : 46,
+    55 : 95,
+    22 : 41,
+    24 : 38,
+    32 : 90,
+    79 : 99,
+    10 : 30};
 
 const slides = {
-    23: 16,
-    53 : 31,
-    62: 44,
-    86 : 64,
-    94: 72 };
+    21 : 2,
+    94 : 72,
+    77 : 42,
+    26 : 9,
+    96: 78,
+    73 : 47,
+    80 : 62,
+    57 : 45 };
 
-const popUpCells = [3,14,23,29,39,45,53,62,74,80,86,97];
+const popUpCells = [4,12,21,22,24,26,28,36,51,53,61,77,79,93,95,96];
 
 const popUpMessages = [
     "מיד האחות תקבל אותך, תעצור את הדימום, תבדוק לך דופק, לחץ דם וחום",
@@ -58,7 +63,6 @@ const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange,
 
     return (
         <div className="game-board-container">
-            לוח כאבי בטןןןןןן
             <Board playerPosition={playerPosition} playerImage={playerImage}/>
 
             <div className="slide-image1">
@@ -74,7 +78,16 @@ const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange,
                 <img src={slideImagePath} alt="Slide" className="slide-image4" />
             </div>
             <div className="slide-image5">
-                <img src={slideImagePath} alt="Slide" className="slide-image4" />
+                <img src={slideImagePath} alt="Slide" className="slide-image5" />
+            </div>
+            <div className="slide-image6">
+                <img src={slideImagePath} alt="Slide" className="slide-image6" />
+            </div>
+            <div className="slide-image7">
+                <img src={slideImagePath} alt="Slide" className="slide-image7" />
+            </div>
+            <div className="slide-image8">
+                <img src={slideImagePath} alt="Slide" className="slide-image8" />
             </div>
 
             <div className="ladder-image1">
@@ -94,6 +107,12 @@ const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange,
             </div>
             <div className="ladder-image6">
                 <img src={ladderImagePath} alt="Slide" className="ladder-image6" />
+            </div>
+            <div className="ladder-image7">
+                <img src={ladderImagePath} alt="Slide" className="ladder-image7" />
+            </div>
+            <div className="ladder-image8">
+                <img src={ladderImagePath} alt="Slide" className="ladder-image8" />
             </div>
         </div>
     )

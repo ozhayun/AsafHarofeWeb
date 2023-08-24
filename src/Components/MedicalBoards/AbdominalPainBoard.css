@@ -1,54 +1,61 @@
 .game-board-container {
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
-/* 23 -> 16*/
+/* 21 -> 2*/
 .slide-image1 {
     z-index: 1;
     position: absolute;
-    height: 37%;
-    width: 40%;
-    top: 54%;
-    left: 42%;
-    transform: rotate(9deg);
+    height: 41%;
+    width: 46%;
+    top: 56%;
+    left: 53%;
+    transform: rotate(-5deg);
 }
 
+/* 94 -> 72*/
 .slide-image2 {
     z-index: 1;
     position: absolute;
-    height: 53%;
-    width: 40%;
-    top: 28%;
-    left: 7%;
+    height: 47%;
+    width: 47%;
+    top: 4%;
+    left: 9%;
     transform: rotate(5deg);
 }
 
+/* 77 -> 42*/
 .slide-image3 {
     z-index: 1;
     position: absolute;
-    height: 50%;
-    width: 52%;
-    top: 23%;
-    left: 42%;
+    height: 55%;
+    width: 50%;
+    top: 17%;
+    left: 41%;
 }
 
+.slide-image3 img {
+    transform: scaleX(-1)
+}
+
+/* 26 -> 9*/
 .slide-image4 {
     z-index: 1;
     position: absolute;
-    height: 50%;
-    width: 52%;
-    top: 3%;
+    height: 43%;
+    width: 61%;
+    top: 53%;
     left: 8%;
 }
 
-/* 86 -> 64 */
+/* 96 -> 78 */
 .slide-image5 {
     z-index: 1;
     position: absolute;
-    height: 50%;
-    width: 52%;
-    top: 12%;
+    height: 44%;
+    width: 49%;
+    top: 5%;
     left: 36%;
 }
 
@@ -56,84 +63,147 @@
     transform: scaleX(-1)
 }
 
-/* ladder 3-> 22 */
+/* 73 -> 47 */
+.slide-image6 {
+    z-index: 1;
+    position: absolute;
+    height: 56%;
+    width: 41%;
+    top: 17%;
+    left: 15%;
+}
+
+.slide-image6 img {
+    transform: scaleX(-1)
+}
+
+/* 80 -> 62 */
+.slide-image7 {
+    z-index: 1;
+    position: absolute;
+    height: 36%;
+    width: 37%;
+    top: 18%;
+    left: 60%;
+}
+
+/* ladder 57-> 45 */
+.slide-image8 {
+    z-index: 1;
+    position: absolute;
+    height: 33%;
+    width: 36%;
+    top: 36%;
+    left: 39%;
+}
+
+/* ladder 4-> 23 */
 .ladder-image1 {
     z-index: 1;
     position: absolute;
     height: 45%;
     width: 40%;
-    top: 51%;
-    left: 52%;
+    top: 52%;
+    left: 45%;
     opacity: 90%;
     transform: rotate(7deg);
 }
 
-/* 14 -> 36 */
+/* 28 -> 46 */
 .ladder-image2 {
     z-index: 1;
     position: absolute;
-    height: 53%;
-    width: 40%;
-    top: 41%;
-    left: 29%;
+    height: 54%;
+    width: 45%;
+    top: 34%;
+    left: 19%;
     opacity: 90%;
-    transform: rotate(18deg);
+    transform: rotate(16deg);
 }
 
-/* 29 -> 54*/
+/* 55 -> 95*/
 .ladder-image3 {
     z-index: 1;
     position: absolute;
-    height: 60%;
-    width: 40%;
-    top: 28%;
-    left: 14%;
+    height: 68%;
+    width: 45%;
+    top: 2%;
+    left: 24%;
     opacity: 90%;
-    transform: rotate(13deg);
+    transform: rotate(0deg);
 }
 
-/* 39 -> 60*/
+/* 22 -> 41*/
 .ladder-image4 {
     z-index: 1;
     position: absolute;
     height: 50%;
-    width: 40%;
-    top: 28%;
-    left: 58%;
+    width: 43%;
+    top: 34%;
+    left: 57%;
     opacity: 90%;
-    transform: rotate(7deg);
+    transform: rotate(9deg);
 }
 
-/* ladder 45 -> 74 */
+/* ladder 24 -> 38 */
 .ladder-image5 {
     z-index: 1;
     position: absolute;
-    height: 60%;
-    width: 40%;
-    top: 14%;
-    left: 28%;
+    height: 39%;
+    width: 32%;
+    top: 44%;
+    left: 50%;
     opacity: 90%;
-    transform: rotate(-14deg);
-
+    transform: rotate(10deg);
 }
-/* 78 -> 99 */
+
+
+
+/* 32 -> 90 */
 .ladder-image6 {
+    z-index: 1;
+    position: absolute;
+    height: 74%;
+    width: 48%;
+    top: 7%;
+    left: 0%;
+    opacity: 90%;
+    transform: rotate(-8deg);
+}
+
+.ladder-image6 img {
+    transform: scaleX(-1)
+}
+
+/* 79 -> 99 */
+.ladder-image7 {
+    z-index: 1;
+    position: absolute;
+    height: 47%;
+    width: 42%;
+    top: 3%;
+    left: 54%;
+    opacity: 90%;
+    transform: rotate(-1deg);
+}
+
+/* 10 -> 30 */
+.ladder-image8 {
     z-index: 1;
     position: absolute;
     height: 46%;
     width: 40%;
-    top: 5%;
-    left: 60%;
+    top: 51%;
+    left: -1%;
     opacity: 90%;
-    transform: rotate(-12deg)
+    transform: rotate(0deg);
 }
 
-
-@media (min-width: 500px) {
+@media (min-width: 501px) {
     .game-board-container {
         width: 100%;
         max-width: 550px;
-        height: 70vh;
+        height: 50vh;
         max-height: 550px;
         margin: 0 auto;
     }
