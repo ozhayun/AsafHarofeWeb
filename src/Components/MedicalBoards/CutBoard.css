@@ -3,52 +3,59 @@
     overflow-x: hidden;
 }
 
-/* 23 -> 16*/
+/* 21 -> 2*/
 .slide-image1 {
     z-index: 1;
     position: absolute;
-    height: 37%;
-    width: 40%;
-    top: 54%;
-    left: 42%;
-    transform: rotate(9deg);
+    height: 41%;
+    width: 46%;
+    top: 56%;
+    left: 53%;
+    transform: rotate(-5deg);
 }
 
+/* 53 -> 31*/
 .slide-image2 {
     z-index: 1;
     position: absolute;
-    height: 53%;
-    width: 40%;
-    top: 28%;
-    left: 7%;
+    height: 47%;
+    width: 47%;
+    top: 31%;
+    left: 4%;
     transform: rotate(5deg);
 }
 
+/* 77 -> 42*/
 .slide-image3 {
     z-index: 1;
     position: absolute;
-    height: 50%;
-    width: 52%;
-    top: 23%;
-    left: 42%;
+    height: 55%;
+    width: 50%;
+    top: 17%;
+    left: 41%;
 }
 
+.slide-image3 img {
+    transform: scaleX(-1)
+}
+
+/* 26 -> 9*/
 .slide-image4 {
     z-index: 1;
     position: absolute;
-    height: 50%;
-    width: 52%;
-    top: 3%;
+    height: 43%;
+    width: 61%;
+    top: 53%;
     left: 8%;
 }
 
-/* 86 -> 64 */
+/* 96 -> 78 */
 .slide-image5 {
     z-index: 1;
     position: absolute;
-    height: 50%;
-    width: 52%;
-    top: 12%;
+    height: 44%;
+    width: 49%;
+    top: 5%;
     left: 36%;
 }
 
@@ -56,133 +63,140 @@
     transform: scaleX(-1)
 }
 
+/* 93 -> 67 */
 .slide-image6 {
     z-index: 1;
     position: absolute;
-    height: 50%;
-    width: 52%;
-    top: 52%;
-    left: 36%;
+    height: 56%;
+    width: 41%;
+    top: 4%;
+    left: 15%;
 }
 
 .slide-image6 img {
     transform: scaleX(-1)
 }
 
+/* 61 -> 59 */
 .slide-image7 {
     z-index: 1;
     position: absolute;
-    height: 50%;
-    width: 52%;
-    top: 12%;
-    left: 36%;
+    height: 36%;
+    width: 37%;
+    top: 26%;
+    left: 60%;
 }
 
+/* ladder 95-> 87 */
 .slide-image8 {
     z-index: 1;
     position: absolute;
-    height: 50%;
-    width: 52%;
-    top: 12%;
-    left: 36%;
+    height: 33%;
+    width: 36%;
+    top: 5%;
+    left: 25%;
 }
 
-/* ladder 3-> 22 */
+/* ladder 4-> 23 */
 .ladder-image1 {
     z-index: 1;
     position: absolute;
     height: 45%;
     width: 40%;
-    top: 51%;
-    left: 52%;
+    top: 52%;
+    left: 45%;
     opacity: 90%;
     transform: rotate(7deg);
 }
 
-/* 14 -> 36 */
+/* 28 -> 46 */
 .ladder-image2 {
     z-index: 1;
     position: absolute;
-    height: 53%;
-    width: 40%;
-    top: 41%;
-    left: 29%;
+    height: 54%;
+    width: 45%;
+    top: 34%;
+    left: 19%;
     opacity: 90%;
-    transform: rotate(18deg);
+    transform: rotate(16deg);
 }
 
-/* 29 -> 54*/
+/* 51 -> 92*/
 .ladder-image3 {
     z-index: 1;
     position: absolute;
-    height: 60%;
-    width: 40%;
-    top: 28%;
-    left: 14%;
+    height: 68%;
+    width: 47%;
+    top: 2%;
+    left: -1%;
     opacity: 90%;
-    transform: rotate(13deg);
+    transform: rotate(4deg);
 }
 
-/* 39 -> 60*/
+/* 22 -> 41*/
 .ladder-image4 {
     z-index: 1;
     position: absolute;
     height: 50%;
-    width: 40%;
-    top: 28%;
-    left: 58%;
+    width: 43%;
+    top: 34%;
+    left: 57%;
     opacity: 90%;
-    transform: rotate(7deg);
+    transform: rotate(9deg);
 }
 
-/* ladder 45 -> 74 */
+/* ladder 24 -> 38 */
 .ladder-image5 {
     z-index: 1;
     position: absolute;
-    height: 60%;
-    width: 40%;
-    top: 14%;
-    left: 28%;
+    height: 39%;
+    width: 32%;
+    top: 44%;
+    left: 50%;
     opacity: 90%;
-    transform: rotate(-14deg);
-
+    transform: rotate(10deg);
 }
-/* 78 -> 99 */
+
+
+
+/* 36 -> 86 */
 .ladder-image6 {
     z-index: 1;
     position: absolute;
-    height: 46%;
-    width: 40%;
-    top: 5%;
-    left: 50%;
+    height: 74%;
+    width: 48%;
+    top: 8%;
+    left: 26%;
     opacity: 90%;
-    transform: rotate(-12deg)
+    transform: rotate(-8deg);
 }
 
 .ladder-image6 img {
     transform: scaleX(-1)
 }
 
+/* 79 -> 99 */
 .ladder-image7 {
     z-index: 1;
     position: absolute;
-    height: 46%;
-    width: 40%;
-    top: 5%;
-    left: 60%;
+    height: 47%;
+    width: 42%;
+    top: 3%;
+    left: 54%;
     opacity: 90%;
-    transform: rotate(-12deg)
+    transform: rotate(-1deg);
 }
 
+/* 12 -> 32 */
 .ladder-image8 {
     z-index: 1;
     position: absolute;
     height: 46%;
     width: 40%;
-    top: 5%;
-    left: 60%;
+    top: 44%;
+    left: 6%;
     opacity: 90%;
-    transform: rotate(-12deg)
+    transform: rotate(0deg);
 }
 @media (min-width: 500px) {
     .game-board-container {
