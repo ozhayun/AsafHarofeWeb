@@ -9,7 +9,7 @@
     position: absolute;
     height: 41%;
     width: 46%;
-    top: 55%;
+    top: -55%;
     left: 39%;
     transform: rotate(-8deg);
 }
@@ -20,7 +20,7 @@
     position: absolute;
     height: 47%;
     width: 47%;
-    top: 4%;
+    top: -4%;
     left: 9%;
     transform: rotate(5deg);
 }
@@ -31,7 +31,7 @@
     position: absolute;
     height: 55%;
     width: 50%;
-    top: 4%;
+    top: -4%;
     left: 35%;
 }
 
@@ -45,7 +45,7 @@
     position: absolute;
     height: 43%;
     width: 61%;
-    top: 53%;
+    top: -53%;
     left: 8%;
 }
 
@@ -55,7 +55,7 @@
     position: absolute;
     height: 44%;
     width: 49%;
-    top: 33%;
+    top: -33%;
     left: 36%;
 }
 
@@ -69,7 +69,7 @@
     position: absolute;
     height: 56%;
     width: 41%;
-    top: 17%;
+    top: -17%;
     left: 15%;
 }
 
@@ -83,7 +83,7 @@
     position: absolute;
     height: 36%;
     width: 37%;
-    top: 18%;
+    top: -18%;
     left: 60%;
 }
 
@@ -93,7 +93,7 @@
     position: absolute;
     height: 33%;
     width: 36%;
-    top: 27%;
+    top: -27%;
     left: 60%;
 }
 
@@ -103,7 +103,7 @@
     position: absolute;
     height: 45%;
     width: 40%;
-    top: 51%;
+    top: -51%;
     left: 59%;
     opacity: 90%;
     transform: rotate(7deg);
@@ -115,7 +115,7 @@
     position: absolute;
     height: 54%;
     width: 45%;
-    top: 34%;
+    top: -34%;
     left: 19%;
     opacity: 90%;
     transform: rotate(16deg);
@@ -127,7 +127,7 @@
     position: absolute;
     height: 68%;
     width: 45%;
-    top: 2%;
+    top: -2%;
     left: 24%;
     opacity: 90%;
     transform: rotate(0deg);
@@ -139,7 +139,7 @@
     position: absolute;
     height: 50%;
     width: 43%;
-    top: 34%;
+    top: -34%;
     left: 57%;
     opacity: 90%;
     transform: rotate(9deg);
@@ -151,7 +151,7 @@
     position: absolute;
     height: 39%;
     width: 32%;
-    top: 2%;
+    top: -2%;
     left: 46%;
     opacity: 90%;
     transform: rotate(14deg);
@@ -165,7 +165,7 @@
     position: absolute;
     height: 74%;
     width: 48%;
-    top: 7%;
+    top: -7%;
     left: 0%;
     opacity: 90%;
     transform: rotate(-8deg);
@@ -181,7 +181,7 @@
     position: absolute;
     height: 47%;
     width: 42%;
-    top: 3%;
+    top: -3%;
     left: 54%;
     opacity: 90%;
     transform: rotate(-1deg);
@@ -193,7 +193,7 @@
     position: absolute;
     height: 46%;
     width: 40%;
-    top: 51%;
+    top: -51%;
     left: -1%;
     opacity: 90%;
     transform: rotate(0deg);
