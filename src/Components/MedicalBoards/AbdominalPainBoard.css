@@ -7,22 +7,22 @@
 .slide-image1 {
     z-index: 1;
     position: absolute;
-    height: 41%;
-    width: 46%;
-    top: 56%;
-    left: 53%;
-    transform: rotate(-5deg);
+    height: 44%;
+    width: 40%;
+    top: 52%;
+    left: 58%;
+    transform: rotate(0deg);
 }
 
 /* 94 -> 72*/
 .slide-image2 {
     z-index: 1;
     position: absolute;
-    height: 47%;
-    width: 47%;
-    top: 4%;
-    left: 9%;
-    transform: rotate(5deg);
+    height: 53%;
+    width: 40%;
+    top: 3%;
+    left: 10%;
+    transform: rotate(10deg);
 }
 
 /* 77 -> 42*/
@@ -30,9 +30,9 @@
     z-index: 1;
     position: absolute;
     height: 55%;
-    width: 50%;
+    width: 52%;
     top: 17%;
-    left: 41%;
+    left: 40%;
 }
 
 .slide-image3 img {
@@ -43,20 +43,21 @@
 .slide-image4 {
     z-index: 1;
     position: absolute;
-    height: 43%;
-    width: 61%;
-    top: 53%;
-    left: 8%;
+    height: 50%;
+    width: 54%;
+    top: 49%;
+    left: 12%;
+    transform: rotate(8deg);
 }
 
 /* 96 -> 78 */
 .slide-image5 {
     z-index: 1;
     position: absolute;
-    height: 44%;
-    width: 49%;
+    height: 43%;
+    width: 52%;
     top: 5%;
-    left: 36%;
+    left: 34%;
 }
 
 .slide-image5 img {
@@ -93,7 +94,7 @@
     position: absolute;
     height: 33%;
     width: 36%;
-    top: 36%;
+    top: 34%;
     left: 39%;
 }
 
@@ -103,22 +104,22 @@
     position: absolute;
     height: 45%;
     width: 40%;
-    top: 52%;
-    left: 45%;
+    top: 51%;
+    left: 47%;
     opacity: 90%;
-    transform: rotate(7deg);
+    transform: rotate(12deg);
 }
 
 /* 28 -> 46 */
 .ladder-image2 {
     z-index: 1;
     position: absolute;
-    height: 54%;
-    width: 45%;
+    height: 53%;
+    width: 40%;
     top: 34%;
-    left: 19%;
+    left: 21%;
     opacity: 90%;
-    transform: rotate(16deg);
+    transform: rotate(19deg);
 }
 
 /* 55 -> 95*/
@@ -126,35 +127,35 @@
     z-index: 1;
     position: absolute;
     height: 68%;
-    width: 45%;
+    width: 40%;
     top: 2%;
-    left: 24%;
+    left: 27%;
     opacity: 90%;
-    transform: rotate(0deg);
+    transform: rotate(-1deg);
 }
 
 /* 22 -> 41*/
 .ladder-image4 {
     z-index: 1;
     position: absolute;
-    height: 50%;
-    width: 43%;
-    top: 34%;
-    left: 57%;
+    height: 47%;
+    width: 40%;
+    top: 36%;
+    left: 59%;
     opacity: 90%;
-    transform: rotate(9deg);
+    transform: rotate(11deg);
 }
 
 /* ladder 24 -> 38 */
 .ladder-image5 {
     z-index: 1;
     position: absolute;
-    height: 39%;
-    width: 32%;
-    top: 44%;
-    left: 50%;
+    height: 38%;
+    width: 40%;
+    top: 45%;
+    left: 45%;
     opacity: 90%;
-    transform: rotate(10deg);
+    transform: rotate(16deg);
 }
 
 
@@ -163,12 +164,12 @@
 .ladder-image6 {
     z-index: 1;
     position: absolute;
-    height: 74%;
-    width: 48%;
-    top: 7%;
-    left: 0%;
+    height: 77%;
+    width: 43%;
+    top: 5%;
+    left: 2%;
     opacity: 90%;
-    transform: rotate(-8deg);
+    transform: rotate(-7deg);
 }
 
 .ladder-image6 img {
@@ -206,5 +207,183 @@
         height: 50vh;
         max-height: 550px;
         margin: 0 auto;
+    }
+    /* 21 -> 2*/
+    .slide-image1 {
+        z-index: 1;
+        position: absolute;
+        height: 44%;
+        width: 40%;
+        top: 42%;
+        left: 58%;
+        transform: rotate(3deg);
+    }
+
+    /* 94 -> 72*/
+    .slide-image2 {
+        z-index: 1;
+        position: absolute;
+        height: 53%;
+        width: 40%;
+        top: 1%;
+        left: 10%;
+        transform: rotate(12deg);
+    }
+
+    /* 77 -> 42*/
+    .slide-image3 {
+        z-index: 1;
+        position: absolute;
+        height: 50%;
+        width: 52%;
+        top: 14%;
+        left: 40%;
+    }
+
+    /* 26 -> 9*/
+    .slide-image4 {
+        z-index: 1;
+        position: absolute;
+        height: 50%;
+        width: 54%;
+        top: 39%;
+        left: 11%;
+        transform: rotate(8deg);
+    }
+
+    /* 96 -> 78 */
+    .slide-image5 {
+        z-index: 1;
+        position: absolute;
+        height: 43%;
+        width: 52%;
+        top: 3%;
+        left: 34%;
+    }
+
+    /* 73 -> 47 */
+    .slide-image6 {
+        z-index: 1;
+        position: absolute;
+        height: 53%;
+        width: 41%;
+        top: 13%;
+        left: 15%;
+    }
+
+    /* 80 -> 62 */
+    .slide-image7 {
+        z-index: 1;
+        position: absolute;
+        height: 36%;
+        width: 37%;
+        top: 14%;
+        left: 60%;
+    }
+
+    /* 57-> 45 */
+    .slide-image8 {
+        z-index: 1;
+        position: absolute;
+        height: 33%;
+        width: 36%;
+        top: 28%;
+        left: 39%;
+    }
+
+    /* 4-> 23 */
+    .ladder-image1 {
+        z-index: 1;
+        position: absolute;
+        height: 45%;
+        width: 40%;
+        top: 41%;
+        left: 45%;
+        opacity: 90%;
+        transform: rotate(12deg);
+    }
+
+    /* 28 -> 46 */
+    .ladder-image2 {
+        z-index: 1;
+        position: absolute;
+        height: 53%;
+        width: 40%;
+        top: 27%;
+        left: 20%;
+        opacity: 90%;
+        transform: rotate(21deg);
+    }
+
+    /* 55 -> 95*/
+    .ladder-image3 {
+        z-index: 1;
+        position: absolute;
+        height: 60%;
+        width: 40%;
+        top: 2%;
+        left: 27%;
+        opacity: 90%;
+        transform: rotate(-2deg);
+    }
+
+    /* 22 -> 41*/
+    .ladder-image4 {
+        z-index: 1;
+        position: absolute;
+        height: 47%;
+        width: 40%;
+        top: 28%;
+        left: 58%;
+        opacity: 90%;
+        transform: rotate(11deg);
+    }
+
+    /* ladder 24 -> 38 */
+    .ladder-image5 {
+        z-index: 1;
+        position: absolute;
+        height: 38%;
+        width: 40%;
+        top: 36%;
+        left: 45%;
+        opacity: 90%;
+        transform: rotate(16deg);
+    }
+
+    /* 32 -> 90 */
+    .ladder-image6 {
+        z-index: 1;
+        position: absolute;
+        height: 69%;
+        width: 40%;
+        top: 4%;
+        left: 2%;
+        opacity: 90%;
+        transform: rotate(-12deg);
+    }
+
+    /* 79 -> 99 */
+    .ladder-image7 {
+        z-index: 1;
+        position: absolute;
+        height: 43%;
+        width: 39%;
+        top: 2%;
+        left: 56%;
+        opacity: 90%;
+        transform: rotate(-1deg);
+    }
+
+    /* 10 -> 30 */
+    .ladder-image8 {
+        z-index: 1;
+        position: absolute;
+        height: 46%;
+        width: 40%;
+        top: 41%;
+        left: -1%;
+        opacity: 90%;
+        transform: rotate(0deg);
     }
 }
