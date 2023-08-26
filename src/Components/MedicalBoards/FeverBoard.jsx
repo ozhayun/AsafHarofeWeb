@@ -1,4 +1,4 @@
-import "./CutBoard.css"
+import "./FeverBoard.css"
 import slideImagePath from "../../../Public/GamePage/water-slide.png";
 import ladderImagePath from "../../../Public/GamePage/ladder.png";
 import * as React from "react";
@@ -43,7 +43,7 @@ const popUpMessages = [
     "לאחר התאוששות תקבל מכתב עם החלטה על אשפוז או שחרור הביתה."
 ];
 
-const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages }) => {
+const FeverBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages }) => {
     React.useEffect(() => {
         setPopUpCells(popUpCells)
     },[setPopUpCells]);
@@ -63,8 +63,6 @@ const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange,
 
     return (
         <div className="game-board-container">
-            ניסיון לראות כמה אתה מעצבן כי אתה מעצבן מאוד
-
             <Board playerPosition={playerPosition} playerImage={playerImage}/>
 
             <div className="slide-image1">
@@ -87,9 +85,6 @@ const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange,
             </div>
             <div className="slide-image7">
                 <img src={slideImagePath} alt="Slide" className="slide-image7" />
-            </div>
-            <div className="slide-image8">
-                <img src={slideImagePath} alt="Slide" className="slide-image8" />
             </div>
 
             <div className="ladder-image1">
@@ -121,4 +116,4 @@ const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange,
 }
 
 
-export default CutBoard
+export default FeverBoard
