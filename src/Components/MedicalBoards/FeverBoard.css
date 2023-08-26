@@ -4,200 +4,251 @@
 }
 
 /* 23 -> 4*/
-.slide-image1 {
+.FB-slide-image1-container {
     z-index: 1;
     position: absolute;
-    height: 41%;
-    width: 46%;
-    top: -55%;
-    left: 39%;
-    transform: rotate(-8deg);
+    height: 15%;
+    width: 22%;
+    top: 77%;
+    left: 58%;
+    transform: rotate(-13deg);
+}
+.FB-slide-image1 {
+    width: 100%;
+    height: 100%;
 }
 
 /* 94 -> 72*/
-.slide-image2 {
+.FB-slide-image2-container {
     z-index: 1;
     position: absolute;
-    height: 47%;
-    width: 47%;
-    top: -4%;
-    left: 9%;
+    height: 26%;
+    width: 25%;
+    top: 4%;
+    left: 13%;
     transform: rotate(5deg);
+}
+.FB-slide-image2 {
+    width: 100%;
+    height: 100%;
 }
 
 /* 96 -> 63*/
-.slide-image3 {
+.FB-slide-image3-container {
     z-index: 1;
     position: absolute;
-    height: 55%;
-    width: 50%;
-    top: -4%;
-    left: 35%;
+    height: 31%;
+    width: 28%;
+    top: 6%;
+    left: 51%;
 }
-
-.slide-image3 img {
+.FB-slide-image3 {
+    width: 100%;
+    height: 100%;
     transform: scaleX(-1)
 }
 
 /* 26 -> 9*/
-.slide-image4 {
+.FB-slide-image4-container {
     z-index: 1;
     position: absolute;
-    height: 43%;
-    width: 61%;
-    top: -53%;
-    left: 8%;
+    height: 21%;
+    width: 37%;
+    top: 75%;
+    left: 13%;
+}
+.FB-slide-image4 {
+    width: 100%;
+    height: 100%;
 }
 
 /* 56 -> 38 */
-.slide-image5 {
+.FB-slide-image5-container {
     z-index: 1;
     position: absolute;
-    height: 44%;
-    width: 49%;
-    top: -33%;
-    left: 36%;
+    overflow: hidden;
+    height: 22%;
+    width: 26%;
+    top: 45%;
+    left: 51%;
 }
-
-.slide-image5 img {
-    transform: scaleX(-1)
+.FB-slide-image5 {
+    transform: scaleX(-1);
+    width: 100%;
+    height: 100%;
 }
 
 /* 73 -> 47 */
-.slide-image6 {
+.FB-slide-image6-container {
     z-index: 1;
     position: absolute;
-    height: 56%;
-    width: 41%;
-    top: -17%;
-    left: 15%;
+    height: 31%;
+    width: 14%;
+    top: 25%;
+    left: 23%;
 }
-
-.slide-image6 img {
-    transform: scaleX(-1)
+.FB-slide-image6 {
+    transform: scaleX(-1);
+    width: 100%;
+    height: 100%;
 }
 
 /* 80 -> 62 */
-.slide-image7 {
+.FB-slide-image7-container {
     z-index: 1;
     position: absolute;
-    height: 36%;
-    width: 37%;
-    top: -18%;
-    left: 60%;
+    height: 14%;
+    width: 17%;
+    top: 25%;
+    left: 81%;
+}
+.FB-slide-image7 {
+    width: 100%;
+    height: 100%;
 }
 
 /* 61-> 59 */
-.slide-image8 {
+.FB-slide-image8-container {
     z-index: 1;
     position: absolute;
-    height: 33%;
-    width: 36%;
-    top: -27%;
-    left: 60%;
+    height: 14%;
+    width: 18%;
+    top: 35%;
+    left: 80%;
+}
+.FB-slide-image8 {
+    width: 100%;
+    height: 100%;
 }
 
 
 /* 2-> 21 */
-.ladder-image1 {
+.FB-ladder-image1-container {
     z-index: 1;
     position: absolute;
-    height: 45%;
-    width: 40%;
-    top: -51%;
-    left: 59%;
+    height: 22%;
+    width: 21%;
+    top: 74%;
+    left: 79%;
     opacity: 90%;
-    transform: rotate(7deg);
+    transform: rotate(15deg)
+}
+.FB-ladder-image1 {
+    width: 100%;
+    height: 100%;
 }
 
 /* 28 -> 46 */
-.ladder-image2 {
+.FB-ladder-image2-container {
     z-index: 1;
     position: absolute;
-    height: 54%;
-    width: 45%;
-    top: -34%;
-    left: 19%;
+    height: 30%;
+    width: 21%;
+    top: 50%;
+    left: 25%;
     opacity: 90%;
-    transform: rotate(16deg);
+    transform: rotate(34deg);
+}
+.FB-ladder-image2 {
+    width: 100%;
+    height: 100%;
 }
 
 /* 55 -> 95*/
-.ladder-image3 {
+.FB-ladder-image3-container {
     z-index: 1;
     position: absolute;
-    height: 68%;
-    width: 45%;
-    top: -2%;
-    left: 24%;
+    height: 46%;
+    width: 20%;
+    top: 2%;
+    left: 35%;
     opacity: 90%;
-    transform: rotate(0deg);
+    transform: rotate(-2deg);
+}
+.FB-ladder-image3 {
+    width: 100%;
+    height: 100%;
 }
 
 /* 22 -> 41*/
-.ladder-image4 {
+.FB-ladder-image4-container {
     z-index: 1;
     position: absolute;
-    height: 50%;
-    width: 43%;
-    top: -34%;
-    left: 57%;
+    height: 25%;
+    width: 20%;
+    top: 53%;
+    left: 79%;
     opacity: 90%;
-    transform: rotate(9deg);
+    transform: rotate(19deg);
+}
+.FB-ladder-image4 {
+    width: 100%;
+    height: 100%;
 }
 
 /* 84 -> 98 */
-.ladder-image5 {
+.FB-ladder-image5-container {
     z-index: 1;
     position: absolute;
-    height: 39%;
-    width: 32%;
-    top: -2%;
-    left: 46%;
+    height: 13%;
+    width: 12%;
+    top: 3%;
+    left: 64%;
     opacity: 90%;
-    transform: rotate(14deg);
+    transform: rotate(34deg);
+}
+.FB-ladder-image5 {
+    width: 100%;
+    height: 100%;
 }
 
-
-
 /* 32 -> 90 */
-.ladder-image6 {
+.FB-ladder-image6-container {
     z-index: 1;
     position: absolute;
-    height: 74%;
-    width: 48%;
-    top: -7%;
-    left: 0%;
+    height: 60%;
+    width: 19%;
+    top: 10%;
+    left: 1%;
     opacity: 90%;
     transform: rotate(-8deg);
 }
-
-.ladder-image6 img {
+.FB-ladder-image6 {
+    width: 100%;
+    height: 100%;
     transform: scaleX(-1)
 }
 
 /* 79 -> 99 */
-.ladder-image7 {
+.FB-ladder-image7-container {
     z-index: 1;
     position: absolute;
-    height: 47%;
-    width: 42%;
-    top: -3%;
-    left: 54%;
+    height: 20%;
+    width: 16%;
+    top: 6%;
+    left: 77%;
     opacity: 90%;
     transform: rotate(-1deg);
 }
+.FB-ladder-image7 {
+    width: 100%;
+    height: 100%;
+}
 
 /* 10 -> 30 */
-.ladder-image8 {
+.FB-ladder-image8-container {
     z-index: 1;
     position: absolute;
-    height: 46%;
-    width: 40%;
-    top: -51%;
-    left: -1%;
+    height: 22%;
+    width: 16%;
+    top: 74%;
+    left: -2%;
     opacity: 90%;
     transform: rotate(0deg);
+}
+.FB-ladder-image8 {
+    width: 100%;
+    height: 100%;
 }
 
 @media (min-width: 501px) {
