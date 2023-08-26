@@ -63,6 +63,8 @@ const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange,
 
     return (
         <div className="game-board-container">
+            ניסיון לראות כמה אתה מעצבן כי אתה מעצבן מאוד
+
             <Board playerPosition={playerPosition} playerImage={playerImage}/>
 
             <div className="slide-image1">
