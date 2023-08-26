@@ -1,4 +1,4 @@
-import "./CutBoard.css"
+import "./AbdominalPainBoard.css"
 import slideImagePath from "../../../Public/GamePage/water-slide.png";
 import ladderImagePath from "../../../Public/GamePage/ladder.png";
 import * as React from "react";
@@ -43,7 +43,7 @@ const popUpMessages = [
     "לאחר התאוששות תקבל מכתב עם החלטה על אשפוז או שחרור הביתה."
 ];
 
-const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages }) => {
+const AbdominalPainBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages }) => {
     React.useEffect(() => {
         setPopUpCells(popUpCells)
     },[setPopUpCells]);
@@ -119,4 +119,4 @@ const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange,
 }
 
 
-export default CutBoard
+export default AbdominalPainBoard

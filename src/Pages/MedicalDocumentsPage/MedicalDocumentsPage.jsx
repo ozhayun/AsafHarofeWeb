@@ -56,9 +56,6 @@ const MedicalDocumentsPage = () => {
                             </a>
                         </div>
                     </ListItem>
-
-
-
                 ))}
             </List>
         </div>
