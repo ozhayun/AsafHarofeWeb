@@ -13,7 +13,7 @@
 
 .popup-content {
     position: relative;
-    background-color: white;
+    background: linear-gradient(to bottom, lightyellow, #ffff66);
     padding: 2rem;
     border-radius: 1rem;
     width: 95%
