@@ -65,54 +65,54 @@ const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange,
         <div className="game-board-container">
             <Board playerPosition={playerPosition} playerImage={playerImage}/>
 
-            <div className="slide-image1">
-                <img src={slideImagePath} alt="Slide" className="slide-image1" />
+            <div className="CB-slide-image1-container">
+                <img src={slideImagePath} alt="Slide" className="CB-slide-image1" />
             </div>
-            <div className="slide-image2">
-                <img src={slideImagePath} alt="Slide" className="slide-image2" />
+            <div className="CB-slide-image2-container">
+                <img src={slideImagePath} alt="Slide" className="CB-slide-image2" />
             </div>
-            <div className="slide-image3">
-                <img src={slideImagePath} alt="Slide" className="slide-image3" />
+            <div className="CB-slide-image3-container">
+                <img src={slideImagePath} alt="Slide" className="CB-slide-image3" />
             </div>
-            <div className="slide-image4">
-                <img src={slideImagePath} alt="Slide" className="slide-image4" />
+            <div className="CB-slide-image4-container">
+                <img src={slideImagePath} alt="Slide" className="CB-slide-image4" />
             </div>
-            <div className="slide-image5">
-                <img src={slideImagePath} alt="Slide" className="slide-image5" />
+            <div className="CB-slide-image5-container">
+                <img src={slideImagePath} alt="Slide" className="CB-slide-image5" />
             </div>
-            <div className="slide-image6">
-                <img src={slideImagePath} alt="Slide" className="slide-image6" />
+            <div className="CB-slide-image6-container">
+                <img src={slideImagePath} alt="Slide" className="CB-slide-image6" />
             </div>
-            <div className="slide-image7">
-                <img src={slideImagePath} alt="Slide" className="slide-image7" />
+            <div className="CB-slide-image7-container">
+                <img src={slideImagePath} alt="Slide" className="CB-slide-image7" />
             </div>
-            <div className="slide-image8">
-                <img src={slideImagePath} alt="Slide" className="slide-image8" />
+            <div className="CB-slide-image8-container">
+                <img src={slideImagePath} alt="Slide" className="CB-slide-image8" />
             </div>
 
-            <div className="ladder-image1">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image1" />
+            <div className="CB-ladder-image1-container">
+                <img src={ladderImagePath} alt="Ladder" className="CB-ladder-image1" />
             </div>
-            <div className="ladder-image2">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image2" />
+            <div className="CB-ladder-image2-container">
+                <img src={ladderImagePath} alt="Ladder" className="CB-ladder-image2" />
             </div>
-            <div className="ladder-image3">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image3" />
+            <div className="CB-ladder-image3-container">
+                <img src={ladderImagePath} alt="Ladder" className="CB-ladder-image3" />
             </div>
-            <div className="ladder-image4">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image4" />
+            <div className="CB-ladder-image4-container">
+                <img src={ladderImagePath} alt="Ladder" className="CB-ladder-image4" />
             </div>
-            <div className="ladder-image5">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image5" />
+            <div className="CB-ladder-image5-container">
+                <img src={ladderImagePath} alt="Ladder" className="CB-ladder-image5" />
             </div>
-            <div className="ladder-image6">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image6" />
+            <div className="CB-ladder-image6-container">
+                <img src={ladderImagePath} alt="Ladder" className="CB-ladder-image6" />
             </div>
-            <div className="ladder-image7">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image7" />
+            <div className="CB-ladder-image7-container">
+                <img src={ladderImagePath} alt="Ladder" className="CB-ladder-image7" />
             </div>
-            <div className="ladder-image8">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image8" />
+            <div className="CB-ladder-image8-container">
+                <img src={ladderImagePath} alt="Ladder" className="CB-ladder-image8" />
             </div>
 
         </div>
