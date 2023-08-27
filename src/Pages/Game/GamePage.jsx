@@ -16,9 +16,7 @@ import vetDogPlayerImagePath from "../../../Public/GamePage/dogPlayer.png";
 import FeverBoard from "../../Components/MedicalBoards/FeverBoard.jsx";
 import AbdominalPainBoard from "../../Components/MedicalBoards/AbdominalPainBoard.jsx";
 import InjuryBoard from "../../Components/MedicalBoards/InjuryBoard.jsx";
-import WinSoundMP3 from "../../../Public/Sounds/WinSound.mp3"
-import SlideSoundMP3 from "../../../Public/Sounds/SlideSound.mp3"
-import LadderSoundMP3 from "../../../Public/Sounds/LadderSound.mp3"
+import {SoundContext} from "../../Sound/SoundContext.jsx";
 
 const GamePage = () => {
     const [playerPosition, setPlayerPosition] = React.useState(1);
@@ -35,7 +33,7 @@ const GamePage = () => {
     const navigate = useNavigate();
     const {pain, animal} = location.state || {};
     const animalClass = `animal ${animal || ''}`;
-    const WinSound = new Audio(WinSoundMP3)
+    const { playWinSound, playSlideSound, playLadderSound } = React.useContext(SoundContext);
 
 
     let animalImage, playerImage;
@@ -65,19 +63,11 @@ const GamePage = () => {
         setLadders(newLadders);
     }
 
-    const playLadderSound = () => {
-        const LadderSound = new Audio(LadderSoundMP3)
-        LadderSound.play();
-    }
 
     const handleSlidesChange = (newSlides) => {
         setSlides(newSlides);
     };
 
-    const playSlideSound = () => {
-        const SlideSound = new Audio(SlideSoundMP3)
-        SlideSound.play();
-    }
 
     const updatePlayerPosition = async (rollResult) => {
         const startPosition = playerPosition;
@@ -138,7 +128,7 @@ const GamePage = () => {
     };
 
     const handlePlayerWin = () => {
-        WinSound.play();
+        playWinSound();
         setIsPopUpOpen(true);
         setIsPlayerWin(true);
         setIsGamePaused(true);

@@ -1,6 +1,9 @@
 import './CustomToolBar.css';
+import {SoundContext} from "../Sound/SoundContext";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
+import VolumeUpIcon from '@mui/icons-material/VolumeUp';
+import VolumeMuteIcon from '@mui/icons-material/VolumeMute';
 import {Link} from "react-router-dom";
 import shamirLogoPath from "../../Public/HomePage/ShamirLogo.png";
 import {createTheme, ThemeProvider} from "@mui/material/styles";
@@ -8,14 +11,16 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import HomeIcon from '@mui/icons-material/Home';
 import Typography from "@mui/material/Typography";
-import ButtonClickSound from '../../Public/Sounds/ClickSound.mp3';
+import {useContext} from "react";
 
 const CustomToolbar = ({toolbarTitle}) => {
-    const clickAudio = new Audio(ButtonClickSound);
+    const { playClickSound, toggleMute, isMuted } = useContext(SoundContext);
 
     const handleHomeButtonClick = () => {
-        clickAudio.play()
+        playClickSound();
     }
+
+
     const appBarLabel = (
         <Toolbar className="toolbar">
             <div className="left-container">
@@ -27,6 +32,9 @@ const CustomToolbar = ({toolbarTitle}) => {
                     onClick={handleHomeButtonClick}
                 >
                     <HomeIcon fontSize="large" />
+                </IconButton>
+                <IconButton onClick={toggleMute}>
+                    {isMuted ? <VolumeMuteIcon /> : <VolumeUpIcon />}
                 </IconButton>
             </div>
             <Typography id="ToolbarTitle" variant="h6" noWrap={false} component="div">
