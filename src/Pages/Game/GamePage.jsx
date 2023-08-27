@@ -109,12 +109,14 @@ const GamePage = () => {
     };
 
     const checkCellPopups = (playerPosition) => {
-        if(messageCount < popUpCells.length || playerPosition === 100) {
+        if(messageCount < popUpMessages.length || playerPosition === 100) {
             const cellIndex = popUpCells.indexOf(playerPosition);
-            if (cellIndex !== -1 && popUpMessages[cellIndex]) {
-                openPopUp(popUpMessages[cellIndex]);
+            if (cellIndex !== -1) {
+                openPopUp(popUpMessages[0]);
                 const newMessageCount = messageCount + 1;
                 setMessageCount(newMessageCount);
+                setPopUpCells(prevItems => prevItems.filter((_, index) => index !== cellIndex));
+                setPopUpMessages(prevMessages => prevMessages.filter((_, index) => index !== 0))
             }
         }
     };
