@@ -60,39 +60,54 @@ const InjuryBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChan
         <div className="game-board-container">
             <Board playerPosition={playerPosition} playerImage={playerImage}/>
 
-            <div className="slide-image1">
-                <img src={slideImagePath} alt="Slide" className="slide-image1" />
+            <div className="IB-slide-image1-container">
+                <img src={slideImagePath} alt="Slide" className="IB-slide-image1" />
             </div>
-            <div className="slide-image2">
-                <img src={slideImagePath} alt="Slide" className="slide-image2" />
+            <div className="IB-slide-image2-container">
+                <img src={slideImagePath} alt="Slide" className="IB-slide-image2" />
             </div>
-            <div className="slide-image3">
-                <img src={slideImagePath} alt="Slide" className="slide-image3" />
+            <div className="IB-slide-image3-container">
+                <img src={slideImagePath} alt="Slide" className="IB-slide-image3" />
             </div>
-            <div className="slide-image4">
-                <img src={slideImagePath} alt="Slide" className="slide-image4" />
+            <div className="IB-slide-image4-container">
+                <img src={slideImagePath} alt="Slide" className="IB-slide-image4" />
             </div>
-            <div className="slide-image5">
-                <img src={slideImagePath} alt="Slide" className="slide-image4" />
+            <div className="IB-slide-image5-container">
+                <img src={slideImagePath} alt="Slide" className="IB-slide-image5" />
+            </div>
+            <div className="IB-slide-image6-container">
+                <img src={slideImagePath} alt="Slide" className="IB-slide-image6" />
+            </div>
+            <div className="IB-slide-image7-container">
+                <img src={slideImagePath} alt="Slide" className="IB-slide-image7" />
+            </div>
+            <div className="IB-slide-image8-container">
+                <img src={slideImagePath} alt="Slide" className="IB-slide-image8" />
             </div>
 
-            <div className="ladder-image1">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image1" />
+            <div className="IB-ladder-image1-container">
+                <img src={ladderImagePath} alt="Ladder" className="IB-ladder-image1" />
             </div>
-            <div className="ladder-image2">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image2" />
+            <div className="IB-ladder-image2-container">
+                <img src={ladderImagePath} alt="Ladder" className="IB-ladder-image2" />
             </div>
-            <div className="ladder-image3">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image3" />
+            <div className="IB-ladder-image3-container">
+                <img src={ladderImagePath} alt="Ladder" className="IB-ladder-image3" />
             </div>
-            <div className="ladder-image4">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image4" />
+            <div className="IB-ladder-image4-container">
+                <img src={ladderImagePath} alt="Ladder" className="IB-ladder-image4" />
             </div>
-            <div className="ladder-image5">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image5" />
+            <div className="IB-ladder-image5-container">
+                <img src={ladderImagePath} alt="Ladder" className="IB-ladder-image5" />
             </div>
-            <div className="ladder-image6">
-                <img src={ladderImagePath} alt="Slide" className="ladder-image6" />
+            <div className="IB-ladder-image6-container">
+                <img src={ladderImagePath} alt="Ladder" className="IB-ladder-image6" />
+            </div>
+            <div className="IB-ladder-image7-container">
+                <img src={ladderImagePath} alt="Ladder" className="IB-ladder-image7" />
+            </div>
+            <div className="IB-ladder-image8-container">
+                <img src={ladderImagePath} alt="Ladder" className="IB-ladder-image8" />
             </div>
         </div>
     )
