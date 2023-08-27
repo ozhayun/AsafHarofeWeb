@@ -4,200 +4,251 @@
 }
 
 /* 21 -> 2*/
-.slide-image1 {
+.APB-slide-image1-container {
     z-index: 1;
     position: absolute;
-    height: 44%;
-    width: 40%;
-    top: 52%;
-    left: 58%;
-    transform: rotate(0deg);
+    height: 19%;
+    width: 19%;
+    top: 76%;
+    left: 80%;
+    transform: rotate(-5deg);
+}
+.APB-slide-image1 {
+    width: 100%;
+    height: 100%;
 }
 
 /* 94 -> 72*/
-.slide-image2 {
+.APB-slide-image2-container {
     z-index: 1;
     position: absolute;
-    height: 53%;
-    width: 40%;
-    top: 3%;
-    left: 10%;
+    height: 26%;
+    width: 22%;
+    top: 2%;
+    left: 15%;
     transform: rotate(10deg);
+}
+.APB-slide-image2 {
+    width: 100%;
+    height: 100%;
 }
 
 /* 77 -> 42*/
-.slide-image3 {
+.APB-slide-image3-container {
     z-index: 1;
     position: absolute;
-    height: 55%;
-    width: 52%;
-    top: 17%;
-    left: 40%;
+    height: 33%;
+    width: 29%;
+    top: 23%;
+    left: 60%;
 }
-
-.slide-image3 img {
+.APB-slide-image3 {
+    width: 100%;
+    height: 100%;
     transform: scaleX(-1)
 }
 
 /* 26 -> 9*/
-.slide-image4 {
+.APB-slide-image4-container {
     z-index: 1;
     position: absolute;
-    height: 50%;
-    width: 54%;
-    top: 49%;
-    left: 12%;
+    height: 26%;
+    width: 33%;
+    top: 73%;
+    left: 14%;
     transform: rotate(8deg);
+}
+.APB-slide-image4 {
+    width: 100%;
+    height: 100%;
 }
 
 /* 96 -> 78 */
-.slide-image5 {
+.APB-slide-image5-container {
     z-index: 1;
     position: absolute;
-    height: 43%;
-    width: 52%;
+    height: 23%;
+    width: 26%;
     top: 5%;
-    left: 34%;
+    left: 51%;
 }
-
-.slide-image5 img {
-    transform: scaleX(-1)
+.APB-slide-image5 {
+    width: 100%;
+    height: 100%;
+   transform: scaleX(-1)
 }
 
 /* 73 -> 47 */
-.slide-image6 {
+.APB-slide-image6-container {
     z-index: 1;
     position: absolute;
-    height: 56%;
-    width: 41%;
-    top: 17%;
-    left: 15%;
+    height: 34%;
+    width: 25%;
+    top: 23%;
+    left: 17%;
+    transform: rotate(11deg);
 }
-
-.slide-image6 img {
+.APB-slide-image6 {
+    width: 100%;
+    height: 100%;
     transform: scaleX(-1)
 }
 
 /* 80 -> 62 */
-.slide-image7 {
+.APB-slide-image7-container {
     z-index: 1;
     position: absolute;
-    height: 36%;
-    width: 37%;
-    top: 18%;
-    left: 60%;
+    height: 11%;
+    width: 16%;
+    top: 25%;
+    left: 81%;
+}
+.APB-slide-image7 {
+    width: 100%;
+    height: 100%;
 }
 
 /* 57-> 45 */
-.slide-image8 {
+.APB-slide-image8-container {
     z-index: 1;
     position: absolute;
-    height: 33%;
-    width: 36%;
-    top: 34%;
-    left: 39%;
+    height: 13%;
+    width: 17%;
+    top: 44%;
+    left: 51%;
+}
+.APB-slide-image8 {
+    width: 100%;
+    height: 100%;
 }
 
 /* 4-> 23 */
-.ladder-image1 {
+.APB-ladder-image1-container {
     z-index: 1;
     position: absolute;
-    height: 45%;
-    width: 40%;
-    top: 51%;
-    left: 47%;
+    height: 26%;
+    width: 23%;
+    top: 73%;
+    left: 59%;
     opacity: 90%;
-    transform: rotate(12deg);
+    transform: rotate(18deg);
+}
+.APB-ladder-image1 {
+    width: 100%;
+    height: 100%;
 }
 
 /* 28 -> 46 */
-.ladder-image2 {
+.APB-ladder-image2-container {
     z-index: 1;
     position: absolute;
-    height: 53%;
-    width: 40%;
-    top: 34%;
-    left: 21%;
+    height: 30%;
+    width: 21%;
+    top: 50%;
+    left: 26%;
     opacity: 90%;
-    transform: rotate(19deg);
+    transform: rotate(36deg);
+}
+.APB-ladder-image2 {
+    width: 100%;
+    height: 100%;
 }
 
 /* 55 -> 95*/
-.ladder-image3 {
+.APB-ladder-image3-container {
     z-index: 1;
     position: absolute;
-    height: 68%;
-    width: 40%;
+    height: 45%;
+    width: 19%;
     top: 2%;
-    left: 27%;
+    left: 36%;
     opacity: 90%;
     transform: rotate(-1deg);
 }
+.APB-ladder-image3 {
+    width: 100%;
+    height: 100%;
+}
 
 /* 22 -> 41*/
-.ladder-image4 {
+.APB-ladder-image4-container {
     z-index: 1;
     position: absolute;
-    height: 47%;
-    width: 40%;
-    top: 36%;
-    left: 59%;
+    height: 24%;
+    width: 18%;
+    top: 53%;
+    left: 80%;
     opacity: 90%;
-    transform: rotate(11deg);
+    transform: rotate(18deg);
+}
+.APB-ladder-image4 {
+    width: 100%;
+    height: 100%;
 }
 
 /* ladder 24 -> 38 */
-.ladder-image5 {
+.APB-ladder-image5-container {
     z-index: 1;
     position: absolute;
-    height: 38%;
-    width: 40%;
-    top: 45%;
-    left: 45%;
+    height: 15%;
+    width: 16%;
+    top: 63%;
+    left: 61%;
     opacity: 90%;
-    transform: rotate(16deg);
+    transform: rotate(31deg);
+}
+.APB-ladder-image5 {
+    width: 100%;
+    height: 100%;
 }
 
-
-
 /* 32 -> 90 */
-.ladder-image6 {
+.APB-ladder-image6-container {
     z-index: 1;
     position: absolute;
-    height: 77%;
-    width: 43%;
-    top: 5%;
-    left: 2%;
+    height: 55%;
+    width: 20%;
+    top: 12%;
+    left: 0%;
     opacity: 90%;
     transform: rotate(-7deg);
 }
-
-.ladder-image6 img {
+.APB-ladder-image6 {
+    width: 100%;
+    height: 100%;
     transform: scaleX(-1)
 }
 
 /* 79 -> 99 */
-.ladder-image7 {
+.APB-ladder-image7-container {
     z-index: 1;
     position: absolute;
-    height: 47%;
-    width: 42%;
-    top: 3%;
-    left: 54%;
+    height: 21%;
+    width: 18%;
+    top: 5%;
+    left: 76%;
     opacity: 90%;
     transform: rotate(-1deg);
 }
+.APB-ladder-image7 {
+    width: 100%;
+    height: 100%;
+}
 
 /* 10 -> 30 */
-.ladder-image8 {
+.APB-ladder-image8-container {
     z-index: 1;
     position: absolute;
-    height: 46%;
-    width: 40%;
-    top: 51%;
-    left: -1%;
+    height: 24%;
+    width: 17%;
+    top: 73%;
+    left: -2%;
     opacity: 90%;
     transform: rotate(0deg);
+}
+.APB-ladder-image8 {
+    width: 100%;
+    height: 100%;
 }
 
 @media (min-width: 501px) {
@@ -207,183 +258,5 @@
         height: 50vh;
         max-height: 550px;
         margin: 0 auto;
-    }
-    /* 21 -> 2*/
-    .slide-image1 {
-        z-index: 1;
-        position: absolute;
-        height: 44%;
-        width: 40%;
-        top: 42%;
-        left: 58%;
-        transform: rotate(3deg);
-    }
-
-    /* 94 -> 72*/
-    .slide-image2 {
-        z-index: 1;
-        position: absolute;
-        height: 53%;
-        width: 40%;
-        top: 1%;
-        left: 10%;
-        transform: rotate(12deg);
-    }
-
-    /* 77 -> 42*/
-    .slide-image3 {
-        z-index: 1;
-        position: absolute;
-        height: 50%;
-        width: 52%;
-        top: 14%;
-        left: 40%;
-    }
-
-    /* 26 -> 9*/
-    .slide-image4 {
-        z-index: 1;
-        position: absolute;
-        height: 50%;
-        width: 54%;
-        top: 39%;
-        left: 11%;
-        transform: rotate(8deg);
-    }
-
-    /* 96 -> 78 */
-    .slide-image5 {
-        z-index: 1;
-        position: absolute;
-        height: 43%;
-        width: 52%;
-        top: 3%;
-        left: 34%;
-    }
-
-    /* 73 -> 47 */
-    .slide-image6 {
-        z-index: 1;
-        position: absolute;
-        height: 53%;
-        width: 41%;
-        top: 13%;
-        left: 15%;
-    }
-
-    /* 80 -> 62 */
-    .slide-image7 {
-        z-index: 1;
-        position: absolute;
-        height: 36%;
-        width: 37%;
-        top: 14%;
-        left: 60%;
-    }
-
-    /* 57-> 45 */
-    .slide-image8 {
-        z-index: 1;
-        position: absolute;
-        height: 33%;
-        width: 36%;
-        top: 28%;
-        left: 39%;
-    }
-
-    /* 4-> 23 */
-    .ladder-image1 {
-        z-index: 1;
-        position: absolute;
-        height: 45%;
-        width: 40%;
-        top: 41%;
-        left: 45%;
-        opacity: 90%;
-        transform: rotate(12deg);
-    }
-
-    /* 28 -> 46 */
-    .ladder-image2 {
-        z-index: 1;
-        position: absolute;
-        height: 53%;
-        width: 40%;
-        top: 27%;
-        left: 20%;
-        opacity: 90%;
-        transform: rotate(21deg);
-    }
-
-    /* 55 -> 95*/
-    .ladder-image3 {
-        z-index: 1;
-        position: absolute;
-        height: 60%;
-        width: 40%;
-        top: 2%;
-        left: 27%;
-        opacity: 90%;
-        transform: rotate(-2deg);
-    }
-
-    /* 22 -> 41*/
-    .ladder-image4 {
-        z-index: 1;
-        position: absolute;
-        height: 47%;
-        width: 40%;
-        top: 28%;
-        left: 58%;
-        opacity: 90%;
-        transform: rotate(11deg);
-    }
-
-    /* ladder 24 -> 38 */
-    .ladder-image5 {
-        z-index: 1;
-        position: absolute;
-        height: 38%;
-        width: 40%;
-        top: 36%;
-        left: 45%;
-        opacity: 90%;
-        transform: rotate(16deg);
-    }
-
-    /* 32 -> 90 */
-    .ladder-image6 {
-        z-index: 1;
-        position: absolute;
-        height: 69%;
-        width: 40%;
-        top: 4%;
-        left: 2%;
-        opacity: 90%;
-        transform: rotate(-12deg);
-    }
-
-    /* 79 -> 99 */
-    .ladder-image7 {
-        z-index: 1;
-        position: absolute;
-        height: 43%;
-        width: 39%;
-        top: 2%;
-        left: 56%;
-        opacity: 90%;
-        transform: rotate(-1deg);
-    }
-
-    /* 10 -> 30 */
-    .ladder-image8 {
-        z-index: 1;
-        position: absolute;
-        height: 46%;
-        width: 40%;
-        top: 41%;
-        left: -1%;
-        opacity: 90%;
-        transform: rotate(0deg);
     }
 }
