@@ -16,7 +16,7 @@ const pdfFiles = [
     { title: "טיפול בחום", filename: "fever_treatment.jpg" }
 ];
 
-const MedicalFilesPagePath = `Public/MedicalFilesPage`;
+const MedicalFilesPagePath = "../../../Public/MedicalFilesPage";
 
 const MedicalDocumentsPage = () => {
     const [selectedFile, setSelectedFile] = useState(null);
