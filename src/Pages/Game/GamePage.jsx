@@ -16,9 +16,8 @@ import vetDogPlayerImagePath from "../../../Public/GamePage/dogPlayer.png";
 import FeverBoard from "../../Components/MedicalBoards/FeverBoard.jsx";
 import AbdominalPainBoard from "../../Components/MedicalBoards/AbdominalPainBoard.jsx";
 import InjuryBoard from "../../Components/MedicalBoards/InjuryBoard.jsx";
-import WinSoundMP3 from "../../../Public/Sounds/WinSound.mp3"
-import SlideSoundMP3 from "../../../Public/Sounds/SlideSound.mp3"
-import LadderSoundMP3 from "../../../Public/Sounds/LadderSound.mp3"
+import {SoundContext} from "../../Sound/SoundContext.jsx";
+import confetti from 'canvas-confetti';
 
 const GamePage = () => {
     const [playerPosition, setPlayerPosition] = React.useState(1);
@@ -31,11 +30,12 @@ const GamePage = () => {
     const [messageCount, setMessageCount] = React.useState(0)
     const [isGamePaused, setIsGamePaused] = React.useState(false);
     const [isPlayerWin, setIsPlayerWin] = React.useState(false);
+    const [resetKey, setResetKey] = React.useState(0);
     const location = useLocation();
     const navigate = useNavigate();
     const {pain, animal} = location.state || {};
     const animalClass = `animal ${animal || ''}`;
-    const WinSound = new Audio(WinSoundMP3)
+    const { playWinSound, playSlideSound, playLadderSound } = React.useContext(SoundContext);
 
 
     let animalImage, playerImage;
@@ -65,19 +65,11 @@ const GamePage = () => {
         setLadders(newLadders);
     }
 
-    const playLadderSound = () => {
-        const LadderSound = new Audio(LadderSoundMP3)
-        LadderSound.play();
-    }
 
     const handleSlidesChange = (newSlides) => {
         setSlides(newSlides);
     };
 
-    const playSlideSound = () => {
-        const SlideSound = new Audio(SlideSoundMP3)
-        SlideSound.play();
-    }
 
     const updatePlayerPosition = async (rollResult) => {
         const startPosition = playerPosition;
@@ -138,10 +130,19 @@ const GamePage = () => {
     };
 
     const handlePlayerWin = () => {
-        WinSound.play();
+        playWinSound();
+        launchConfetti();
         setIsPopUpOpen(true);
         setIsPlayerWin(true);
         setIsGamePaused(true);
+    }
+
+    const launchConfetti = () => {
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
     }
 
     const navigateHome = () => {
@@ -155,50 +156,49 @@ const GamePage = () => {
         setIsPlayerWin(false)
         setPlayerPosition(1);
         setMessageCount(0)
+        setResetKey(prevKey => prevKey + 1);
     };
-
 
     return (
         <div className="game-page">
             <div className="toolbar-container">
                 <CustomToolbar toolbarTitle="סולמות ומגלשות"/>
             </div>
-
                 {pain === 'cut' ? (
                     <CutBoard playerPosition={playerPosition}
                               playerImage={playerImage}
                               onLaddersChange={handleLaddersChange}
                               onSlidesChange={handleSlidesChange}
-                              openPopUp={openPopUp}
                               setPopUpCells={setPopUpCells}
                               setPopUpMessages={setPopUpMessages}
+                              resetKey={resetKey}
                     />
                 ) : pain === 'fever' ? (
                     <FeverBoard playerPosition={playerPosition}
                                 playerImage={playerImage}
                                 onLaddersChange={handleLaddersChange}
                                 onSlidesChange={handleSlidesChange}
-                                openPopUp={openPopUp}
                                 setPopUpCells={setPopUpCells}
                                 setPopUpMessages={setPopUpMessages}
+                                resetKey={resetKey}
                     />
                 ) : pain === 'injury' ? (
                     <InjuryBoard playerPosition={playerPosition}
                                 playerImage={playerImage}
                                 onLaddersChange={handleLaddersChange}
                                 onSlidesChange={handleSlidesChange}
-                                openPopUp={openPopUp}
                                 setPopUpCells={setPopUpCells}
                                 setPopUpMessages={setPopUpMessages}
+                                resetKey={resetKey}
                     />
                 ) : pain === 'abdominalPain' ? (
                     <AbdominalPainBoard playerPosition={playerPosition}
                               playerImage={playerImage}
                               onLaddersChange={handleLaddersChange}
                               onSlidesChange={handleSlidesChange}
-                              openPopUp={openPopUp}
                               setPopUpCells={setPopUpCells}
                               setPopUpMessages={setPopUpMessages}
+                              resetKey={resetKey}
                     />
                 ) : null
                 }
