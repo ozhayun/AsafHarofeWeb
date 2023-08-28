@@ -163,7 +163,6 @@ const GamePage = () => {
             <div className="toolbar-container">
                 <CustomToolbar toolbarTitle="סולמות ומגלשות"/>
             </div>
-
                 {pain === 'cut' ? (
                     <CutBoard playerPosition={playerPosition}
                               playerImage={playerImage}
