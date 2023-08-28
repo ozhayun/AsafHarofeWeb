@@ -12,7 +12,7 @@ import CustomToolbar from '../../Components/CustomToolbar.jsx';
 const pdfFiles = [
     { title: "תהליך הטיפול במיון", filename: "emergency_room_treatment.jpg" },
     { title: "הדבקת חתך", filename: "adhesive_cut.jpg" },
-    { title: "טיפול בחבלת ראש", filename: "head_injury_treatment.jpg" },
+    { title: "טיפול בחבלת ראש", filename: "head_injury_treatment.png" },
     { title: "טיפול בחום", filename: "fever_treatment.jpg" }
 ];
 
