@@ -17,6 +17,7 @@ import FeverBoard from "../../Components/MedicalBoards/FeverBoard.jsx";
 import AbdominalPainBoard from "../../Components/MedicalBoards/AbdominalPainBoard.jsx";
 import InjuryBoard from "../../Components/MedicalBoards/InjuryBoard.jsx";
 import {SoundContext} from "../../Sound/SoundContext.jsx";
+import confetti from 'canvas-confetti';
 
 const GamePage = () => {
     const [playerPosition, setPlayerPosition] = React.useState(1);
@@ -129,9 +130,18 @@ const GamePage = () => {
 
     const handlePlayerWin = () => {
         playWinSound();
+        launchConfetti();
         setIsPopUpOpen(true);
         setIsPlayerWin(true);
         setIsGamePaused(true);
+    }
+
+    const launchConfetti = () => {
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
     }
 
     const navigateHome = () => {
