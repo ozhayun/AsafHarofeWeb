@@ -1,4 +1,6 @@
 import './PopUp.css'
+import CloseIcon from '@mui/icons-material/Close';
+import React from "react";
 const PopUp = ({ isOpen, isPlayerWin, content, closePopup, restartGame, navigateHome }) => {
     if (!isOpen) return null;
 
@@ -25,7 +27,9 @@ const PopUp = ({ isOpen, isPlayerWin, content, closePopup, restartGame, navigate
     return (
         <div className="popup-container">
             <div className="popup-content">
-                <button className="close-button" onClick={closePopup}>X</button>
+                <button className="close-button" onClick={closePopup}>
+                    <CloseIcon className="close-icon"/>
+                </button>
                 <div className="content">{content}</div>
             </div>
         </div>
