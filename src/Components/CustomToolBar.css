@@ -15,8 +15,16 @@
 }
 
 .left-container, .right-container {
-    flex-basis: 20%;
+    flex-basis: 38%;
 }
+.left-container {
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: row;  /* not strictly necessary since 'row' is the default */
+    align-items: center;  /* align items vertically */
+    justify-content: space-between;  /* distribute items horizontally */
+}
+
 
 #ToolbarTitle {
     flex-grow: 1;
@@ -26,8 +34,10 @@
     line-height: 1;
 }
 
-#HomeButton, #ShamirLogo {
+#HomeButton, #ShamirLogo, #SoundButton {
     flex-shrink: 0;
+}
+#SoundButton {
 
 }
 

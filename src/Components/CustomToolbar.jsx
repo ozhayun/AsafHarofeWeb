@@ -33,8 +33,8 @@ const CustomToolbar = ({toolbarTitle}) => {
                 >
                     <HomeIcon fontSize="large" />
                 </IconButton>
-                <IconButton onClick={toggleMute}>
-                    {isMuted ? <VolumeMuteIcon /> : <VolumeUpIcon />}
+                <IconButton id="SoundButton" onClick={toggleMute}>
+                    {isMuted ? <VolumeMuteIcon fontSize="large"/> : <VolumeUpIcon fontSize="large"/>}
                 </IconButton>
             </div>
             <Typography id="ToolbarTitle" variant="h6" noWrap={false} component="div">
