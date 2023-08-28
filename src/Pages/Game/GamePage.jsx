@@ -27,7 +27,6 @@ const GamePage = () => {
     const [popUpContent, setPopUpContent] = React.useState("");
     const [popUpCells, setPopUpCells] = React.useState([]);
     const [popUpMessages, setPopUpMessages] = React.useState([]);
-    const [messageCount, setMessageCount] = React.useState(0)
     const [isGamePaused, setIsGamePaused] = React.useState(false);
     const [isPlayerWin, setIsPlayerWin] = React.useState(false);
     const [resetKey, setResetKey] = React.useState(0);
@@ -101,12 +100,10 @@ const GamePage = () => {
     };
 
     const checkCellPopups = (playerPosition) => {
-        if(messageCount < popUpMessages.length || playerPosition === 100) {
+        if(popUpMessages.length != 0|| playerPosition === 100) {
             const cellIndex = popUpCells.indexOf(playerPosition);
             if (cellIndex !== -1) {
                 openPopUp(popUpMessages[0]);
-                const newMessageCount = messageCount + 1;
-                setMessageCount(newMessageCount);
                 setPopUpCells(prevItems => prevItems.filter((_, index) => index !== cellIndex));
                 setPopUpMessages(prevMessages => prevMessages.filter((_, index) => index !== 0))
             }
@@ -155,7 +152,6 @@ const GamePage = () => {
         setIsPopUpOpen(false);
         setIsPlayerWin(false)
         setPlayerPosition(1);
-        setMessageCount(0)
         setResetKey(prevKey => prevKey + 1);
     };
 
