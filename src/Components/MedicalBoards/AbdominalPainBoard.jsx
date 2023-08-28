@@ -5,7 +5,7 @@ import * as React from "react";
 import Board from "../Board.jsx";
 
 
-const AbdominalPainBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, resetKey, onReset }) => {
+const AbdominalPainBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, resetKey }) => {
     const specifics = {
         ladders: {
             4 : 23,
@@ -44,7 +44,6 @@ const AbdominalPainBoard = ({playerPosition, playerImage, onLaddersChange, onSli
                    setPopUpCells={setPopUpCells}
                    setPopUpMessages={setPopUpMessages}
                    resetKey={resetKey}
-                   onReset={onReset}
                    {...specifics}/>
             <div className="APB-slide-image1-container">
                 <img src={slideImagePath} alt="Slide" className="APB-slide-image1" />

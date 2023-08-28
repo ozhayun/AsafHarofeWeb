@@ -159,13 +159,6 @@ const GamePage = () => {
         setResetKey(prevKey => prevKey + 1);
     };
 
-    const handleBoardReset = (newPopUpCells, newPopUpMessages) => {
-        setPopUpCells(newPopUpCells);
-        setPopUpMessages(newPopUpMessages);
-    };
-
-
-
     return (
         <div className="game-page">
             <div className="toolbar-container">
@@ -179,7 +172,6 @@ const GamePage = () => {
                               setPopUpCells={setPopUpCells}
                               setPopUpMessages={setPopUpMessages}
                               resetKey={resetKey}
-                              onReset={handleBoardReset}
                     />
                 ) : pain === 'fever' ? (
                     <FeverBoard playerPosition={playerPosition}
@@ -189,7 +181,6 @@ const GamePage = () => {
                                 setPopUpCells={setPopUpCells}
                                 setPopUpMessages={setPopUpMessages}
                                 resetKey={resetKey}
-                                onReset={handleBoardReset}
                     />
                 ) : pain === 'injury' ? (
                     <InjuryBoard playerPosition={playerPosition}
@@ -199,7 +190,6 @@ const GamePage = () => {
                                 setPopUpCells={setPopUpCells}
                                 setPopUpMessages={setPopUpMessages}
                                 resetKey={resetKey}
-                                onReset={handleBoardReset}
                     />
                 ) : pain === 'abdominalPain' ? (
                     <AbdominalPainBoard playerPosition={playerPosition}
@@ -209,7 +199,6 @@ const GamePage = () => {
                               setPopUpCells={setPopUpCells}
                               setPopUpMessages={setPopUpMessages}
                               resetKey={resetKey}
-                              onReset={handleBoardReset}
                     />
                 ) : null
                 }

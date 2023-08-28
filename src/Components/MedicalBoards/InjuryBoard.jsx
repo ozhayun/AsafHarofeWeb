@@ -4,7 +4,7 @@ import ladderImagePath from "../../../Public/GamePage/ladder.png";
 import * as React from "react";
 import Board from "../Board.jsx";
 
-const InjuryBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, resetKey, onReset }) => {
+const InjuryBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, resetKey }) => {
     const specifics = {
         ladders: {
             2: 21,
@@ -44,7 +44,6 @@ const InjuryBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChan
                    setPopUpCells={setPopUpCells}
                    setPopUpMessages={setPopUpMessages}
                    resetKey={resetKey}
-                   onReset={onReset}
                    {...specifics}/>
             <div className="IB-slide-image1-container">
                 <img src={slideImagePath} alt="Slide" className="IB-slide-image1" />

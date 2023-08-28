@@ -4,7 +4,7 @@ import ladderImagePath from "../../../Public/GamePage/ladder.png";
 import * as React from "react";
 import Board from "../Board.jsx";
 
-const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, resetKey, onReset }) => {
+const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, resetKey }) => {
     const specifics = {
         ladders: {
             4: 23,
@@ -44,7 +44,6 @@ const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange,
                    setPopUpCells={setPopUpCells}
                    setPopUpMessages={setPopUpMessages}
                    resetKey={resetKey}
-                   onReset={onReset}
                    {...specifics}/>
             <div className="CB-slide-image1-container">
                 <img src={slideImagePath} alt="Slide" className="CB-slide-image1" />

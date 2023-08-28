@@ -5,7 +5,7 @@ import * as React from "react";
 import Board from "../Board.jsx";
 
 
-const FeverBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, resetKey, onReset }) => {
+const FeverBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, resetKey }) => {
     const specifics = {
         ladders: {
             2 : 21,
@@ -45,7 +45,6 @@ const FeverBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChang
                    setPopUpCells={setPopUpCells}
                    setPopUpMessages={setPopUpMessages}
                    resetKey={resetKey}
-                   onReset={onReset}
                    {...specifics}/>
 
             <div className="FB-slide-image1-container">
