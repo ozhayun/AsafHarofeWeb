@@ -159,7 +159,6 @@ const GamePage = () => {
                               playerImage={playerImage}
                               onLaddersChange={handleLaddersChange}
                               onSlidesChange={handleSlidesChange}
-                              openPopUp={openPopUp}
                               setPopUpCells={setPopUpCells}
                               setPopUpMessages={setPopUpMessages}
                     />
@@ -168,7 +167,6 @@ const GamePage = () => {
                                 playerImage={playerImage}
                                 onLaddersChange={handleLaddersChange}
                                 onSlidesChange={handleSlidesChange}
-                                openPopUp={openPopUp}
                                 setPopUpCells={setPopUpCells}
                                 setPopUpMessages={setPopUpMessages}
                     />
@@ -177,7 +175,6 @@ const GamePage = () => {
                                 playerImage={playerImage}
                                 onLaddersChange={handleLaddersChange}
                                 onSlidesChange={handleSlidesChange}
-                                openPopUp={openPopUp}
                                 setPopUpCells={setPopUpCells}
                                 setPopUpMessages={setPopUpMessages}
                     />
@@ -186,7 +183,6 @@ const GamePage = () => {
                               playerImage={playerImage}
                               onLaddersChange={handleLaddersChange}
                               onSlidesChange={handleSlidesChange}
-                              openPopUp={openPopUp}
                               setPopUpCells={setPopUpCells}
                               setPopUpMessages={setPopUpMessages}
                     />
