@@ -5,7 +5,6 @@ import MedicalDocumentsPage from './Pages/MedicalDocumentsPage/MedicalDocumentsP
 import ChooseAnimal from './Pages/Game/ChooseAnimal'
 import ChoosePain from './Pages/Game/ChoosePain';
 import GamePage from './Pages/Game/GamePage';
-import FeverPdf from '../Public/MedicalFilesPage/fever_treatment.pdf';
 import ButtonClickSound from '/Public/Sounds/ClickSound.mp3';
 
 
@@ -22,8 +21,6 @@ function App() {
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/medical-documents" element={<MedicalDocumentsPage />} />
-                <Route path="/fever-pdf" element={< FeverPdf />} />
-
                 <Route path="/game" element={<GamePage />} />
                 <Route
                     path="/choose-animal"
