@@ -5,14 +5,16 @@ import ThermometerImagePath from "../../../Public/HomePage/Thermometer.png";
 import PlasterImagePath from "../../../Public/HomePage/Plaster.png";
 import AbdominalPainImagePath from "../../../Public/HomePage/AbdominalPain.png";
 import InjuryImagePath from "../../../Public/HomePage/Injury.png";
-import {useState} from "react";
+import {useContext, useState} from "react";
 import CustomToolbar from '../../Components/CustomToolbar.jsx';
 import {Button} from "@mui/material";
 import {useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
+import {SoundContext} from "../../Sound/SoundContext.jsx";
 
 
-const ChoosePain = ({playClickSound}) => {
+const ChoosePain = () => {
+    const { playClickSound, toggleMute, isMuted } = useContext(SoundContext);
     const [selectedPain, setSelectedPain] = useState("");
     const navigate = useNavigate();
     const location = useLocation();

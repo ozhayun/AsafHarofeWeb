@@ -1,4 +1,5 @@
 import './App.css';
+import {SoundProvider} from "./Sound/SoundProvider.jsx";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './Pages/HomePage/HomePage';
 import MedicalDocumentsPage from './Pages/MedicalDocumentsPage/MedicalDocumentsPage';
@@ -8,15 +9,7 @@ import GamePage from './Pages/Game/GamePage';
 import FeverPdf from '../Public/MedicalFilesPage/fever_treatment.pdf';
 import ButtonClickSound from '/Public/Sounds/ClickSound.mp3';
 
-
 function App() {
-    const clickAudio = new Audio(ButtonClickSound);
-
-    function playClickSound() {
-        const audio = new Audio(ButtonClickSound);
-        audio.play();
-    }
-
     return (
         <Router>
             <Routes>

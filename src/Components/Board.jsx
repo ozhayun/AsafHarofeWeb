@@ -2,7 +2,41 @@ import "./Board.css"
 import Cell from "./Cell.jsx"
 import * as React from "react";
 
-const Board = ({ playerPosition, playerImage }) => {
+const Board = ({
+                   playerPosition,
+                   playerImage,
+                   ladders,
+                   slides,
+                   popUpCells,
+                   popUpMessages,
+                   onLaddersChange,
+                   onSlidesChange,
+                   setPopUpCells,
+                   setPopUpMessages,
+                   resetKey
+               }) => {
+
+    React.useEffect(() => {
+        setPopUpCells(popUpCells)
+    },[]);
+
+    React.useEffect(() => {
+        setPopUpMessages(popUpMessages)
+    }, []);
+
+    React.useEffect(() => {
+        onLaddersChange(ladders);
+    }, []);
+
+    React.useEffect(() => {
+        onSlidesChange(slides);
+    }, []);
+
+    React.useEffect(() => {
+        setPopUpCells(popUpCells);
+        setPopUpMessages(popUpMessages);
+    }, [resetKey]);
+
     return (
         <div className="game-board">
             {Array.from({ length: 100 }, (_, index) => {
