@@ -13,23 +13,29 @@ const Board = ({
                    onSlidesChange,
                    setPopUpCells,
                    setPopUpMessages,
+                   resetKey
                }) => {
 
     React.useEffect(() => {
         setPopUpCells(popUpCells)
-    },[setPopUpCells]);
+    },[]);
 
     React.useEffect(() => {
         setPopUpMessages(popUpMessages)
-    }, [setPopUpMessages]);
+    }, []);
 
     React.useEffect(() => {
         onLaddersChange(ladders);
-    }, [ladders, onLaddersChange]);
+    }, []);
 
     React.useEffect(() => {
         onSlidesChange(slides);
-    }, [slides, onSlidesChange]);
+    }, []);
+
+    React.useEffect(() => {
+        setPopUpCells(popUpCells);
+        setPopUpMessages(popUpMessages);
+    }, [resetKey]);
 
     return (
         <div className="game-board">

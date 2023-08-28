@@ -29,6 +29,7 @@ const GamePage = () => {
     const [messageCount, setMessageCount] = React.useState(0)
     const [isGamePaused, setIsGamePaused] = React.useState(false);
     const [isPlayerWin, setIsPlayerWin] = React.useState(false);
+    const [resetKey, setResetKey] = React.useState(0);
     const location = useLocation();
     const navigate = useNavigate();
     const {pain, animal} = location.state || {};
@@ -145,7 +146,14 @@ const GamePage = () => {
         setIsPlayerWin(false)
         setPlayerPosition(1);
         setMessageCount(0)
+        setResetKey(prevKey => prevKey + 1);
     };
+
+    const handleBoardReset = (newPopUpCells, newPopUpMessages) => {
+        setPopUpCells(newPopUpCells);
+        setPopUpMessages(newPopUpMessages);
+    };
+
 
 
     return (
@@ -161,6 +169,8 @@ const GamePage = () => {
                               onSlidesChange={handleSlidesChange}
                               setPopUpCells={setPopUpCells}
                               setPopUpMessages={setPopUpMessages}
+                              resetKey={resetKey}
+                              onReset={handleBoardReset}
                     />
                 ) : pain === 'fever' ? (
                     <FeverBoard playerPosition={playerPosition}
@@ -169,6 +179,8 @@ const GamePage = () => {
                                 onSlidesChange={handleSlidesChange}
                                 setPopUpCells={setPopUpCells}
                                 setPopUpMessages={setPopUpMessages}
+                                resetKey={resetKey}
+                                onReset={handleBoardReset}
                     />
                 ) : pain === 'injury' ? (
                     <InjuryBoard playerPosition={playerPosition}
@@ -177,6 +189,8 @@ const GamePage = () => {
                                 onSlidesChange={handleSlidesChange}
                                 setPopUpCells={setPopUpCells}
                                 setPopUpMessages={setPopUpMessages}
+                                resetKey={resetKey}
+                                onReset={handleBoardReset}
                     />
                 ) : pain === 'abdominalPain' ? (
                     <AbdominalPainBoard playerPosition={playerPosition}
@@ -185,6 +199,8 @@ const GamePage = () => {
                               onSlidesChange={handleSlidesChange}
                               setPopUpCells={setPopUpCells}
                               setPopUpMessages={setPopUpMessages}
+                              resetKey={resetKey}
+                              onReset={handleBoardReset}
                     />
                 ) : null
                 }
