@@ -7,6 +7,7 @@ import vetDogImagePath from "../../../Public/HomePage/VetDog.png";
 import youtubeImagePath from "../../../Public/HomePage/YouTube.png";
 import facebookImagePath from "../../../Public/HomePage/Facebook.png";
 import instagramImagePath from "../../../Public/HomePage/Instagram.png";
+import mapImagePath from "../../../Public/HomePage/Map.png"
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -37,6 +38,9 @@ const HomePage = () => {
                 </a>
                 <a href="https://www.instagram.com/shamir.medical.center/" target="_blank">
                     <img src={instagramImagePath} id="InstagramIcon" alt='Instagram'/>
+                </a>
+                <a href="https://simplex-smart3d.com/ces/beeryaakov/app-shamir/" target="_blank">
+                    <img src={mapImagePath} id="MapIcon" alt='Map'/>
                 </a>
             </div>
         </div>
