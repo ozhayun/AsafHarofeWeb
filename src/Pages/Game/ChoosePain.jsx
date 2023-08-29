@@ -37,7 +37,8 @@ const ChoosePain = () => {
                 <CustomToolbar toolbarTitle=""/>
             </div>
                 <Typography id = "Title" variant="h2" gutterBottom style={{ direction: 'rtl' }}>
-                    מה כואב לחיה?
+                    מה כואב
+                    לחיה?
                 </Typography>
                 <div className='rectanglePain'>
                     <Button className="piece fever" onClick={() => handlePainClick('fever')}
