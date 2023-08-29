@@ -33,7 +33,8 @@ const ChooseAnimal = () => {
                 <CustomToolbar toolbarTitle=""/>
             </div>
             <Typography id = "Title" variant="h2" gutterBottom style={{ direction: 'rtl' }}>
-                איזה חיה תרצה להיות?
+                איזה חיה
+                תרצה להיות?
             </Typography>
             <div className='rectangle'>
                 <Button className="piece dog" onClick={() => handleAnimalClick('dog')} data-selected={selectedAnimal === 'dog' ? 'true' : selectedAnimal === "" ? 'default' : 'false'}>

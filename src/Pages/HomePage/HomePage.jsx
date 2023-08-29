@@ -22,7 +22,7 @@ const HomePage = () => {
             </div>
             <div id="ButtonsDiv">
                 <Button id="MedicalDocumentsButton" component={Link} to="/medical-documents">
-                    מסמכים רפואים
+                    דפי הסבר
                 </Button>
                 <Button id="StartGameButton" component={Link} to="/choose-animal">
                     התחל משחק
