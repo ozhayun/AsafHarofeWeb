@@ -38,7 +38,7 @@ const ChoosePain = () => {
             </div>
                 <Typography id = "Title" variant="h2" gutterBottom style={{ direction: 'rtl' }}>
                     מה כואב
-                    לחיה?
+                    לחיה שבחרת?
                 </Typography>
                 <div className='rectanglePain'>
                     <Button className="piece fever" onClick={() => handlePainClick('fever')}
