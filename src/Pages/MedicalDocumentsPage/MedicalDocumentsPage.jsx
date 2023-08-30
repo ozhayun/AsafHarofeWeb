@@ -19,15 +19,13 @@ const pdfFiles = [
     { title: "טיפול בחום", filepath: feverPdf }
 ];
 
-const MedicalFilesPagePath = `/MedicalFilesPage`;
-
 const MedicalDocumentsPage = () => {
 
 
     return (
         <div className="medical documents container">
             <div className="toolbar-container">
-                <CustomToolbar toolbarTitle="דפי הסבר רפואים"/>
+                <CustomToolbar toolbarTitle="דפי הסבר"/>
             </div>
             <List className="files-list" >
                 {pdfFiles.map((file, index) => (
