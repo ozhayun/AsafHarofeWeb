@@ -28,15 +28,15 @@ const ChooseAnimal = () => {
     }
 
     return(
-        <div className="container">
+        <div className="choose-animal-container">
             <div className="toolbar-container">
                 <CustomToolbar toolbarTitle=""/>
             </div>
-            <Typography id = "Title" variant="h2" gutterBottom style={{ direction: 'rtl' }}>
+            <Typography id = "ChooseAnimalTitle" variant="h2" gutterBottom style={{ direction: 'rtl' }}>
                 איזה חיה
                 תרצה להיות?
             </Typography>
-            <div className='rectangle'>
+            <div className='animal-rectangle'>
                 <Button className="piece dog" onClick={() => handleAnimalClick('dog')} data-selected={selectedAnimal === 'dog' ? 'true' : selectedAnimal === "" ? 'default' : 'false'}>
                     <img src={vetDogImagePath} style={{width: "100%", height: "100%"}} alt="Dog" />
                 </Button>
@@ -50,7 +50,7 @@ const ChooseAnimal = () => {
                     <img src={vetPandaImagePath} style={{width: "100%", height: "100%"}} alt="Panda" />
                 </Button>
             </div>
-            <Button id="ContinueButton" disabled={selectedAnimal === ""} onClick={handleContinueClick}>
+            <Button id="ContinueAnimalButton" disabled={selectedAnimal === ""} onClick={handleContinueClick}>
                 המשך
             </Button>
         </div>
