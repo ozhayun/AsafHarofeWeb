@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 const HomePage = () => {
     return (
         <div id="HomePage">
-            <img src={shamirLogoPath} id="ShamirLogo" alt="Shamir"/>
+            <img src={shamirLogoPath} id="HomeShamirLogo" alt="Shamir"/>
             <div className="AnimalsBackground">
                 <img src={vetMonkeyImagePath} id="MonkeyBackground" alt="Monkey"/>
                 <img src={vetLionImagePath} id="LionBackground" alt="Lion"/>

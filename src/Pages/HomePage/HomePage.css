@@ -51,7 +51,7 @@
     justify-content: center;
     align-items: center;
     height: 10em;
-    margin-top: 3em;
+    margin-top: 3.5em;
 }
 
 #MonkeyBackground, #LionBackground, #PandaBackground, #DogBackground {
@@ -73,11 +73,11 @@
     z-index: 1;
 }
 
-#ShamirLogo {
+#HomeShamirLogo {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 60%;
     height: auto;
     margin-top: 5vh;
     margin-left: auto;

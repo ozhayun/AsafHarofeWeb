@@ -37,9 +37,6 @@
 #HomeButton, #ShamirLogo, #SoundButton {
     flex-shrink: 0;
 }
-#SoundButton {
-
-}
 
 #ShamirLogo {
     width: 50px;
