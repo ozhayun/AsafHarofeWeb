@@ -11,7 +11,7 @@
 
 .ListItemText {
     text-align: right;
-    flex-grow: 1; /* This makes sure the text takes up as much space as possible */
+    flex-grow: 1;
 }
 
 .icon-container {
