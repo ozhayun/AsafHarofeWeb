@@ -41,7 +41,7 @@ const CustomToolbar = ({toolbarTitle}) => {
                 {toolbarTitle}
             </Typography>
             <div className="right-container">
-                <img src={shamirLogoPath} id="ShamirLogo" alt="Shamir" />
+                <img src={shamirLogoPath} id="ToolBarShamirLogo" alt="Shamir" />
             </div>
         </Toolbar>
     );

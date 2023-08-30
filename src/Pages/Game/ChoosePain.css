@@ -14,8 +14,8 @@
     line-height: 4rem;
     text-align: center;
     color: #00456E;
-    margin-top: 0.6em;
-    margin-bottom: 0.6em;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
 }
 
 .rectanglePain {
@@ -83,12 +83,6 @@
     object-fit: contain;
 }
 
-#ShamirLogo {
-    display: block;
-    width: auto;
-    height: 30%;
-    margin-left: auto;
-}
 
 #ContinueButton {
     margin-top: 1.2em;

@@ -34,19 +34,21 @@
     line-height: 1;
 }
 
-#HomeButton, #ShamirLogo, #SoundButton {
+#HomeButton, #ToolBarShamirLogo, #SoundButton {
     flex-shrink: 0;
 }
 
-#ShamirLogo {
-    width: 50px;
+#ToolBarShamirLogo {
+    width: 20vw;
     height: auto;
     object-fit: contain;
+    display: block;
+    margin-left: auto;
+
 }
 
 @media (min-width: 501px) {
-    #ShamirLogo {
+    #ToolBarShamirLogo {
         width: 15vw;
-        max-width: 100px;
     }
 }

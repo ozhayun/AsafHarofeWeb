@@ -3,10 +3,6 @@
     background: linear-gradient(to bottom, #67E5D6, #FFFFFF) no-repeat;
 }
 
-#ShamirLogo {
-    width: 50%;
-}
-
 .animal {
     display: flex;
     align-items: center;
