@@ -51,7 +51,7 @@
     justify-content: center;
     align-items: center;
     height: 10em;
-    margin-top: 2.5em;
+    margin-top: 3em;
 }
 
 #MonkeyBackground, #LionBackground, #PandaBackground, #DogBackground {
@@ -79,7 +79,7 @@
     align-items: center;
     width: 80%;
     height: auto;
-    margin-top: 3vh;
+    margin-top: 5vh;
     margin-left: auto;
     margin-right: auto;
 }
@@ -88,6 +88,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2vh;
 }
 
 #YoutubeIcon, #FacebookIcon, #InstagramIcon, #MapIcon {
@@ -98,13 +99,10 @@
 
 
 @media only screen and (min-width: 501px) {
-
-    /* Buttons container */
     #ButtonsDiv {
         height: 25vh;
     }
 
-    /* Individual buttons */
     #StartGameButton, #MedicalDocumentsButton {
         width: 85%;
         height: 4rem;

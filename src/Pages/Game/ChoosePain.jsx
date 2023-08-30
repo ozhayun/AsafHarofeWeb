@@ -32,11 +32,11 @@ const ChoosePain = () => {
     }
 
     return (
-        <div className="container">
+        <div className="choose-pain-container">
             <div className="toolbar-container">
                 <CustomToolbar toolbarTitle=""/>
             </div>
-                <Typography id = "Title" variant="h2" gutterBottom style={{ direction: 'rtl' }}>
+                <Typography id = "ChoosePainTitle" variant="h2" gutterBottom style={{ direction: 'rtl' }}>
                     מה כואב
                     לחיה שבחרת?
                 </Typography>
@@ -44,22 +44,22 @@ const ChoosePain = () => {
                     <Button className="piece fever" onClick={() => handlePainClick('fever')}
                             data-selected={selectedPain === 'fever' ? 'true' : selectedPain === "" ? 'default' : 'false'}>
                         <img src={ThermometerImagePath} style={{width: "100%", height: "100%"}} alt="Thermometer"/>
-                        ?יש לה חום
+                        יש לה חום
                     </Button>
                     <Button className="piece cut" onClick={() => handlePainClick('cut')}
                             data-selected={selectedPain === 'cut' ? 'true' : selectedPain === "" ? 'default' : 'false'}>
                         <img src={PlasterImagePath} style={{width: "100%", height: "100%"}} alt="Plaster"/>
-                        ?יש לה חתך
+                        יש לה חתך
                     </Button>
                     <Button className="piece abdominalPain" onClick={() => handlePainClick('abdominalPain')}
                             data-selected={selectedPain === 'abdominalPain' ? 'true' : selectedPain === "" ? 'default' : 'false'}>
                         <img src={AbdominalPainImagePath} style={{width: "100%", height: "100%"}} alt="AbdominalPain"/>
-                        ?יש לה כאב בטן
+                        יש לה כאב בטן
                     </Button>
                     <Button className="piece injury" onClick={() => handlePainClick('injury')}
                             data-selected={selectedPain === 'injury' ? 'true' : selectedPain === "" ? 'default' : 'false'}>
                         <img src={InjuryImagePath} style={{width: "100%", height: "100%"}} alt="Injury"/>
-                        ?יש לה חבלה ביד או רגל
+                        יש לה חבלה ביד או ברגל
                     </Button>
                 </div>
                 <Button id="ContinueButton" disabled={selectedPain === null} onClick={handleContinueClick}>

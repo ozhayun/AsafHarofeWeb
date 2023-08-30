@@ -21,7 +21,7 @@
 .animal-rectangle {
     width: 80%;
     max-width: 20rem;
-    height: 16rem;
+    height: 20rem;
     border-radius: 3rem;
     border: 0.25rem solid black;
     overflow: hidden;

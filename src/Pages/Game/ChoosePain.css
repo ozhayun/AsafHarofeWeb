@@ -1,4 +1,4 @@
-.container {
+.choose-pain-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,21 +7,21 @@
     background: linear-gradient(to bottom, #67E5D6, #FFFFFF) no-repeat;
 }
 
-#Title {
+#ChoosePainTitle {
     font-family: 'Assistant', serif;
     font-style: normal;
-    font-weight: 500;
     font-size: 4rem;
-    line-height: 5rem;
+    line-height: 4rem;
     text-align: center;
     color: #00456E;
-    margin-top: 1em;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
 }
 
 .rectanglePain {
     width: 80%;
     max-width: 20rem;
-    height: 16rem;
+    height: 20rem;
     border-radius: 3rem;
     border: 0.25rem solid black;
     overflow: hidden;
@@ -42,7 +42,8 @@
     overflow: hidden;
     transition: transform 0.3s ease;
     opacity: 1;
-    font-size: 0.8rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
     padding: 5px;
 }
 
@@ -68,7 +69,7 @@
 }
 
 .rectanglePain .piece[data-selected='true'] {
-     opacity: 1;
+    opacity: 1;
     background-color: #25B90D;
  }
 
@@ -77,8 +78,8 @@
 }
 
 .rectanglePain .piece img {
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 60%;
+    max-height: 60%;
     object-fit: contain;
 }
 
@@ -90,9 +91,21 @@
 }
 
 #ContinueButton {
-    width: 30%;
-    font-size: 4vw;
-    line-height: 8vw;
+    margin-top: 1.2em;
+    width: 60%;
+    height: 6%;
+
+    font-size: 9vw;
+    line-height: 15vw;
+    text-align: center;
+    color: #25B90D;
+
+    box-sizing: border-box;
+
+    background: #FFFFFF;
+    border: 0.7vw solid #25B90D;
+    box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
+    border-radius: 4vw;
 }
 
 
