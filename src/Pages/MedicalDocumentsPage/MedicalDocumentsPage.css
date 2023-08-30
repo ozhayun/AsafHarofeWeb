@@ -12,6 +12,7 @@
 .ListItemText {
     text-align: right;
     flex-grow: 1;
+    padding-right: 1em ;
 }
 
 .icon-container {
