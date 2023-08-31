@@ -10,6 +10,44 @@
     overflow: hidden;
 }
 
+#HomeShamirLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: auto;
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.AnimalsBackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10em;
+    margin-top: 3em;
+}
+
+#MonkeyBackground, #LionBackground, #PandaBackground, #DogBackground {
+    width: 29vw;
+    height: 13em;
+    margin: -0.6em;
+}
+
+#DogBackground {
+    transform: rotate(-3.97deg);
+    z-index: 1;
+}
+
+#LionBackground {
+    transform: rotate(6deg);
+}
+
+#PandaBackground {
+    z-index: 1;
+}
+
 #ButtonsDiv {
     display: flex;
     flex-direction: column;
@@ -45,44 +83,6 @@
     border-color: #00456E;
 }
 
-.AnimalsBackground {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10em;
-    margin-top: 3em;
-}
-
-#MonkeyBackground, #LionBackground, #PandaBackground, #DogBackground {
-    width: 29vw;
-    height: 13em;
-    margin: -0.6em;
-}
-
-#DogBackground {
-    transform: rotate(-3.97deg);
-    z-index: 1;
-}
-
-#LionBackground {
-    transform: rotate(6deg);
-}
-
-#PandaBackground {
-    z-index: 1;
-}
-
-#HomeShamirLogo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    height: auto;
-    margin-top: 3vh;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 #LinksDiv {
     display: flex;
     justify-content: center;
@@ -97,9 +97,25 @@
 }
 
 
+
 @media only screen and (min-width: 501px) {
+    #HomeShamirLogo {
+        width: 25%;
+    }
+
+    .AnimalsBackground {
+        margin-top: 0;
+    }
+
+    #MonkeyBackground, #LionBackground, #PandaBackground, #DogBackground {
+        width: 18vw;
+        height: 30vh;
+        margin: 0.5em;
+    }
+
     #ButtonsDiv {
-        height: 25vh;
+        height: 38vh;
+        margin-top: -1.9em;
     }
 
     #StartGameButton, #MedicalDocumentsButton {
@@ -108,14 +124,8 @@
         font-size: 2vw;
     }
 
-    #MonkeyBackground, #LionBackground, #PandaBackground, #DogBackground {
-        width: 20vw;
-        height: 25vh;
-        margin: 0.5em;
-    }
-
-    #HomeShamirLogo {
-        width: 60%;
+    #StartGameButton, #MedicalDocumentsButton {
+        font-size: 3.5vw;
     }
 
     #YoutubeIcon, #FacebookIcon, #InstagramIcon, #MapIcon {
@@ -123,3 +133,53 @@
     }
 }
 
+@media only screen and (min-height: 401px) and (min-width: 501px) {
+    .AnimalsBackground {
+        margin-top: 3em;
+    }
+
+    #LinksDiv {
+        margin-top: -5vh;
+    }
+}
+
+@media only screen and (min-width: 901px) {
+    .AnimalsBackground {
+        margin-top: 2.5em;
+    }
+
+    #MonkeyBackground, #LionBackground, #PandaBackground, #DogBackground {
+        width: 16vw;
+        height: 27vh;
+        margin: 0.5em;
+    }
+
+    #ButtonsDiv {
+        height: 25vh;
+        margin-top: 0.5em;
+    }
+
+    #LinksDiv {
+        margin-top: 2vh;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    #HomeShamirLogo {
+        width: 20%;
+    }
+
+    #MonkeyBackground, #LionBackground, #PandaBackground, #DogBackground {
+        width: 14vw;
+        height: 23vh;
+        margin: 0.5em;
+    }
+
+    #ButtonsDiv {
+        height: 22vh;
+    }
+
+    #StartGameButton, #MedicalDocumentsButton {
+        font-size: 2.2vw;
+    }
+}
