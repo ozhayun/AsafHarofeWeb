@@ -23,9 +23,7 @@
 
 @media (min-width: 501px) {
     .game-board {
-        height: 90vh;
-        width: 80%;
-        margin-left: 10vw;
+        height: 70vh;
     }
 }
 
@@ -38,8 +36,6 @@
 
 @media only screen and (min-width: 901px) {
     .game-board {
-        width: 70%;
-        margin-left: 15vw;
     }
 }
 

@@ -1,45 +1,43 @@
+.CB-slide-image1, .CB-slide-image2, .CB-slide-image3, .CB-slide-image4,
+.CB-slide-image5, .CB-slide-image6, .CB-slide-image7, .CB-slide-image8,
+.CB-ladder-image1, .CB-ladder-image2, .CB-ladder-image3, .CB-ladder-image4,
+.CB-ladder-image5, .CB-ladder-image6, .CB-ladder-image7, .CB-ladder-image8{
+    width: 100%;
+    height: 100%;
+}
+
 /* 21 -> 2*/
 .CB-slide-image1-container {
     z-index: 1;
     position: absolute;
-    height: 15%;
+    height: 11%;
     width: 20%;
-    top: 77%;
+    top: 53%;
     left: 80%;
     transform: rotate(-10deg);
-}
-.CB-slide-image1 {
-    width: 100%;
-    height: 100%;
 }
 
 /* 53 -> 31*/
 .CB-slide-image2-container {
     z-index: 1;
     position: absolute;
-    height: 21%;
+    height: 14%;
     width: 23%;
-    top: 46%;
+    top: 35%;
     left: 4%;
     transform: rotate(5deg);
-}
-.CB-slide-image2 {
-    width: 100%;
-    height: 100%;
 }
 
 /* 77 -> 42*/
 .CB-slide-image3-container {
     z-index: 1;
     position: absolute;
-    height: 33%;
+    height: 20%;
     width: 25%;
-    top: 25%;
+    top: 23%;
     left: 61%;
 }
 .CB-slide-image3 {
-    width: 100%;
-    height: 100%;
     transform: scaleX(-1)
 }
 
@@ -47,28 +45,22 @@
 .CB-slide-image4-container {
     z-index: 1;
     position: absolute;
-    height: 22%;
-    width: 34%;
-    top: 74%;
+    height: 14%;
+    width: 35%;
+    top: 52%;
     left: 14%;
-}
-.CB-slide-image4 {
-    width: 100%;
-    height: 100%;
 }
 
 /* 96 -> 78 */
 .CB-slide-image5-container {
     z-index: 1;
     position: absolute;
-    height: 21%;
+    height: 13%;
     width: 23%;
-    top: 5%;
-    left: 52%;
+    top: 13%;
+    left: 53%;
 }
 .CB-slide-image5 {
-    width: 100%;
-    height: 100%;
     transform: scaleX(-1)
 }
 
@@ -76,14 +68,12 @@
 .CB-slide-image6-container {
     z-index: 1;
     position: absolute;
-    height: 28%;
+    height: 19%;
     width: 16%;
-    top: 7%;
+    top: 12%;
     left: 22%;
 }
 .CB-slide-image6 {
-    width: 100%;
-    height: 100%;
     transform: scaleX(-1)
 }
 
@@ -91,125 +81,94 @@
 .CB-slide-image7-container {
     z-index: 1;
     position: absolute;
-    height: 14%;
+    height: 7%;
     width: 15%;
-    top: 34%;
+    top: 30%;
     left: 81%;
-}
-.CB-slide-image7 {
-    width: 100%;
-    height: 100%;
 }
 
 /* 95-> 87 */
 .CB-slide-image8-container {
     z-index: 1;
     position: absolute;
-    height: 10%;
+    height: 8%;
     width: 15%;
-    top: 6%;
+    top: 12%;
     left: 32%;
-}
-.CB-slide-image8 {
-    width: 100%;
-    height: 100%;
 }
 
 /* 4-> 23 */
 .CB-ladder-image1-container {
     z-index: 1;
     position: absolute;
-    height: 26%;
-    width: 17%;
-    top: 73%;
-    left: 61%;
+    height: 17%;
+    width: 15%;
+    top: 51%;
+    left: 62%;
     opacity: 90%;
     transform: rotate(18deg);
-}
-.CB-ladder-image1 {
-    width: 100%;
-    height: 100%;
 }
 
 /* 28 -> 46 */
 .CB-ladder-image2-container {
     z-index: 1;
     position: absolute;
-    height: 26%;
-    width: 18%;
-    top: 51%;
-    left: 26%;
+    height: 17%;
+    width: 15%;
+    top: 39%;
+    left: 27%;
     opacity: 90%;
-    transform: rotate(35deg);
-}
-.CB-ladder-image2 {
-    width: 100%;
-    height: 100%;
+    transform: rotate(32deg);
 }
 
 /* 51 -> 92*/
 .CB-ladder-image3-container {
     z-index: 1;
     position: absolute;
-    height: 47%;
+    height: 27%;
     width: 20%;
-    top: 2%;
+    top: 10%;
     left: 1%;
     opacity: 90%;
-    transform: rotate(8deg);
-}
-.CB-ladder-image3 {
-    width: 100%;
-    height: 100%;
+    transform: rotate(10deg);
 }
 
 /* 22 -> 41*/
 .CB-ladder-image4-container {
     z-index: 1;
     position: absolute;
-    height: 25%;
+    height: 15%;
     width: 19%;
-    top: 54%;
+    top: 40%;
     left: 80%;
     opacity: 90%;
-    transform: rotate(14deg);
-}
-.CB-ladder-image4 {
-    width: 100%;
-    height: 100%;
+    transform: rotate(16deg);
 }
 
 /* 24 -> 38 */
 .CB-ladder-image5-container {
     z-index: 1;
     position: absolute;
-    height: 16%;
-    width: 21%;
-    top: 61%;
-    left: 58%;
+    height: 8%;
+    width: 14%;
+    top: 46%;
+    left: 63%;
     opacity: 90%;
     transform: rotate(29deg);
 }
-.CB-ladder-image5 {
-    width: 100%;
-    height: 100%;
-}
-
 
 /* 36 -> 86 */
 .CB-ladder-image6-container {
     z-index: 1;
     position: absolute;
-    height: 57%;
-    width: 22%;
-    top: 11%;
-    left: 39%;
+    height: 35%;
+    width: 18%;
+    top: 16%;
+    left: 41%;
     opacity: 90%;
     transform: rotate(-8deg);
 }
 .CB-ladder-image6 {
-    width: 100%;
-    height: 100%;
     transform: scaleX(-1)
 }
 
@@ -217,30 +176,90 @@
 .CB-ladder-image7-container {
     z-index: 1;
     position: absolute;
-    height: 22%;
+    height: 16%;
     width: 19%;
-    top: 5%;
+    top: 11%;
     left: 75%;
     opacity: 90%;
     transform: rotate(-3deg);
-}
-.CB-ladder-image7 {
-    width: 100%;
-    height: 100%;
 }
 
 /* 12 -> 32 */
 .CB-ladder-image8-container {
     z-index: 1;
     position: absolute;
-    height: 26%;
+    height: 14%;
     width: 17%;
-    top: 62%;
+    top: 46%;
     left: 8%;
     opacity: 90%;
-    transform: rotate(0deg);
+    transform: rotate(-1deg);
 }
-.CB-ladder-image8 {
-    width: 100%;
-    height: 100%;
+
+
+@media (min-width: 501px) and (max-width: 900px) and (max-height: 700px) {
+    /* 21 -> 2*/
+    .CB-slide-image1-container {
+        height: 10%;
+        width: 15%;
+        top: 70%;
+        left: 81%;
+    }
+
+    /* 53 -> 31*/
+    .CB-slide-image2-container {
+        height: 14%;
+        width: 24%;
+        top: 48%;
+        left: 4%;
+        transform: rotate(-3deg);
+    }
+
+    /* 77 -> 42*/
+    .CB-slide-image3-container {
+        height: 24%;
+        width: 21%;
+        top: 33%;
+        left: 64%;
+    }
+
+    /* 26 -> 9*/
+    .CB-slide-image4-container {
+        height: 14%;
+        width: 35%;
+        top: 68%;
+        left: 14%;
+    }
+
+    /* 96 -> 78 */
+    .CB-slide-image5-container {
+        height: 16%;
+        width: 23%;
+        top: 20%;
+        left: 53%;
+    }
+
+    /* 93 -> 67 */
+    .CB-slide-image6-container {
+        height: 22%;
+        width: 14%;
+        top: 20%;
+        left: 23%;
+    }
+
+    /* 61 -> 59 */
+    .CB-slide-image7-container {
+        height: 10%;
+        width: 10%;
+        top: 40%;
+        left: 85%;
+    }
+
+    /* 95-> 87 */
+    .CB-slide-image8-container {
+        height: 8%;
+        width: 12%;
+        top: 20%;
+        left: 35%;
+    }
 }
