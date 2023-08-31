@@ -35,6 +35,10 @@ const AbdominalPainBoard = ({playerPosition, playerImage, onLaddersChange, onSli
             "נחכה להחלטת הרופא בהתאם לתוצאות. לאחר מכן נוכל ללכת הביתה או שנצטרך להישאר בבית החולים עוד קצת."
         ]
     };
+
+    const imagesCount = 8;
+
+
     return (
         <div className="game-board-container">
             <Board playerPosition={playerPosition}
@@ -45,55 +49,20 @@ const AbdominalPainBoard = ({playerPosition, playerImage, onLaddersChange, onSli
                    setPopUpMessages={setPopUpMessages}
                    resetKey={resetKey}
                    {...specifics}/>
-            <div className="APB-slide-image1-container">
-                <img src={slideImagePath} alt="Slide" className="APB-slide-image1" />
-            </div>
-            <div className="APB-slide-image2-container">
-                <img src={slideImagePath} alt="Slide" className="APB-slide-image2" />
-            </div>
-            <div className="APB-slide-image3-container">
-                <img src={slideImagePath} alt="Slide" className="APB-slide-image3" />
-            </div>
-            <div className="APB-slide-image4-container">
-                <img src={slideImagePath} alt="Slide" className="APB-slide-image4" />
-            </div>
-            <div className="APB-slide-image5-container">
-                <img src={slideImagePath} alt="Slide" className="APB-slide-image5" />
-            </div>
-            <div className="APB-slide-image6-container">
-                <img src={slideImagePath} alt="Slide" className="APB-slide-image6" />
-            </div>
-            <div className="APB-slide-image7-container">
-                <img src={slideImagePath} alt="Slide" className="APB-slide-image7" />
-            </div>
-            <div className="APB-slide-image8-container">
-                <img src={slideImagePath} alt="Slide" className="APB-slide-image8" />
-            </div>
 
-            <div className="APB-ladder-image1-container">
-                <img src={ladderImagePath} alt="Slide" className="APB-ladder-image1" />
-            </div>
-            <div className="APB-ladder-image2-container">
-                <img src={ladderImagePath} alt="Slide" className="APB-ladder-image2" />
-            </div>
-            <div className="APB-ladder-image3-container">
-                <img src={ladderImagePath} alt="Slide" className="APB-ladder-image3" />
-            </div>
-            <div className="APB-ladder-image4-container">
-                <img src={ladderImagePath} alt="Slide" className="APB-ladder-image4" />
-            </div>
-            <div className="APB-ladder-image5-container">
-                <img src={ladderImagePath} alt="Slide" className="APB-ladder-image5" />
-            </div>
-            <div className="APB-ladder-image6-container">
-                <img src={ladderImagePath} alt="Slide" className="APB-ladder-image6" />
-            </div>
-            <div className="APB-ladder-image7-container">
-                <img src={ladderImagePath} alt="Slide" className="APB-ladder-image7" />
-            </div>
-            <div className="APB-ladder-image8-container">
-                <img src={ladderImagePath} alt="Slide" className="APB-ladder-image8" />
-            </div>
+            {/*Slides*/}
+            {Array.from({ length: imagesCount }, (_, index) => (
+                <div key={index} className={`APB-slide-image${index + 1}-container`}>
+                    <img src={slideImagePath} alt={`Slide ${index + 1}`} className={`APB-slide-image${index + 1}`} />
+                </div>
+            ))}
+
+            {/*Ladders*/}
+            {Array.from({ length: imagesCount }, (_, index) => (
+                <div key={index} className={`APB-ladder-image${index + 1}-container`}>
+                    <img src={ladderImagePath} alt={`Ladder ${index + 1}`} className={`APB-ladder-image${index + 1}`} />
+                </div>
+            ))}
         </div>
     )
 }

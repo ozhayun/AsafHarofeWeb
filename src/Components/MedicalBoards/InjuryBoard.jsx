@@ -35,6 +35,8 @@ const InjuryBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChan
         ]
     };
 
+    const imagesCount = 8;
+
     return (
         <div className="game-board-container">
             <Board playerPosition={playerPosition}
@@ -45,55 +47,20 @@ const InjuryBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChan
                    setPopUpMessages={setPopUpMessages}
                    resetKey={resetKey}
                    {...specifics}/>
-            <div className="IB-slide-image1-container">
-                <img src={slideImagePath} alt="Slide" className="IB-slide-image1" />
-            </div>
-            <div className="IB-slide-image2-container">
-                <img src={slideImagePath} alt="Slide" className="IB-slide-image2" />
-            </div>
-            <div className="IB-slide-image3-container">
-                <img src={slideImagePath} alt="Slide" className="IB-slide-image3" />
-            </div>
-            <div className="IB-slide-image4-container">
-                <img src={slideImagePath} alt="Slide" className="IB-slide-image4" />
-            </div>
-            <div className="IB-slide-image5-container">
-                <img src={slideImagePath} alt="Slide" className="IB-slide-image5" />
-            </div>
-            <div className="IB-slide-image6-container">
-                <img src={slideImagePath} alt="Slide" className="IB-slide-image6" />
-            </div>
-            <div className="IB-slide-image7-container">
-                <img src={slideImagePath} alt="Slide" className="IB-slide-image7" />
-            </div>
-            <div className="IB-slide-image8-container">
-                <img src={slideImagePath} alt="Slide" className="IB-slide-image8" />
-            </div>
 
-            <div className="IB-ladder-image1-container">
-                <img src={ladderImagePath} alt="Ladder" className="IB-ladder-image1" />
-            </div>
-            <div className="IB-ladder-image2-container">
-                <img src={ladderImagePath} alt="Ladder" className="IB-ladder-image2" />
-            </div>
-            <div className="IB-ladder-image3-container">
-                <img src={ladderImagePath} alt="Ladder" className="IB-ladder-image3" />
-            </div>
-            <div className="IB-ladder-image4-container">
-                <img src={ladderImagePath} alt="Ladder" className="IB-ladder-image4" />
-            </div>
-            <div className="IB-ladder-image5-container">
-                <img src={ladderImagePath} alt="Ladder" className="IB-ladder-image5" />
-            </div>
-            <div className="IB-ladder-image6-container">
-                <img src={ladderImagePath} alt="Ladder" className="IB-ladder-image6" />
-            </div>
-            <div className="IB-ladder-image7-container">
-                <img src={ladderImagePath} alt="Ladder" className="IB-ladder-image7" />
-            </div>
-            <div className="IB-ladder-image8-container">
-                <img src={ladderImagePath} alt="Ladder" className="IB-ladder-image8" />
-            </div>
+            {/*Slides*/}
+            {Array.from({ length: imagesCount }, (_, index) => (
+                <div key={index} className={`IB-slide-image${index + 1}-container`}>
+                    <img src={slideImagePath} alt={`Slide ${index + 1}`} className={`IB-slide-image${index + 1}`} />
+                </div>
+            ))}
+
+            {/*Ladders*/}
+            {Array.from({ length: imagesCount }, (_, index) => (
+                <div key={index} className={`IB-ladder-image${index + 1}-container`}>
+                    <img src={ladderImagePath} alt={`Ladder ${index + 1}`} className={`IB-ladder-image${index + 1}`} />
+                </div>
+            ))}
         </div>
     )
 }

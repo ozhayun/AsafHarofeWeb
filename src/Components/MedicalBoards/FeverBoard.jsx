@@ -36,6 +36,8 @@ const FeverBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChang
         ]
     };
 
+    const imagesCount = 8;
+
     return (
         <div className="game-board-container">
             <Board playerPosition={playerPosition}
@@ -47,55 +49,19 @@ const FeverBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChang
                    resetKey={resetKey}
                    {...specifics}/>
 
-            <div className="FB-slide-image1-container">
-                <img src={slideImagePath} alt="Slide" className="FB-slide-image1" />
-            </div>
-            <div className="FB-slide-image2-container">
-                <img src={slideImagePath} alt="Slide" className="FB-slide-image2" />
-            </div>
-            <div className="FB-slide-image3-container">
-                <img src={slideImagePath} alt="Slide" className="FB-slide-image3" />
-            </div>
-            <div className="FB-slide-image4-container">
-                <img src={slideImagePath} alt="Slide" className="FB-slide-image4" />
-            </div>
-            <div className="FB-slide-image5-container">
-                <img src={slideImagePath} alt="Slide" className="FB-slide-image5" />
-            </div>
-            <div className="FB-slide-image6-container">
-                <img src={slideImagePath} alt="Slide" className="FB-slide-image6" />
-            </div>
-            <div className="FB-slide-image7-container">
-                <img src={slideImagePath} alt="Slide" className="FB-slide-image7" />
-            </div>
-            <div className="FB-slide-image8-container">
-                <img src={slideImagePath} alt="Slide" className="FB-slide-image8" />
-            </div>
+            {/*Slides*/}
+            {Array.from({ length: imagesCount }, (_, index) => (
+                <div key={index} className={`FB-slide-image${index + 1}-container`}>
+                    <img src={slideImagePath} alt={`Slide ${index + 1}`} className={`FB-slide-image${index + 1}`} />
+                </div>
+            ))}
 
-            <div className="FB-ladder-image1-container">
-                <img src={ladderImagePath} alt="Slide" className="FB-ladder-image1" />
-            </div>
-            <div className="FB-ladder-image2-container">
-                <img src={ladderImagePath} alt="Slide" className="FB-ladder-image2" />
-            </div>
-            <div className="FB-ladder-image3-container">
-                <img src={ladderImagePath} alt="Slide" className="FB-ladder-image3" />
-            </div>
-            <div className="FB-ladder-image4-container">
-                <img src={ladderImagePath} alt="Slide" className="FB-ladder-image4" />
-            </div>
-            <div className="FB-ladder-image5-container">
-                <img src={ladderImagePath} alt="Slide" className="FB-ladder-image5" />
-            </div>
-            <div className="FB-ladder-image6-container">
-                <img src={ladderImagePath} alt="Slide" className="FB-ladder-image6" />
-            </div>
-            <div className="FB-ladder-image7-container">
-                <img src={ladderImagePath} alt="Slide" className="FB-ladder-image7" />
-            </div>
-            <div className="FB-ladder-image8-container">
-                <img src={ladderImagePath} alt="Slide" className="FB-ladder-image8" />
-            </div>
+            {/*Ladders*/}
+            {Array.from({ length: imagesCount }, (_, index) => (
+                <div key={index} className={`FB-ladder-image${index + 1}-container`}>
+                    <img src={ladderImagePath} alt={`Ladder ${index + 1}`} className={`FB-ladder-image${index + 1}`} />
+                </div>
+            ))}
         </div>
     )
 }
