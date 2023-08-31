@@ -49,6 +49,17 @@
 
 }
 
+@media only screen and (max-width: 500px) {
+    #ToolbarTitle {
+        position: static;
+        transform: none;
+        flex-grow: 1;
+        text-align: center;
+        left: auto;
+        top: auto;
+    }
+}
+
 @media (min-width: 501px) {
     #ToolBarShamirLogo {
         width: 12vw;
