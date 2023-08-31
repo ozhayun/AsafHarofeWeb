@@ -90,7 +90,7 @@
     box-sizing: border-box;
 
     background: #FFFFFF;
-    border: 0.7vw solid #25B90D;
+    border: 0.8vw solid #25B90D;
     box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
     border-radius: 4vw;
 }
@@ -103,20 +103,56 @@
 
 @media (min-width: 501px) {
     #ChooseAnimalTitle {
-        font-size: 6rem;
-        line-height: 7rem;
+        font-size: 4rem;
+        line-height: 4rem;
     }
 
     .animal-rectangle {
-        width: 60%;
+        width: 50%;
         max-width: 40rem;
-        height: 25rem;
-        border-radius: 6rem;
+        height: 14rem;
     }
 
     #ContinueAnimalButton {
         width: 30%;
         font-size: 4vw;
         line-height: 8vw;
+    }
+
+    #ContinueAnimalButton {
+        border: 0.4vw solid #25B90D;
+        box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
+        border-radius: 2vw;
+        margin-bottom: 0.5em;
+    }
+
+
+    @media only screen and (min-height: 401px) and (min-width: 501px) {
+        #ChooseAnimalTitle {
+            font-size: 4rem;
+            line-height: 5rem;
+        }
+
+        .animal-rectangle {
+            width: 60%;
+            max-width: 40rem;
+            height: 23rem;
+        }
+    }
+
+
+
+    @media only screen and (min-width: 901px) {
+        .animal-rectangle {
+            max-width: 40rem;
+            height: 23rem;
+        }
+    }
+
+
+    @media only screen and (min-width: 1500px) {
+        #ContinueAnimalButton {
+            margin-top: 0.4em;
+        }
     }
 }
