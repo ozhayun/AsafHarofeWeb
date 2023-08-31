@@ -1,15 +1,12 @@
 .game-board {
+    overflow: hidden;
     position: relative;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
     border: 0.25rem solid #000000;
-    overflow: hidden;
     height: 58vh;
-    width: 100vw;
-    flex-direction: column-reverse;
     z-index: 2;
-
 }
 
 .player-image{
@@ -20,16 +17,32 @@
     width: 50%;
     height: auto;
     max-height: 80%;
-    z-index: 3;
+    z-index: 2;
 }
 
 
 @media (min-width: 501px) {
     .game-board {
-        width: 100%;
-        max-width: 550px;
-        height: 50vh;
-        max-height: 550px;
-        margin: 0 auto;
+        height: 90vh;
+        width: 80%;
+        margin-left: 10vw;
     }
 }
+
+
+@media only screen and (min-height: 401px) and (min-width: 501px) {
+    .game-board {
+        height: 60vh;
+    }
+}
+
+@media only screen and (min-width: 901px) {
+    .game-board {
+        width: 70%;
+        margin-left: 15vw;
+    }
+}
+
+
+
+

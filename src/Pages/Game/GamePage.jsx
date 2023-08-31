@@ -157,48 +157,47 @@ const GamePage = () => {
 
     return (
         <div className="game-page">
-            <div className="toolbar-container">
-                <CustomToolbar toolbarTitle="סולמות ומגלשות"/>
-            </div>
-                {pain === 'cut' ? (
-                    <CutBoard playerPosition={playerPosition}
-                              playerImage={playerImage}
-                              onLaddersChange={handleLaddersChange}
-                              onSlidesChange={handleSlidesChange}
-                              setPopUpCells={setPopUpCells}
-                              setPopUpMessages={setPopUpMessages}
-                              resetKey={resetKey}
-                    />
-                ) : pain === 'fever' ? (
-                    <FeverBoard playerPosition={playerPosition}
-                                playerImage={playerImage}
-                                onLaddersChange={handleLaddersChange}
-                                onSlidesChange={handleSlidesChange}
-                                setPopUpCells={setPopUpCells}
-                                setPopUpMessages={setPopUpMessages}
-                                resetKey={resetKey}
-                    />
-                ) : pain === 'injury' ? (
-                    <InjuryBoard playerPosition={playerPosition}
-                                playerImage={playerImage}
-                                onLaddersChange={handleLaddersChange}
-                                onSlidesChange={handleSlidesChange}
-                                setPopUpCells={setPopUpCells}
-                                setPopUpMessages={setPopUpMessages}
-                                resetKey={resetKey}
-                    />
-                ) : pain === 'abdominalPain' ? (
-                    <AbdominalPainBoard playerPosition={playerPosition}
-                              playerImage={playerImage}
-                              onLaddersChange={handleLaddersChange}
-                              onSlidesChange={handleSlidesChange}
-                              setPopUpCells={setPopUpCells}
-                              setPopUpMessages={setPopUpMessages}
-                              resetKey={resetKey}
-                    />
-                ) : null
-                }
+            <CustomToolbar toolbarTitle="סולמות ומגלשות"/>
 
+            {/*Medical Board*/}
+            {pain === 'cut' ? (
+                <CutBoard playerPosition={playerPosition}
+                          playerImage={playerImage}
+                          onLaddersChange={handleLaddersChange}
+                          onSlidesChange={handleSlidesChange}
+                          setPopUpCells={setPopUpCells}
+                          setPopUpMessages={setPopUpMessages}
+                          resetKey={resetKey}
+                />
+            ) : pain === 'fever' ? (
+                <FeverBoard playerPosition={playerPosition}
+                            playerImage={playerImage}
+                            onLaddersChange={handleLaddersChange}
+                            onSlidesChange={handleSlidesChange}
+                            setPopUpCells={setPopUpCells}
+                            setPopUpMessages={setPopUpMessages}
+                            resetKey={resetKey}
+                />
+            ) : pain === 'injury' ? (
+                <InjuryBoard playerPosition={playerPosition}
+                            playerImage={playerImage}
+                            onLaddersChange={handleLaddersChange}
+                            onSlidesChange={handleSlidesChange}
+                            setPopUpCells={setPopUpCells}
+                            setPopUpMessages={setPopUpMessages}
+                            resetKey={resetKey}
+                />
+            ) : pain === 'abdominalPain' ? (
+                <AbdominalPainBoard playerPosition={playerPosition}
+                          playerImage={playerImage}
+                          onLaddersChange={handleLaddersChange}
+                          onSlidesChange={handleSlidesChange}
+                          setPopUpCells={setPopUpCells}
+                          setPopUpMessages={setPopUpMessages}
+                          resetKey={resetKey}
+                />
+            ) : null
+            }
 
             <PopUp isOpen={isPopUpOpen}
                    isPlayerWin={isPlayerWin}

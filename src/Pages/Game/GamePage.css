@@ -1,16 +1,13 @@
 .game-page {
-    overflow: hidden;
+    overflow: auto;
     background: linear-gradient(to bottom, #67E5D6, #FFFFFF) no-repeat;
 }
+
 
 .animal {
     display: flex;
     align-items: center;
-    bottom: 0;
-    left: 0;
-    width: 100%;
     height: 24vh;
-    padding: 20px;
     background-size: contain;
     justify-content: center;
     position: relative;
