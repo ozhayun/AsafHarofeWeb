@@ -84,7 +84,7 @@
 }
 
 
-#ContinueButton {
+#ContinuePainButton {
     margin-top: 0.8em;
     width: 60%;
     height: 6%;
@@ -102,13 +102,61 @@
     border-radius: 4vw;
 }
 
+#ContinuePainButton:hover, #ContinuePainButton:focus {
+    background-color: #a0f575;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
 
 
 @media (min-width: 501px) {
     .rectanglePain {
+        width: 62%;
+        max-width: 40rem;
+        height: 14rem;
+    }
+
+    .rectanglePain .piece img {
+        max-width: 70%;
+        max-height: 60%;
+        object-fit: contain;
+    }
+
+    #ContinuePainButton {
+        width: 30%;
+        font-size: 4vw;
+        line-height: 8vw;
+        border: 0.4vw solid #25B90D;
+        box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.25);
+        border-radius: 2vw;
+        margin-bottom: 0.5em;
+    }
+}
+
+@media only screen and (min-height: 401px) and (min-width: 501px) {
+    #ChoosePainTitle {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+
+    .rectanglePain {
         width: 60%;
         max-width: 40rem;
-        height: 25rem;
-        border-radius: 6rem;
+        height: 23rem;
+    }
+}
+
+
+
+@media only screen and (min-width: 901px) {
+    .rectanglePain {
+        max-width: 40rem;
+        height: 23rem;
+    }
+}
+
+
+@media only screen and (min-width: 1500px) {
+    #ContinuePainButton {
+        margin-top: 0.4em;
     }
 }

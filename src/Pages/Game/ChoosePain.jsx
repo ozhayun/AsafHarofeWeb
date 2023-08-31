@@ -62,7 +62,7 @@ const ChoosePain = () => {
                         יש לה חבלה ביד או ברגל
                     </Button>
                 </div>
-                <Button id="ContinueButton" disabled={selectedPain === null} onClick={handleContinueClick}>
+                <Button id="ContinuePainButton" disabled={selectedPain === null} onClick={handleContinueClick}>
                     המשך
                 </Button>
             </div>
