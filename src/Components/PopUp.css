@@ -13,12 +13,12 @@
 
 .popup-content {
     position: relative;
-    background: linear-gradient(to bottom, lightyellow, #ffff66);
+    background: linear-gradient(to bottom, white, antiquewhite);
     padding: 2rem;
     border-radius: 1rem;
     width: 95%;
     text-align: center;
-    border: 3px solid brown;
+    border: 3px solid black;
 }
 
 .close-button {
