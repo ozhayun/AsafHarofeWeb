@@ -54,7 +54,7 @@ const InjuryBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange
     const imagesCount = 8;
 
     return (
-        <div className="game-board-container">
+        <div className="IB-game-board-container">
             <Board playerPosition={playerPosition}
                    playerImage={playerImage}
                    onLaddersChange={onLaddersChange}
