@@ -1,3 +1,8 @@
+.game-board-container {
+    position: relative;
+    overflow: hidden;
+}
+
 .CB-slide-image1, .CB-slide-image2, .CB-slide-image3, .CB-slide-image4,
 .CB-slide-image5, .CB-slide-image6, .CB-slide-image7, .CB-slide-image8,
 .CB-ladder-image1, .CB-ladder-image2, .CB-ladder-image3, .CB-ladder-image4,
@@ -10,9 +15,9 @@
 .CB-slide-image1-container {
     z-index: 1;
     position: absolute;
-    height: 11%;
+    height: 15%;
     width: 20%;
-    top: 53%;
+    top: 77%;
     left: 80%;
     transform: rotate(-10deg);
 }
@@ -21,9 +26,9 @@
 .CB-slide-image2-container {
     z-index: 1;
     position: absolute;
-    height: 14%;
+    height: 23%;
     width: 23%;
-    top: 35%;
+    top: 43%;
     left: 4%;
     transform: rotate(5deg);
 }
@@ -32,9 +37,9 @@
 .CB-slide-image3-container {
     z-index: 1;
     position: absolute;
-    height: 20%;
+    height: 33%;
     width: 25%;
-    top: 23%;
+    top: 25%;
     left: 61%;
 }
 .CB-slide-image3 {
@@ -45,9 +50,9 @@
 .CB-slide-image4-container {
     z-index: 1;
     position: absolute;
-    height: 14%;
-    width: 35%;
-    top: 52%;
+    height: 22%;
+    width: 34%;
+    top: 74%;
     left: 14%;
 }
 
@@ -55,10 +60,10 @@
 .CB-slide-image5-container {
     z-index: 1;
     position: absolute;
-    height: 13%;
+    height: 21%;
     width: 23%;
-    top: 13%;
-    left: 53%;
+    top: 5%;
+    left: 52%;
 }
 .CB-slide-image5 {
     transform: scaleX(-1)
@@ -68,9 +73,9 @@
 .CB-slide-image6-container {
     z-index: 1;
     position: absolute;
-    height: 19%;
+    height: 30%;
     width: 16%;
-    top: 12%;
+    top: 7%;
     left: 22%;
 }
 .CB-slide-image6 {
@@ -81,9 +86,9 @@
 .CB-slide-image7-container {
     z-index: 1;
     position: absolute;
-    height: 7%;
+    height: 14%;
     width: 15%;
-    top: 30%;
+    top: 34%;
     left: 81%;
 }
 
@@ -91,9 +96,9 @@
 .CB-slide-image8-container {
     z-index: 1;
     position: absolute;
-    height: 8%;
+    height: 10%;
     width: 15%;
-    top: 12%;
+    top: 6%;
     left: 32%;
 }
 
@@ -101,10 +106,10 @@
 .CB-ladder-image1-container {
     z-index: 1;
     position: absolute;
-    height: 17%;
-    width: 15%;
-    top: 51%;
-    left: 62%;
+    height: 26%;
+    width: 17%;
+    top: 73%;
+    left: 61%;
     opacity: 90%;
     transform: rotate(18deg);
 }
@@ -113,46 +118,46 @@
 .CB-ladder-image2-container {
     z-index: 1;
     position: absolute;
-    height: 17%;
-    width: 15%;
-    top: 39%;
-    left: 27%;
+    height: 26%;
+    width: 18%;
+    top: 51%;
+    left: 26%;
     opacity: 90%;
-    transform: rotate(32deg);
+    transform: rotate(35deg);
 }
 
 /* 51 -> 92*/
 .CB-ladder-image3-container {
     z-index: 1;
     position: absolute;
-    height: 27%;
+    height: 47%;
     width: 20%;
-    top: 10%;
+    top: 2%;
     left: 1%;
     opacity: 90%;
-    transform: rotate(10deg);
+    transform: rotate(8deg);
 }
 
 /* 22 -> 41*/
 .CB-ladder-image4-container {
     z-index: 1;
     position: absolute;
-    height: 15%;
+    height: 25%;
     width: 19%;
-    top: 40%;
+    top: 54%;
     left: 80%;
     opacity: 90%;
-    transform: rotate(16deg);
+    transform: rotate(14deg);
 }
 
 /* 24 -> 38 */
 .CB-ladder-image5-container {
     z-index: 1;
     position: absolute;
-    height: 8%;
-    width: 14%;
-    top: 46%;
-    left: 63%;
+    height: 16%;
+    width: 21%;
+    top: 61%;
+    left: 58%;
     opacity: 90%;
     transform: rotate(29deg);
 }
@@ -161,10 +166,10 @@
 .CB-ladder-image6-container {
     z-index: 1;
     position: absolute;
-    height: 35%;
-    width: 18%;
-    top: 16%;
-    left: 41%;
+    height: 57%;
+    width: 22%;
+    top: 11%;
+    left: 39%;
     opacity: 90%;
     transform: rotate(-8deg);
 }
@@ -176,9 +181,9 @@
 .CB-ladder-image7-container {
     z-index: 1;
     position: absolute;
-    height: 16%;
+    height: 22%;
     width: 19%;
-    top: 11%;
+    top: 5%;
     left: 75%;
     opacity: 90%;
     transform: rotate(-3deg);
@@ -188,78 +193,143 @@
 .CB-ladder-image8-container {
     z-index: 1;
     position: absolute;
-    height: 14%;
+    height: 26%;
     width: 17%;
-    top: 46%;
+    top: 62%;
     left: 8%;
     opacity: 90%;
-    transform: rotate(-1deg);
+    transform: rotate(0deg);
 }
 
 
-@media (min-width: 501px) and (max-width: 900px) and (max-height: 700px) {
+@media only screen and (min-width: 501px) {
     /* 21 -> 2*/
     .CB-slide-image1-container {
-        height: 10%;
-        width: 15%;
-        top: 70%;
+        height: 15%;
+        width: 17%;
         left: 81%;
     }
 
     /* 53 -> 31*/
     .CB-slide-image2-container {
-        height: 14%;
-        width: 24%;
-        top: 48%;
-        left: 4%;
-        transform: rotate(-3deg);
+        height: 25%;
+        width: 20%;
+        left: 5%;
     }
 
-    /* 77 -> 42*/
-    .CB-slide-image3-container {
-        height: 24%;
-        width: 21%;
-        top: 33%;
-        left: 64%;
-    }
-
-    /* 26 -> 9*/
-    .CB-slide-image4-container {
-        height: 14%;
-        width: 35%;
+    /* 4-> 23 */
+    .CB-ladder-image1-container {
+        width: 7%;
+        height: 32%;
         top: 68%;
-        left: 14%;
+        left: 67%;
+        transform: rotate(40deg);
     }
 
-    /* 96 -> 78 */
-    .CB-slide-image5-container {
-        height: 16%;
-        width: 23%;
-        top: 20%;
-        left: 53%;
+    /* 28 -> 46 */
+    .CB-ladder-image2-container {
+        height: 55%;
+        width: 7%;
+        top: 38%;
+        left: 32%;
+        transform: rotate(65deg);
     }
 
-    /* 93 -> 67 */
-    .CB-slide-image6-container {
-        height: 22%;
-        width: 14%;
-        top: 20%;
-        left: 23%;
-    }
-
-    /* 61 -> 59 */
-    .CB-slide-image7-container {
-        height: 10%;
+    /* 51 -> 92*/
+    .CB-ladder-image3-container {
+        height: 52%;
         width: 10%;
-        top: 40%;
-        left: 85%;
+        top: 1%;
+        left: 5%;
+        transform: rotate(25deg);
     }
 
-    /* 95-> 87 */
-    .CB-slide-image8-container {
-        height: 8%;
-        width: 12%;
-        top: 20%;
-        left: 35%;
+    /* 22 -> 41*/
+    .CB-ladder-image4-container {
+        height: 28%;
+        width: 8%;
+        top: 51%;
+        left: 86%;
+        transform: rotate(31deg);
+    }
+
+    /* 24 -> 38 */
+    .CB-ladder-image5-container {
+        height: 19%;
+        width: 8%;
+        top: 61%;
+        left: 66%;
+        transform: rotate(35deg);
+    }
+
+    /* 36 -> 86 */
+    .CB-ladder-image6-container {
+        height: 62%;
+        width: 13%;
+        top: 10%;
+        left: 43%;
+        transform: rotate(-15deg);
+    }
+
+    /* 79 -> 99 */
+    .CB-ladder-image7-container {
+        height: 28%;
+        width: 10%;
+        top: 3%;
+        left: 80%;
+    }
+
+    /* 12 -> 32 */
+    .CB-ladder-image8-container {
+        height: 26%;
+        width: 9%;
+        top: 62%;
+        left: 10%;
+    }
+
+}
+
+
+@media only screen and (min-height: 401px) and (min-width: 501px) and (max-height: 901px) and (max-width: 600px){
+    /* 28 -> 46 */
+    .CB-ladder-image2-container {
+        height: 40%;
+        width: 15%;
+        top: 45%;
+        left: 28%;
+        transform: rotate(45deg);
+    }
+
+    /* 51 -> 92*/
+    .CB-ladder-image3-container {
+        transform: rotate(15deg);
+    }
+}
+
+
+@media only screen and (min-width: 1500px) {
+    /* 28 -> 46 */
+    .CB-ladder-image2-container {
+        height: 65%;
+        width: 6%;
+        top: 33%;
+        left: 31%;
+        transform: rotate(67deg);
+    }
+
+    /* 24 -> 38 */
+    .CB-ladder-image5-container {
+        height: 27%;
+        width: 5%;
+        top: 57%;
+        left: 66%;
+        transform: rotate(60deg);
+    }
+
+    /* 36 -> 86 */
+    .CB-ladder-image6-container {
+        height: 62%;
+        width: 10%;
+        left: 45%;
     }
 }
