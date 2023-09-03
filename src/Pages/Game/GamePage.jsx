@@ -34,7 +34,7 @@ const GamePage = () => {
     const navigate = useNavigate();
     const {pain, animal} = location.state || {};
     const animalClass = `animal ${animal || ''}`;
-    const { playWinSound, playSlideSound, playLadderSound } = React.useContext(SoundContext);
+    const {playWinSound, playSlideSound, playLadderSound} = React.useContext(SoundContext);
 
     let animalHebrew, animalImage, playerImage;
     switch (animal) {
@@ -104,7 +104,7 @@ const GamePage = () => {
     };
 
     const checkCellPopups = (playerPosition) => {
-        if(popUpMessages.length != 0|| playerPosition === 100) {
+        if (popUpMessages.length != 0 || playerPosition === 100) {
             const cellIndex = popUpCells.indexOf(playerPosition);
             if (cellIndex !== -1) {
                 openPopUp(popUpMessages[0]);
@@ -142,7 +142,7 @@ const GamePage = () => {
         confetti({
             particleCount: 100,
             spread: 70,
-            origin: { y: 0.6 }
+            origin: {y: 0.6}
         });
     }
 
@@ -164,45 +164,46 @@ const GamePage = () => {
             <div className="toolbar-container">
                 <CustomToolbar toolbarTitle="סולמות ומגלשות"/>
             </div>
-                {pain === 'cut' ? (
-                    <CutBoard playerPosition={playerPosition}
-                              playerImage={playerImage}
-                              onLaddersChange={handleLaddersChange}
-                              onSlidesChange={handleSlidesChange}
-                              setPopUpCells={setPopUpCells}
-                              setPopUpMessages={setPopUpMessages}
-                              resetKey={resetKey}
-                    />
-                ) : pain === 'fever' ? (
-                    <FeverBoard animalHebrew={animalHebrew}
-                                playerPosition={playerPosition}
-                                playerImage={playerImage}
-                                onLaddersChange={handleLaddersChange}
-                                onSlidesChange={handleSlidesChange}
-                                setPopUpCells={setPopUpCells}
-                                setPopUpMessages={setPopUpMessages}
-                                resetKey={resetKey}
-                    />
-                ) : pain === 'injury' ? (
-                    <InjuryBoard playerPosition={playerPosition}
-                                playerImage={playerImage}
-                                onLaddersChange={handleLaddersChange}
-                                onSlidesChange={handleSlidesChange}
-                                setPopUpCells={setPopUpCells}
-                                setPopUpMessages={setPopUpMessages}
-                                resetKey={resetKey}
-                    />
-                ) : pain === 'abdominalPain' ? (
-                    <AbdominalPainBoard playerPosition={playerPosition}
-                              playerImage={playerImage}
-                              onLaddersChange={handleLaddersChange}
-                              onSlidesChange={handleSlidesChange}
-                              setPopUpCells={setPopUpCells}
-                              setPopUpMessages={setPopUpMessages}
-                              resetKey={resetKey}
-                    />
-                ) : null
-                }
+            {pain === 'cut' ? (
+                <CutBoard playerPosition={playerPosition}
+                          playerImage={playerImage}
+                          onLaddersChange={handleLaddersChange}
+                          onSlidesChange={handleSlidesChange}
+                          setPopUpCells={setPopUpCells}
+                          setPopUpMessages={setPopUpMessages}
+                          resetKey={resetKey}
+                />
+            ) : pain === 'fever' ? (
+                <FeverBoard animalHebrew={animalHebrew}
+                            playerPosition={playerPosition}
+                            playerImage={playerImage}
+                            onLaddersChange={handleLaddersChange}
+                            onSlidesChange={handleSlidesChange}
+                            setPopUpCells={setPopUpCells}
+                            setPopUpMessages={setPopUpMessages}
+                            resetKey={resetKey}
+                />
+            ) : pain === 'injury' ? (
+                <InjuryBoard playerPosition={playerPosition}
+                             playerImage={playerImage}
+                             onLaddersChange={handleLaddersChange}
+                             onSlidesChange={handleSlidesChange}
+                             setPopUpCells={setPopUpCells}
+                             setPopUpMessages={setPopUpMessages}
+                             resetKey={resetKey}
+                />
+            ) : pain === 'abdominalPain' ? (
+                <AbdominalPainBoard animalHebrew={animalHebrew}
+                                    playerPosition={playerPosition}
+                                    playerImage={playerImage}
+                                    onLaddersChange={handleLaddersChange}
+                                    onSlidesChange={handleSlidesChange}
+                                    setPopUpCells={setPopUpCells}
+                                    setPopUpMessages={setPopUpMessages}
+                                    resetKey={resetKey}
+                />
+            ) : null
+            }
 
 
             <PopUp isOpen={isPopUpOpen}
@@ -215,7 +216,7 @@ const GamePage = () => {
             <div className={animalClass}>
                 {animalImage && <img src={animalImage} alt={animal} className="animal-image"/>}
                 <div className='rectangleDice'>
-                    <Dice updatePlayerPosition={updatePlayerPosition} />
+                    <Dice updatePlayerPosition={updatePlayerPosition}/>
                 </div>
             </div>
         </div>
