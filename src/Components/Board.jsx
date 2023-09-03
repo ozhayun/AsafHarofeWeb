@@ -9,10 +9,12 @@ const Board = ({
                    slides,
                    popUpCells,
                    popUpMessages,
+                   popUpImages,
                    onLaddersChange,
                    onSlidesChange,
                    setPopUpCells,
                    setPopUpMessages,
+                   setPopUpImages,
                    resetKey
                }) => {
 
@@ -22,6 +24,10 @@ const Board = ({
 
     React.useEffect(() => {
         setPopUpMessages(popUpMessages)
+    }, []);
+
+    React.useEffect(() => {
+        setPopUpImages(popUpImages)
     }, []);
 
     React.useEffect(() => {
@@ -35,6 +41,7 @@ const Board = ({
     React.useEffect(() => {
         setPopUpCells(popUpCells);
         setPopUpMessages(popUpMessages);
+        setPopUpImages(popUpImages);
     }, [resetKey]);
 
     return (

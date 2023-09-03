@@ -1,10 +1,11 @@
 import "./FeverBoard.css"
 import slideImagePath from "../../../Public/GamePage/water-slide.png";
 import ladderImagePath from "../../../Public/GamePage/ladder.png";
+import startPopUpImagePath from "../../../Public/GamePage/PopUp/start.png";
 import * as React from "react";
 import Board from "../Board.jsx";
 
-const FeverBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, resetKey }) => {
+const FeverBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, resetKey }) => {
     const specifics = {
         ladders: {
             2 : 21,
@@ -45,7 +46,9 @@ const FeverBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange,
 
             "יכול להיות ש" + animalHebrew +
             "יעבור למחלקה ונשאר ביחד קצת בבית החולים או שנקבל מכתב שחרור ונחזור הביתה."
-
+        ],
+        popUpImages:[
+            startPopUpImagePath
         ]
     };
 
@@ -59,6 +62,7 @@ const FeverBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange,
                    onSlidesChange={onSlidesChange}
                    setPopUpCells={setPopUpCells}
                    setPopUpMessages={setPopUpMessages}
+                   setPopUpImages={setPopUpImages}
                    resetKey={resetKey}
                    {...specifics}/>
 

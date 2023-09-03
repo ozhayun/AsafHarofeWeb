@@ -25,8 +25,10 @@ const GamePage = () => {
     const [slides, setSlides] = React.useState({});
     const [isPopUpOpen, setIsPopUpOpen] = React.useState(false);
     const [popUpContent, setPopUpContent] = React.useState("");
+    const [popUpImage, setPopUpImage] = React.useState("");
     const [popUpCells, setPopUpCells] = React.useState([]);
     const [popUpMessages, setPopUpMessages] = React.useState([]);
+    const [popUpImages, setPopUpImages] = React.useState([]);
     const [isGamePaused, setIsGamePaused] = React.useState(false);
     const [isPlayerWin, setIsPlayerWin] = React.useState(false);
     const [resetKey, setResetKey] = React.useState(0);
@@ -56,7 +58,7 @@ const GamePage = () => {
         case 'panda':
             animalImage = vetPandaImagePath;
             playerImage = vetPandaPlayerImagePath;
-            animalHebrew = 'פנדה';
+            animalHebrew = 'P';
             break;
         default:
             animalImage = null;
@@ -104,12 +106,14 @@ const GamePage = () => {
     };
 
     const checkCellPopups = (playerPosition) => {
-        if (popUpMessages.length != 0 || playerPosition === 100) {
+        if (popUpMessages.length !== 0 || playerPosition === 100) {
             const cellIndex = popUpCells.indexOf(playerPosition);
             if (cellIndex !== -1) {
-                openPopUp(popUpMessages[0]);
+                openPopUp(popUpMessages[0], popUpImages[0]);
                 setPopUpCells(prevItems => prevItems.filter((_, index) => index !== cellIndex));
                 setPopUpMessages(prevMessages => prevMessages.filter((_, index) => index !== 0))
+                setPopUpImages(prevImage => prevImage.filter((_, index) => index !== 0))
+
             }
         }
     };
@@ -119,8 +123,9 @@ const GamePage = () => {
     }, [playerPosition]);
 
 
-    const openPopUp = (content) => {
+    const openPopUp = (content, image) => {
         setPopUpContent(content);
+        setPopUpImage(image);
         setIsPopUpOpen(true);
         setIsGamePaused(true)
     };
@@ -172,6 +177,7 @@ const GamePage = () => {
                           onSlidesChange={handleSlidesChange}
                           setPopUpCells={setPopUpCells}
                           setPopUpMessages={setPopUpMessages}
+                          setPopUpImages={setPopUpImages}
                           resetKey={resetKey}
                 />
             ) : pain === 'fever' ? (
@@ -181,6 +187,7 @@ const GamePage = () => {
                             onSlidesChange={handleSlidesChange}
                             setPopUpCells={setPopUpCells}
                             setPopUpMessages={setPopUpMessages}
+                            setPopUpImages={setPopUpImages}
                             resetKey={resetKey}
                 />
             ) : pain === 'injury' ? (
@@ -190,6 +197,7 @@ const GamePage = () => {
                             onSlidesChange={handleSlidesChange}
                             setPopUpCells={setPopUpCells}
                             setPopUpMessages={setPopUpMessages}
+                             setPopUpImages={setPopUpImages}
                             resetKey={resetKey}
                 />
             ) : pain === 'abdominalPain' ? (
@@ -199,6 +207,7 @@ const GamePage = () => {
                           onSlidesChange={handleSlidesChange}
                           setPopUpCells={setPopUpCells}
                           setPopUpMessages={setPopUpMessages}
+                          setPopUpImages={setPopUpImages}
                           resetKey={resetKey}
                 />
             ) : null
@@ -207,6 +216,7 @@ const GamePage = () => {
             <PopUp isOpen={isPopUpOpen}
                    isPlayerWin={isPlayerWin}
                    content={popUpContent}
+                   image={popUpImage}
                    closePopup={closePopUp}
                    restartGame={restartGame}
                    navigateHome={navigateHome}/>
