@@ -17,13 +17,14 @@
     padding: 2rem;
     border-radius: 1rem;
     width: 95%;
+    max-height: 95%;
     text-align: center;
     border: 3px solid black;
     font-size: 1.3rem;
     line-height: 2rem;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .popup-image{
