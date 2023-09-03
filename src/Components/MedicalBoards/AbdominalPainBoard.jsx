@@ -55,7 +55,7 @@ const AbdominalPainBoard = ({animalHebrew, playerPosition, playerImage, onLadder
 
 
     return (
-        <div className="game-board-container">
+        <div className="APB-game-board-container">
             <Board playerPosition={playerPosition}
                    playerImage={playerImage}
                    onLaddersChange={onLaddersChange}
