@@ -2,6 +2,11 @@ import "./FeverBoard.css"
 import slideImagePath from "../../../Public/GamePage/water-slide.png";
 import ladderImagePath from "../../../Public/GamePage/ladder.png";
 import startPopUpImagePath from "../../../Public/GamePage/PopUp/start.png";
+import nursesPopUpImagePath from "../../../Public/GamePage/PopUp/nursesStation.png";
+import medicationPopUpImagePath from "../../../Public/GamePage/PopUp/medication.png";
+import waitingPopUpImagePath from "../../../Public/GamePage/PopUp/Waiting.png";
+import medicalTestsPopUpImagePath from "../../../Public/GamePage/PopUp/medicalTests.png";
+import homePopUpImagePath from "../../../Public/GamePage/PopUp/home.png";
 import * as React from "react";
 import Board from "../Board.jsx";
 
@@ -31,7 +36,7 @@ const FeverBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange,
             " בתהליך הטיפול הרפואי שהוא הולך לעבור במיון. חשוב לנו לומר שהצוות הרפואי שנמצא במיון עושה את המאמצים לעזור לנו להרגיש טוב יותר. ה" + animalHebrew +
             " לא נמצא לבד, אתם וההורים שלכם מלווים אותה בתהליך. אם הוא מפחד אפשר לשתף את הצוות הרפואי. מאחלים לכם משחק מהנה!",
 
-            "בהתחלה החיה " + animalHebrew +
+            "בהתחלה ה" + animalHebrew +
             " תפגוש אח או אחות, הם יבדקו חום, דופק ולחץ דם.",
 
             "אם ל" + animalHebrew +
@@ -45,11 +50,16 @@ const FeverBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange,
             "נחכה להחלטות הרופאים בהתאם לתוצאות.",
 
             "יכול להיות ש" + animalHebrew +
-            "יעבור למחלקה ונשאר ביחד קצת בבית החולים או שנקבל מכתב שחרור ונחזור הביתה."
+            " יעבור למחלקה ונשאר ביחד קצת בבית החולים או שנקבל מכתב שחרור ונחזור הביתה."
         ],
         popUpImages:[
             startPopUpImagePath,
-
+            nursesPopUpImagePath,
+            medicationPopUpImagePath,
+            waitingPopUpImagePath,
+            medicalTestsPopUpImagePath,
+            waitingPopUpImagePath,
+            homePopUpImagePath
         ]
     };
 
