@@ -5,7 +5,7 @@ import * as React from "react";
 import Board from "../Board.jsx";
 
 
-const AbdominalPainBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, resetKey }) => {
+const AbdominalPainBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, resetKey }) => {
     const specifics = {
         ladders: {
             4 : 23,

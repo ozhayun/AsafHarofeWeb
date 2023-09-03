@@ -3,8 +3,15 @@ import slideImagePath from "../../../Public/GamePage/water-slide.png";
 import ladderImagePath from "../../../Public/GamePage/ladder.png";
 import * as React from "react";
 import Board from "../Board.jsx";
+import startPopUpImagePath from "../../../Public/GamePage/PopUp/start.png";
+import nursesPopUpImagePath from "../../../Public/GamePage/PopUp/nursesStation.png";
+import waitingPopUpImagePath from "../../../Public/GamePage/PopUp/Waiting.png";
+import medicalTestsPopUpImagePath from "../../../Public/GamePage/PopUp/medicalTests.png";
+import homePopUpImagePath from "../../../Public/GamePage/PopUp/home.png";
+import gelSoapPopUpImagePath from "../../../Public/GamePage/PopUp/gelSoap.png";
+import injectionPopUpImagePath from "../../../Public/GamePage/PopUp/injection.png";
 
-const CutBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, resetKey }) => {
+const CutBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, resetKey }) => {
     const specifics = {
         ladders: {
             4: 23,
@@ -46,6 +53,15 @@ const CutBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange, o
 
             "לאחר התאוששות יכול להיות ש" + animalHebrew +
             " יעבור למחלקה ונשאר ביחד קצת בבית החולים או שנקבל מכתב ונחזור הביתה."
+        ],
+        popUpImages:[
+            startPopUpImagePath,
+            nursesPopUpImagePath,
+            waitingPopUpImagePath,
+            medicalTestsPopUpImagePath,
+            gelSoapPopUpImagePath,
+            injectionPopUpImagePath,
+            homePopUpImagePath
         ]
     };
 
@@ -59,6 +75,7 @@ const CutBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange, o
                    onSlidesChange={onSlidesChange}
                    setPopUpCells={setPopUpCells}
                    setPopUpMessages={setPopUpMessages}
+                   setPopUpImages={setPopUpImages}
                    resetKey={resetKey}
                    {...specifics}/>
 

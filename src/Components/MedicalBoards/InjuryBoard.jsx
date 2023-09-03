@@ -4,7 +4,7 @@ import ladderImagePath from "../../../Public/GamePage/ladder.png";
 import * as React from "react";
 import Board from "../Board.jsx";
 
-const InjuryBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, resetKey }) => {
+const InjuryBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, resetKey }) => {
     const specifics = {
         ladders: {
             2: 21,
