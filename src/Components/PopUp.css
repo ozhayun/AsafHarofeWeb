@@ -22,8 +22,8 @@
 }
 
 .popup-image{
-    width: 70%;
-    height: 70%;
+    max-width: 70%;
+    max-height: 70%;
 }
 
 .close-button {
