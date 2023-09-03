@@ -19,11 +19,16 @@
     width: 95%;
     text-align: center;
     border: 3px solid black;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .popup-image{
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 60%;
+    max-height: 60%;
 }
 
 .close-button {
