@@ -165,7 +165,8 @@ const GamePage = () => {
 
             {/*Medical Board*/}
             {pain === 'cut' ? (
-                <CutBoard playerPosition={playerPosition}
+                <CutBoard animalHebrew={animalHebrew}
+                          playerPosition={playerPosition}
                           playerImage={playerImage}
                           onLaddersChange={handleLaddersChange}
                           onSlidesChange={handleSlidesChange}
