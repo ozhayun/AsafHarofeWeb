@@ -161,9 +161,9 @@ const GamePage = () => {
 
     return (
         <div className="game-page">
-            <div className="toolbar-container">
-                <CustomToolbar toolbarTitle="סולמות ומגלשות"/>
-            </div>
+            <CustomToolbar toolbarTitle="סולמות ומגלשות"/>
+
+            {/*Medical Board*/}
             {pain === 'cut' ? (
                 <CutBoard animalHebrew={animalHebrew}
                           playerPosition={playerPosition}
@@ -175,8 +175,7 @@ const GamePage = () => {
                           resetKey={resetKey}
                 />
             ) : pain === 'fever' ? (
-                <FeverBoard animalHebrew={animalHebrew}
-                            playerPosition={playerPosition}
+                <FeverBoard playerPosition={playerPosition}
                             playerImage={playerImage}
                             onLaddersChange={handleLaddersChange}
                             onSlidesChange={handleSlidesChange}
@@ -185,28 +184,25 @@ const GamePage = () => {
                             resetKey={resetKey}
                 />
             ) : pain === 'injury' ? (
-                <InjuryBoard animalHebrew={animalHebrew}
-                             playerPosition={playerPosition}
-                             playerImage={playerImage}
-                             onLaddersChange={handleLaddersChange}
-                             onSlidesChange={handleSlidesChange}
-                             setPopUpCells={setPopUpCells}
-                             setPopUpMessages={setPopUpMessages}
-                             resetKey={resetKey}
+                <InjuryBoard playerPosition={playerPosition}
+                            playerImage={playerImage}
+                            onLaddersChange={handleLaddersChange}
+                            onSlidesChange={handleSlidesChange}
+                            setPopUpCells={setPopUpCells}
+                            setPopUpMessages={setPopUpMessages}
+                            resetKey={resetKey}
                 />
             ) : pain === 'abdominalPain' ? (
-                <AbdominalPainBoard animalHebrew={animalHebrew}
-                                    playerPosition={playerPosition}
-                                    playerImage={playerImage}
-                                    onLaddersChange={handleLaddersChange}
-                                    onSlidesChange={handleSlidesChange}
-                                    setPopUpCells={setPopUpCells}
-                                    setPopUpMessages={setPopUpMessages}
-                                    resetKey={resetKey}
+                <AbdominalPainBoard playerPosition={playerPosition}
+                          playerImage={playerImage}
+                          onLaddersChange={handleLaddersChange}
+                          onSlidesChange={handleSlidesChange}
+                          setPopUpCells={setPopUpCells}
+                          setPopUpMessages={setPopUpMessages}
+                          resetKey={resetKey}
                 />
             ) : null
             }
-
 
             <PopUp isOpen={isPopUpOpen}
                    isPlayerWin={isPlayerWin}

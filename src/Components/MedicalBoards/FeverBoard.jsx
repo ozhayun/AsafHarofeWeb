@@ -3,15 +3,6 @@ import slideImagePath from "../../../Public/GamePage/water-slide.png";
 import ladderImagePath from "../../../Public/GamePage/ladder.png";
 import * as React from "react";
 import Board from "../Board.jsx";
-import vetDogImagePath from "../../../Public/HomePage/VetDog.png";
-import vetDogPlayerImagePath from "../../../Public/GamePage/dogPlayer.png";
-import vetLionImagePath from "../../../Public/HomePage/VetLion.png";
-import vetLionPlayerImagePath from "../../../Public/GamePage/lionPlayer.png";
-import vetMonkeyImagePath from "../../../Public/HomePage/VetMonkey.png";
-import vetMonkeyPlayerImagePath from "../../../Public/GamePage/monkeyPlayer.png";
-import vetPandaImagePath from "../../../Public/HomePage/VetPanda.png";
-import vetPandaPlayerImagePath from "../../../Public/GamePage/pandaPlayer.png";
-
 
 const FeverBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, resetKey }) => {
     const specifics = {
@@ -61,7 +52,7 @@ const FeverBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange,
     const imagesCount = 8;
 
     return (
-        <div className="game-board-container">
+        <div className="FB-game-board-container">
             <Board playerPosition={playerPosition}
                    playerImage={playerImage}
                    onLaddersChange={onLaddersChange}
