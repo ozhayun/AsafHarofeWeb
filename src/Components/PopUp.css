@@ -19,6 +19,11 @@
     width: 95%;
     text-align: center;
     border: 3px solid black;
+}
+
+.popup-image{
+    width: 80%;
+    height: 80%;
 
 }
 
@@ -77,3 +82,4 @@
     margin: 4px 2px;
     cursor: pointer;
 }
+

@@ -1,6 +1,7 @@
 import './PopUp.css'
 import CloseIcon from '@mui/icons-material/Close';
 import React from "react";
+import slideImagePath from "../../Public/GamePage/water-slide.png";
 const PopUp = ({ isOpen, isPlayerWin, content, image, closePopup, restartGame, navigateHome }) => {
     if (!isOpen) return null;
 
@@ -30,7 +31,10 @@ const PopUp = ({ isOpen, isPlayerWin, content, image, closePopup, restartGame, n
                 <button className="close-button" onClick={closePopup}>
                     <CloseIcon className="close-icon"/>
                 </button>
-                <img src={image} alt="Popup Image" />
+                <div className={`popup-image-container`}>
+                    <img src={image} alt={`popup-image`} className={`popup-image`} />
+                </div>
+
                 <div className="content">{content}</div>
             </div>
         </div>

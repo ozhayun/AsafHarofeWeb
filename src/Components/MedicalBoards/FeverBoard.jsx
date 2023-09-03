@@ -48,7 +48,8 @@ const FeverBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange,
             "יעבור למחלקה ונשאר ביחד קצת בבית החולים או שנקבל מכתב שחרור ונחזור הביתה."
         ],
         popUpImages:[
-            startPopUpImagePath
+            startPopUpImagePath,
+
         ]
     };
 
