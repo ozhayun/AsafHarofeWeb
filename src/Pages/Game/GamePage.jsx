@@ -58,7 +58,7 @@ const GamePage = () => {
         case 'panda':
             animalImage = vetPandaImagePath;
             playerImage = vetPandaPlayerImagePath;
-            animalHebrew = 'P';
+            animalHebrew = 'פנדה';
             break;
         default:
             animalImage = null;
@@ -113,7 +113,6 @@ const GamePage = () => {
                 setPopUpCells(prevItems => prevItems.filter((_, index) => index !== cellIndex));
                 setPopUpMessages(prevMessages => prevMessages.filter((_, index) => index !== 0))
                 setPopUpImages(prevImage => prevImage.filter((_, index) => index !== 0))
-
             }
         }
     };
@@ -181,7 +180,8 @@ const GamePage = () => {
                           resetKey={resetKey}
                 />
             ) : pain === 'fever' ? (
-                <FeverBoard playerPosition={playerPosition}
+                <FeverBoard animalHebrew={animalHebrew}
+                            playerPosition={playerPosition}
                             playerImage={playerImage}
                             onLaddersChange={handleLaddersChange}
                             onSlidesChange={handleSlidesChange}
@@ -191,24 +191,26 @@ const GamePage = () => {
                             resetKey={resetKey}
                 />
             ) : pain === 'injury' ? (
-                <InjuryBoard playerPosition={playerPosition}
-                            playerImage={playerImage}
-                            onLaddersChange={handleLaddersChange}
-                            onSlidesChange={handleSlidesChange}
-                            setPopUpCells={setPopUpCells}
-                            setPopUpMessages={setPopUpMessages}
+                <InjuryBoard animalHebrew={animalHebrew}
+                             playerPosition={playerPosition}
+                             playerImage={playerImage}
+                             onLaddersChange={handleLaddersChange}
+                             onSlidesChange={handleSlidesChange}
+                             setPopUpCells={setPopUpCells}
+                             setPopUpMessages={setPopUpMessages}
                              setPopUpImages={setPopUpImages}
-                            resetKey={resetKey}
+                             resetKey={resetKey}
                 />
             ) : pain === 'abdominalPain' ? (
-                <AbdominalPainBoard playerPosition={playerPosition}
-                          playerImage={playerImage}
-                          onLaddersChange={handleLaddersChange}
-                          onSlidesChange={handleSlidesChange}
-                          setPopUpCells={setPopUpCells}
-                          setPopUpMessages={setPopUpMessages}
-                          setPopUpImages={setPopUpImages}
-                          resetKey={resetKey}
+                <AbdominalPainBoard animalHebrew={animalHebrew}
+                                    playerPosition={playerPosition}
+                                    playerImage={playerImage}
+                                    onLaddersChange={handleLaddersChange}
+                                    onSlidesChange={handleSlidesChange}
+                                    setPopUpCells={setPopUpCells}
+                                    setPopUpMessages={setPopUpMessages}
+                                    setPopUpImages={setPopUpImages}
+                                    resetKey={resetKey}
                 />
             ) : null
             }
