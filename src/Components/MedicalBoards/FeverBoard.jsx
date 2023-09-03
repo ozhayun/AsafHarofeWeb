@@ -3,9 +3,17 @@ import slideImagePath from "../../../Public/GamePage/water-slide.png";
 import ladderImagePath from "../../../Public/GamePage/ladder.png";
 import * as React from "react";
 import Board from "../Board.jsx";
+import vetDogImagePath from "../../../Public/HomePage/VetDog.png";
+import vetDogPlayerImagePath from "../../../Public/GamePage/dogPlayer.png";
+import vetLionImagePath from "../../../Public/HomePage/VetLion.png";
+import vetLionPlayerImagePath from "../../../Public/GamePage/lionPlayer.png";
+import vetMonkeyImagePath from "../../../Public/HomePage/VetMonkey.png";
+import vetMonkeyPlayerImagePath from "../../../Public/GamePage/monkeyPlayer.png";
+import vetPandaImagePath from "../../../Public/HomePage/VetPanda.png";
+import vetPandaPlayerImagePath from "../../../Public/GamePage/pandaPlayer.png";
 
 
-const FeverBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, resetKey }) => {
+const FeverBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, resetKey }) => {
     const specifics = {
         ladders: {
             2 : 21,
@@ -27,12 +35,26 @@ const FeverBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChang
             61 : 59 },
         popUpCells: [3,11,18,25,33,40,49,57,65,74,81,87,93,97],
         popUpMessages: [
-            "הראשונה שתבדוק אותך היא האחות! איזה כיף! היא תבדוק לך חום, דופק ולחץ דם. היא אישה מאוד נחמדה, אין ממה לפחד.",
-            "אם יש לך חום היא תביא לך תרופה שתגרום לך להרגיש טוב יותר.",
-            "עכשיו אנחנו ממתינים לרופא שיחליט על הטיפול המתאים, הרופאים בבית החולים אסף הרופא הם האנשים הכי נחמדים שיש.",
-            "יש כל מיני בדיקות שהרופא יכול לבקש מאיתנו לעשות - אולטרסאונד, צילום, בדיקות דם או שתן. הבדיקות האלו לא כואבות, אין ממה לחשוש!",
-            "נחכה להחלטת הרופא בהתאם לתוצאות.",
-            "יכול להיות שנעבור למחלקה ונצטרך להישאר קצת בבית החולים או שנקבל מכתב ונחזור הביתה."
+            "ברוכים הבאים למשחק סולמות ומגלשות! במהלך המשחק נלווה את ה" + animalHebrew +
+            " בתהליך הטיפול הרפואי שהוא הולך לעבור במיון. חשוב לנו לומר שהצוות הרפואי שנמצא במיון עושה את המאמצים לעזור לנו להרגיש טוב יותר. ה" + animalHebrew +
+            " לא נמצא לבד, אתם וההורים שלכם מלווים אותה בתהליך. אם הוא מפחד אפשר לשתף את הצוות הרפואי. מאחלים לכם משחק מהנה!",
+
+            "בהתחלה החיה " + animalHebrew +
+            " תפגוש אח או אחות, הם יבדקו חום, דופק ולחץ דם.",
+
+            "אם ל" + animalHebrew +
+            " יש חום הוא יקבל תרופה שתגרום לו להרגיש טוב יותר.",
+
+            "עכשיו אנחנו ממתינים בסבלנות לרופאים שיחליטו על הטיפול המתאים.",
+
+            "יש כל מיני בדיקות שהרופאים יכולים לבקש מה" + animalHebrew +
+            " לעשות - אולטרסאונד, צילום, בדיקות דם או שתן. אולטרסאונד, צילום ובדיקת שתן לא כואבות ובדיקת הדם יכולה טיפה לכאוב, אך הרופאים עושים את המאמצים כדי שיכאב כמה שפחות.",
+
+            "נחכה להחלטות הרופאים בהתאם לתוצאות.",
+
+            "יכול להיות ש" + animalHebrew +
+            "יעבור למחלקה ונשאר ביחד קצת בבית החולים או שנקבל מכתב שחרור ונחזור הביתה."
+
         ]
     };
 

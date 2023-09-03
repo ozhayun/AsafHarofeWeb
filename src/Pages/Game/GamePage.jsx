@@ -34,30 +34,34 @@ const GamePage = () => {
     const navigate = useNavigate();
     const {pain, animal} = location.state || {};
     const animalClass = `animal ${animal || ''}`;
-    const { playWinSound, playSlideSound, playLadderSound } = React.useContext(SoundContext);
+    const {playWinSound, playSlideSound, playLadderSound} = React.useContext(SoundContext);
 
-
-    let animalImage, playerImage;
+    let animalHebrew, animalImage, playerImage;
     switch (animal) {
         case 'dog':
             animalImage = vetDogImagePath;
             playerImage = vetDogPlayerImagePath;
+            animalHebrew = 'כלב';
             break;
         case 'lion':
             animalImage = vetLionImagePath;
             playerImage = vetLionPlayerImagePath;
+            animalHebrew = 'אריה';
             break;
         case 'monkey':
             animalImage = vetMonkeyImagePath;
             playerImage = vetMonkeyPlayerImagePath;
+            animalHebrew = 'קוף';
             break;
         case 'panda':
             animalImage = vetPandaImagePath;
             playerImage = vetPandaPlayerImagePath;
+            animalHebrew = 'פנדה';
             break;
         default:
             animalImage = null;
             playerImage = null;
+            animalHebrew = null;
     }
 
     const handleLaddersChange = (newLadders) => {
@@ -100,7 +104,7 @@ const GamePage = () => {
     };
 
     const checkCellPopups = (playerPosition) => {
-        if(popUpMessages.length != 0|| playerPosition === 100) {
+        if (popUpMessages.length != 0 || playerPosition === 100) {
             const cellIndex = popUpCells.indexOf(playerPosition);
             if (cellIndex !== -1) {
                 openPopUp(popUpMessages[0]);
@@ -138,7 +142,7 @@ const GamePage = () => {
         confetti({
             particleCount: 100,
             spread: 70,
-            origin: { y: 0.6 }
+            origin: {y: 0.6}
         });
     }
 
@@ -209,7 +213,7 @@ const GamePage = () => {
             <div className={animalClass}>
                 {animalImage && <img src={animalImage} alt={animal} className="animal-image"/>}
                 <div className='rectangleDice'>
-                    <Dice updatePlayerPosition={updatePlayerPosition} />
+                    <Dice updatePlayerPosition={updatePlayerPosition}/>
                 </div>
             </div>
         </div>
