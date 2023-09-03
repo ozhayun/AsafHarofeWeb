@@ -36,28 +36,32 @@ const GamePage = () => {
     const animalClass = `animal ${animal || ''}`;
     const { playWinSound, playSlideSound, playLadderSound } = React.useContext(SoundContext);
 
-
-    let animalImage, playerImage;
+    let animalHebrew, animalImage, playerImage;
     switch (animal) {
         case 'dog':
             animalImage = vetDogImagePath;
             playerImage = vetDogPlayerImagePath;
+            animalHebrew = 'כלב';
             break;
         case 'lion':
             animalImage = vetLionImagePath;
             playerImage = vetLionPlayerImagePath;
+            animalHebrew = 'אריה';
             break;
         case 'monkey':
             animalImage = vetMonkeyImagePath;
             playerImage = vetMonkeyPlayerImagePath;
+            animalHebrew = 'קוף';
             break;
         case 'panda':
             animalImage = vetPandaImagePath;
             playerImage = vetPandaPlayerImagePath;
+            animalHebrew = 'פנדה';
             break;
         default:
             animalImage = null;
             playerImage = null;
+            animalHebrew = null;
     }
 
     const handleLaddersChange = (newLadders) => {
@@ -170,7 +174,8 @@ const GamePage = () => {
                               resetKey={resetKey}
                     />
                 ) : pain === 'fever' ? (
-                    <FeverBoard playerPosition={playerPosition}
+                    <FeverBoard animalHebrew={animalHebrew}
+                                playerPosition={playerPosition}
                                 playerImage={playerImage}
                                 onLaddersChange={handleLaddersChange}
                                 onSlidesChange={handleSlidesChange}
