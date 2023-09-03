@@ -38,7 +38,7 @@ const CutBoard = ({playerPosition, playerImage, onLaddersChange, onSlidesChange,
     const imagesCount = 8;
 
     return (
-        <div className="game-board-container">
+        <div className="CB-game-board-container">
             <Board playerPosition={playerPosition}
                    playerImage={playerImage}
                    onLaddersChange={onLaddersChange}

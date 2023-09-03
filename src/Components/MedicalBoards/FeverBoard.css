@@ -1,3 +1,15 @@
+.FB-game-board-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.FB-slide-image1, .FB-slide-image2, .FB-slide-image3, .FB-slide-image4,
+.FB-slide-image5, .FB-slide-image6, .FB-slide-image7, .FB-slide-image8,
+.FB-ladder-image1, .FB-ladder-image2, .FB-ladder-image3, .FB-ladder-image4,
+.FB-ladder-image5, .FB-ladder-image6, .FB-ladder-image7, .FB-ladder-image8{
+    width: 100%;
+    height: 100%;
+}
 
 /* 23 -> 4*/
 .FB-slide-image1-container {
@@ -8,10 +20,6 @@
     top: 77%;
     left: 58%;
     transform: rotate(-13deg);
-}
-.FB-slide-image1 {
-    width: 100%;
-    height: 100%;
 }
 
 /* 94 -> 72*/
@@ -24,10 +32,6 @@
     left: 13%;
     transform: rotate(5deg);
 }
-.FB-slide-image2 {
-    width: 100%;
-    height: 100%;
-}
 
 /* 96 -> 63*/
 .FB-slide-image3-container {
@@ -39,8 +43,6 @@
     left: 51%;
 }
 .FB-slide-image3 {
-    width: 100%;
-    height: 100%;
     transform: scaleX(-1)
 }
 
@@ -52,10 +54,6 @@
     width: 37%;
     top: 75%;
     left: 13%;
-}
-.FB-slide-image4 {
-    width: 100%;
-    height: 100%;
 }
 
 /* 56 -> 38 */
@@ -70,8 +68,6 @@
 }
 .FB-slide-image5 {
     transform: scaleX(-1);
-    width: 100%;
-    height: 100%;
 }
 
 /* 73 -> 47 */
@@ -85,8 +81,6 @@
 }
 .FB-slide-image6 {
     transform: scaleX(-1);
-    width: 100%;
-    height: 100%;
 }
 
 /* 80 -> 62 */
@@ -98,10 +92,6 @@
     top: 25%;
     left: 81%;
 }
-.FB-slide-image7 {
-    width: 100%;
-    height: 100%;
-}
 
 /* 61-> 59 */
 .FB-slide-image8-container {
@@ -112,11 +102,6 @@
     top: 35%;
     left: 80%;
 }
-.FB-slide-image8 {
-    width: 100%;
-    height: 100%;
-}
-
 
 /* 2-> 21 */
 .FB-ladder-image1-container {
@@ -128,10 +113,6 @@
     left: 79%;
     opacity: 90%;
     transform: rotate(15deg)
-}
-.FB-ladder-image1 {
-    width: 100%;
-    height: 100%;
 }
 
 /* 28 -> 46 */
@@ -145,10 +126,6 @@
     opacity: 90%;
     transform: rotate(34deg);
 }
-.FB-ladder-image2 {
-    width: 100%;
-    height: 100%;
-}
 
 /* 55 -> 95*/
 .FB-ladder-image3-container {
@@ -160,10 +137,6 @@
     left: 35%;
     opacity: 90%;
     transform: rotate(-2deg);
-}
-.FB-ladder-image3 {
-    width: 100%;
-    height: 100%;
 }
 
 /* 22 -> 41*/
@@ -177,10 +150,6 @@
     opacity: 90%;
     transform: rotate(19deg);
 }
-.FB-ladder-image4 {
-    width: 100%;
-    height: 100%;
-}
 
 /* 84 -> 98 */
 .FB-ladder-image5-container {
@@ -192,10 +161,6 @@
     left: 64%;
     opacity: 90%;
     transform: rotate(34deg);
-}
-.FB-ladder-image5 {
-    width: 100%;
-    height: 100%;
 }
 
 /* 32 -> 90 */
@@ -210,8 +175,6 @@
     transform: rotate(-8deg);
 }
 .FB-ladder-image6 {
-    width: 100%;
-    height: 100%;
     transform: scaleX(-1)
 }
 
@@ -226,10 +189,6 @@
     opacity: 90%;
     transform: rotate(-1deg);
 }
-.FB-ladder-image7 {
-    width: 100%;
-    height: 100%;
-}
 
 /* 10 -> 30 */
 .FB-ladder-image8-container {
@@ -242,13 +201,167 @@
     opacity: 90%;
     transform: rotate(0deg);
 }
-.FB-ladder-image8 {
-    width: 100%;
-    height: 100%;
-}
+
+
 
 @media (min-width: 501px) {
-    .game-board-container {
+    /* 23 -> 4*/
+    .FB-slide-image1-container {
+        height: 15%;
+        width: 18%;
+        left: 61%;
+    }
 
+    /* 94 -> 72*/
+    .FB-slide-image2-container {
+        top: 3%;
+        transform: rotate(2deg);
+    }
+
+    /* 26 -> 9*/
+    .FB-slide-image4-container {
+        top: 73%;
+    }
+
+    /* 61-> 59 */
+    .FB-slide-image8-container {
+        top: 34%;
+    }
+
+    /* 2-> 21 */
+    .FB-ladder-image1-container {
+        height: 32%;
+        width: 9%;
+        top: 68%;
+        left: 85%;
+        transform: rotate(32deg)
+    }
+
+    /* 28 -> 46 */
+    .FB-ladder-image2-container {
+        height: 55%;
+        width: 7%;
+        top: 38%;
+        left: 32%;
+        transform: rotate(65deg);
+    }
+
+    /* 55 -> 95*/
+    .FB-ladder-image3-container {
+        height: 48%;
+        width: 10%;
+        left: 40%;
+    }
+
+    /* 22 -> 41*/
+    .FB-ladder-image4-container {
+        height: 45%;
+        width: 7%;
+        top: 42%;
+        left: 85%;
+        transform: rotate(55deg);
+    }
+
+    /* 84 -> 98 */
+    .FB-ladder-image5-container {
+        height: 18%;
+        width: 7%;
+        left: 66%;
+    }
+
+    /* 32 -> 90 */
+    .FB-ladder-image6-container {
+        height: 63%;
+        width: 10%;
+        top: 9%;
+        left: 6%;
+        transform: rotate(-18deg);
+    }
+
+    /* 79 -> 99 */
+    .FB-ladder-image7-container {
+        height: 28%;
+        width: 10%;
+        top: 3%;
+        left: 80%;
+    }
+
+    /* 10 -> 30 */
+    .FB-ladder-image8-container {
+        height: 30%;
+        width: 8%;
+        top: 69%;
+        left: 3%;
+    }
+}
+
+
+@media only screen and (min-height: 401px) and (min-width: 501px) and (max-height: 901px) and (max-width: 600px) {
+    /* 28 -> 46 */
+    .FB-ladder-image2-container {
+        height: 40%;
+        width: 15%;
+        top: 45%;
+        left: 28%;
+        transform: rotate(45deg);
+    }
+
+    /* 55 -> 95*/
+    .FB-ladder-image3-container {
+        height: 48%;
+        width: 13%;
+        left: 40%;
+    }
+    /* 22 -> 41*/
+    .FB-ladder-image4-container {
+        height: 30%;
+        width: 10%;
+        top: 50%;
+        left: 85%;
+        transform: rotate(30deg);
+    }
+    /* 84 -> 98 */
+    .FB-ladder-image5-container {
+        width: 10%;
+    }
+
+    /* 32 -> 90 */
+    .FB-ladder-image6-container {
+        width: 15%;
+        left: 3%;
+        transform: rotate(-12deg);
+    }
+}
+
+
+
+@media only screen and (min-width: 1500px) {
+    /* 2-> 21 */
+    .FB-ladder-image1-container {
+        height: 30%;
+        width: 7%;
+        top: 70%;
+        left: 87%;
+    }
+
+    /* 28 -> 46 */
+    .FB-ladder-image2-container {
+        height: 65%;
+        width: 6%;
+        top: 33%;
+        left: 31%;
+        transform: rotate(67deg);
+    }
+
+    /* 84 -> 98 */
+    .FB-ladder-image5-container {
+        width: 5%;
+        left: 67%;
+    }
+
+    /* 32 -> 90 */
+    .FB-ladder-image6-container {
+        left: 5%;
+        transform: rotate(-20deg);
     }
 }

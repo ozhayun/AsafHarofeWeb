@@ -1,5 +1,6 @@
 .game-board-container {
-
+    position: relative;
+    overflow: hidden;
 }
 
 /* 21 -> 2*/
