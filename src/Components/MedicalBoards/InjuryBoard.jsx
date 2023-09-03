@@ -3,6 +3,13 @@ import slideImagePath from "../../../Public/GamePage/water-slide.png";
 import ladderImagePath from "../../../Public/GamePage/ladder.png";
 import * as React from "react";
 import Board from "../Board.jsx";
+import startPopUpImagePath from "../../../Public/GamePage/PopUp/start.png";
+import doNotEatPopUpImagePath from "../../../Public/GamePage/PopUp/doNotEat.png";
+import nursesPopUpImagePath from "../../../Public/GamePage/PopUp/nursesStation.png";
+import medicationPopUpImagePath from "../../../Public/GamePage/PopUp/medication.png";
+import waitingPopUpImagePath from "../../../Public/GamePage/PopUp/Waiting.png";
+import medicalTestsPopUpImagePath from "../../../Public/GamePage/PopUp/medicalTests.png";
+import homePopUpImagePath from "../../../Public/GamePage/PopUp/home.png";
 
 const InjuryBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, resetKey }) => {
     const specifics = {
@@ -48,6 +55,16 @@ const InjuryBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange
 
             "יכול להיות שיחבשו ל" + animalHebrew +
             " את החבלה או יקבעו בגבס ונשאר ביחד קצת בבית החולים או שנקבל מכתב שחרור ונחזור הביתה."
+        ],
+        popUpImages:[
+            startPopUpImagePath,
+            doNotEatPopUpImagePath,
+            nursesPopUpImagePath,
+            medicationPopUpImagePath,
+            waitingPopUpImagePath,
+            medicalTestsPopUpImagePath,
+            waitingPopUpImagePath,
+            homePopUpImagePath
         ]
     };
 
@@ -61,6 +78,7 @@ const InjuryBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange
                    onSlidesChange={onSlidesChange}
                    setPopUpCells={setPopUpCells}
                    setPopUpMessages={setPopUpMessages}
+                   setPopUpImages={setPopUpImages}
                    resetKey={resetKey}
                    {...specifics}/>
 
