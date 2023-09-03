@@ -1,11 +1,12 @@
 import './PopUp.css'
 import CloseIcon from '@mui/icons-material/Close';
 import React from "react";
-import slideImagePath from "../../Public/GamePage/water-slide.png";
+import winPopUpImagePath from "../../Public/GamePage/PopUp/win.png";
 const PopUp = ({ isOpen, isPlayerWin, content, image, closePopup, restartGame, navigateHome }) => {
     if (!isOpen) return null;
 
     if (isPlayerWin) {
+        image = winPopUpImagePath;
         content = (
             <div>
                 <p>ברכות! ניצחת במשחק!</p>
