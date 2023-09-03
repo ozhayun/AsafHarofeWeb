@@ -184,7 +184,8 @@ const GamePage = () => {
                             resetKey={resetKey}
                 />
             ) : pain === 'injury' ? (
-                <InjuryBoard playerPosition={playerPosition}
+                <InjuryBoard animalHebrew={animalHebrew}
+                             playerPosition={playerPosition}
                              playerImage={playerImage}
                              onLaddersChange={handleLaddersChange}
                              onSlidesChange={handleSlidesChange}
