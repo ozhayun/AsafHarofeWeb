@@ -70,11 +70,9 @@ const GamePage = () => {
         setLadders(newLadders);
     }
 
-
     const handleSlidesChange = (newSlides) => {
         setSlides(newSlides);
     };
-
 
     const updatePlayerPosition = async (rollResult) => {
         const startPosition = playerPosition;

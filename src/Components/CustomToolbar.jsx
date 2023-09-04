@@ -4,6 +4,8 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import VolumeMuteIcon from '@mui/icons-material/VolumeMute';
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import MusicOffIcon from '@mui/icons-material/MusicOff';
 import {Link} from "react-router-dom";
 import shamirLogoPath from "../../Public/HomePage/ShamirLogo.png";
 import {createTheme, ThemeProvider} from "@mui/material/styles";
@@ -14,10 +16,11 @@ import Typography from "@mui/material/Typography";
 import {useContext} from "react";
 
 const CustomToolbar = ({toolbarTitle}) => {
-    const { playClickSound, toggleMute, isMuted } = useContext(SoundContext);
+    const { playClickSound, toggleMute, isMuted, toggleBackgroundMusic, isBackgroundMusicPlaying, pauseBackgroundMusic } = useContext(SoundContext);
 
     const handleHomeButtonClick = () => {
         playClickSound();
+        pauseBackgroundMusic();
     }
 
 
@@ -31,10 +34,14 @@ const CustomToolbar = ({toolbarTitle}) => {
                     aria-label="homePage"
                     onClick={handleHomeButtonClick}
                 >
-                    <HomeIcon fontSize="large" />
+                    <HomeIcon fontSize="medium" />
                 </IconButton>
                 <IconButton id="SoundButton" onClick={toggleMute}>
-                    {isMuted ? <VolumeMuteIcon fontSize="large"/> : <VolumeUpIcon fontSize="large"/>}
+                    {isMuted ? <VolumeMuteIcon fontSize="medium"/> : <VolumeUpIcon fontSize="medium"/>}
+                </IconButton>
+
+                <IconButton id="BackgroundMusicButton" onClick={toggleBackgroundMusic}>
+                    {isBackgroundMusicPlaying ? <MusicNoteIcon fontSize="medium"/> : <MusicOffIcon fontSize="medium"/>}
                 </IconButton>
             </div>
             <Typography id="ToolbarTitle" variant="h6" noWrap={false} component="div">
