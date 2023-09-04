@@ -16,6 +16,7 @@ export const SoundProvider = ({ children }) => {
     const diceRollAudio = new Audio(DiceRollSoundMP3);
     const jumpAudio = new Audio(JumpSoundMP3);
 
+
     const playWinSound = () => {
         if(!isMuted) winSound.play();
     }
@@ -37,7 +38,11 @@ export const SoundProvider = ({ children }) => {
     }
 
     const playJumpSound = () => {
-        if(!isMuted) jumpAudio.play();
+        if(!isMuted) {
+            setTimeout(() => {
+                jumpAudio.play();
+            },300)
+        }
     }
 
     const toggleMute = () => {

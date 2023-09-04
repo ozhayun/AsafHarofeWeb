@@ -36,7 +36,7 @@ const GamePage = () => {
     const navigate = useNavigate();
     const {pain, animal} = location.state || {};
     const animalClass = `animal ${animal || ''}`;
-    const {playWinSound, playSlideSound, playLadderSound} = React.useContext(SoundContext);
+    const {playWinSound, playSlideSound, playLadderSound, playJumpSound} = React.useContext(SoundContext);
 
     let animalHebrew, animalImage, playerImage;
     switch (animal) {
@@ -80,10 +80,17 @@ const GamePage = () => {
         const startPosition = playerPosition;
         const endPosition = Math.min(playerPosition + rollResult, 100);
 
-        let newPos = startPosition;
-        for (newPos; newPos <= endPosition; newPos++) {
+        console.log("ROLL RESULT", rollResult, "END POSITION", endPosition, "START POSITION", startPosition)
+        playJumpSound();
+
+        // Use a loop to move the player
+        for (let newPos = startPosition + 1; newPos <= endPosition; newPos++) {
+            playJumpSound();
             setPlayerPosition(newPos);
-            await new Promise((resolve) => setTimeout(resolve, 200));
+            console.log(newPos)
+
+            // Wait for a short delay between animation steps
+            await new Promise((resolve) => setTimeout(resolve, 300));
 
             // If the player reaches cell 100, show victory popup and return
             if (newPos === 100) {
