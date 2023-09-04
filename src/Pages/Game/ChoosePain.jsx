@@ -11,10 +11,13 @@ import {Button} from "@mui/material";
 import {useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
 import {SoundContext} from "../../Sound/SoundContext.jsx";
+import {BackgroundMusicContext} from "../../Sound/BackgroundMusicContext.jsx";
 
 
 const ChoosePain = () => {
-    const { playClickSound, toggleMute, isMuted } = useContext(SoundContext);
+    const { playClickSound } = useContext(SoundContext);
+    const { isBackgroundMusicPlaying } = useContext(BackgroundMusicContext)
+    console.log(isBackgroundMusicPlaying)
     const [selectedPain, setSelectedPain] = useState("");
     const navigate = useNavigate();
     const location = useLocation();

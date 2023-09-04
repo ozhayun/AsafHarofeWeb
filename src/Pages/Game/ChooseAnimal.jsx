@@ -10,12 +10,15 @@ import {Button} from "@mui/material";
 import CustomToolbar from '../../Components/CustomToolbar.jsx';
 import * as React from "react";
 import {SoundContext} from "../../Sound/SoundContext.jsx";
+import {BackgroundMusicContext} from "../../Sound/BackgroundMusicContext.jsx";
 
 const ChooseAnimal = () => {
-    const { playClickSound, playBackgroundMusic } = useContext(SoundContext);
+    const { playClickSound } = useContext(SoundContext);
+    const {playBackgroundMusic} = useContext(BackgroundMusicContext)
     const [selectedAnimal, setSelectedAnimal] = useState("");
     const navigate = useNavigate();
 
+    console.log("Animal")
     useEffect(() => {
         return () => {
             playBackgroundMusic();

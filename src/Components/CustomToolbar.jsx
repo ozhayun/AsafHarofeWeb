@@ -14,14 +14,18 @@ import AppBar from "@mui/material/AppBar";
 import HomeIcon from '@mui/icons-material/Home';
 import Typography from "@mui/material/Typography";
 import {useContext} from "react";
+import {BackgroundMusicContext} from "../Sound/BackgroundMusicContext.jsx";
 
 const CustomToolbar = ({toolbarTitle}) => {
-    const { playClickSound, toggleMute, isMuted, toggleBackgroundMusic, isBackgroundMusicPlaying, pauseBackgroundMusic } = useContext(SoundContext);
+    const { playClickSound, toggleMute, isMuted } = useContext(SoundContext);
+    const {toggleBackgroundMusic, isBackgroundMusicPlaying, pauseBackgroundMusic} = useContext(BackgroundMusicContext)
 
     const handleHomeButtonClick = () => {
         playClickSound();
         pauseBackgroundMusic();
     }
+
+    console.log("I render")
 
 
     const appBarLabel = (
