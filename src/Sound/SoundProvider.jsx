@@ -5,7 +5,6 @@ import WinSoundMP3 from '../../Public/Sounds/WinSound.mp3';
 import SlideSoundMP3 from '../../Public/Sounds/SlideSound.mp3';
 import LadderSoundMP3 from '../../Public/Sounds/LadderSound.mp3';
 import DiceRollSoundMP3 from '../../Public/Sounds/DiceRollingSound.mp3'
-import JumpSoundMP3 from '../../Public/Sounds/Jump.mp3'
 
 export const SoundProvider = ({ children }) => {
     const [isMuted, setIsMuted] = useState(false);
@@ -14,8 +13,6 @@ export const SoundProvider = ({ children }) => {
     const slideSound = new Audio(SlideSoundMP3);
     const ladderSound = new Audio(LadderSoundMP3);
     const diceRollAudio = new Audio(DiceRollSoundMP3);
-    const jumpAudio = new Audio(JumpSoundMP3);
-
 
     const playWinSound = () => {
         if(!isMuted) winSound.play();
@@ -37,14 +34,6 @@ export const SoundProvider = ({ children }) => {
         if (!isMuted) diceRollAudio.play();
     }
 
-    const playJumpSound = () => {
-        if(!isMuted) {
-            setTimeout(() => {
-                jumpAudio.play();
-            },400)
-        }
-    }
-
     const toggleMute = () => {
         setIsMuted(prevState => !prevState);
     };
@@ -52,7 +41,7 @@ export const SoundProvider = ({ children }) => {
 
 
     return (
-    <SoundContext.Provider value={{ playClickSound, playWinSound, playSlideSound, playLadderSound, playDiceRollSound, playJumpSound, toggleMute, isMuted }}>
+    <SoundContext.Provider value={{ playClickSound, playWinSound, playSlideSound, playLadderSound, playDiceRollSound, toggleMute, isMuted }}>
             {children}
         </SoundContext.Provider>
     );
