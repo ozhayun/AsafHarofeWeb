@@ -70,24 +70,17 @@ const GamePage = () => {
         setLadders(newLadders);
     }
 
-
     const handleSlidesChange = (newSlides) => {
         setSlides(newSlides);
     };
-
 
     const updatePlayerPosition = async (rollResult) => {
         const startPosition = playerPosition;
         const endPosition = Math.min(playerPosition + rollResult, 100);
 
-        console.log("ROLL RESULT", rollResult, "END POSITION", endPosition, "START POSITION", startPosition)
-        playJumpSound();
-
         // Use a loop to move the player
         for (let newPos = startPosition + 1; newPos <= endPosition; newPos++) {
-            playJumpSound();
             setPlayerPosition(newPos);
-            console.log(newPos)
 
             // Wait for a short delay between animation steps
             await new Promise((resolve) => setTimeout(resolve, 400));

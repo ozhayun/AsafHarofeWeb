@@ -1,5 +1,5 @@
 import './ChooseAnimal.css'
-import {useContext, useState} from 'react'
+import {useContext, useEffect, useState} from 'react'
 import Typography from "@mui/material/Typography";
 import vetLionImagePath from "../../../Public/HomePage/VetLion.png";
 import vetPandaImagePath from "../../../Public/HomePage/VetPanda.png";
@@ -12,9 +12,15 @@ import * as React from "react";
 import {SoundContext} from "../../Sound/SoundContext.jsx";
 
 const ChooseAnimal = () => {
-    const { playClickSound, toggleMute, isMuted } = useContext(SoundContext);
+    const { playClickSound, playBackgroundMusic } = useContext(SoundContext);
     const [selectedAnimal, setSelectedAnimal] = useState("");
     const navigate = useNavigate();
+
+    useEffect(() => {
+        return () => {
+            playBackgroundMusic();
+        };
+    }, []);
 
     const handleAnimalClick = (animal) => {
         setSelectedAnimal(animal);
