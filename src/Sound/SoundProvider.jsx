@@ -41,7 +41,7 @@ export const SoundProvider = ({ children }) => {
         if(!isMuted) {
             setTimeout(() => {
                 jumpAudio.play();
-            },300)
+            },400)
         }
     }
 

@@ -90,7 +90,7 @@ const GamePage = () => {
             console.log(newPos)
 
             // Wait for a short delay between animation steps
-            await new Promise((resolve) => setTimeout(resolve, 300));
+            await new Promise((resolve) => setTimeout(resolve, 400));
 
             // If the player reaches cell 100, show victory popup and return
             if (newPos === 100) {

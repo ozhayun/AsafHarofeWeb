@@ -28,7 +28,7 @@ const InjuryBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange
             95: 64,
             26: 9,
             56: 38,
-            73: 47,
+            91: 69,
             80 : 62,
             61 : 59},
         popUpCells:  [3,11,18,25,33,40,49,57,65,74,81,88,94,97],
