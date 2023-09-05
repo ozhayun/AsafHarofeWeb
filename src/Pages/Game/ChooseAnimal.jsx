@@ -5,16 +5,19 @@ import vetLionImagePath from "../../../Public/HomePage/VetLion.png";
 import vetPandaImagePath from "../../../Public/HomePage/VetPanda.png";
 import vetMonkeyImagePath from "../../../Public/HomePage/VetMonkey.png";
 import vetDogImagePath from "../../../Public/HomePage/VetDog.png";
+import noticePopUpImagePath from "../../../Public/GamePage/PopUp/notice.png"
 import {useNavigate} from "react-router";
 import {Button} from "@mui/material";
 import CustomToolbar from '../../Components/CustomToolbar.jsx';
 import * as React from "react";
 import {SoundContext} from "../../Sound/SoundContext.jsx";
+import PopUp from "../../Components/PopUp.jsx";
 
 const ChooseAnimal = () => {
     const { playClickSound, playBackgroundMusic } = useContext(SoundContext);
     const [selectedAnimal, setSelectedAnimal] = useState("");
     const navigate = useNavigate();
+    const [errorPopupOpen, setErrorPopupOpen] = useState(false); // Add this state
 
     useEffect(() => {
         return () => {
@@ -30,6 +33,9 @@ const ChooseAnimal = () => {
         if(selectedAnimal) {
             playClickSound();
             navigate('/choose-pain', { state: { animal: selectedAnimal } });
+        }
+        else {
+            setErrorPopupOpen(true);
         }
     }
 
@@ -56,9 +62,15 @@ const ChooseAnimal = () => {
                     <img src={vetPandaImagePath} style={{width: "100%", height: "100%"}} alt="Panda" />
                 </Button>
             </div>
-            <Button id="ContinueAnimalButton" disabled={selectedAnimal === ""} onClick={handleContinueClick}>
+            <Button id="ContinueAnimalButton" onClick={handleContinueClick}>
                 המשך
             </Button>
+            <PopUp
+                isOpen={errorPopupOpen}
+                closePopup={() => setErrorPopupOpen(false)}
+                content="בבקשה לחצו על חיה ולאחר מכן על המשך."
+                image={noticePopUpImagePath}
+            />
         </div>
     )
 }
