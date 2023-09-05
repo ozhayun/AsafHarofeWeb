@@ -16,7 +16,7 @@ import Typography from "@mui/material/Typography";
 import {useContext} from "react";
 import {BackgroundMusicContext} from "../Sound/BackgroundMusicContext.jsx";
 
-const CustomToolbar = ({toolbarTitle}) => {
+const CustomToolbar = React.memo(({toolbarTitle}) => {
     const { playClickSound, toggleMute, isMuted } = useContext(SoundContext);
     const {toggleBackgroundMusic, isBackgroundMusicPlaying, pauseBackgroundMusic} = useContext(BackgroundMusicContext)
 
@@ -24,9 +24,6 @@ const CustomToolbar = ({toolbarTitle}) => {
         playClickSound();
         pauseBackgroundMusic();
     }
-
-    console.log("I render")
-
 
     const appBarLabel = (
         <Toolbar className="toolbar">
@@ -73,7 +70,7 @@ const CustomToolbar = ({toolbarTitle}) => {
             </AppBar>
         </ThemeProvider>
     )
-}
+})
 
 
 export default CustomToolbar;

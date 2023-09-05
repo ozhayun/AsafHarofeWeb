@@ -20,7 +20,7 @@ export const BackgroundMusicProviderComponent = ({ children }) => {
 
     const startBackgroundMusic = () => {
         backgroundMusicAudioRef.current.currentTime = 0; // Reset the audio to the beginning
-        backgroundMusicAudioRef.current.play();
+        playBackgroundMusic();
     };
 
     const playBackgroundMusic = () => {
@@ -47,7 +47,8 @@ export const BackgroundMusicProviderComponent = ({ children }) => {
             toggleBackgroundMusic,
             isBackgroundMusicPlaying,
             playBackgroundMusic,
-            pauseBackgroundMusic,}}>
+            pauseBackgroundMusic,
+            startBackgroundMusic}}>
             {children}
         </BackgroundMusicContext.Provider>
     );

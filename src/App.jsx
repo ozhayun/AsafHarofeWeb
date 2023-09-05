@@ -11,19 +11,19 @@ import GamePage from './Pages/Game/GamePage';
 
 function App() {
     return (
-        <SoundProvider>
-            <BackgroundMusicProviderComponent>
-                <Router>
-                    <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/medical-documents" element={<MedicalDocumentsPage />} />
-                        <Route path="/game" element={<GamePage />} />
-                        <Route path="/choose-animal" element={<ChooseAnimal/>}/>
-                        <Route path="/choose-pain" element={<ChoosePain/>}/>
-                    </Routes>
-                </Router>
-            </BackgroundMusicProviderComponent>
-        </SoundProvider>
+        <BackgroundMusicProviderComponent>
+            <SoundProvider>
+                    <Router>
+                        <Routes>
+                            <Route path="/" element={<HomePage />} />
+                            <Route path="/medical-documents" element={<MedicalDocumentsPage />} />
+                            <Route path="/game" element={<GamePage />} />
+                            <Route path="/choose-animal" element={<ChooseAnimal/>}/>
+                            <Route path="/choose-pain" element={<ChoosePain/>}/>
+                        </Routes>
+                    </Router>
+            </SoundProvider>
+        </BackgroundMusicProviderComponent>
     );
 }
 

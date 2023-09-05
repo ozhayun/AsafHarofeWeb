@@ -14,10 +14,8 @@ import {SoundContext} from "../../Sound/SoundContext.jsx";
 import {BackgroundMusicContext} from "../../Sound/BackgroundMusicContext.jsx";
 
 
-const ChoosePain = () => {
+const ChoosePain = React.memo(() => {
     const { playClickSound } = useContext(SoundContext);
-    const { isBackgroundMusicPlaying } = useContext(BackgroundMusicContext)
-    console.log(isBackgroundMusicPlaying)
     const [selectedPain, setSelectedPain] = useState("");
     const navigate = useNavigate();
     const location = useLocation();
@@ -65,11 +63,11 @@ const ChoosePain = () => {
                         יש לה חבלה ביד או ברגל
                     </Button>
                 </div>
-                <Button id="ContinuePainButton" disabled={selectedPain === null} onClick={handleContinueClick}>
+                <Button id="ContinuePainButton" disabled={selectedPain === ""} onClick={handleContinueClick}>
                     המשך
                 </Button>
             </div>
     );
-}
+})
 
 export default ChoosePain;

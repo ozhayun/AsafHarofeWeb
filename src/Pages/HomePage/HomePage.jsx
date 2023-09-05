@@ -10,8 +10,19 @@ import instagramImagePath from "../../../Public/HomePage/Instagram.png";
 import mapImagePath from "../../../Public/HomePage/Map.png"
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import {BackgroundMusicContext} from "../../Sound/BackgroundMusicContext.jsx";
+import {useContext} from "react";
+
+
 
 const HomePage = () => {
+
+    const { startBackgroundMusic } = useContext(BackgroundMusicContext);
+
+    const handleStartGameClick = () => {
+        startBackgroundMusic();
+    };
+
     return (
         <div id="HomePage">
             <img src={shamirLogoPath} id="HomeShamirLogo" alt="Shamir"/>
@@ -25,7 +36,7 @@ const HomePage = () => {
                 <Button id="MedicalDocumentsButton" component={Link} to="/medical-documents">
                     דפי הסבר
                 </Button>
-                <Button id="StartGameButton" component={Link} to="/choose-animal">
+                <Button id="StartGameButton" onClick={handleStartGameClick} component={Link} to="/choose-animal">
                     התחל משחק
                 </Button>
             </div>
