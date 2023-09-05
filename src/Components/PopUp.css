@@ -11,6 +11,13 @@
     z-index: 4;
 }
 
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
 .popup-content {
     position: relative;
     background: linear-gradient(to bottom, white, antiquewhite);
@@ -23,8 +30,18 @@
     font-size: 1.3rem;
     line-height: 2rem;
     justify-content: center;
-    align-items: center;
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
     overflow: auto;
+}
+.speaker-button {
+    margin-right: 1rem;
+}
+.popup-image-container {
+    display: flex; /* Display the image and speaker icon side by side */
+    align-items: center; /* Align items vertically within the container */
+    justify-content: center; /* Center items horizontally within the container */
+    margin-bottom: 1rem; /* Add margin to separate from content */
 }
 
 .popup-image{

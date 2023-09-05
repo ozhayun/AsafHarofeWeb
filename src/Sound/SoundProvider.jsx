@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useState} from 'react';
 import ButtonClickSound from '../../Public/Sounds/ClickSound.mp3';
 import { SoundContext } from './SoundContext'
 import WinSoundMP3 from '../../Public/Sounds/WinSound.mp3';
@@ -8,6 +8,7 @@ import DiceRollSoundMP3 from '../../Public/Sounds/DiceRollingSound.mp3'
 
 export const SoundProvider = ({ children }) => {
     const [isMuted, setIsMuted] = useState(false);
+    const [isSpeaker, setIsSpeaker] = useState(true);
     const clickAudio = new Audio(ButtonClickSound);
     const winSound = new Audio(WinSoundMP3);
     const slideSound = new Audio(SlideSoundMP3);
@@ -38,7 +39,9 @@ export const SoundProvider = ({ children }) => {
         setIsMuted(prevState => !prevState);
     };
 
-
+    const toggleIsSpeaker = () => {
+        setIsSpeaker(prevState => !prevState)
+    }
 
     return (
         <SoundContext.Provider value={{ playClickSound,
@@ -47,7 +50,9 @@ export const SoundProvider = ({ children }) => {
             playLadderSound,
             playDiceRollSound,
             toggleMute,
-            isMuted }}>
+            isMuted,
+            isSpeaker,
+            toggleIsSpeaker}}>
             {children}
         </SoundContext.Provider>
     );

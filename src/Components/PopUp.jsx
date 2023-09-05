@@ -1,8 +1,31 @@
 import './PopUp.css'
 import CloseIcon from '@mui/icons-material/Close';
-import React from "react";
+import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
+import VoiceOverOffIcon from '@mui/icons-material/VoiceOverOff';
+import React, {useEffect, useRef} from "react";
 import winPopUpImagePath from "../../Public/GamePage/PopUp/win.png";
+import {SoundContext} from "../Sound/SoundContext.jsx";
+import IconButton from "@mui/material/IconButton";
+
 const PopUp = ({ isOpen, isPlayerWin, content, audio, image, closePopup, restartGame, navigateHome }) => {
+    const {isSpeaker, toggleIsSpeaker} = React.useContext(SoundContext);
+
+    useEffect(() => {
+        let audioElement;
+
+        if (isOpen && isSpeaker) {
+            audioElement = new Audio(audio);
+            audioElement.playbackRate = 1.25;
+            audioElement.play();
+        }
+
+        return () => {
+            if (audioElement) {
+                audioElement.pause();
+            }
+        };
+    }, [isOpen, isSpeaker, audio]);
+
     if (!isOpen) return null;
 
     if (isPlayerWin) {
@@ -29,13 +52,20 @@ const PopUp = ({ isOpen, isPlayerWin, content, audio, image, closePopup, restart
     return (
         <div className="popup-container">
             <div className="popup-content">
-                <button className="close-button" onClick={closePopup}>
-                    <CloseIcon className="close-icon"/>
-                </button>
+                <div className="popup-header">
+                    <button className="close-button" onClick={closePopup}>
+                        <CloseIcon className="close-icon"/>
+                    </button>
+                    <div className="speaker-button">
+                        <IconButton id="speaker" onClick={toggleIsSpeaker}>
+                            {isSpeaker ? <RecordVoiceOverIcon fontSize="large"/> : <VoiceOverOffIcon fontSize="large"/>}
+                        </IconButton>
+                    </div>
+                </div>
                 <div className={`popup-image-container`}>
+
                     <img src={image} alt={`popup-image`} className={`popup-image`} />
                 </div>
-
                 <div className="content">{content}</div>
             </div>
         </div>
