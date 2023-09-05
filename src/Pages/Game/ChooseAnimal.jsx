@@ -1,5 +1,5 @@
 import './ChooseAnimal.css'
-import {useContext, useEffect, useState} from 'react'
+import {useContext, useState} from 'react'
 import Typography from "@mui/material/Typography";
 import vetLionImagePath from "../../../Public/HomePage/VetLion.png";
 import vetPandaImagePath from "../../../Public/HomePage/VetPanda.png";

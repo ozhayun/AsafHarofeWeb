@@ -65,7 +65,7 @@ const GamePage = () => {
         case 'panda':
             animalImage = vetPandaImagePath;
             playerImage = vetPandaPlayerImagePath;
-            animalHebrew = 'פנדה';
+            animalHebrew = 'דוב פנדה';
             break;
         default:
             animalImage = null;

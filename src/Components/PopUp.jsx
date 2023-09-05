@@ -2,7 +2,7 @@ import './PopUp.css'
 import CloseIcon from '@mui/icons-material/Close';
 import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
 import VoiceOverOffIcon from '@mui/icons-material/VoiceOverOff';
-import React, {useEffect, useRef} from "react";
+import React, {useEffect} from "react";
 import winPopUpImagePath from "../../Public/GamePage/PopUp/win.png";
 import {SoundContext} from "../Sound/SoundContext.jsx";
 import IconButton from "@mui/material/IconButton";
