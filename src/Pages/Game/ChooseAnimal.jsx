@@ -17,7 +17,7 @@ const ChooseAnimal = React.memo(() => {
     const { playClickSound } = useContext(SoundContext);
     const [selectedAnimal, setSelectedAnimal] = useState("");
     const navigate = useNavigate();
-    const [errorPopupOpen, setErrorPopupOpen] = useState(false); // Add this state
+    const [errorPopupOpen, setErrorPopupOpen] = useState(false);
 
     const handleAnimalClick = (animal) => {
         setSelectedAnimal(animal);
