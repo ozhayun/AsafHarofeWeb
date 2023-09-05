@@ -3,6 +3,9 @@ import Cell from "./Cell.jsx"
 import * as React from "react";
 
 const Board = ({
+                   animal,
+                   animalHebrew,
+                   pain,
                    playerPosition,
                    playerImage,
                    ladders,
@@ -15,6 +18,8 @@ const Board = ({
                    setPopUpCells,
                    setPopUpMessages,
                    setPopUpImages,
+                   importAudio,
+                   setPopUpsAudio,
                    resetKey
                }) => {
 
@@ -37,6 +42,11 @@ const Board = ({
     React.useEffect(() => {
         onSlidesChange(slides);
     }, []);
+
+    React.useEffect(() => {
+        const promises = popUpMessages.map((message, index) => importAudio(pain, animal, index + 1));
+        Promise.all(promises).then(setPopUpsAudio);
+    }, [pain, animal, resetKey]);
 
     React.useEffect(() => {
         setPopUpCells(popUpCells);

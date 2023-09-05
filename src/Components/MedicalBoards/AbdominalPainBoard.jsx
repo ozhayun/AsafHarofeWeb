@@ -12,7 +12,9 @@ import doNotEatPopUpImagePath from "../../../Public/GamePage/PopUp/doNotEat.png"
 import medicationPopUpImagePath from "../../../Public/GamePage/PopUp/medication.png";
 
 
-const AbdominalPainBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, resetKey }) => {
+const AbdominalPainBoard = ({animalHebrew, pain, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, importAudio, setPopUpsAudio, resetKey }) => {
+
+
     const specifics = {
         ladders: {
             4 : 23,
@@ -70,7 +72,6 @@ const AbdominalPainBoard = ({animalHebrew, playerPosition, playerImage, onLadder
 
     const imagesCount = 8;
 
-
     return (
         <div className="APB-game-board-container">
             <Board playerPosition={playerPosition}
@@ -80,6 +81,11 @@ const AbdominalPainBoard = ({animalHebrew, playerPosition, playerImage, onLadder
                    setPopUpCells={setPopUpCells}
                    setPopUpMessages={setPopUpMessages}
                    setPopUpImages={setPopUpImages}
+                   animal={animal}
+                   animalHebrew={animalHebrew}
+                   pain={pain}
+                   importAudio={importAudio}
+                   setPopUpsAudio={setPopUpsAudio}
                    resetKey={resetKey}
                    {...specifics}/>
 

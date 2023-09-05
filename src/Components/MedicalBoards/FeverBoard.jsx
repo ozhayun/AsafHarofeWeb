@@ -10,7 +10,7 @@ import homePopUpImagePath from "../../../Public/GamePage/PopUp/home.png";
 import * as React from "react";
 import Board from "../Board.jsx";
 
-const FeverBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, resetKey }) => {
+const FeverBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, importAudio, setPopUpsAudio, resetKey }) => {
     const specifics = {
         ladders: {
             2 : 21,
@@ -74,6 +74,11 @@ const FeverBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange,
                    setPopUpCells={setPopUpCells}
                    setPopUpMessages={setPopUpMessages}
                    setPopUpImages={setPopUpImages}
+                   animal={animal}
+                   animalHebrew={animalHebrew}
+                   pain={pain}
+                   importAudio={importAudio}
+                   setPopUpsAudio={setPopUpsAudio}
                    resetKey={resetKey}
                    {...specifics}/>
 

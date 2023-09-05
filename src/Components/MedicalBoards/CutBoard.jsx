@@ -11,7 +11,7 @@ import homePopUpImagePath from "../../../Public/GamePage/PopUp/home.png";
 import gelSoapPopUpImagePath from "../../../Public/GamePage/PopUp/gelSoap.png";
 import injectionPopUpImagePath from "../../../Public/GamePage/PopUp/injection.png";
 
-const CutBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, resetKey }) => {
+const CutBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, importAudio, setPopUpsAudio, resetKey }) => {
     const specifics = {
         ladders: {
             4: 23,
@@ -76,6 +76,11 @@ const CutBoard = ({animalHebrew, playerPosition, playerImage, onLaddersChange, o
                    setPopUpCells={setPopUpCells}
                    setPopUpMessages={setPopUpMessages}
                    setPopUpImages={setPopUpImages}
+                   animal={animal}
+                   animalHebrew={animalHebrew}
+                   pain={pain}
+                   importAudio={importAudio}
+                   setPopUpsAudio={setPopUpsAudio}
                    resetKey={resetKey}
                    {...specifics}/>
 

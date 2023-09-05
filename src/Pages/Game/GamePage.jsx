@@ -25,10 +25,12 @@ const GamePage = () => {
     const [slides, setSlides] = React.useState({});
     const [isPopUpOpen, setIsPopUpOpen] = React.useState(false);
     const [popUpContent, setPopUpContent] = React.useState("");
+    const [popUpAudio, setPopUpAudio] = React.useState([]);
     const [popUpImage, setPopUpImage] = React.useState("");
     const [popUpCells, setPopUpCells] = React.useState([]);
     const [popUpMessages, setPopUpMessages] = React.useState([]);
     const [popUpImages, setPopUpImages] = React.useState([]);
+    const [popUpsAudio, setPopUpsAudio] = React.useState([]);
     const [isGamePaused, setIsGamePaused] = React.useState(false);
     const [isPlayerWin, setIsPlayerWin] = React.useState(false);
     const [resetKey, setResetKey] = React.useState(0);
@@ -37,6 +39,11 @@ const GamePage = () => {
     const {pain, animal} = location.state || {};
     const animalClass = `animal ${animal || ''}`;
     const {playWinSound, playSlideSound, playLadderSound} = React.useContext(SoundContext);
+
+    const importAudio = async (pain, animalHebrew, messageIndex) => {
+        const audioModule = await import(`../../../Public/Sounds/PopUp/${pain}/${animal}/${messageIndex}.mp3`);
+        return audioModule.default;
+    };
 
     let animalHebrew, animalImage, playerImage;
     switch (animal) {
@@ -109,9 +116,10 @@ const GamePage = () => {
         if (popUpMessages.length !== 0 || playerPosition === 100) {
             const cellIndex = popUpCells.indexOf(playerPosition);
             if (cellIndex !== -1) {
-                openPopUp(popUpMessages[0], popUpImages[0]);
+                openPopUp(popUpMessages[0], popUpsAudio[0], popUpImages[0]);
                 setPopUpCells(prevItems => prevItems.filter((_, index) => index !== cellIndex));
                 setPopUpMessages(prevMessages => prevMessages.filter((_, index) => index !== 0))
+                setPopUpsAudio(prevAudios => prevAudios.filter((_, index) => index !== 0))
                 setPopUpImages(prevImage => prevImage.filter((_, index) => index !== 0))
             }
         }
@@ -122,9 +130,10 @@ const GamePage = () => {
     }, [playerPosition]);
 
 
-    const openPopUp = (content, image) => {
+    const openPopUp = (content, audio, image) => {
         setPopUpContent(content);
         setPopUpImage(image);
+        setPopUpAudio(audio);
         setIsPopUpOpen(true);
         setIsGamePaused(true)
     };
@@ -169,7 +178,9 @@ const GamePage = () => {
 
             {/*Medical Board*/}
             {pain === 'cut' ? (
-                <CutBoard animalHebrew={animalHebrew}
+                <CutBoard animal={animal}
+                          animalHebrew={animalHebrew}
+                          pain={pain}
                           playerPosition={playerPosition}
                           playerImage={playerImage}
                           onLaddersChange={handleLaddersChange}
@@ -177,10 +188,14 @@ const GamePage = () => {
                           setPopUpCells={setPopUpCells}
                           setPopUpMessages={setPopUpMessages}
                           setPopUpImages={setPopUpImages}
+                          importAudio={importAudio}
+                          setPopUpsAudio={setPopUpsAudio}
                           resetKey={resetKey}
                 />
             ) : pain === 'fever' ? (
-                <FeverBoard animalHebrew={animalHebrew}
+                <FeverBoard animal={animal}
+                            animalHebrew={animalHebrew}
+                            pain={pain}
                             playerPosition={playerPosition}
                             playerImage={playerImage}
                             onLaddersChange={handleLaddersChange}
@@ -188,10 +203,14 @@ const GamePage = () => {
                             setPopUpCells={setPopUpCells}
                             setPopUpMessages={setPopUpMessages}
                             setPopUpImages={setPopUpImages}
+                            importAudio={importAudio}
+                            setPopUpsAudio={setPopUpsAudio}
                             resetKey={resetKey}
                 />
             ) : pain === 'injury' ? (
-                <InjuryBoard animalHebrew={animalHebrew}
+                <InjuryBoard animal={animal}
+                             animalHebrew={animalHebrew}
+                             pain={pain}
                              playerPosition={playerPosition}
                              playerImage={playerImage}
                              onLaddersChange={handleLaddersChange}
@@ -199,10 +218,14 @@ const GamePage = () => {
                              setPopUpCells={setPopUpCells}
                              setPopUpMessages={setPopUpMessages}
                              setPopUpImages={setPopUpImages}
+                             importAudio={importAudio}
+                             setPopUpsAudio={setPopUpsAudio}
                              resetKey={resetKey}
                 />
             ) : pain === 'abdominalPain' ? (
-                <AbdominalPainBoard animalHebrew={animalHebrew}
+                <AbdominalPainBoard animal={animal}
+                                    animalHebrew={animalHebrew}
+                                    pain={pain}
                                     playerPosition={playerPosition}
                                     playerImage={playerImage}
                                     onLaddersChange={handleLaddersChange}
@@ -210,6 +233,8 @@ const GamePage = () => {
                                     setPopUpCells={setPopUpCells}
                                     setPopUpMessages={setPopUpMessages}
                                     setPopUpImages={setPopUpImages}
+                                    importAudio={importAudio}
+                                    setPopUpsAudio={setPopUpsAudio}
                                     resetKey={resetKey}
                 />
             ) : null
@@ -218,6 +243,7 @@ const GamePage = () => {
             <PopUp isOpen={isPopUpOpen}
                    isPlayerWin={isPlayerWin}
                    content={popUpContent}
+                   audio={popUpAudio}
                    image={popUpImage}
                    closePopup={closePopUp}
                    restartGame={restartGame}
