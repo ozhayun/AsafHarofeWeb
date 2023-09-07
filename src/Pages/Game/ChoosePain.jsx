@@ -12,6 +12,8 @@ import {useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
 import {SoundContext} from "../../Sound/SoundContext.jsx";
 import {BackgroundMusicContext} from "../../Sound/BackgroundMusicContext.jsx";
+import PopUp from "../../Components/PopUp.jsx";
+import noticePopUpImagePath from "../../../Public/GamePage/PopUp/notice.png";
 
 
 const ChoosePain = React.memo(() => {
@@ -20,6 +22,7 @@ const ChoosePain = React.memo(() => {
     const navigate = useNavigate();
     const location = useLocation();
     const { animal } = location.state || {};
+    const [errorPopupOpen, setErrorPopupOpen] = useState(false);
 
     const handlePainClick = (pain) => {
         setSelectedPain(pain);
@@ -29,6 +32,9 @@ const ChoosePain = React.memo(() => {
         if(selectedPain) {
             playClickSound();
             navigate('/game', { state: { pain: selectedPain, animal: animal } });
+        }
+        else {
+            setErrorPopupOpen(true);
         }
     }
 
@@ -63,9 +69,15 @@ const ChoosePain = React.memo(() => {
                         יש לה חבלה ביד או ברגל
                     </Button>
                 </div>
-                <Button id="ContinuePainButton" disabled={selectedPain === ""} onClick={handleContinueClick}>
+                <Button id="ContinuePainButton" onClick={handleContinueClick}>
                     המשך
                 </Button>
+            <PopUp
+                isOpen={errorPopupOpen}
+                closePopup={() => setErrorPopupOpen(false)}
+                content="בבקשה לחצו על כאב ולאחר מכן על המשך."
+                image={noticePopUpImagePath}
+            />
             </div>
     );
 })

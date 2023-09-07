@@ -2,7 +2,6 @@
     border: 1px solid #677365;
     position: relative;
     z-index: 2;
-
 }
 
 .cell-number {
@@ -10,4 +9,14 @@
     padding: 0.2rem;
     font-size: 1rem;
     z-index: 2;
+}
+
+.cell.highlighted {
+    border: 1.5px solid yellow;
+}
+
+.player-image {
+    width: 60%;
+    height: 60%;
+    top: 70%;
 }
