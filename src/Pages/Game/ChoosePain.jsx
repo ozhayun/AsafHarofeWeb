@@ -44,7 +44,7 @@ const ChoosePain = React.memo(() => {
             animalHebrew = 'קוף';
             break;
         case 'panda':
-            animalHebrew = 'פנדה';
+            animalHebrew = 'דוב פנדה';
             break;
         default:
             animalHebrew = null;
