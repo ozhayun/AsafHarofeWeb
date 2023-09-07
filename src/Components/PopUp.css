@@ -88,3 +88,8 @@
     cursor: pointer;
 }
 
+@media (min-width: 501px) {
+    .popup-content {
+        width: 50%;
+    }
+}
