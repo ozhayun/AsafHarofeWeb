@@ -6,7 +6,7 @@ import React, {useEffect} from "react";
 import winPopUpImagePath from "../../Public/GamePage/PopUp/win.png";
 import {SoundContext} from "../Sound/SoundContext.jsx";
 import IconButton from "@mui/material/IconButton";
-
+import Victory from "../../Public/Sounds/PopUp/Victory.mp3";
 const PopUp = ({ isOpen, isPlayerWin, content, audio, image, closePopup, restartGame, navigateHome }) => {
     const {isSpeaker, toggleIsSpeaker} = React.useContext(SoundContext);
 
@@ -47,6 +47,8 @@ const PopUp = ({ isOpen, isPlayerWin, content, audio, image, closePopup, restart
                 </button>
             </div>
         );
+
+        audio= Victory;
     }
 
     return (
