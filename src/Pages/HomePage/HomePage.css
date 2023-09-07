@@ -92,13 +92,19 @@
 
 #YoutubeIcon {
     width: 22vw;
-    height: 10vh;
+    height: 11vh;
     margin-left: 0.3em;
 }
 
-#FacebookIcon, #InstagramIcon, #MapIcon {
+#FacebookIcon, #InstagramIcon {
     width: 18vw;
-    height: 9vh;
+    height: 8vh;
+    margin: 0.6em;
+}
+
+#MapIcon {
+    width: 16vw;
+    height: 8vh;
     margin: 0.6em;
 }
 
