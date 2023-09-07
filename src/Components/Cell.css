@@ -20,3 +20,12 @@
     height: 60%;
     top: 70%;
 }
+
+@media (min-width: 501px) {
+    .player-image {
+        width: 45%;
+        height: 70%;
+        top: 60%;
+        left: 60%;
+    }
+}
