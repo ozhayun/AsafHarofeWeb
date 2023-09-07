@@ -29,9 +29,11 @@ const PopUp = ({ isOpen, isPlayerWin, content, image, closePopup, restartGame, n
     return (
         <div className="popup-container">
             <div className="popup-content">
-                <button className="close-button" onClick={closePopup}>
-                    <CloseIcon className="close-icon"/>
-                </button>
+                {!isPlayerWin && (
+                    <button className="close-button" onClick={closePopup}>
+                        <CloseIcon className="close-icon" />
+                    </button>
+                )}
                 <div className={`popup-image-container`}>
                     <img src={image} alt={`popup-image`} className={`popup-image`} />
                 </div>
