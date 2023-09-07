@@ -90,12 +90,20 @@
     margin-top: 2vh;
 }
 
-#YoutubeIcon, #FacebookIcon, #InstagramIcon, #MapIcon {
-    width: 18vw;
-    height: auto;
-    margin: 0.8em;
+#MapIcon {
+    width: 25vw;
+    height: 11vh;
+}
+#YoutubeIcon {
+    width: 22vw;
+    height: 10vh;
 }
 
+#FacebookIcon, #InstagramIcon {
+    width: 19vw;
+    height: 9vh;
+    margin: 0.8em;
+}
 
 
 @media only screen and (min-width: 501px) {
@@ -128,8 +136,14 @@
         font-size: 3.5vw;
     }
 
-    #YoutubeIcon, #FacebookIcon, #InstagramIcon, #MapIcon {
-        width: 10vw;
+    #YoutubeIcon, #MapIcon {
+        width: 15vw;
+        height: 16vh;
+    }
+
+     #FacebookIcon, #InstagramIcon {
+        width: 12vw;
+        height: 14vh;
     }
 }
 
@@ -140,6 +154,16 @@
 
     #LinksDiv {
         margin-top: -5vh;
+    }
+
+    #YoutubeIcon, #MapIcon {
+        width: 12vw;
+        height: 13vh;
+    }
+
+    #FacebookIcon, #InstagramIcon {
+        width: 11vw;
+        height: 13vh;
     }
 }
 
@@ -162,6 +186,16 @@
     #LinksDiv {
         margin-top: 2vh;
     }
+
+    #YoutubeIcon, #MapIcon {
+        width: 9vw;
+        height: 10vh;
+    }
+
+    #FacebookIcon, #InstagramIcon {
+        width: 8vw;
+        height: 10vh;
+    }
 }
 
 @media only screen and (min-width: 1500px) {
@@ -181,5 +215,15 @@
 
     #StartGameButton, #MedicalDocumentsButton {
         font-size: 2.2vw;
+    }
+
+    #YoutubeIcon, #MapIcon {
+        width: 7vw;
+        height: 10vh;
+    }
+
+    #FacebookIcon, #InstagramIcon {
+        width: 6vw;
+        height: 10vh;
     }
 }
