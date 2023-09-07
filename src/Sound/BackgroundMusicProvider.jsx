@@ -35,7 +35,7 @@ export const BackgroundMusicProviderComponent = ({ children }) => {
         const backgroundMusicAudio = backgroundMusicAudioRef.current;
 
         if (isBackgroundMusicPlaying) {
-            backgroundMusicAudio.volume = 0.3;
+            backgroundMusicAudio.volume = 0.02;
             backgroundMusicAudio.play();
         } else {
             backgroundMusicAudio.pause();
