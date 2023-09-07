@@ -34,36 +34,31 @@ const GamePage = () => {
     const [resetKey, setResetKey] = React.useState(0);
     const location = useLocation();
     const navigate = useNavigate();
-    const {pain, animal} = location.state || {};
+    const {pain, animal, animalHebrew} = location.state || {};
     const animalClass = `animal ${animal || ''}`;
     const {playWinSound, playSlideSound, playLadderSound} = React.useContext(SoundContext);
 
-    let animalHebrew, animalImage, playerImage;
+    let animalImage, playerImage;
     switch (animal) {
         case 'dog':
             animalImage = vetDogImagePath;
             playerImage = vetDogPlayerImagePath;
-            animalHebrew = 'כלב';
             break;
         case 'lion':
             animalImage = vetLionImagePath;
             playerImage = vetLionPlayerImagePath;
-            animalHebrew = 'אריה';
             break;
         case 'monkey':
             animalImage = vetMonkeyImagePath;
             playerImage = vetMonkeyPlayerImagePath;
-            animalHebrew = 'קוף';
             break;
         case 'panda':
             animalImage = vetPandaImagePath;
             playerImage = vetPandaPlayerImagePath;
-            animalHebrew = 'פנדה';
             break;
         default:
             animalImage = null;
             playerImage = null;
-            animalHebrew = null;
     }
 
     const handleLaddersChange = (newLadders) => {
