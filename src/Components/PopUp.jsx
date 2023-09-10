@@ -2,19 +2,41 @@ import './PopUp.css'
 import CloseIcon from '@mui/icons-material/Close';
 import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
 import VoiceOverOffIcon from '@mui/icons-material/VoiceOverOff';
-import React, {useEffect} from "react";
+import React, { useEffect, useRef, useState } from "react";
 import winPopUpImagePath from "../../Public/GamePage/PopUp/win.png";
 import {SoundContext} from "../Sound/SoundContext.jsx";
 import IconButton from "@mui/material/IconButton";
 import Victory from "../../Public/Sounds/PopUp/Victory.mp3";
+
 const PopUp = ({ isOpen, isPlayerWin, content, audio, image, closePopup, restartGame, navigateHome }) => {
     const {isSpeaker, toggleIsSpeaker} = React.useContext(SoundContext);
+    const [audioReady, setAudioReady] = useState(false);
+    const audioRef = useRef(new Audio(audio));
+
+    useEffect(() => {
+        const audioElement = audioRef.current;
+
+        audioElement.addEventListener('loadeddata', () => {
+            // Once the audio is loaded, set audioReady to true
+            setAudioReady(true);
+        });
+
+        return () => {
+            // Clean up event listener when the component unmounts
+            audioElement.removeEventListener('loadeddata', () => {
+                // Reset audioReady to false
+                setAudioReady(false);
+            });
+        };
+    }, [audio]);
 
     useEffect(() => {
         let audioElement;
 
         if (isOpen && isSpeaker) {
             audioElement = new Audio(audio);
+            audioElement.preload = 'auto';
+            audioElement.load()
             audioElement.playbackRate = 1.25;
             audioElement.play();
         }
