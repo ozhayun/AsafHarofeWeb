@@ -6,7 +6,6 @@ import dice3 from '../../Public/GamePage/3.png';
 import dice4 from '../../Public/GamePage/4.png';
 import dice5 from '../../Public/GamePage/5.png';
 import dice6 from '../../Public/GamePage/6.png';
-import { Button } from "@mui/material";
 import {SoundContext} from "../Sound/SoundContext.jsx";
 
 const diceImages = [dice1, dice2, dice3, dice4, dice5, dice6];
@@ -48,7 +47,7 @@ const Dice = ({ updatePlayerPosition }) => {
                     />
                 ))}
             </div>
-            <div id="RollText" >הטל</div>
+            <div id="RollText">הטל</div>
         </div>
     );
 };
