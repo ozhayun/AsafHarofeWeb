@@ -36,7 +36,7 @@ const Dice = ({ updatePlayerPosition }) => {
     }, [animate]);
 
     return (
-        <div className="dice-container">
+        <div className="dice-container" onClick={rollDice}>
             <div className={`dice-images ${animate ? 'animate' : ''}`}>
                 {diceImages.map((diceImage, index) => (
                     <img
@@ -48,7 +48,7 @@ const Dice = ({ updatePlayerPosition }) => {
                     />
                 ))}
             </div>
-            <Button id="RollButton" onClick={rollDice}>הטל</Button>
+            <div id="RollText" >הטל</div>
         </div>
     );
 };

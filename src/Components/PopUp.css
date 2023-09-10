@@ -38,10 +38,10 @@
     margin-right: 1rem;
 }
 .popup-image-container {
-    display: flex; /* Display the image and speaker icon side by side */
-    align-items: center; /* Align items vertically within the container */
-    justify-content: center; /* Center items horizontally within the container */
-    margin-bottom: 1rem; /* Add margin to separate from content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 
 .popup-image{
@@ -60,8 +60,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 12%;
+    height: 10%;
 }
 
 .close-icon {
