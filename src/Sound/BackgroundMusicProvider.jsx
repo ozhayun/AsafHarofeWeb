@@ -8,31 +8,40 @@ export const BackgroundMusicProviderComponent = ({ children }) => {
 
     const toggleBackgroundMusic = () => {
         setIsBackgroundMusicPlaying(prevState => !prevState);
-        const backgroundMusicAudio = backgroundMusicAudioRef.current; // Get the current instance
+        const backgroundMusicAudio = backgroundMusicAudioRef.current;
 
         if (!isBackgroundMusicPlaying) {
             backgroundMusicAudio.pause();
         } else {
-            backgroundMusicAudio.volume = 0.3;
+            backgroundMusicAudio.volume = 0.04;
             backgroundMusicAudio.play();
         }
     };
 
     const startBackgroundMusic = () => {
-        backgroundMusicAudioRef.current.currentTime = 0; // Reset the audio to the beginning
-        playBackgroundMusic();
+        const backgroundMusicAudio = backgroundMusicAudioRef.current;
+        backgroundMusicAudio.currentTime = 0;
+        backgroundMusicAudio.play();
+        setIsBackgroundMusicPlaying(true);
     };
 
     const playBackgroundMusic = () => {
+        const backgroundMusicAudio = backgroundMusicAudioRef.current;
+        backgroundMusicAudio.play();
         setIsBackgroundMusicPlaying(true);
-    }
+    };
 
     const pauseBackgroundMusic = () => {
+        const backgroundMusicAudio = backgroundMusicAudioRef.current;
+        backgroundMusicAudio.pause();
         setIsBackgroundMusicPlaying(false);
-    }
+    };
 
     useEffect(() => {
         const backgroundMusicAudio = backgroundMusicAudioRef.current;
+
+        // Add an event listener to restart the audio when it ends
+        backgroundMusicAudio.addEventListener('ended', startBackgroundMusic);
 
         if (isBackgroundMusicPlaying) {
             backgroundMusicAudio.volume = 0.04;
@@ -40,6 +49,11 @@ export const BackgroundMusicProviderComponent = ({ children }) => {
         } else {
             backgroundMusicAudio.pause();
         }
+
+        // Cleanup the event listener when the component unmounts
+        return () => {
+            backgroundMusicAudio.removeEventListener('ended', startBackgroundMusic);
+        };
     }, [isBackgroundMusicPlaying]);
 
     return (
@@ -48,7 +62,8 @@ export const BackgroundMusicProviderComponent = ({ children }) => {
             isBackgroundMusicPlaying,
             playBackgroundMusic,
             pauseBackgroundMusic,
-            startBackgroundMusic}}>
+            startBackgroundMusic,
+        }}>
             {children}
         </BackgroundMusicContext.Provider>
     );
