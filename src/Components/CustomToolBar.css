@@ -6,8 +6,8 @@
 }
 
 .toolbar {
-    height: 9vh;
-    padding: 1em;
+    height: 5%;
+    padding: 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,7 +23,7 @@
     align-items: center;
     justify-content: space-between;
     max-width: 100px;
-    margin-left: -0.8em;
+    margin-left: -3%;
 }
 
 
@@ -34,6 +34,8 @@
     transform: translate(-50%, -50%);
     font-size: 2rem;
     line-height: 1;
+    margin-left: 5%;
+
 }
 
 #HomeButton, #ToolBarShamirLogo, #SoundButton {
@@ -41,7 +43,7 @@
 }
 
 #ToolBarShamirLogo {
-    width: 20vw;
+    width: 20%;
     height: auto;
     object-fit: contain;
     display: block;
