@@ -13,22 +13,26 @@ const diceImages = [dice1, dice2, dice3, dice4, dice5, dice6];
 const Dice = ({ updatePlayerPosition }) => {
     const [diceNumber, setDiceNumber] = useState(1);
     const [animate, setAnimate] = useState(false);
+    const [rolling, setRolling] = useState(false);
     const {playDiceRollSound} = React.useContext(SoundContext);
 
 
     const rollDice = () => {
+        if (rolling) return;
         const newDiceNumber = Math.floor(Math.random() * 6) + 1;
         setDiceNumber(newDiceNumber);
         playDiceRollSound();
         updatePlayerPosition(newDiceNumber);
         setAnimate(true);
+        setRolling(true);
     };
 
     useEffect(() => {
         if (animate) {
             const animationTimeout = setTimeout(() => {
                 setAnimate(false);
-            }, 500); // The same duration as the CSS animation (0.5s)
+                setRolling(false)
+            }, 1200); // The same duration as the CSS animation (0.5s)
 
             return () => clearTimeout(animationTimeout);
         }
