@@ -12,7 +12,7 @@ import doNotEatPopUpImagePath from "../../../Public/GamePage/PopUp/doNotEat.png"
 import medicationPopUpImagePath from "../../../Public/GamePage/PopUp/medication.png";
 
 
-const AbdominalPainBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, importAudio, setPopUpsAudio, resetKey }) => {
+const AbdominalPainBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, setIsAudioLoaded, importAudio, setPopUpsAudio, resetKey }) => {
 
 
     const specifics = {
@@ -81,6 +81,7 @@ const AbdominalPainBoard = ({animal, animalHebrew, pain, playerPosition, playerI
                    setPopUpCells={setPopUpCells}
                    setPopUpMessages={setPopUpMessages}
                    setPopUpImages={setPopUpImages}
+                   setIsAudioLoaded={setIsAudioLoaded}
                    animal={animal}
                    pain={pain}
                    importAudio={importAudio}

@@ -7,28 +7,21 @@ export const BackgroundMusicProviderComponent = ({ children }) => {
     const backgroundMusicAudioRef = useRef(new Audio(BackgroundMusicMP3));
 
     const toggleBackgroundMusic = () => {
-        setIsBackgroundMusicPlaying(prevState => !prevState);
-        const backgroundMusicAudio = backgroundMusicAudioRef.current;
-
-        if (!isBackgroundMusicPlaying) {
-            backgroundMusicAudio.pause();
-        } else {
-            backgroundMusicAudio.volume = 0.04;
-            backgroundMusicAudio.play();
-        }
+        setIsBackgroundMusicPlaying((prevIsPlaying) => !prevIsPlaying);
     };
 
     const startBackgroundMusic = () => {
         const backgroundMusicAudio = backgroundMusicAudioRef.current;
         backgroundMusicAudio.currentTime = 0;
-        backgroundMusicAudio.play();
-        setIsBackgroundMusicPlaying(true);
+        playBackgroundMusic();
     };
 
     const playBackgroundMusic = () => {
         const backgroundMusicAudio = backgroundMusicAudioRef.current;
-        backgroundMusicAudio.play();
-        setIsBackgroundMusicPlaying(true);
+        backgroundMusicAudio.volume = 0.04;
+        backgroundMusicAudio.play().then(() => {
+            setIsBackgroundMusicPlaying(true);
+        });
     };
 
     const pauseBackgroundMusic = () => {
@@ -44,10 +37,9 @@ export const BackgroundMusicProviderComponent = ({ children }) => {
         backgroundMusicAudio.addEventListener('ended', startBackgroundMusic);
 
         if (isBackgroundMusicPlaying) {
-            backgroundMusicAudio.volume = 0.04;
-            backgroundMusicAudio.play();
+            playBackgroundMusic();
         } else {
-            backgroundMusicAudio.pause();
+            pauseBackgroundMusic();
         }
 
         // Cleanup the event listener when the component unmounts

@@ -11,7 +11,7 @@ import waitingPopUpImagePath from "../../../Public/GamePage/PopUp/Waiting.png";
 import medicalTestsPopUpImagePath from "../../../Public/GamePage/PopUp/medicalTests.png";
 import homePopUpImagePath from "../../../Public/GamePage/PopUp/home.png";
 
-const InjuryBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, importAudio, setPopUpsAudio, resetKey }) => {
+const InjuryBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, setIsAudioLoaded, importAudio, setPopUpsAudio, resetKey }) => {
     const specifics = {
         ladders: {
             2: 21,
@@ -79,6 +79,7 @@ const InjuryBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, o
                    setPopUpCells={setPopUpCells}
                    setPopUpMessages={setPopUpMessages}
                    setPopUpImages={setPopUpImages}
+                   setIsAudioLoaded={setIsAudioLoaded}
                    animal={animal}
                    pain={pain}
                    importAudio={importAudio}
