@@ -149,7 +149,6 @@ const GamePage = () => {
     const closePopUp = () => {
         setIsPopUpOpen(false);
         setIsGamePaused(false)
-        if(isSpeaker) toggleIsSpeaker();
     };
 
     const handlePlayerWin = () => {
