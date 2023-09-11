@@ -61,8 +61,7 @@ const ChooseAnimal = React.memo(() => {
                 <CustomToolbar toolbarTitle=""/>
             </div>
             <Typography id = "ChooseAnimalTitle" variant="h2" gutterBottom style={{ direction: 'rtl' }}>
-                לאיזו חיה
-                תרצה לעזור?
+                לאיזו חיה תרצה לעזור?
             </Typography>
             <div className="speaker-button-chooseAnimal">
                 <IconButton id="speaker" onClick={handleClickOnChooseAnimalSpeaker}>
