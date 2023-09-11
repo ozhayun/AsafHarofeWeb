@@ -12,10 +12,13 @@
 }
 
 .popup-header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
+    flex-wrap: wrap; /* add this */
+
 }
 
 .popup-content {
@@ -37,6 +40,7 @@
 .speaker-button {
     margin-right: 1rem;
 }
+
 .popup-image-container {
     display: flex;
     align-items: center;
@@ -107,6 +111,22 @@
 
 @media (min-width: 501px) {
     .popup-content {
-        width: 50%;
+        width: 60%;
+        max-width: 800px;
+        padding: 2.5rem;
+    }
+
+    .popup-image {
+        margin-top: 15%;
+        max-width: 60%;
+        max-height: 60%;
+    }
+
+    .close-button {
+        width: 10%;
+        height: 8%;
+    }
+
+    .speaker-button {
     }
 }
