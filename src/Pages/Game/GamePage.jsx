@@ -41,7 +41,7 @@ const GamePage = () => {
     const navigate = useNavigate();
     const {pain, animal, animalHebrew} = location.state || {};
     const animalClass = `animal ${animal || ''}`;
-    const {playWinSound, playSlideSound, playLadderSound} = React.useContext(SoundContext);
+    const {playWinSound, playSlideSound, playLadderSound, isSpeaker, toggleIsSpeaker} = React.useContext(SoundContext);
     const {pauseBackgroundMusic} = useContext(BackgroundMusicContext)
 
 
@@ -149,6 +149,7 @@ const GamePage = () => {
     const closePopUp = () => {
         setIsPopUpOpen(false);
         setIsGamePaused(false)
+        if(isSpeaker) toggleIsSpeaker();
     };
 
     const handlePlayerWin = () => {
