@@ -31,7 +31,7 @@ const CutBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, onLa
             93 : 67,
             61 : 59,
             95: 87 },
-        popUpCells: [3,11,18,25,33,40,49,57,65,74,81,88,94],
+        popUpCells: [1,3,11,18,25,33,40,49,57,65,74,81,88,94],
         popUpMessages: [
             "ברוכים הבאים למשחק סולמות ומגלשות! במהלך המשחק נלווה את ה" + animalHebrew +
             " בתהליך הטיפול הרפואי שהוא הולך לעבור במיון. חשוב לנו לומר שהצוות הרפואי שנמצא במיון עושה את המאמצים לעזור לו להרגיש טוב יותר. ה" + animalHebrew +
@@ -77,7 +77,6 @@ const CutBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, onLa
                    setPopUpMessages={setPopUpMessages}
                    setPopUpImages={setPopUpImages}
                    animal={animal}
-                   animalHebrew={animalHebrew}
                    pain={pain}
                    importAudio={importAudio}
                    setPopUpsAudio={setPopUpsAudio}

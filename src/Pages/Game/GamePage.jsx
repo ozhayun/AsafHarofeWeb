@@ -18,6 +18,8 @@ import AbdominalPainBoard from "../../Components/MedicalBoards/AbdominalPainBoar
 import InjuryBoard from "../../Components/MedicalBoards/InjuryBoard.jsx";
 import {SoundContext} from "../../Sound/SoundContext.jsx";
 import confetti from 'canvas-confetti';
+import {useContext} from "react";
+import {BackgroundMusicContext} from "../../Sound/BackgroundMusicContext.jsx";
 
 const GamePage = () => {
     const [playerPosition, setPlayerPosition] = React.useState(1);
@@ -39,6 +41,7 @@ const GamePage = () => {
     const {pain, animal, animalHebrew} = location.state || {};
     const animalClass = `animal ${animal || ''}`;
     const {playWinSound, playSlideSound, playLadderSound} = React.useContext(SoundContext);
+    const {pauseBackgroundMusic} = useContext(BackgroundMusicContext)
 
     const importAudio = async (pain, animalHebrew, messageIndex) => {
         const audioModule = await import(`../../../Public/Sounds/PopUp/${pain}/${animal}/${messageIndex}.mp3`);
@@ -109,9 +112,14 @@ const GamePage = () => {
     };
 
     const checkCellPopups = (playerPosition) => {
+        console.log("-------CheckCell-------")
+        console.log("playerPos:", playerPosition)
+        console.log("popupMessages length:", popUpMessages.length)
         if (popUpMessages.length !== 0 || playerPosition === 100) {
             const cellIndex = popUpCells.indexOf(playerPosition);
+            console.log("cell index:", cellIndex)
             if (cellIndex !== -1) {
+                console.log(popUpMessages[0], popUpsAudio[0], popUpImages[0])
                 openPopUp(popUpMessages[0], popUpsAudio[0], popUpImages[0]);
                 setPopUpCells(prevItems => prevItems.filter((_, index) => index !== cellIndex));
                 setPopUpMessages(prevMessages => prevMessages.filter((_, index) => index !== 0))
@@ -122,8 +130,9 @@ const GamePage = () => {
     };
 
     React.useEffect(() => {
+        console.log("UseEffect:", playerPosition)
         checkCellPopups(playerPosition);
-    }, [playerPosition]);
+    }, [playerPosition, popUpMessages.length]);
 
 
     const openPopUp = (content, audio, image) => {
@@ -157,7 +166,8 @@ const GamePage = () => {
 
     const navigateHome = () => {
         setIsPopUpOpen(false);
-        setIsPlayerWin(false)
+        setIsPlayerWin(false);
+        pauseBackgroundMusic();
         navigate('/');
     };
 

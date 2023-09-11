@@ -31,7 +31,7 @@ const InjuryBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, o
             91: 69,
             80 : 62,
             61 : 59},
-        popUpCells:  [3,11,18,25,33,40,49,57,65,74,81,88,94],
+        popUpCells:  [1,3,11,18,25,33,40,49,57,65,74,81,88,94],
         popUpMessages: [
             "ברוכים הבאים למשחק סולמות ומגלשות! במהלך המשחק נלווה את ה" + animalHebrew +
             " בתהליך הטיפול הרפואי שהוא הולך לעבור במיון. חשוב לנו לומר שהצוות הרפואי שנמצא במיון עושה את המאמצים לעזור לו להרגיש טוב יותר. ה" + animalHebrew +
@@ -80,7 +80,6 @@ const InjuryBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, o
                    setPopUpMessages={setPopUpMessages}
                    setPopUpImages={setPopUpImages}
                    animal={animal}
-                   animalHebrew={animalHebrew}
                    pain={pain}
                    importAudio={importAudio}
                    setPopUpsAudio={setPopUpsAudio}

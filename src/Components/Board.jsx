@@ -4,7 +4,6 @@ import * as React from "react";
 
 const Board = ({
                    animal,
-                   animalHebrew,
                    pain,
                    playerPosition,
                    playerImage,

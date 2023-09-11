@@ -30,7 +30,7 @@ const FeverBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, on
             73 : 47,
             80 : 62,
             61 : 59 },
-        popUpCells: [3,11,18,25,33,40,49,57,65,74,81,87,93],
+        popUpCells: [1,3,11,18,25,33,40,49,57,65,74,81,87,93],
         popUpMessages: [
             "ברוכים הבאים למשחק סולמות ומגלשות! במהלך המשחק נלווה את ה" + animalHebrew +
             " בתהליך הטיפול הרפואי שהוא הולך לעבור במיון. חשוב לנו לומר שהצוות הרפואי שנמצא במיון עושה את המאמצים לעזור לו להרגיש טוב יותר. ה" + animalHebrew +
@@ -75,7 +75,6 @@ const FeverBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, on
                    setPopUpMessages={setPopUpMessages}
                    setPopUpImages={setPopUpImages}
                    animal={animal}
-                   animalHebrew={animalHebrew}
                    pain={pain}
                    importAudio={importAudio}
                    setPopUpsAudio={setPopUpsAudio}

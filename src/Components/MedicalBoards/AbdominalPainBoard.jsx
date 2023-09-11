@@ -34,7 +34,7 @@ const AbdominalPainBoard = ({animal, animalHebrew, pain, playerPosition, playerI
             73 : 47,
             80 : 62,
             57 : 45 },
-        popUpCells: [3,11,18,25,33,40,49,56,65,74,81,87,93],
+        popUpCells: [1, 3,11,18,25,33,40,49,56,65,74,81,87,93],
         popUpMessages: [
             "ברוכים הבאים למשחק סולמות ומגלשות! במהלך המשחק נלווה את ה" + animalHebrew +
             " בתהליך הטיפול הרפואי שהוא הולך לעבור במיון. חשוב לנו לומר שהצוות הרפואי שנמצא במיון עושה את המאמצים לעזור לו להרגיש טוב יותר. ה" + animalHebrew +
@@ -82,7 +82,6 @@ const AbdominalPainBoard = ({animal, animalHebrew, pain, playerPosition, playerI
                    setPopUpMessages={setPopUpMessages}
                    setPopUpImages={setPopUpImages}
                    animal={animal}
-                   animalHebrew={animalHebrew}
                    pain={pain}
                    importAudio={importAudio}
                    setPopUpsAudio={setPopUpsAudio}
