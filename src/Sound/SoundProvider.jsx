@@ -8,7 +8,7 @@ import DiceRollSoundMP3 from '../../Public/Sounds/DiceRollingSound.mp3'
 
 export const SoundProvider = ({ children }) => {
     const [isMuted, setIsMuted] = useState(false);
-    const [isSpeaker, setIsSpeaker] = useState(true);
+    const [isSpeaker, setIsSpeaker] = useState(false);
     const clickAudio = new Audio(ButtonClickSound);
     const winSound = new Audio(WinSoundMP3);
     const slideSound = new Audio(SlideSoundMP3);
