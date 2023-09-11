@@ -17,7 +17,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
-    flex-wrap: wrap; /* add this */
+    flex-wrap: wrap; 
 
 }
 
@@ -34,7 +34,7 @@
     line-height: 2rem;
     justify-content: center;
     display: flex;
-    flex-direction: column; /* Arrange children vertically */
+    flex-direction: column;
     overflow: auto;
 }
 .speaker-button {
@@ -84,7 +84,7 @@
 }
 
 .button-restart {
-    background: #4CAF50; /* Green */
+    background: #4CAF50;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -97,7 +97,7 @@
 }
 
 .button-home {
-    background: #008CBA; /* Blue */
+    background: #008CBA;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -128,5 +128,24 @@
     }
 
     .speaker-button {
+        margin-top: 45%;
+        margin-bottom: -20%;
     }
 }
+
+@media only screen and (min-height: 401px) and (min-width: 501px) {
+    .speaker-button {
+        margin-top: -10%;
+        margin-bottom: -20%;
+    }
+}
+
+@media only screen and (min-width: 901px) {
+    .speaker-button {
+        margin-bottom: -20%;
+    }
+    .popup-image {
+        margin-top: 5%;
+    }
+}
+
