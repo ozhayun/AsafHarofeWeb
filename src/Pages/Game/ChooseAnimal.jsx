@@ -1,5 +1,5 @@
 import './ChooseAnimal.css'
-import {useContext, useState} from 'react'
+import {useContext, useRef, useState} from 'react'
 import Typography from "@mui/material/Typography";
 import vetLionImagePath from "../../../Public/HomePage/VetLion.png";
 import vetPandaImagePath from "../../../Public/HomePage/VetPanda.png";
@@ -12,12 +12,19 @@ import CustomToolbar from '../../Components/CustomToolbar.jsx';
 import * as React from "react";
 import {SoundContext} from "../../Sound/SoundContext.jsx";
 import PopUp from "../../Components/PopUp.jsx";
+import IconButton from "@mui/material/IconButton";
+import RecordVoiceOverIcon from "@mui/icons-material/RecordVoiceOver.js";
+import VoiceOverOffIcon from "@mui/icons-material/VoiceOverOff.js";
+import ChooseAnimalAudio from "../../../Public/ChooseAnimalPage/ChooseAnimal.mp3"
+import ChooseAnimalErrorAudio from "../../../Public/ChooseAnimalPage/ChooseAnimalError.mp3"
+
 
 const ChooseAnimal = React.memo(() => {
-    const { playClickSound } = useContext(SoundContext);
+    const { playClickSound, isSpeaker, toggleIsSpeaker } = useContext(SoundContext);
     const [selectedAnimal, setSelectedAnimal] = useState("");
     const navigate = useNavigate();
     const [errorPopupOpen, setErrorPopupOpen] = useState(false);
+    const audioRef = useRef(null);
 
     const handleAnimalClick = (animal) => {
         setSelectedAnimal(animal);
@@ -25,12 +32,27 @@ const ChooseAnimal = React.memo(() => {
 
     const handleContinueClick = () => {
         if(selectedAnimal) {
+            if(isSpeaker) {
+                toggleIsSpeaker();
+            }
             playClickSound();
             navigate('/choose-pain', { state: { animal: selectedAnimal } });
         }
         else {
             setErrorPopupOpen(true);
         }
+    }
+
+    const handleClickOnChooseAnimalSpeaker = () =>{
+        const audioElement = audioRef.current;
+        if (isSpeaker) {
+            audioElement.pause();
+        } else {
+            audioElement.currentTime = 0;
+            audioElement.playbackRate = 1.25;
+            audioElement.play();
+        }
+        toggleIsSpeaker();
     }
 
     return(
@@ -42,6 +64,12 @@ const ChooseAnimal = React.memo(() => {
                 לאיזו חיה
                 תרצה לעזור?
             </Typography>
+            <div className="speaker-button">
+                <IconButton id="speaker" onClick={handleClickOnChooseAnimalSpeaker}>
+                    {isSpeaker ? <RecordVoiceOverIcon fontSize="large"/> : <VoiceOverOffIcon fontSize="large"/>}
+                </IconButton>
+                <audio ref={audioRef} src={ChooseAnimalAudio}></audio>
+            </div>
             <div className='animal-rectangle'>
                 <Button className="piece dog" onClick={() => handleAnimalClick('dog')} data-selected={selectedAnimal === 'dog' ? 'true' : selectedAnimal === "" ? 'default' : 'false'}>
                     <img src={vetDogImagePath} style={{width: "100%", height: "100%"}} alt="Dog" />
@@ -62,8 +90,9 @@ const ChooseAnimal = React.memo(() => {
             <PopUp
                 isOpen={errorPopupOpen}
                 closePopup={() => setErrorPopupOpen(false)}
-                content="בבקשה לחצו על חיה ולאחר מכן על המשך."
+                content="בבקשה בחר חיה שלה תרצה לעזור ולאחר מכן לחץ על המשך."
                 image={noticePopUpImagePath}
+                audio={ChooseAnimalErrorAudio}
             />
         </div>
     )

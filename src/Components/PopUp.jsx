@@ -73,12 +73,17 @@ const PopUp = ({ isOpen, isPlayerWin, content, audio, image, closePopup, restart
         audio= Victory;
     }
 
+    const handlePopUpClose = () => {
+        closePopup();
+        if(isSpeaker) toggleIsSpeaker();
+    }
+
     return (
         <div className="popup-container">
             <div className="popup-content">
                 <div className="popup-header">
                     {!isPlayerWin && (
-                        <button className="close-button" onClick={closePopup}>
+                        <button className="close-button" onClick={handlePopUpClose}>
                             <CloseIcon className="close-icon" />
                         </button>
                     )}
@@ -86,7 +91,6 @@ const PopUp = ({ isOpen, isPlayerWin, content, audio, image, closePopup, restart
                         <IconButton id="speaker" onClick={toggleIsSpeaker}>
                             {isSpeaker ? <RecordVoiceOverIcon fontSize="large"/> : <VoiceOverOffIcon fontSize="large"/>}
                         </IconButton>
-
                     </div>
                 </div>
                 <div className={`popup-image-container`}>

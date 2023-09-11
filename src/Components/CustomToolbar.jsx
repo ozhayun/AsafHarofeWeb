@@ -17,12 +17,15 @@ import {useContext} from "react";
 import {BackgroundMusicContext} from "../Sound/BackgroundMusicContext.jsx";
 
 const CustomToolbar = React.memo(({toolbarTitle}) => {
-    const { playClickSound, toggleMute, isMuted } = useContext(SoundContext);
+    const { playClickSound, toggleMute, isMuted, isSpeaker, toggleIsSpeaker } = useContext(SoundContext);
     const {toggleBackgroundMusic, isBackgroundMusicPlaying, pauseBackgroundMusic} = useContext(BackgroundMusicContext)
 
     const handleHomeButtonClick = () => {
         playClickSound();
         pauseBackgroundMusic();
+        if(isSpeaker) {
+            toggleIsSpeaker();
+        }
     }
 
     const appBarLabel = (

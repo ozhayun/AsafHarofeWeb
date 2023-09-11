@@ -5,7 +5,7 @@ import ThermometerImagePath from "../../../Public/HomePage/Thermometer.png";
 import PlasterImagePath from "../../../Public/HomePage/Plaster.png";
 import AbdominalPainImagePath from "../../../Public/HomePage/AbdominalPain.png";
 import InjuryImagePath from "../../../Public/HomePage/Injury.png";
-import {useContext, useState} from "react";
+import {useContext, useEffect, useRef, useState} from "react";
 import CustomToolbar from '../../Components/CustomToolbar.jsx';
 import {Button} from "@mui/material";
 import {useNavigate} from "react-router";
@@ -13,15 +13,59 @@ import {useLocation} from "react-router-dom";
 import {SoundContext} from "../../Sound/SoundContext.jsx";
 import PopUp from "../../Components/PopUp.jsx";
 import noticePopUpImagePath from "../../../Public/GamePage/PopUp/notice.png";
+import IconButton from "@mui/material/IconButton";
+import RecordVoiceOverIcon from "@mui/icons-material/RecordVoiceOver";
+import VoiceOverOffIcon from "@mui/icons-material/VoiceOverOff";
 
 
 const ChoosePain = React.memo(() => {
-    const { playClickSound } = useContext(SoundContext);
+    const { playClickSound, isSpeaker, toggleIsSpeaker } = useContext(SoundContext);
     const [selectedPain, setSelectedPain] = useState("");
+    const [animalAudioSrc, setAnimalAudioSrc] = useState(null);
+    const [animalPainErrorAudioSrc, setAnimalPainErrorAudioSrc] = useState(null);
     const navigate = useNavigate();
     const location = useLocation();
     const { animal } = location.state || {};
     const [errorPopupOpen, setErrorPopupOpen] = useState(false);
+    const audioRef = useRef(null);
+
+
+    useEffect(() => {
+        async function loadAnimalAudio() {
+            let animalPainAudio, animalPainErrorAudio;
+            switch (animal) {
+                case 'dog':
+                    animalPainAudio = await import("../../../Public/ChoosePainPage/dog.mp3");
+                    animalPainErrorAudio = await import("../../../Public/ChoosePainPage/dog-error.mp3")
+                    break;
+                case 'lion':
+                    animalPainAudio = await import("../../../Public/ChoosePainPage/lion.mp3");
+                    animalPainErrorAudio = await import("../../../Public/ChoosePainPage/lion-error.mp3")
+                    break;
+                case 'monkey':
+                    animalPainAudio = await import("../../../Public/ChoosePainPage/monkey.mp3");
+                    animalPainErrorAudio = await import("../../../Public/ChoosePainPage/monkey-error.mp3")
+                    break;
+                case 'panda':
+                    animalPainAudio = await import("../../../Public/ChoosePainPage/panda.mp3");
+                    animalPainErrorAudio = await import("../../../Public/ChoosePainPage/panda-error.mp3")
+                    break;
+                default:
+                    animalHebrew = null;
+            }
+            if (animalPainAudio && animalPainAudio.default) {
+                setAnimalAudioSrc(animalPainAudio.default);
+            }
+            if (animalPainErrorAudio && animalPainErrorAudio.default) {
+                setAnimalPainErrorAudioSrc(animalPainErrorAudio.default);
+            }
+        }
+
+        if (animal) {
+            loadAnimalAudio();
+        }
+    }, [animal]);
+
 
     let animalHebrew;
     switch (animal) {
@@ -47,12 +91,27 @@ const ChoosePain = React.memo(() => {
 
     const handleContinueClick = () => {
         if(selectedPain) {
+            if(isSpeaker) {
+                toggleIsSpeaker();
+            }
             playClickSound();
             navigate('/game', { state: { pain: selectedPain, animal: animal, animalHebrew: animalHebrew } });
         }
         else {
             setErrorPopupOpen(true);
         }
+    }
+
+    const handleClickOnChooseAnimalPainSpeaker = () =>{
+        const audioElement = audioRef.current;
+        if (isSpeaker) {
+            audioElement.pause();
+        } else {
+            audioElement.currentTime = 0;
+            audioElement.playbackRate = 1.25;
+            audioElement.play();
+        }
+        toggleIsSpeaker();
     }
 
     return (
@@ -65,6 +124,12 @@ const ChoosePain = React.memo(() => {
                 <br />
                 ל{animalHebrew}?
             </Typography>
+            <div className="speaker-button">
+                <IconButton id="speaker" onClick={handleClickOnChooseAnimalPainSpeaker}>
+                    {isSpeaker ? <RecordVoiceOverIcon fontSize="large"/> : <VoiceOverOffIcon fontSize="large"/>}
+                </IconButton>
+                <audio ref={audioRef} src={animalAudioSrc}></audio>
+            </div>
             <div className='rectanglePain'>
                 <Button className="piece fever" onClick={() => handlePainClick('fever')}
                         data-selected={selectedPain === 'fever' ? 'true' : selectedPain === "" ? 'default' : 'false'}>
@@ -93,8 +158,9 @@ const ChoosePain = React.memo(() => {
             <PopUp
                 isOpen={errorPopupOpen}
                 closePopup={() => setErrorPopupOpen(false)}
-                content="בבקשה לחצו על כאב ולאחר מכן על המשך."
+                content={`בבקשה בחר מה כואב ל${animalHebrew} ולאחר מכן לחץ על המשך.`}
                 image={noticePopUpImagePath}
+                audio={animalPainErrorAudioSrc}
             />
         </div>
     );
