@@ -10,12 +10,10 @@
 #ChooseAnimalTitle {
     font-family: 'Assistant', serif;
     font-style: normal;
-    font-size: 4rem;
-    line-height: 4rem;
+    font-size: 320%;
+    line-height: 100%;
     text-align: center;
     color: #00456E;
-    margin-top: 0.2em;
-    margin-bottom: 0.3em;
 }
 
 .animal-rectangle {

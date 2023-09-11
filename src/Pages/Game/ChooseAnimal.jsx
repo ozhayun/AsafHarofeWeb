@@ -64,7 +64,7 @@ const ChooseAnimal = React.memo(() => {
                 לאיזו חיה
                 תרצה לעזור?
             </Typography>
-            <div className="speaker-button">
+            <div className="speaker-button-chooseAnimal">
                 <IconButton id="speaker" onClick={handleClickOnChooseAnimalSpeaker}>
                     {isSpeaker ? <RecordVoiceOverIcon fontSize="large"/> : <VoiceOverOffIcon fontSize="large"/>}
                 </IconButton>

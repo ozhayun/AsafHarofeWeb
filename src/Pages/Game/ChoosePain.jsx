@@ -124,7 +124,7 @@ const ChoosePain = React.memo(() => {
                 <br />
                 ל{animalHebrew}?
             </Typography>
-            <div className="speaker-button">
+            <div className="speaker-button-choose-pain">
                 <IconButton id="speaker" onClick={handleClickOnChooseAnimalPainSpeaker}>
                     {isSpeaker ? <RecordVoiceOverIcon fontSize="large"/> : <VoiceOverOffIcon fontSize="large"/>}
                 </IconButton>
