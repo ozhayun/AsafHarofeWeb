@@ -58,7 +58,6 @@
     border-radius: 10px;
 }
 
-
 @media (min-width: 501px) {
     .dice-container {
         display: grid;
