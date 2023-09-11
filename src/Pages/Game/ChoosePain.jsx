@@ -11,17 +11,8 @@ import {Button} from "@mui/material";
 import {useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
 import {SoundContext} from "../../Sound/SoundContext.jsx";
-import {BackgroundMusicContext} from "../../Sound/BackgroundMusicContext.jsx";
 import PopUp from "../../Components/PopUp.jsx";
 import noticePopUpImagePath from "../../../Public/GamePage/PopUp/notice.png";
-import vetDogImagePath from "../../../Public/HomePage/VetDog.png";
-import vetDogPlayerImagePath from "../../../Public/GamePage/dogPlayer.png";
-import vetLionImagePath from "../../../Public/HomePage/VetLion.png";
-import vetLionPlayerImagePath from "../../../Public/GamePage/lionPlayer.png";
-import vetMonkeyImagePath from "../../../Public/HomePage/VetMonkey.png";
-import vetMonkeyPlayerImagePath from "../../../Public/GamePage/monkeyPlayer.png";
-import vetPandaImagePath from "../../../Public/HomePage/VetPanda.png";
-import vetPandaPlayerImagePath from "../../../Public/GamePage/pandaPlayer.png";
 
 
 const ChoosePain = React.memo(() => {

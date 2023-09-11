@@ -10,7 +10,7 @@ import homePopUpImagePath from "../../../Public/GamePage/PopUp/home.png";
 import * as React from "react";
 import Board from "../Board.jsx";
 
-const FeverBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, importAudio, setPopUpsAudio, resetKey }) => {
+const FeverBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, setIsAudioLoaded, importAudio, setPopUpsAudio, resetKey }) => {
     const specifics = {
         ladders: {
             2 : 21,
@@ -30,7 +30,7 @@ const FeverBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, on
             73 : 47,
             80 : 62,
             61 : 59 },
-        popUpCells: [3,11,18,25,33,40,49,57,65,74,81,87,93],
+        popUpCells: [1,3,11,18,25,33,40,49,57,65,74,81,87,93],
         popUpMessages: [
             "ברוכים הבאים למשחק סולמות ומגלשות! במהלך המשחק נלווה את ה" + animalHebrew +
             " בתהליך הטיפול הרפואי שהוא הולך לעבור במיון. חשוב לנו לומר שהצוות הרפואי שנמצא במיון עושה את המאמצים לעזור לו להרגיש טוב יותר. ה" + animalHebrew +
@@ -74,8 +74,8 @@ const FeverBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, on
                    setPopUpCells={setPopUpCells}
                    setPopUpMessages={setPopUpMessages}
                    setPopUpImages={setPopUpImages}
+                   setIsAudioLoaded={setIsAudioLoaded}
                    animal={animal}
-                   animalHebrew={animalHebrew}
                    pain={pain}
                    importAudio={importAudio}
                    setPopUpsAudio={setPopUpsAudio}

@@ -12,6 +12,8 @@ const PopUp = ({ isOpen, isPlayerWin, content, audio, image, closePopup, restart
     const {isSpeaker, toggleIsSpeaker} = React.useContext(SoundContext);
     const [audioReady, setAudioReady] = useState(false);
     const audioRef = useRef(new Audio(audio));
+    const speakerButtonRef = useRef(null);
+
 
     useEffect(() => {
         const audioElement = audioRef.current;
@@ -29,6 +31,21 @@ const PopUp = ({ isOpen, isPlayerWin, content, audio, image, closePopup, restart
             });
         };
     }, [audio]);
+
+    useEffect(() => {
+        if (isOpen) {
+            const btn = speakerButtonRef.current;
+            if (btn) {
+                const clickEvent = new MouseEvent('dblclick', {
+                    bubbles: true,
+                    cancelable: true,
+                    view: window
+                });
+                btn.dispatchEvent(clickEvent);
+            }
+        }
+    }, [isOpen]);
+
 
     useEffect(() => {
         let audioElement;
@@ -69,7 +86,6 @@ const PopUp = ({ isOpen, isPlayerWin, content, audio, image, closePopup, restart
                 </button>
             </div>
         );
-
         audio= Victory;
     }
 
@@ -83,9 +99,10 @@ const PopUp = ({ isOpen, isPlayerWin, content, audio, image, closePopup, restart
                         </button>
                     )}
                     <div className="speaker-button">
-                        <IconButton id="speaker" onClick={toggleIsSpeaker}>
+                        <IconButton ref={speakerButtonRef} id="speaker" onClick={toggleIsSpeaker}>
                             {isSpeaker ? <RecordVoiceOverIcon fontSize="large"/> : <VoiceOverOffIcon fontSize="large"/>}
                         </IconButton>
+
                     </div>
                 </div>
                 <div className={`popup-image-container`}>

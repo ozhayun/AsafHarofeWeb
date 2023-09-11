@@ -11,7 +11,7 @@ import waitingPopUpImagePath from "../../../Public/GamePage/PopUp/Waiting.png";
 import medicalTestsPopUpImagePath from "../../../Public/GamePage/PopUp/medicalTests.png";
 import homePopUpImagePath from "../../../Public/GamePage/PopUp/home.png";
 
-const InjuryBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, importAudio, setPopUpsAudio, resetKey }) => {
+const InjuryBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, setIsAudioLoaded, importAudio, setPopUpsAudio, resetKey }) => {
     const specifics = {
         ladders: {
             2: 21,
@@ -31,7 +31,7 @@ const InjuryBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, o
             91: 69,
             80 : 62,
             61 : 59},
-        popUpCells:  [3,11,18,25,33,40,49,57,65,74,81,88,94],
+        popUpCells:  [1,3,11,18,25,33,40,49,57,65,74,81,88,94],
         popUpMessages: [
             "ברוכים הבאים למשחק סולמות ומגלשות! במהלך המשחק נלווה את ה" + animalHebrew +
             " בתהליך הטיפול הרפואי שהוא הולך לעבור במיון. חשוב לנו לומר שהצוות הרפואי שנמצא במיון עושה את המאמצים לעזור לו להרגיש טוב יותר. ה" + animalHebrew +
@@ -79,8 +79,8 @@ const InjuryBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, o
                    setPopUpCells={setPopUpCells}
                    setPopUpMessages={setPopUpMessages}
                    setPopUpImages={setPopUpImages}
+                   setIsAudioLoaded={setIsAudioLoaded}
                    animal={animal}
-                   animalHebrew={animalHebrew}
                    pain={pain}
                    importAudio={importAudio}
                    setPopUpsAudio={setPopUpsAudio}

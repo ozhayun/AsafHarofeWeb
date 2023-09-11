@@ -4,7 +4,6 @@ import * as React from "react";
 
 const Board = ({
                    animal,
-                   animalHebrew,
                    pain,
                    playerPosition,
                    playerImage,
@@ -18,6 +17,7 @@ const Board = ({
                    setPopUpCells,
                    setPopUpMessages,
                    setPopUpImages,
+                   setIsAudioLoaded,
                    importAudio,
                    setPopUpsAudio,
                    resetKey
@@ -45,8 +45,17 @@ const Board = ({
 
     React.useEffect(() => {
         const promises = popUpMessages.map((message, index) => importAudio(pain, animal, index + 1));
-        Promise.all(promises).then(setPopUpsAudio);
+
+        Promise.all(promises)
+            .then((audioData) => {
+                setPopUpsAudio(audioData);
+                setIsAudioLoaded(true); // Set audio loaded flag to true when all audio is loaded.
+            })
+            .catch((error) => {
+                console.error("Error loading audio:", error);
+            });
     }, [pain, animal, resetKey]);
+
 
     React.useEffect(() => {
         setPopUpCells(popUpCells);

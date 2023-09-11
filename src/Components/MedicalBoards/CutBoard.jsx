@@ -11,7 +11,7 @@ import homePopUpImagePath from "../../../Public/GamePage/PopUp/home.png";
 import gelSoapPopUpImagePath from "../../../Public/GamePage/PopUp/gelSoap.png";
 import injectionPopUpImagePath from "../../../Public/GamePage/PopUp/injection.png";
 
-const CutBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, importAudio, setPopUpsAudio, resetKey }) => {
+const CutBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, onLaddersChange, onSlidesChange, setPopUpCells, setPopUpMessages, setPopUpImages, setIsAudioLoaded, importAudio, setPopUpsAudio, resetKey }) => {
     const specifics = {
         ladders: {
             4: 23,
@@ -31,14 +31,14 @@ const CutBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, onLa
             93 : 67,
             61 : 59,
             95: 87 },
-        popUpCells: [3,11,18,25,33,40,49,57,65,74,81,88,94],
+        popUpCells: [1,3,11,18,25,33,40,49,57,65,74,81,88,94],
         popUpMessages: [
             "ברוכים הבאים למשחק סולמות ומגלשות! במהלך המשחק נלווה את ה" + animalHebrew +
             " בתהליך הטיפול הרפואי שהוא הולך לעבור במיון. חשוב לנו לומר שהצוות הרפואי שנמצא במיון עושה את המאמצים לעזור לו להרגיש טוב יותר. ה" + animalHebrew +
             " לא נמצא לבד, אתם וההורים שלכם מלווים אותה בתהליך. אם הוא מפחד אפשר לשתף את הצוות הרפואי. מאחלים לכם משחק מהנה!",
 
-            "בהתחלה האח או האחות יבדקו את ה " + animalHebrew + "," +
-            ", אם יורד לו דם, אז קודם נעצור את הדימום ולאחר מכן הם יבדקו חום, דופק ולחץ דם.",
+            "בהתחלה האח או האחות יבדקו את ה" + animalHebrew + ", " +
+            "אם יורד לו דם, אז קודם נעצור את הדימום ולאחר מכן הם יבדקו חום, דופק ולחץ דם.",
 
             "עכשיו אנחנו ממתינים בסבלנות לרופאים שיחליטו על הטיפול המתאים.",
 
@@ -76,8 +76,8 @@ const CutBoard = ({animal, animalHebrew, pain, playerPosition, playerImage, onLa
                    setPopUpCells={setPopUpCells}
                    setPopUpMessages={setPopUpMessages}
                    setPopUpImages={setPopUpImages}
+                   setIsAudioLoaded={setIsAudioLoaded}
                    animal={animal}
-                   animalHebrew={animalHebrew}
                    pain={pain}
                    importAudio={importAudio}
                    setPopUpsAudio={setPopUpsAudio}

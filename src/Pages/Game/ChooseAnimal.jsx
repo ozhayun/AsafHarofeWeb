@@ -39,7 +39,7 @@ const ChooseAnimal = React.memo(() => {
                 <CustomToolbar toolbarTitle=""/>
             </div>
             <Typography id = "ChooseAnimalTitle" variant="h2" gutterBottom style={{ direction: 'rtl' }}>
-                לאיזה חיה
+                לאיזו חיה
                 תרצה לעזור?
             </Typography>
             <div className='animal-rectangle'>

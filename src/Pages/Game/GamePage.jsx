@@ -18,6 +18,8 @@ import AbdominalPainBoard from "../../Components/MedicalBoards/AbdominalPainBoar
 import InjuryBoard from "../../Components/MedicalBoards/InjuryBoard.jsx";
 import {SoundContext} from "../../Sound/SoundContext.jsx";
 import confetti from 'canvas-confetti';
+import {useContext} from "react";
+import {BackgroundMusicContext} from "../../Sound/BackgroundMusicContext.jsx";
 
 const GamePage = () => {
     const [playerPosition, setPlayerPosition] = React.useState(1);
@@ -33,12 +35,15 @@ const GamePage = () => {
     const [popUpsAudio, setPopUpsAudio] = React.useState([]);
     const [isGamePaused, setIsGamePaused] = React.useState(false);
     const [isPlayerWin, setIsPlayerWin] = React.useState(false);
+    const [isAudioLoaded, setIsAudioLoaded] = React.useState(false);
     const [resetKey, setResetKey] = React.useState(0);
     const location = useLocation();
     const navigate = useNavigate();
     const {pain, animal, animalHebrew} = location.state || {};
     const animalClass = `animal ${animal || ''}`;
     const {playWinSound, playSlideSound, playLadderSound} = React.useContext(SoundContext);
+    const {pauseBackgroundMusic} = useContext(BackgroundMusicContext)
+
 
     const importAudio = async (pain, animalHebrew, messageIndex) => {
         const audioModule = await import(`../../../Public/Sounds/PopUp/${pain}/${animal}/${messageIndex}.mp3`);
@@ -109,21 +114,17 @@ const GamePage = () => {
     };
 
     const checkCellPopups = (playerPosition) => {
-        if (popUpMessages.length !== 0 || playerPosition === 100) {
+        if (isAudioLoaded && (popUpMessages.length !== 0 || playerPosition === 100)) {
             const cellIndex = popUpCells.indexOf(playerPosition);
             if (cellIndex !== -1) {
-                openPopUp(popUpMessages[0], popUpsAudio[0], popUpImages[0]);
-                setPopUpCells(prevItems => prevItems.filter((_, index) => index !== cellIndex));
-                setPopUpMessages(prevMessages => prevMessages.filter((_, index) => index !== 0))
-                setPopUpsAudio(prevAudios => prevAudios.filter((_, index) => index !== 0))
-                setPopUpImages(prevImage => prevImage.filter((_, index) => index !== 0))
+                handleOpenPop(cellIndex);
             }
         }
     };
 
     React.useEffect(() => {
         checkCellPopups(playerPosition);
-    }, [playerPosition]);
+    }, [playerPosition, popUpMessages.length, isAudioLoaded]);
 
 
     const openPopUp = (content, audio, image) => {
@@ -133,6 +134,17 @@ const GamePage = () => {
         setIsPopUpOpen(true);
         setIsGamePaused(true)
     };
+
+    const handleOpenPop = (cellIndex) => {
+        if(isAudioLoaded) {
+            openPopUp(popUpMessages[0], popUpsAudio[0], popUpImages[0]);
+            // Update cell, messages, audio and images
+            setPopUpCells(prevItems => prevItems.filter((_, index) => index !== cellIndex));
+            setPopUpMessages(prevMessages => prevMessages.filter((_, index) => index !== 0))
+            setPopUpsAudio(prevAudios => prevAudios.filter((_, index) => index !== 0))
+            setPopUpImages(prevImage => prevImage.filter((_, index) => index !== 0))
+        }
+    }
 
     const closePopUp = () => {
         setIsPopUpOpen(false);
@@ -157,13 +169,15 @@ const GamePage = () => {
 
     const navigateHome = () => {
         setIsPopUpOpen(false);
-        setIsPlayerWin(false)
+        setIsPlayerWin(false);
+        pauseBackgroundMusic();
         navigate('/');
     };
 
     const restartGame = () => {
         setIsPopUpOpen(false);
         setIsPlayerWin(false)
+        setIsAudioLoaded(false);
         setPlayerPosition(1);
         setResetKey(prevKey => prevKey + 1);
     };
@@ -172,24 +186,20 @@ const GamePage = () => {
         <div className="game-page">
             <CustomToolbar toolbarTitle="סולמות ומגלשות"/>
 
-            {/*Medical Board*/}
-            {pain === 'cut' ? (
-                <CutBoard animal={animal}
-                          animalHebrew={animalHebrew}
-                          pain={pain}
-                          playerPosition={playerPosition}
-                          playerImage={playerImage}
-                          onLaddersChange={handleLaddersChange}
-                          onSlidesChange={handleSlidesChange}
-                          setPopUpCells={setPopUpCells}
-                          setPopUpMessages={setPopUpMessages}
-                          setPopUpImages={setPopUpImages}
-                          importAudio={importAudio}
-                          setPopUpsAudio={setPopUpsAudio}
-                          resetKey={resetKey}
-                />
-            ) : pain === 'fever' ? (
-                <FeverBoard animal={animal}
+            {(() => {
+                const MedicalBoardComponents = {
+                    cut: CutBoard,
+                    fever: FeverBoard,
+                    injury: InjuryBoard,
+                    abdominalPain: AbdominalPainBoard,
+                };
+
+                const MedicalBoardComponent = MedicalBoardComponents[pain];
+
+                if (MedicalBoardComponent) {
+                    return (
+                        <MedicalBoardComponent
+                            animal={animal}
                             animalHebrew={animalHebrew}
                             pain={pain}
                             playerPosition={playerPosition}
@@ -202,48 +212,25 @@ const GamePage = () => {
                             importAudio={importAudio}
                             setPopUpsAudio={setPopUpsAudio}
                             resetKey={resetKey}
-                />
-            ) : pain === 'injury' ? (
-                <InjuryBoard animal={animal}
-                             animalHebrew={animalHebrew}
-                             pain={pain}
-                             playerPosition={playerPosition}
-                             playerImage={playerImage}
-                             onLaddersChange={handleLaddersChange}
-                             onSlidesChange={handleSlidesChange}
-                             setPopUpCells={setPopUpCells}
-                             setPopUpMessages={setPopUpMessages}
-                             setPopUpImages={setPopUpImages}
-                             importAudio={importAudio}
-                             setPopUpsAudio={setPopUpsAudio}
-                             resetKey={resetKey}
-                />
-            ) : pain === 'abdominalPain' ? (
-                <AbdominalPainBoard animal={animal}
-                                    animalHebrew={animalHebrew}
-                                    pain={pain}
-                                    playerPosition={playerPosition}
-                                    playerImage={playerImage}
-                                    onLaddersChange={handleLaddersChange}
-                                    onSlidesChange={handleSlidesChange}
-                                    setPopUpCells={setPopUpCells}
-                                    setPopUpMessages={setPopUpMessages}
-                                    setPopUpImages={setPopUpImages}
-                                    importAudio={importAudio}
-                                    setPopUpsAudio={setPopUpsAudio}
-                                    resetKey={resetKey}
-                />
-            ) : null
-            }
+                            setIsAudioLoaded={setIsAudioLoaded}
+                        />
+                    );
+                } else {
+                    return null;
+                }
+            })()}
 
-            <PopUp isOpen={isPopUpOpen}
-                   isPlayerWin={isPlayerWin}
-                   content={popUpContent}
-                   audio={popUpAudio}
-                   image={popUpImage}
-                   closePopup={closePopUp}
-                   restartGame={restartGame}
-                   navigateHome={navigateHome}/>
+            {isPopUpOpen && isAudioLoaded && (
+                <PopUp isOpen={isPopUpOpen}
+                       isPlayerWin={isPlayerWin}
+                       content={popUpContent}
+                       audio={popUpAudio}
+                       image={popUpImage}
+                       closePopup={closePopUp}
+                       restartGame={restartGame}
+                       navigateHome={navigateHome}
+                />
+            )}
 
             <div className={animalClass}>
                 {animalImage && <img src={animalImage} alt={animal} className="animal-image"/>}
