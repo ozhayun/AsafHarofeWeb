@@ -11,9 +11,10 @@
     font-family: 'Assistant', serif;
     font-style: normal;
     font-size: 320%;
-    line-height: 100%;
+    line-height: 95%;
     text-align: center;
     color: #00456E;
+    margin-top: 5%;
 }
 
 .animal-rectangle {
